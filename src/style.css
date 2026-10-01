@@ -356,6 +356,9 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
   .footer { padding: 14vh 16px 6vh; }
   .brand-mini { letter-spacing: 0.3em; font-size: 10px; }
 }
+@media (max-width: 480px) {
+  .brand-mini em { display: none; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
