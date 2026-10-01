@@ -159,8 +159,7 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 .step { transform-box: fill-box; }
 /* the reference's letters: taller than the font draws them, warm white, lit red */
 .step-letter { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 38px; fill: #f6dfd8; opacity: 0; transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(1.15); filter: drop-shadow(0 0 1.5px rgba(255, 70, 55, 0.95)) drop-shadow(0 0 6px rgba(255, 30, 20, 0.85)); }
-.ready .step-letter { animation: riseTall 1s var(--ease) forwards; animation-delay: calc(2.7s + var(--i) * 0.16s); }
-@keyframes riseTall { from { opacity: 0; transform: translateY(18px) scaleY(1.15); } to { opacity: 1; transform: scaleY(1.15); } }
+/* the letters climb the stairs (climb() in hero.js) */
 .step-glint { fill: #ff6a5a; opacity: 0; filter: drop-shadow(0 0 4px #ff2b2b); }
 .ready .step-glint { animation: fadeIn 0.6s forwards; animation-delay: calc(2.9s + var(--i) * 0.16s); }
 .step-spark { fill: #fff; filter: drop-shadow(0 0 6px #ff2b2b) drop-shadow(0 0 14px #ff2b2b); opacity: 0; }
