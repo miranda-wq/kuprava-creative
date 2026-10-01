@@ -42,9 +42,10 @@ function drawArm(svg) {
     const xc = ARM.x0 + (armY(ARM.x0) + off(xBend) - yH) / ARM.slope; // the diagonal meets the flat line here
     const d = `M${f1(a[0])},${f1(a[1])} L${f1(s0[0])},${f1(s0[1])} Q${f1(xc)},${f1(yH)} ${f1(xEnd - 6 * t)},${f1(yH)}`;
     // silver along the top turning red, then fading into the threads below
-    const r = Math.min(1, t / 0.35);
+    // no hard edge anywhere: the colour turns gradually and the light fades out smoothly
+    const r = t ** 0.7;
     const c = [Math.round(242 + 13 * r), Math.round(234 - 196 * r), Math.round(234 - 208 * r)];
-    const o = t < 0.35 ? 0.6 : 0.6 * (1 - (t - 0.35) / 0.65) ** 1.4 + 0.04;
+    const o = 0.5 * (1 - t) ** 1.8 + 0.02;
     el('path', { d, fill: 'none', stroke: `rgb(${c.join(',')})`, 'stroke-opacity': o.toFixed(2) }, arm);
   }
   // the same sheet, blurred, for the glow
