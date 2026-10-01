@@ -48,6 +48,15 @@ function drawArm(svg) {
     const o = 0.5 * (1 - t) ** 1.8 + 0.02;
     el('path', { d, fill: 'none', stroke: `rgb(${c.join(',')})`, 'stroke-opacity': o.toFixed(2) }, arm);
   }
+  // as in the reference: a thin red line runs under the stairs, parallel to them, from
+  // where the arm crosses the K up to the spark, bending into the flat line at the top
+  {
+    const g = 10, a = [ARM.x0 - 26, armY(ARM.x0 - 26) + g], b = [xBend + 6, armY(xBend + 6) + g];
+    const yH = yTop + 1.5 + g * 0.35, xc = ARM.x0 + (armY(ARM.x0) + g - yH) / ARM.slope;
+    el('path', { class: 'arm-line', d: `M${f1(a[0])},${f1(a[1])} L${f1(b[0])},${f1(b[1])} Q${f1(xc)},${f1(yH)} ${xEnd + 2},${f1(yH)}` }, k);
+    // and the stairs' own edge carries on down through the stem
+    el('path', { class: 'arm-tail', d: `M${ARM.x0},${f1(armY(ARM.x0))} L${ARM.x0 - 90},${f1(armY(ARM.x0 - 90))}` }, k);
+  }
   // the same sheet, blurred, for the glow
   arm.id = 'armSheet';
   k.insertBefore(el('use', { href: '#armSheet', class: 'arm-glow' }), arm);
@@ -264,6 +273,11 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   [[669, 58, 669, 700], [405, 185, 885, 185], [560, 693, 1080, 693], [793, 252, 793, 697]].forEach(([a, b, c, d]) => {
     el('line', { x1: a, y1: b, x2: c, y2: d, pathLength: 1000 }, cons);
   });
+  // the K's cap line: bright white across the serifs, fading out at both ends, as in the reference
+  el('defs', {}, svg).innerHTML = `<linearGradient id="capFade" gradientUnits="userSpaceOnUse" x1="500" y1="0" x2="1020" y2="0">
+    <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.2" stop-color="#fff" stop-opacity="0.75"/>
+    <stop offset="0.75" stop-color="#fff" stop-opacity="0.85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`;
+  el('line', { x1: 500, y1: 185.5, x2: 1020, y2: 185.5, class: 'cap-line', pathLength: 1000 }, cons);
   [[669, 512], [669, 592], [793, 470]].forEach(([cx, cy]) => el('circle', { cx, cy, r: 2.6, class: 'node-dot' }, cons));
 
   // the traced K, then the arm, the staircase and the cap-line glint on top of it
