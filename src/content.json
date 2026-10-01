@@ -1,0 +1,3116 @@
+{
+ "sections": [
+  {
+   "id": "sculpture",
+   "doc": {
+    "title": "Artworks Portfolio",
+    "pdf": "docs/artworks-portfolio.pdf",
+    "pages": [
+     {
+      "src": "docs/artworks-portfolio/01.jpg",
+      "thumb": "docs/artworks-portfolio/01-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/02.jpg",
+      "thumb": "docs/artworks-portfolio/02-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/03.jpg",
+      "thumb": "docs/artworks-portfolio/03-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/04.jpg",
+      "thumb": "docs/artworks-portfolio/04-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/05.jpg",
+      "thumb": "docs/artworks-portfolio/05-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/06.jpg",
+      "thumb": "docs/artworks-portfolio/06-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/07.jpg",
+      "thumb": "docs/artworks-portfolio/07-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/08.jpg",
+      "thumb": "docs/artworks-portfolio/08-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/09.jpg",
+      "thumb": "docs/artworks-portfolio/09-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/10.jpg",
+      "thumb": "docs/artworks-portfolio/10-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/11.jpg",
+      "thumb": "docs/artworks-portfolio/11-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/12.jpg",
+      "thumb": "docs/artworks-portfolio/12-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/13.jpg",
+      "thumb": "docs/artworks-portfolio/13-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/14.jpg",
+      "thumb": "docs/artworks-portfolio/14-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/15.jpg",
+      "thumb": "docs/artworks-portfolio/15-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/16.jpg",
+      "thumb": "docs/artworks-portfolio/16-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/17.jpg",
+      "thumb": "docs/artworks-portfolio/17-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/18.jpg",
+      "thumb": "docs/artworks-portfolio/18-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/19.jpg",
+      "thumb": "docs/artworks-portfolio/19-t.jpg",
+      "w": 1203,
+      "h": 1700
+     },
+     {
+      "src": "docs/artworks-portfolio/20.jpg",
+      "thumb": "docs/artworks-portfolio/20-t.jpg",
+      "w": 1203,
+      "h": 1700
+     }
+    ],
+    "sizeMB": 24.6
+   },
+   "projects": [
+    {
+     "title": "Incitatus",
+     "images": [
+      {
+       "src": "art/sculpture/incitatus-01.jpg",
+       "thumb": "art/sculpture/incitatus-01-t.jpg",
+       "w": 1374,
+       "h": 1145
+      },
+      {
+       "src": "art/sculpture/incitatus-02.jpg",
+       "thumb": "art/sculpture/incitatus-02-t.jpg",
+       "w": 1536,
+       "h": 1024
+      },
+      {
+       "src": "art/sculpture/incitatus-03.jpg",
+       "thumb": "art/sculpture/incitatus-03-t.jpg",
+       "w": 1536,
+       "h": 1024
+      }
+     ]
+    },
+    {
+     "title": "Blue Horse",
+     "images": [
+      {
+       "src": "art/sculpture/blue-horse-01.jpg",
+       "thumb": "art/sculpture/blue-horse-01-t.jpg",
+       "w": 1122,
+       "h": 1402
+      }
+     ]
+    },
+    {
+     "title": "Dictator's Fate",
+     "images": [
+      {
+       "src": "art/sculpture/dictator-s-fate-01.jpg",
+       "thumb": "art/sculpture/dictator-s-fate-01-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/sculpture/dictator-s-fate-02.jpg",
+       "thumb": "art/sculpture/dictator-s-fate-02-t.jpg",
+       "w": 1202,
+       "h": 1308
+      }
+     ]
+    },
+    {
+     "title": "Dogs",
+     "images": [
+      {
+       "src": "art/sculpture/dogs-01.jpg",
+       "thumb": "art/sculpture/dogs-01-t.jpg",
+       "w": 1369,
+       "h": 1149
+      }
+     ]
+    },
+    {
+     "title": "Bull",
+     "images": [
+      {
+       "src": "art/sculpture/bull-01.jpg",
+       "thumb": "art/sculpture/bull-01-t.jpg",
+       "w": 1113,
+       "h": 1413
+      },
+      {
+       "src": "art/sculpture/bull-02.jpg",
+       "thumb": "art/sculpture/bull-02-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/sculpture/bull-03.jpg",
+       "thumb": "art/sculpture/bull-03-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/sculpture/bull-04.jpg",
+       "thumb": "art/sculpture/bull-04-t.jpg",
+       "w": 1152,
+       "h": 1536
+      }
+     ]
+    },
+    {
+     "title": "Gen Z",
+     "images": [
+      {
+       "src": "art/sculpture/gen-z-01.jpg",
+       "thumb": "art/sculpture/gen-z-01-t.jpg",
+       "w": 1053,
+       "h": 1493
+      },
+      {
+       "src": "art/sculpture/gen-z-02.jpg",
+       "thumb": "art/sculpture/gen-z-02-t.jpg",
+       "w": 1152,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/gen-z-03.jpg",
+       "thumb": "art/sculpture/gen-z-03-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/sculpture/gen-z-04.jpg",
+       "thumb": "art/sculpture/gen-z-04-t.jpg",
+       "w": 1086,
+       "h": 1448
+      }
+     ]
+    },
+    {
+     "title": "Sacrifice",
+     "images": [
+      {
+       "src": "art/sculpture/sacrifice-01.jpg",
+       "thumb": "art/sculpture/sacrifice-01-t.jpg",
+       "w": 1086,
+       "h": 1448
+      }
+     ]
+    },
+    {
+     "title": "Iphigenia",
+     "images": [
+      {
+       "src": "art/sculpture/iphigenia-01.jpg",
+       "thumb": "art/sculpture/iphigenia-01-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/iphigenia-02.jpg",
+       "thumb": "art/sculpture/iphigenia-02-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/iphigenia-03.jpg",
+       "thumb": "art/sculpture/iphigenia-03-t.jpg",
+       "w": 1024,
+       "h": 1536
+      }
+     ]
+    },
+    {
+     "title": "Woman",
+     "images": [
+      {
+       "src": "art/sculpture/woman-01.jpg",
+       "thumb": "art/sculpture/woman-01-t.jpg",
+       "w": 1145,
+       "h": 1374
+      },
+      {
+       "src": "art/sculpture/woman-02.jpg",
+       "thumb": "art/sculpture/woman-02-t.jpg",
+       "w": 1145,
+       "h": 1374
+      }
+     ]
+    },
+    {
+     "title": "The Gaze of God",
+     "images": [
+      {
+       "src": "art/sculpture/the-gaze-of-god-01.jpg",
+       "thumb": "art/sculpture/the-gaze-of-god-01-t.jpg",
+       "w": 1120,
+       "h": 1404
+      },
+      {
+       "src": "art/sculpture/the-gaze-of-god-02.jpg",
+       "thumb": "art/sculpture/the-gaze-of-god-02-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/sculpture/the-gaze-of-god-03.jpg",
+       "thumb": "art/sculpture/the-gaze-of-god-03-t.jpg",
+       "w": 1224,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/the-gaze-of-god-04.jpg",
+       "thumb": "art/sculpture/the-gaze-of-god-04-t.jpg",
+       "w": 1152,
+       "h": 1536
+      }
+     ]
+    },
+    {
+     "title": "Man with a Lantern",
+     "images": [
+      {
+       "src": "art/sculpture/man-with-a-lantern-01.jpg",
+       "thumb": "art/sculpture/man-with-a-lantern-01-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/sculpture/man-with-a-lantern-02.jpg",
+       "thumb": "art/sculpture/man-with-a-lantern-02-t.jpg",
+       "w": 1152,
+       "h": 1536
+      }
+     ]
+    },
+    {
+     "title": "Medea",
+     "images": [
+      {
+       "src": "art/sculpture/medea-01.jpg",
+       "thumb": "art/sculpture/medea-01-t.jpg",
+       "w": 1440,
+       "h": 1800
+      },
+      {
+       "src": "art/sculpture/medea-02.jpg",
+       "thumb": "art/sculpture/medea-02-t.jpg",
+       "w": 1440,
+       "h": 1800
+      },
+      {
+       "src": "art/sculpture/medea-03.jpg",
+       "thumb": "art/sculpture/medea-03-t.jpg",
+       "w": 1440,
+       "h": 1800
+      },
+      {
+       "src": "art/sculpture/medea-04.jpg",
+       "thumb": "art/sculpture/medea-04-t.jpg",
+       "w": 1440,
+       "h": 1800
+      }
+     ]
+    },
+    {
+     "title": "Hecate",
+     "images": [
+      {
+       "src": "art/sculpture/hecate-01.jpg",
+       "thumb": "art/sculpture/hecate-01-t.jpg",
+       "w": 1086,
+       "h": 1448
+      }
+     ]
+    },
+    {
+     "title": "Don't Eat Goldfish",
+     "images": [
+      {
+       "src": "art/sculpture/don-t-eat-goldfish-01.jpg",
+       "thumb": "art/sculpture/don-t-eat-goldfish-01-t.jpg",
+       "w": 1122,
+       "h": 1402
+      }
+     ]
+    },
+    {
+     "title": "Pixel",
+     "images": [
+      {
+       "src": "art/sculpture/pixel-01.jpg",
+       "thumb": "art/sculpture/pixel-01-t.jpg",
+       "w": 1086,
+       "h": 1449
+      }
+     ]
+    },
+    {
+     "title": "Black Cat",
+     "images": [
+      {
+       "src": "art/sculpture/black-cat-01.jpg",
+       "thumb": "art/sculpture/black-cat-01-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/sculpture/black-cat-02.jpg",
+       "thumb": "art/sculpture/black-cat-02-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/sculpture/black-cat-03.jpg",
+       "thumb": "art/sculpture/black-cat-03-t.jpg",
+       "w": 895,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/black-cat-04.jpg",
+       "thumb": "art/sculpture/black-cat-04-t.jpg",
+       "w": 1086,
+       "h": 1448
+      }
+     ]
+    },
+    {
+     "title": "Madame Butterfly",
+     "images": [
+      {
+       "src": "art/sculpture/madame-butterfly-01.jpg",
+       "thumb": "art/sculpture/madame-butterfly-01-t.jpg",
+       "w": 1152,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/madame-butterfly-02.jpg",
+       "thumb": "art/sculpture/madame-butterfly-02-t.jpg",
+       "w": 1152,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/madame-butterfly-03.jpg",
+       "thumb": "art/sculpture/madame-butterfly-03-t.jpg",
+       "w": 1152,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/madame-butterfly-04.jpg",
+       "thumb": "art/sculpture/madame-butterfly-04-t.jpg",
+       "w": 1152,
+       "h": 1536
+      }
+     ]
+    },
+    {
+     "title": "Angry Puppy",
+     "images": [
+      {
+       "src": "art/sculpture/angry-puppy-01.jpg",
+       "thumb": "art/sculpture/angry-puppy-01-t.jpg",
+       "w": 1536,
+       "h": 1152
+      }
+     ]
+    },
+    {
+     "title": "Horse",
+     "images": [
+      {
+       "src": "art/sculpture/horse-01.jpg",
+       "thumb": "art/sculpture/horse-01-t.jpg",
+       "w": 1067,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/horse-02.jpg",
+       "thumb": "art/sculpture/horse-02-t.jpg",
+       "w": 1536,
+       "h": 1152
+      },
+      {
+       "src": "art/sculpture/horse-03.jpg",
+       "thumb": "art/sculpture/horse-03-t.jpg",
+       "w": 1536,
+       "h": 1152
+      },
+      {
+       "src": "art/sculpture/horse-04.jpg",
+       "thumb": "art/sculpture/horse-04-t.jpg",
+       "w": 1536,
+       "h": 1152
+      }
+     ]
+    },
+    {
+     "title": "Young Horse",
+     "images": [
+      {
+       "src": "art/sculpture/young-horse-01.jpg",
+       "thumb": "art/sculpture/young-horse-01-t.jpg",
+       "w": 1170,
+       "h": 1562
+      },
+      {
+       "src": "art/sculpture/young-horse-02.jpg",
+       "thumb": "art/sculpture/young-horse-02-t.jpg",
+       "w": 1160,
+       "h": 1787
+      }
+     ]
+    },
+    {
+     "title": "Ceramic Rabbits",
+     "kicker": "Series",
+     "images": [
+      {
+       "src": "art/sculpture/ceramic-rabbits-01.jpg",
+       "thumb": "art/sculpture/ceramic-rabbits-01-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/ceramic-rabbits-02.jpg",
+       "thumb": "art/sculpture/ceramic-rabbits-02-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/ceramic-rabbits-03.jpg",
+       "thumb": "art/sculpture/ceramic-rabbits-03-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/ceramic-rabbits-04.jpg",
+       "thumb": "art/sculpture/ceramic-rabbits-04-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/ceramic-rabbits-05.jpg",
+       "thumb": "art/sculpture/ceramic-rabbits-05-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/ceramic-rabbits-06.jpg",
+       "thumb": "art/sculpture/ceramic-rabbits-06-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/ceramic-rabbits-07.jpg",
+       "thumb": "art/sculpture/ceramic-rabbits-07-t.jpg",
+       "w": 1024,
+       "h": 1536
+      }
+     ]
+    },
+    {
+     "title": "Rabbits",
+     "kicker": "Series · interior studies",
+     "images": [
+      {
+       "src": "art/sculpture/rabbits-01.jpg",
+       "thumb": "art/sculpture/rabbits-01-t.jpg",
+       "w": 1129,
+       "h": 1393
+      },
+      {
+       "src": "art/sculpture/rabbits-02.jpg",
+       "thumb": "art/sculpture/rabbits-02-t.jpg",
+       "w": 1078,
+       "h": 1459
+      },
+      {
+       "src": "art/sculpture/rabbits-03.jpg",
+       "thumb": "art/sculpture/rabbits-03-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/sculpture/rabbits-04.jpg",
+       "thumb": "art/sculpture/rabbits-04-t.jpg",
+       "w": 1124,
+       "h": 1399
+      },
+      {
+       "src": "art/sculpture/rabbits-05.jpg",
+       "thumb": "art/sculpture/rabbits-05-t.jpg",
+       "w": 1123,
+       "h": 1401
+      },
+      {
+       "src": "art/sculpture/rabbits-06.jpg",
+       "thumb": "art/sculpture/rabbits-06-t.jpg",
+       "w": 1113,
+       "h": 1414
+      },
+      {
+       "src": "art/sculpture/rabbits-07.jpg",
+       "thumb": "art/sculpture/rabbits-07-t.jpg",
+       "w": 1113,
+       "h": 1414
+      },
+      {
+       "src": "art/sculpture/rabbits-08.jpg",
+       "thumb": "art/sculpture/rabbits-08-t.jpg",
+       "w": 1197,
+       "h": 1315
+      },
+      {
+       "src": "art/sculpture/rabbits-09.jpg",
+       "thumb": "art/sculpture/rabbits-09-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/sculpture/rabbits-10.jpg",
+       "thumb": "art/sculpture/rabbits-10-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/sculpture/rabbits-11.jpg",
+       "thumb": "art/sculpture/rabbits-11-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/sculpture/rabbits-12.jpg",
+       "thumb": "art/sculpture/rabbits-12-t.jpg",
+       "w": 1086,
+       "h": 1448
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "public",
+   "projects": [
+    {
+     "title": "Children's Park of Imagination",
+     "kicker": "Shanghai · public park concept",
+     "credit": "Original idea: Melita Iosava · Concept & artistic direction: Miranda Kuprava",
+     "text": "A real place for children’s ideas. “I believe children’s drawings should not disappear in drawers. They can become sculptures, places, furniture, lights, gardens and even architecture.” (Melita Iosava, 12)",
+     "images": [
+      {
+       "src": "docs/children-s-park-of-imagination/01.jpg",
+       "thumb": "docs/children-s-park-of-imagination/01-t.jpg",
+       "w": 1700,
+       "h": 1063
+      },
+      {
+       "src": "docs/children-s-park-of-imagination/04.jpg",
+       "thumb": "docs/children-s-park-of-imagination/04-t.jpg",
+       "w": 1700,
+       "h": 1063
+      },
+      {
+       "src": "docs/children-s-park-of-imagination/06.jpg",
+       "thumb": "docs/children-s-park-of-imagination/06-t.jpg",
+       "w": 1700,
+       "h": 1063
+      },
+      {
+       "src": "docs/children-s-park-of-imagination/09.jpg",
+       "thumb": "docs/children-s-park-of-imagination/09-t.jpg",
+       "w": 1700,
+       "h": 1063
+      },
+      {
+       "src": "docs/children-s-park-of-imagination/12.jpg",
+       "thumb": "docs/children-s-park-of-imagination/12-t.jpg",
+       "w": 1700,
+       "h": 1063
+      },
+      {
+       "src": "docs/children-s-park-of-imagination/15.jpg",
+       "thumb": "docs/children-s-park-of-imagination/15-t.jpg",
+       "w": 1700,
+       "h": 1063
+      }
+     ],
+     "doc": {
+      "title": "Children's Park of Imagination",
+      "pdf": "docs/children-s-park-of-imagination.pdf",
+      "pages": [
+       {
+        "src": "docs/children-s-park-of-imagination/01.jpg",
+        "thumb": "docs/children-s-park-of-imagination/01-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/02.jpg",
+        "thumb": "docs/children-s-park-of-imagination/02-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/03.jpg",
+        "thumb": "docs/children-s-park-of-imagination/03-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/04.jpg",
+        "thumb": "docs/children-s-park-of-imagination/04-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/05.jpg",
+        "thumb": "docs/children-s-park-of-imagination/05-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/06.jpg",
+        "thumb": "docs/children-s-park-of-imagination/06-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/07.jpg",
+        "thumb": "docs/children-s-park-of-imagination/07-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/08.jpg",
+        "thumb": "docs/children-s-park-of-imagination/08-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/09.jpg",
+        "thumb": "docs/children-s-park-of-imagination/09-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/10.jpg",
+        "thumb": "docs/children-s-park-of-imagination/10-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/11.jpg",
+        "thumb": "docs/children-s-park-of-imagination/11-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/12.jpg",
+        "thumb": "docs/children-s-park-of-imagination/12-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/13.jpg",
+        "thumb": "docs/children-s-park-of-imagination/13-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/14.jpg",
+        "thumb": "docs/children-s-park-of-imagination/14-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/15.jpg",
+        "thumb": "docs/children-s-park-of-imagination/15-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/16.jpg",
+        "thumb": "docs/children-s-park-of-imagination/16-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/17.jpg",
+        "thumb": "docs/children-s-park-of-imagination/17-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/18.jpg",
+        "thumb": "docs/children-s-park-of-imagination/18-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/19.jpg",
+        "thumb": "docs/children-s-park-of-imagination/19-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/20.jpg",
+        "thumb": "docs/children-s-park-of-imagination/20-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/21.jpg",
+        "thumb": "docs/children-s-park-of-imagination/21-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/22.jpg",
+        "thumb": "docs/children-s-park-of-imagination/22-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/23.jpg",
+        "thumb": "docs/children-s-park-of-imagination/23-t.jpg",
+        "w": 1700,
+        "h": 1063
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/24.jpg",
+        "thumb": "docs/children-s-park-of-imagination/24-t.jpg",
+        "w": 1700,
+        "h": 1063
+       }
+      ],
+      "sizeMB": 20.5
+     }
+    },
+    {
+     "title": "Pinocchios' Library",
+     "kicker": "New York City · public library concept",
+     "credit": "Original thought & first drawing: Melita Iosava · Project author, artist & designer: Miranda Kuprava",
+     "text": "“As many Pinocchios can exist as there are logs, if there is someone who can carve a person out of a log.” A child’s thought and drawing became the starting point for an artist’s library.",
+     "images": [
+      {
+       "src": "docs/pinocchios-library/01.jpg",
+       "thumb": "docs/pinocchios-library/01-t.jpg",
+       "w": 1700,
+       "h": 1010
+      },
+      {
+       "src": "docs/pinocchios-library/04.jpg",
+       "thumb": "docs/pinocchios-library/04-t.jpg",
+       "w": 1700,
+       "h": 1010
+      },
+      {
+       "src": "docs/pinocchios-library/07.jpg",
+       "thumb": "docs/pinocchios-library/07-t.jpg",
+       "w": 1700,
+       "h": 1010
+      },
+      {
+       "src": "docs/pinocchios-library/10.jpg",
+       "thumb": "docs/pinocchios-library/10-t.jpg",
+       "w": 1700,
+       "h": 1010
+      },
+      {
+       "src": "docs/pinocchios-library/13.jpg",
+       "thumb": "docs/pinocchios-library/13-t.jpg",
+       "w": 1700,
+       "h": 1010
+      },
+      {
+       "src": "docs/pinocchios-library/16.jpg",
+       "thumb": "docs/pinocchios-library/16-t.jpg",
+       "w": 1700,
+       "h": 1010
+      }
+     ],
+     "doc": {
+      "title": "Pinocchios' Library",
+      "pdf": "docs/pinocchios-library.pdf",
+      "pages": [
+       {
+        "src": "docs/pinocchios-library/01.jpg",
+        "thumb": "docs/pinocchios-library/01-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/02.jpg",
+        "thumb": "docs/pinocchios-library/02-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/03.jpg",
+        "thumb": "docs/pinocchios-library/03-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/04.jpg",
+        "thumb": "docs/pinocchios-library/04-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/05.jpg",
+        "thumb": "docs/pinocchios-library/05-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/06.jpg",
+        "thumb": "docs/pinocchios-library/06-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/07.jpg",
+        "thumb": "docs/pinocchios-library/07-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/08.jpg",
+        "thumb": "docs/pinocchios-library/08-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/09.jpg",
+        "thumb": "docs/pinocchios-library/09-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/10.jpg",
+        "thumb": "docs/pinocchios-library/10-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/11.jpg",
+        "thumb": "docs/pinocchios-library/11-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/12.jpg",
+        "thumb": "docs/pinocchios-library/12-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/13.jpg",
+        "thumb": "docs/pinocchios-library/13-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/14.jpg",
+        "thumb": "docs/pinocchios-library/14-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/15.jpg",
+        "thumb": "docs/pinocchios-library/15-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/16.jpg",
+        "thumb": "docs/pinocchios-library/16-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/17.jpg",
+        "thumb": "docs/pinocchios-library/17-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/18.jpg",
+        "thumb": "docs/pinocchios-library/18-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/19.jpg",
+        "thumb": "docs/pinocchios-library/19-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/20.jpg",
+        "thumb": "docs/pinocchios-library/20-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/21.jpg",
+        "thumb": "docs/pinocchios-library/21-t.jpg",
+        "w": 1700,
+        "h": 1010
+       },
+       {
+        "src": "docs/pinocchios-library/22.jpg",
+        "thumb": "docs/pinocchios-library/22-t.jpg",
+        "w": 1700,
+        "h": 1010
+       }
+      ],
+      "sizeMB": 15.6
+     }
+    }
+   ]
+  },
+  {
+   "id": "outdoor",
+   "projects": [
+    {
+     "title": "Outdoor Objects",
+     "kicker": "Gardens · terraces · courtyards · pools",
+     "images": [
+      {
+       "src": "art/outdoor/outdoor-01.jpg",
+       "thumb": "art/outdoor/outdoor-01-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/outdoor/outdoor-02.jpg",
+       "thumb": "art/outdoor/outdoor-02-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/outdoor/outdoor-03.jpg",
+       "thumb": "art/outdoor/outdoor-03-t.jpg",
+       "w": 1402,
+       "h": 1122
+      },
+      {
+       "src": "art/outdoor/outdoor-04.jpg",
+       "thumb": "art/outdoor/outdoor-04-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/outdoor/outdoor-05.jpg",
+       "thumb": "art/outdoor/outdoor-05-t.jpg",
+       "w": 1123,
+       "h": 1401
+      },
+      {
+       "src": "art/outdoor/outdoor-06.jpg",
+       "thumb": "art/outdoor/outdoor-06-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/outdoor/outdoor-07.jpg",
+       "thumb": "art/outdoor/outdoor-07-t.jpg",
+       "w": 1402,
+       "h": 1122
+      },
+      {
+       "src": "art/outdoor/outdoor-08.jpg",
+       "thumb": "art/outdoor/outdoor-08-t.jpg",
+       "w": 1402,
+       "h": 1122
+      },
+      {
+       "src": "art/outdoor/outdoor-09.jpg",
+       "thumb": "art/outdoor/outdoor-09-t.jpg",
+       "w": 1367,
+       "h": 1150
+      },
+      {
+       "src": "art/outdoor/outdoor-10.jpg",
+       "thumb": "art/outdoor/outdoor-10-t.jpg",
+       "w": 1402,
+       "h": 1122
+      },
+      {
+       "src": "art/outdoor/outdoor-11.jpg",
+       "thumb": "art/outdoor/outdoor-11-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/outdoor/outdoor-12.jpg",
+       "thumb": "art/outdoor/outdoor-12-t.jpg",
+       "w": 1280,
+       "h": 959
+      },
+      {
+       "src": "art/outdoor/outdoor-13.jpg",
+       "thumb": "art/outdoor/outdoor-13-t.jpg",
+       "w": 1280,
+       "h": 960
+      },
+      {
+       "src": "art/outdoor/outdoor-14.jpg",
+       "thumb": "art/outdoor/outdoor-14-t.jpg",
+       "w": 1519,
+       "h": 1035
+      },
+      {
+       "src": "art/outdoor/outdoor-15.jpg",
+       "thumb": "art/outdoor/outdoor-15-t.jpg",
+       "w": 1086,
+       "h": 1448
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "christmas",
+   "projects": [
+    {
+     "title": "Art at the Centre of Christmas",
+     "kicker": "Completed works · The Promise of Tomorrow · Illuminated Figure",
+     "text": "Two sculptural Christmas works conceived as art objects first and seasonal installations second. The surrounding environment adapts to the space; the original sculptures remain the focal point.",
+     "images": [
+      {
+       "src": "docs/art-at-the-centre-of-christmas/04.jpg",
+       "thumb": "docs/art-at-the-centre-of-christmas/04-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/art-at-the-centre-of-christmas/05.jpg",
+       "thumb": "docs/art-at-the-centre-of-christmas/05-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/art-at-the-centre-of-christmas/07.jpg",
+       "thumb": "docs/art-at-the-centre-of-christmas/07-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/art-at-the-centre-of-christmas/08.jpg",
+       "thumb": "docs/art-at-the-centre-of-christmas/08-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/art-at-the-centre-of-christmas/11.jpg",
+       "thumb": "docs/art-at-the-centre-of-christmas/11-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/art-at-the-centre-of-christmas/14.jpg",
+       "thumb": "docs/art-at-the-centre-of-christmas/14-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/art-at-the-centre-of-christmas/15.jpg",
+       "thumb": "docs/art-at-the-centre-of-christmas/15-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/art-at-the-centre-of-christmas/16.jpg",
+       "thumb": "docs/art-at-the-centre-of-christmas/16-t.jpg",
+       "w": 1203,
+       "h": 1700
+      }
+     ],
+     "doc": {
+      "title": "Art at the Centre of Christmas",
+      "pdf": "docs/art-at-the-centre-of-christmas.pdf",
+      "pages": [
+       {
+        "src": "docs/art-at-the-centre-of-christmas/01.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/01-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/02.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/02-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/03.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/03-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/04.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/04-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/05.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/05-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/06.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/06-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/07.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/07-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/08.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/08-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/09.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/09-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/10.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/10-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/11.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/11-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/12.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/12-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/13.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/13-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/14.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/14-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/15.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/15-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/16.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/16-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/17.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/17-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/18.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/18-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/art-at-the-centre-of-christmas/19.jpg",
+        "thumb": "docs/art-at-the-centre-of-christmas/19-t.jpg",
+        "w": 1203,
+        "h": 1700
+       }
+      ],
+      "sizeMB": 19.0
+     }
+    },
+    {
+     "title": "Christmas Tree Proposals",
+     "kicker": "Three sculptural concepts",
+     "text": "Three original Christmas installations conceived for a monumental, brick-vaulted hospitality interior, each with its own night identity.",
+     "images": [
+      {
+       "src": "docs/christmas-tree-proposals/01.jpg",
+       "thumb": "docs/christmas-tree-proposals/01-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/christmas-tree-proposals/04.jpg",
+       "thumb": "docs/christmas-tree-proposals/04-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/christmas-tree-proposals/07.jpg",
+       "thumb": "docs/christmas-tree-proposals/07-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/christmas-tree-proposals/10.jpg",
+       "thumb": "docs/christmas-tree-proposals/10-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/christmas-tree-proposals/13.jpg",
+       "thumb": "docs/christmas-tree-proposals/13-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/christmas-tree-proposals/16.jpg",
+       "thumb": "docs/christmas-tree-proposals/16-t.jpg",
+       "w": 1203,
+       "h": 1700
+      }
+     ],
+     "doc": {
+      "title": "Christmas Tree Proposals",
+      "pdf": "docs/christmas-tree-proposals.pdf",
+      "pages": [
+       {
+        "src": "docs/christmas-tree-proposals/01.jpg",
+        "thumb": "docs/christmas-tree-proposals/01-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/02.jpg",
+        "thumb": "docs/christmas-tree-proposals/02-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/03.jpg",
+        "thumb": "docs/christmas-tree-proposals/03-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/04.jpg",
+        "thumb": "docs/christmas-tree-proposals/04-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/05.jpg",
+        "thumb": "docs/christmas-tree-proposals/05-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/06.jpg",
+        "thumb": "docs/christmas-tree-proposals/06-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/07.jpg",
+        "thumb": "docs/christmas-tree-proposals/07-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/08.jpg",
+        "thumb": "docs/christmas-tree-proposals/08-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/09.jpg",
+        "thumb": "docs/christmas-tree-proposals/09-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/10.jpg",
+        "thumb": "docs/christmas-tree-proposals/10-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/11.jpg",
+        "thumb": "docs/christmas-tree-proposals/11-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/12.jpg",
+        "thumb": "docs/christmas-tree-proposals/12-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/13.jpg",
+        "thumb": "docs/christmas-tree-proposals/13-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/14.jpg",
+        "thumb": "docs/christmas-tree-proposals/14-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/15.jpg",
+        "thumb": "docs/christmas-tree-proposals/15-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/16.jpg",
+        "thumb": "docs/christmas-tree-proposals/16-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/17.jpg",
+        "thumb": "docs/christmas-tree-proposals/17-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/christmas-tree-proposals/18.jpg",
+        "thumb": "docs/christmas-tree-proposals/18-t.jpg",
+        "w": 1203,
+        "h": 1700
+       }
+      ],
+      "sizeMB": 22.5
+     }
+    },
+    {
+     "title": "Homage to Salvador Dalí",
+     "kicker": "Christmas sculpture proposal",
+     "text": "An elongated golden silhouette, sculptural lips, egg-like forms and butterflies transform the traditional Christmas tree into a monumental art object: theatrical, luminous and deliberately unexpected.",
+     "images": [
+      {
+       "src": "docs/homage-to-salvador-dali/01.jpg",
+       "thumb": "docs/homage-to-salvador-dali/01-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/homage-to-salvador-dali/02.jpg",
+       "thumb": "docs/homage-to-salvador-dali/02-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/homage-to-salvador-dali/03.jpg",
+       "thumb": "docs/homage-to-salvador-dali/03-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/homage-to-salvador-dali/04.jpg",
+       "thumb": "docs/homage-to-salvador-dali/04-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/homage-to-salvador-dali/05.jpg",
+       "thumb": "docs/homage-to-salvador-dali/05-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/homage-to-salvador-dali/06.jpg",
+       "thumb": "docs/homage-to-salvador-dali/06-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/homage-to-salvador-dali/07.jpg",
+       "thumb": "docs/homage-to-salvador-dali/07-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/homage-to-salvador-dali/08.jpg",
+       "thumb": "docs/homage-to-salvador-dali/08-t.jpg",
+       "w": 1203,
+       "h": 1700
+      }
+     ],
+     "doc": {
+      "title": "Homage to Salvador Dali",
+      "pdf": "docs/homage-to-salvador-dali.pdf",
+      "pages": [
+       {
+        "src": "docs/homage-to-salvador-dali/01.jpg",
+        "thumb": "docs/homage-to-salvador-dali/01-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/homage-to-salvador-dali/02.jpg",
+        "thumb": "docs/homage-to-salvador-dali/02-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/homage-to-salvador-dali/03.jpg",
+        "thumb": "docs/homage-to-salvador-dali/03-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/homage-to-salvador-dali/04.jpg",
+        "thumb": "docs/homage-to-salvador-dali/04-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/homage-to-salvador-dali/05.jpg",
+        "thumb": "docs/homage-to-salvador-dali/05-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/homage-to-salvador-dali/06.jpg",
+        "thumb": "docs/homage-to-salvador-dali/06-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/homage-to-salvador-dali/07.jpg",
+        "thumb": "docs/homage-to-salvador-dali/07-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/homage-to-salvador-dali/08.jpg",
+        "thumb": "docs/homage-to-salvador-dali/08-t.jpg",
+        "w": 1203,
+        "h": 1700
+       }
+      ],
+      "sizeMB": 3.7
+     }
+    }
+   ]
+  },
+  {
+   "id": "kinetic",
+   "projects": [
+    {
+     "title": "Merani",
+     "kicker": "Independent conceptual proposal · inspired by Ferrari design",
+     "text": "Born from the meeting of Ferrari design and Nikoloz Baratashvili’s poem “Merani”, where the horse becomes an image of freedom, sacrifice and the courage to open an untrodden path. Original concept and hand-sculpted model by Miranda Kuprava.",
+     "images": [
+      {
+       "src": "art/kinetic/merani-hero.jpg",
+       "thumb": "art/kinetic/merani-hero-t.jpg",
+       "w": 1402,
+       "h": 1122
+      },
+      {
+       "src": "docs/merani/04.jpg",
+       "thumb": "docs/merani/04-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/merani/06.jpg",
+       "thumb": "docs/merani/06-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/merani/07.jpg",
+       "thumb": "docs/merani/07-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/merani/09.jpg",
+       "thumb": "docs/merani/09-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/merani/12.jpg",
+       "thumb": "docs/merani/12-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/merani/13.jpg",
+       "thumb": "docs/merani/13-t.jpg",
+       "w": 1203,
+       "h": 1700
+      }
+     ],
+     "doc": {
+      "title": "Merani",
+      "pdf": "docs/merani.pdf",
+      "pages": [
+       {
+        "src": "docs/merani/01.jpg",
+        "thumb": "docs/merani/01-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/02.jpg",
+        "thumb": "docs/merani/02-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/03.jpg",
+        "thumb": "docs/merani/03-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/04.jpg",
+        "thumb": "docs/merani/04-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/05.jpg",
+        "thumb": "docs/merani/05-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/06.jpg",
+        "thumb": "docs/merani/06-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/07.jpg",
+        "thumb": "docs/merani/07-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/08.jpg",
+        "thumb": "docs/merani/08-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/09.jpg",
+        "thumb": "docs/merani/09-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/10.jpg",
+        "thumb": "docs/merani/10-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/11.jpg",
+        "thumb": "docs/merani/11-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/12.jpg",
+        "thumb": "docs/merani/12-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/13.jpg",
+        "thumb": "docs/merani/13-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/14.jpg",
+        "thumb": "docs/merani/14-t.jpg",
+        "w": 1203,
+        "h": 1700
+       }
+      ],
+      "sizeMB": 7.1
+     }
+    },
+    {
+     "title": "Space Age",
+     "kicker": "Kinetic monument · Dubai",
+     "text": "A kinetic sculpture inspired by the visual memory of the 1960s Space Age. Independently moving rings orbit a luminous central structure; in Christmas mode the whole work becomes a celebration of light.",
+     "images": [
+      {
+       "src": "docs/space-age/04.jpg",
+       "thumb": "docs/space-age/04-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/space-age/03.jpg",
+       "thumb": "docs/space-age/03-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/space-age/05.jpg",
+       "thumb": "docs/space-age/05-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/space-age/06.jpg",
+       "thumb": "docs/space-age/06-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/space-age/07.jpg",
+       "thumb": "docs/space-age/07-t.jpg",
+       "w": 1700,
+       "h": 1203
+      }
+     ],
+     "doc": {
+      "title": "Space Age",
+      "pdf": "docs/space-age.pdf",
+      "pages": [
+       {
+        "src": "docs/space-age/01.jpg",
+        "thumb": "docs/space-age/01-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/space-age/02.jpg",
+        "thumb": "docs/space-age/02-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/space-age/03.jpg",
+        "thumb": "docs/space-age/03-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/space-age/04.jpg",
+        "thumb": "docs/space-age/04-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/space-age/05.jpg",
+        "thumb": "docs/space-age/05-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/space-age/06.jpg",
+        "thumb": "docs/space-age/06-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/space-age/07.jpg",
+        "thumb": "docs/space-age/07-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/space-age/08.jpg",
+        "thumb": "docs/space-age/08-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/space-age/09.jpg",
+        "thumb": "docs/space-age/09-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/space-age/10.jpg",
+        "thumb": "docs/space-age/10-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/space-age/11.jpg",
+        "thumb": "docs/space-age/11-t.jpg",
+        "w": 1700,
+        "h": 1203
+       }
+      ],
+      "sizeMB": 21.8
+     }
+    },
+    {
+     "title": "From One Root, Every Future",
+     "kicker": "Independent conceptual proposal for XPENG · kinetic tree",
+     "text": "The tree is not decoration. It is a spatial metaphor of evolution: root as origin and energy, central spine as intelligence, spiral roads as mobility, orbital nodes as transition, and the upper air-space as the point where movement becomes three-dimensional. Road → intelligence → physical AI → flight.",
+     "images": [
+      {
+       "src": "art/kinetic/xpeng-tree-01.jpg",
+       "thumb": "art/kinetic/xpeng-tree-01-t.jpg",
+       "w": 1496,
+       "h": 1051
+      }
+     ]
+    },
+    {
+     "title": "Automotive Tree",
+     "kicker": "Independent conceptual proposal · technological sculptural tree",
+     "text": "A sculptural tree conceived as a dialogue between automotive engineering and seasonal ritual, designed for showroom and atrium scale.",
+     "images": [
+      {
+       "src": "art/kinetic/automotive-tree-01.jpg",
+       "thumb": "art/kinetic/automotive-tree-01-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/kinetic/automotive-tree-02.jpg",
+       "thumb": "art/kinetic/automotive-tree-02-t.jpg",
+       "w": 1199,
+       "h": 1312
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "spaces",
+   "projects": [
+    {
+     "title": "Wine & Art · Vitis Vinifera",
+     "kicker": "Collectible art & lighting for wine estates, châteaux and wineries",
+     "text": "A singular sculptural object built around an old grapevine, the central and irreplaceable element of the work. Functional art and site-specific design for European wine estates.",
+     "images": [
+      {
+       "src": "docs/vitis-vinifera/01.jpg",
+       "thumb": "docs/vitis-vinifera/01-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/vitis-vinifera/03.jpg",
+       "thumb": "docs/vitis-vinifera/03-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/vitis-vinifera/04.jpg",
+       "thumb": "docs/vitis-vinifera/04-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/vitis-vinifera/05.jpg",
+       "thumb": "docs/vitis-vinifera/05-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/vitis-vinifera/06.jpg",
+       "thumb": "docs/vitis-vinifera/06-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/vitis-vinifera/07.jpg",
+       "thumb": "docs/vitis-vinifera/07-t.jpg",
+       "w": 1700,
+       "h": 1203
+      }
+     ],
+     "doc": {
+      "title": "Vitis Vinifera",
+      "pdf": "docs/vitis-vinifera.pdf",
+      "pages": [
+       {
+        "src": "docs/vitis-vinifera/01.jpg",
+        "thumb": "docs/vitis-vinifera/01-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/vitis-vinifera/02.jpg",
+        "thumb": "docs/vitis-vinifera/02-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/vitis-vinifera/03.jpg",
+        "thumb": "docs/vitis-vinifera/03-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/vitis-vinifera/04.jpg",
+        "thumb": "docs/vitis-vinifera/04-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/vitis-vinifera/05.jpg",
+        "thumb": "docs/vitis-vinifera/05-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/vitis-vinifera/06.jpg",
+        "thumb": "docs/vitis-vinifera/06-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/vitis-vinifera/07.jpg",
+        "thumb": "docs/vitis-vinifera/07-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/vitis-vinifera/08.jpg",
+        "thumb": "docs/vitis-vinifera/08-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/vitis-vinifera/09.jpg",
+        "thumb": "docs/vitis-vinifera/09-t.jpg",
+        "w": 1700,
+        "h": 1203
+       }
+      ],
+      "sizeMB": 19.2
+     }
+    },
+    {
+     "title": "Sculpting a Child’s Imagination",
+     "kicker": "Tsinandali · exhibition & outdoor sculpture space",
+     "credit": "Miranda Kuprava × Melita Iosava",
+     "text": "The adult author does not “correct” the child’s figures: proportion, movement, strange form and colour remain untouched. That raw precision is the work’s main value.",
+     "images": [
+      {
+       "src": "docs/tsinandali/01.jpg",
+       "thumb": "docs/tsinandali/01-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/tsinandali/02.jpg",
+       "thumb": "docs/tsinandali/02-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/tsinandali/03.jpg",
+       "thumb": "docs/tsinandali/03-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/tsinandali/04.jpg",
+       "thumb": "docs/tsinandali/04-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/tsinandali/05.jpg",
+       "thumb": "docs/tsinandali/05-t.jpg",
+       "w": 1700,
+       "h": 1203
+      },
+      {
+       "src": "docs/tsinandali/06.jpg",
+       "thumb": "docs/tsinandali/06-t.jpg",
+       "w": 1700,
+       "h": 1203
+      }
+     ],
+     "doc": {
+      "title": "Tsinandali",
+      "pdf": "docs/tsinandali.pdf",
+      "pages": [
+       {
+        "src": "docs/tsinandali/01.jpg",
+        "thumb": "docs/tsinandali/01-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/tsinandali/02.jpg",
+        "thumb": "docs/tsinandali/02-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/tsinandali/03.jpg",
+        "thumb": "docs/tsinandali/03-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/tsinandali/04.jpg",
+        "thumb": "docs/tsinandali/04-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/tsinandali/05.jpg",
+        "thumb": "docs/tsinandali/05-t.jpg",
+        "w": 1700,
+        "h": 1203
+       },
+       {
+        "src": "docs/tsinandali/06.jpg",
+        "thumb": "docs/tsinandali/06-t.jpg",
+        "w": 1700,
+        "h": 1203
+       }
+      ],
+      "sizeMB": 8.8
+     }
+    }
+   ]
+  },
+  {
+   "id": "functional",
+   "subsections": true,
+   "projects": [
+    {
+     "title": "Sculptural Lighting",
+     "kicker": "01 — Lighting",
+     "key": "lighting",
+     "images": [
+      {
+       "src": "art/functional/lighting-01.jpg",
+       "thumb": "art/functional/lighting-01-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/lighting-02.jpg",
+       "thumb": "art/functional/lighting-02-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/lighting-03.jpg",
+       "thumb": "art/functional/lighting-03-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/lighting-04.jpg",
+       "thumb": "art/functional/lighting-04-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/functional/lighting-05.jpg",
+       "thumb": "art/functional/lighting-05-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/lighting-06.jpg",
+       "thumb": "art/functional/lighting-06-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/lighting-07.jpg",
+       "thumb": "art/functional/lighting-07-t.jpg",
+       "w": 1024,
+       "h": 1535
+      },
+      {
+       "src": "art/functional/lighting-08.jpg",
+       "thumb": "art/functional/lighting-08-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/lighting-09.jpg",
+       "thumb": "art/functional/lighting-09-t.jpg",
+       "w": 1022,
+       "h": 1536
+      },
+      {
+       "src": "art/functional/lighting-10.jpg",
+       "thumb": "art/functional/lighting-10-t.jpg",
+       "w": 1022,
+       "h": 1536
+      },
+      {
+       "src": "art/functional/lighting-11.jpg",
+       "thumb": "art/functional/lighting-11-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/functional/lighting-12.jpg",
+       "thumb": "art/functional/lighting-12-t.jpg",
+       "w": 1402,
+       "h": 1122
+      },
+      {
+       "src": "art/functional/lighting-13.jpg",
+       "thumb": "art/functional/lighting-13-t.jpg",
+       "w": 1401,
+       "h": 1123
+      },
+      {
+       "src": "art/functional/lighting-14.jpg",
+       "thumb": "art/functional/lighting-14-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/lighting-15.jpg",
+       "thumb": "art/functional/lighting-15-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/functional/lighting-16.jpg",
+       "thumb": "art/functional/lighting-16-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/functional/lighting-17.jpg",
+       "thumb": "art/functional/lighting-17-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/functional/lighting-18.jpg",
+       "thumb": "art/functional/lighting-18-t.jpg",
+       "w": 1536,
+       "h": 1024
+      }
+     ]
+    },
+    {
+     "title": "Sculptural Chandeliers",
+     "kicker": "02 — Chandeliers",
+     "key": "chandeliers",
+     "images": [
+      {
+       "src": "art/functional/chandeliers-01.jpg",
+       "thumb": "art/functional/chandeliers-01-t.jpg",
+       "w": 837,
+       "h": 873
+      },
+      {
+       "src": "art/functional/chandeliers-02.jpg",
+       "thumb": "art/functional/chandeliers-02-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/chandeliers-03.jpg",
+       "thumb": "art/functional/chandeliers-03-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/functional/chandeliers-04.jpg",
+       "thumb": "art/functional/chandeliers-04-t.jpg",
+       "w": 1201,
+       "h": 1309
+      },
+      {
+       "src": "art/functional/chandeliers-05.jpg",
+       "thumb": "art/functional/chandeliers-05-t.jpg",
+       "w": 1449,
+       "h": 1086
+      },
+      {
+       "src": "art/functional/chandeliers-06.jpg",
+       "thumb": "art/functional/chandeliers-06-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/functional/chandeliers-07.jpg",
+       "thumb": "art/functional/chandeliers-07-t.jpg",
+       "w": 1122,
+       "h": 1402
+      }
+     ]
+    },
+    {
+     "title": "Sculptural Furniture",
+     "kicker": "03 — Furniture",
+     "key": "furniture",
+     "images": [
+      {
+       "src": "art/functional/furniture-01.jpg",
+       "thumb": "art/functional/furniture-01-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/functional/furniture-02.jpg",
+       "thumb": "art/functional/furniture-02-t.jpg",
+       "w": 933,
+       "h": 1536
+      },
+      {
+       "src": "art/functional/furniture-03.jpg",
+       "thumb": "art/functional/furniture-03-t.jpg",
+       "w": 934,
+       "h": 1536
+      },
+      {
+       "src": "art/functional/furniture-04.jpg",
+       "thumb": "art/functional/furniture-04-t.jpg",
+       "w": 933,
+       "h": 1536
+      },
+      {
+       "src": "art/functional/furniture-05.jpg",
+       "thumb": "art/functional/furniture-05-t.jpg",
+       "w": 1313,
+       "h": 1198
+      },
+      {
+       "src": "art/functional/furniture-06.jpg",
+       "thumb": "art/functional/furniture-06-t.jpg",
+       "w": 1254,
+       "h": 1254
+      },
+      {
+       "src": "art/functional/furniture-07.jpg",
+       "thumb": "art/functional/furniture-07-t.jpg",
+       "w": 1254,
+       "h": 1254
+      },
+      {
+       "src": "art/functional/furniture-08.jpg",
+       "thumb": "art/functional/furniture-08-t.jpg",
+       "w": 1402,
+       "h": 1122
+      },
+      {
+       "src": "art/functional/furniture-09.jpg",
+       "thumb": "art/functional/furniture-09-t.jpg",
+       "w": 1402,
+       "h": 1122
+      },
+      {
+       "src": "art/functional/furniture-10.jpg",
+       "thumb": "art/functional/furniture-10-t.jpg",
+       "w": 1402,
+       "h": 1122
+      },
+      {
+       "src": "art/functional/furniture-11.jpg",
+       "thumb": "art/functional/furniture-11-t.jpg",
+       "w": 1145,
+       "h": 1374
+      },
+      {
+       "src": "art/functional/furniture-12.jpg",
+       "thumb": "art/functional/furniture-12-t.jpg",
+       "w": 1536,
+       "h": 1024
+      },
+      {
+       "src": "art/functional/furniture-13.jpg",
+       "thumb": "art/functional/furniture-13-t.jpg",
+       "w": 1536,
+       "h": 1024
+      },
+      {
+       "src": "art/functional/furniture-14.jpg",
+       "thumb": "art/functional/furniture-14-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/furniture-15.jpg",
+       "thumb": "art/functional/furniture-15-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/functional/furniture-16.jpg",
+       "thumb": "art/functional/furniture-16-t.jpg",
+       "w": 1123,
+       "h": 1401
+      },
+      {
+       "src": "art/functional/furniture-17.jpg",
+       "thumb": "art/functional/furniture-17-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/furniture-18.jpg",
+       "thumb": "art/functional/furniture-18-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/furniture-19.jpg",
+       "thumb": "art/functional/furniture-19-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/functional/furniture-20.jpg",
+       "thumb": "art/functional/furniture-20-t.jpg",
+       "w": 1054,
+       "h": 1493
+      }
+     ]
+    },
+    {
+     "title": "Balenciaga Paper Lights",
+     "kicker": "04 — Paper & Light",
+     "key": "paper",
+     "text": "Sculptural lighting objects created from original Balenciaga paper. The material is neither painted nor recolored; its existing graphic language becomes part of the artwork.",
+     "images": [
+      {
+       "src": "art/functional/balenciaga-paper-01.jpg",
+       "thumb": "art/functional/balenciaga-paper-01-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/functional/balenciaga-paper-02.jpg",
+       "thumb": "art/functional/balenciaga-paper-02-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/functional/balenciaga-paper-03.jpg",
+       "thumb": "art/functional/balenciaga-paper-03-t.jpg",
+       "w": 1156,
+       "h": 1360
+      },
+      {
+       "src": "art/functional/balenciaga-paper-04.jpg",
+       "thumb": "art/functional/balenciaga-paper-04-t.jpg",
+       "w": 1103,
+       "h": 1426
+      },
+      {
+       "src": "art/functional/balenciaga-paper-05.jpg",
+       "thumb": "art/functional/balenciaga-paper-05-t.jpg",
+       "w": 1143,
+       "h": 1376
+      },
+      {
+       "src": "art/functional/balenciaga-paper-06.jpg",
+       "thumb": "art/functional/balenciaga-paper-06-t.jpg",
+       "w": 1500,
+       "h": 2000
+      },
+      {
+       "src": "art/functional/balenciaga-paper-07.jpg",
+       "thumb": "art/functional/balenciaga-paper-07-t.jpg",
+       "w": 1622,
+       "h": 2000
+      },
+      {
+       "src": "art/functional/balenciaga-paper-08.jpg",
+       "thumb": "art/functional/balenciaga-paper-08-t.jpg",
+       "w": 1170,
+       "h": 1431
+      },
+      {
+       "src": "art/functional/balenciaga-paper-09.jpg",
+       "thumb": "art/functional/balenciaga-paper-09-t.jpg",
+       "w": 924,
+       "h": 2000
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "brand",
+   "projects": [
+    {
+     "title": "Merani",
+     "kicker": "Independent conceptual proposal · Ferrari × Georgian Romanticism",
+     "text": "Every great design begins with an emotion. An original concept and hand-sculpted model uniting the language of Ferrari design with the Georgian poem “Merani”.",
+     "images": [
+      {
+       "src": "docs/merani/01.jpg",
+       "thumb": "docs/merani/01-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/merani/03.jpg",
+       "thumb": "docs/merani/03-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/merani/05.jpg",
+       "thumb": "docs/merani/05-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/merani/07.jpg",
+       "thumb": "docs/merani/07-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/merani/10.jpg",
+       "thumb": "docs/merani/10-t.jpg",
+       "w": 1203,
+       "h": 1700
+      },
+      {
+       "src": "docs/merani/11.jpg",
+       "thumb": "docs/merani/11-t.jpg",
+       "w": 1203,
+       "h": 1700
+      }
+     ],
+     "doc": {
+      "title": "Merani",
+      "pdf": "docs/merani.pdf",
+      "pages": [
+       {
+        "src": "docs/merani/01.jpg",
+        "thumb": "docs/merani/01-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/02.jpg",
+        "thumb": "docs/merani/02-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/03.jpg",
+        "thumb": "docs/merani/03-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/04.jpg",
+        "thumb": "docs/merani/04-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/05.jpg",
+        "thumb": "docs/merani/05-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/06.jpg",
+        "thumb": "docs/merani/06-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/07.jpg",
+        "thumb": "docs/merani/07-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/08.jpg",
+        "thumb": "docs/merani/08-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/09.jpg",
+        "thumb": "docs/merani/09-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/10.jpg",
+        "thumb": "docs/merani/10-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/11.jpg",
+        "thumb": "docs/merani/11-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/12.jpg",
+        "thumb": "docs/merani/12-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/13.jpg",
+        "thumb": "docs/merani/13-t.jpg",
+        "w": 1203,
+        "h": 1700
+       },
+       {
+        "src": "docs/merani/14.jpg",
+        "thumb": "docs/merani/14-t.jpg",
+        "w": 1203,
+        "h": 1700
+       }
+      ],
+      "sizeMB": 7.1
+     }
+    },
+    {
+     "title": "Wendy's / China",
+     "kicker": "Independent conceptual proposal · from packaging to papier-mâché",
+     "text": "Ecological, educational and functional art: used Wendy's paper is collected, transformed into papier-mâché and returned to the restaurants as tables, lamps and public art.",
+     "images": [
+      {
+       "src": "docs/wendy-s-china/01.jpg",
+       "thumb": "docs/wendy-s-china/01-t.jpg",
+       "w": 1700,
+       "h": 957
+      },
+      {
+       "src": "docs/wendy-s-china/03.jpg",
+       "thumb": "docs/wendy-s-china/03-t.jpg",
+       "w": 1700,
+       "h": 957
+      },
+      {
+       "src": "docs/wendy-s-china/05.jpg",
+       "thumb": "docs/wendy-s-china/05-t.jpg",
+       "w": 1700,
+       "h": 957
+      },
+      {
+       "src": "docs/wendy-s-china/07.jpg",
+       "thumb": "docs/wendy-s-china/07-t.jpg",
+       "w": 1700,
+       "h": 957
+      },
+      {
+       "src": "docs/wendy-s-china/09.jpg",
+       "thumb": "docs/wendy-s-china/09-t.jpg",
+       "w": 1700,
+       "h": 957
+      }
+     ],
+     "doc": {
+      "title": "Wendy's China",
+      "pdf": "docs/wendy-s-china.pdf",
+      "pages": [
+       {
+        "src": "docs/wendy-s-china/01.jpg",
+        "thumb": "docs/wendy-s-china/01-t.jpg",
+        "w": 1700,
+        "h": 957
+       },
+       {
+        "src": "docs/wendy-s-china/02.jpg",
+        "thumb": "docs/wendy-s-china/02-t.jpg",
+        "w": 1700,
+        "h": 957
+       },
+       {
+        "src": "docs/wendy-s-china/03.jpg",
+        "thumb": "docs/wendy-s-china/03-t.jpg",
+        "w": 1700,
+        "h": 957
+       },
+       {
+        "src": "docs/wendy-s-china/04.jpg",
+        "thumb": "docs/wendy-s-china/04-t.jpg",
+        "w": 1700,
+        "h": 957
+       },
+       {
+        "src": "docs/wendy-s-china/05.jpg",
+        "thumb": "docs/wendy-s-china/05-t.jpg",
+        "w": 1700,
+        "h": 957
+       },
+       {
+        "src": "docs/wendy-s-china/06.jpg",
+        "thumb": "docs/wendy-s-china/06-t.jpg",
+        "w": 1700,
+        "h": 957
+       },
+       {
+        "src": "docs/wendy-s-china/07.jpg",
+        "thumb": "docs/wendy-s-china/07-t.jpg",
+        "w": 1700,
+        "h": 957
+       },
+       {
+        "src": "docs/wendy-s-china/08.jpg",
+        "thumb": "docs/wendy-s-china/08-t.jpg",
+        "w": 1700,
+        "h": 957
+       },
+       {
+        "src": "docs/wendy-s-china/09.jpg",
+        "thumb": "docs/wendy-s-china/09-t.jpg",
+        "w": 1700,
+        "h": 957
+       },
+       {
+        "src": "docs/wendy-s-china/10.jpg",
+        "thumb": "docs/wendy-s-china/10-t.jpg",
+        "w": 1700,
+        "h": 957
+       },
+       {
+        "src": "docs/wendy-s-china/11.jpg",
+        "thumb": "docs/wendy-s-china/11-t.jpg",
+        "w": 1700,
+        "h": 957
+       }
+      ],
+      "sizeMB": 23.1
+     }
+    }
+   ]
+  },
+  {
+   "id": "melita",
+   "projects": [
+    {
+     "title": "Drawings made real",
+     "kicker": "Miranda Kuprava × Melita Iosava",
+     "credit": "Ideas and drawings: Melita Iosava · Artworks: Miranda Kuprava",
+     "images": [
+      {
+       "src": "art/melita/melita-01.jpg",
+       "thumb": "art/melita/melita-01-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/melita/melita-02.jpg",
+       "thumb": "art/melita/melita-02-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/melita/melita-03.jpg",
+       "thumb": "art/melita/melita-03-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/melita/melita-04.jpg",
+       "thumb": "art/melita/melita-04-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/melita/melita-05.jpg",
+       "thumb": "art/melita/melita-05-t.jpg",
+       "w": 1536,
+       "h": 1024
+      },
+      {
+       "src": "art/melita/melita-06.jpg",
+       "thumb": "art/melita/melita-06-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/melita/melita-07.jpg",
+       "thumb": "art/melita/melita-07-t.jpg",
+       "w": 1402,
+       "h": 1122
+      },
+      {
+       "src": "art/melita/melita-08.jpg",
+       "thumb": "art/melita/melita-08-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/melita/melita-09.jpg",
+       "thumb": "art/melita/melita-09-t.jpg",
+       "w": 1536,
+       "h": 1024
+      },
+      {
+       "src": "art/melita/melita-10.jpg",
+       "thumb": "art/melita/melita-10-t.jpg",
+       "w": 1145,
+       "h": 1374
+      },
+      {
+       "src": "art/melita/melita-11.jpg",
+       "thumb": "art/melita/melita-11-t.jpg",
+       "w": 1254,
+       "h": 1254
+      },
+      {
+       "src": "art/melita/melita-12.jpg",
+       "thumb": "art/melita/melita-12-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/melita/melita-13.jpg",
+       "thumb": "art/melita/melita-13-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/melita/melita-14.jpg",
+       "thumb": "art/melita/melita-14-t.jpg",
+       "w": 1122,
+       "h": 1402
+      },
+      {
+       "src": "art/melita/melita-15.jpg",
+       "thumb": "art/melita/melita-15-t.jpg",
+       "w": 1448,
+       "h": 1086
+      },
+      {
+       "src": "art/melita/melita-16.jpg",
+       "thumb": "art/melita/melita-16-t.jpg",
+       "w": 1254,
+       "h": 1254
+      },
+      {
+       "src": "art/melita/melita-17.jpg",
+       "thumb": "art/melita/melita-17-t.jpg",
+       "w": 1152,
+       "h": 1536
+      },
+      {
+       "src": "art/melita/melita-18.jpg",
+       "thumb": "art/melita/melita-18-t.jpg",
+       "w": 934,
+       "h": 1536
+      },
+      {
+       "src": "art/melita/melita-19.jpg",
+       "thumb": "art/melita/melita-19-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/melita/melita-20.jpg",
+       "thumb": "art/melita/melita-20-t.jpg",
+       "w": 1200,
+       "h": 900
+      },
+      {
+       "src": "art/melita/melita-21.jpg",
+       "thumb": "art/melita/melita-21-t.jpg",
+       "w": 1179,
+       "h": 1334
+      },
+      {
+       "src": "art/melita/melita-22.jpg",
+       "thumb": "art/melita/melita-22-t.jpg",
+       "w": 1254,
+       "h": 1254
+      },
+      {
+       "src": "art/melita/melita-23.jpg",
+       "thumb": "art/melita/melita-23-t.jpg",
+       "w": 1536,
+       "h": 1024
+      },
+      {
+       "src": "art/melita/melita-24.jpg",
+       "thumb": "art/melita/melita-24-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/melita/melita-25.jpg",
+       "thumb": "art/melita/melita-25-t.jpg",
+       "w": 1536,
+       "h": 1024
+      },
+      {
+       "src": "art/melita/melita-26.jpg",
+       "thumb": "art/melita/melita-26-t.jpg",
+       "w": 1402,
+       "h": 1122
+      },
+      {
+       "src": "art/melita/melita-27.jpg",
+       "thumb": "art/melita/melita-27-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/melita/melita-28.jpg",
+       "thumb": "art/melita/melita-28-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/melita/melita-29.jpg",
+       "thumb": "art/melita/melita-29-t.jpg",
+       "w": 1170,
+       "h": 1563
+      },
+      {
+       "src": "art/melita/melita-30.jpg",
+       "thumb": "art/melita/melita-30-t.jpg",
+       "w": 1170,
+       "h": 1709
+      },
+      {
+       "src": "art/melita/melita-31.jpg",
+       "thumb": "art/melita/melita-31-t.jpg",
+       "w": 1170,
+       "h": 1541
+      },
+      {
+       "src": "art/melita/melita-32.jpg",
+       "thumb": "art/melita/melita-32-t.jpg",
+       "w": 1170,
+       "h": 1691
+      },
+      {
+       "src": "art/melita/melita-33.jpg",
+       "thumb": "art/melita/melita-33-t.jpg",
+       "w": 1170,
+       "h": 1720
+      },
+      {
+       "src": "art/melita/melita-34.jpg",
+       "thumb": "art/melita/melita-34-t.jpg",
+       "w": 1170,
+       "h": 1697
+      },
+      {
+       "src": "art/melita/melita-35.jpg",
+       "thumb": "art/melita/melita-35-t.jpg",
+       "w": 821,
+       "h": 1663
+      },
+      {
+       "src": "art/melita/melita-36.jpg",
+       "thumb": "art/melita/melita-36-t.jpg",
+       "w": 1170,
+       "h": 1524
+      },
+      {
+       "src": "art/melita/melita-37.jpg",
+       "thumb": "art/melita/melita-37-t.jpg",
+       "w": 1153,
+       "h": 2000
+      }
+     ]
+    },
+    {
+     "title": "Also with Melita",
+     "kicker": "Projects that began with Melita’s drawings",
+     "text": "Children's Park of Imagination (Shanghai) and Pinocchios' Library (New York) in Public Art, the Tsinandali exhibition in Spaces & Worlds, and The Deafening Silence, which grew from Melita’s drawing Freedom, in Competitions / Submissions.",
+     "images": [
+      {
+       "src": "docs/children-s-park-of-imagination/01.jpg",
+       "thumb": "docs/children-s-park-of-imagination/01-t.jpg",
+       "w": 1700,
+       "h": 1063
+      },
+      {
+       "src": "docs/pinocchios-library/01.jpg",
+       "thumb": "docs/pinocchios-library/01-t.jpg",
+       "w": 1700,
+       "h": 1010
+      },
+      {
+       "src": "docs/tsinandali/01.jpg",
+       "thumb": "docs/tsinandali/01-t.jpg",
+       "w": 1700,
+       "h": 1203
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "competitions",
+   "projects": [
+    {
+     "title": "The Man Who Was a Shadow",
+     "kicker": "Light sculpture · submitted to Amsterdam Light Festival, Edition 16, 2027–2028",
+     "text": "A bronze-toned figure whose head is a lamp: he lights the street for others while his own face stays in shadow.",
+     "images": [
+      {
+       "src": "art/competitions/man-who-was-a-shadow-01.jpg",
+       "thumb": "art/competitions/man-who-was-a-shadow-01-t.jpg",
+       "w": 1672,
+       "h": 941
+      },
+      {
+       "src": "art/competitions/man-who-was-a-shadow-02.jpg",
+       "thumb": "art/competitions/man-who-was-a-shadow-02-t.jpg",
+       "w": 924,
+       "h": 2000
+      },
+      {
+       "src": "art/competitions/man-who-was-a-shadow-03.jpg",
+       "thumb": "art/competitions/man-who-was-a-shadow-03-t.jpg",
+       "w": 1024,
+       "h": 1536
+      },
+      {
+       "src": "art/competitions/man-who-was-a-shadow-04.jpg",
+       "thumb": "art/competitions/man-who-was-a-shadow-04-t.jpg",
+       "w": 1024,
+       "h": 1536
+      }
+     ]
+    },
+    {
+     "title": "The Deafening Silence",
+     "kicker": "Public art / light & sound installation · competition submission, Germany, 2026",
+     "credit": "Concept & artistic direction: Miranda Kuprava · Original inspiration: Melita Iosava’s drawing Freedom",
+     "text": "Dedicated to the children affected by the war in Ukraine. Child-sized, faceless figures stand within a field of light, each holding a balloon. Made from unpainted fiberglass, all visible colour is created by light. The installation unfolds in three acts: everyday city life, the sudden interruption of an air-raid siren, and finally silence accompanied by Mahler’s Kindertotenlieder.",
+     "images": [
+      {
+       "src": "docs/the-deafening-silence/01.jpg",
+       "thumb": "docs/the-deafening-silence/01-t.jpg",
+       "w": 1700,
+       "h": 1134
+      },
+      {
+       "src": "docs/the-deafening-silence/02.jpg",
+       "thumb": "docs/the-deafening-silence/02-t.jpg",
+       "w": 1700,
+       "h": 1134
+      },
+      {
+       "src": "docs/the-deafening-silence/03.jpg",
+       "thumb": "docs/the-deafening-silence/03-t.jpg",
+       "w": 1700,
+       "h": 1134
+      },
+      {
+       "src": "docs/the-deafening-silence/04.jpg",
+       "thumb": "docs/the-deafening-silence/04-t.jpg",
+       "w": 1700,
+       "h": 1134
+      },
+      {
+       "src": "docs/the-deafening-silence/05.jpg",
+       "thumb": "docs/the-deafening-silence/05-t.jpg",
+       "w": 1700,
+       "h": 1134
+      },
+      {
+       "src": "docs/the-deafening-silence/06.jpg",
+       "thumb": "docs/the-deafening-silence/06-t.jpg",
+       "w": 1700,
+       "h": 1134
+      },
+      {
+       "src": "docs/the-deafening-silence/07.jpg",
+       "thumb": "docs/the-deafening-silence/07-t.jpg",
+       "w": 1700,
+       "h": 1134
+      },
+      {
+       "src": "docs/the-deafening-silence/08.jpg",
+       "thumb": "docs/the-deafening-silence/08-t.jpg",
+       "w": 1700,
+       "h": 1134
+      },
+      {
+       "src": "docs/the-deafening-silence/09.jpg",
+       "thumb": "docs/the-deafening-silence/09-t.jpg",
+       "w": 1700,
+       "h": 1134
+      },
+      {
+       "src": "docs/the-deafening-silence/10.jpg",
+       "thumb": "docs/the-deafening-silence/10-t.jpg",
+       "w": 1700,
+       "h": 1134
+      }
+     ],
+     "doc": {
+      "title": "The Deafening Silence",
+      "pdf": "docs/the-deafening-silence.pdf",
+      "pages": [
+       {
+        "src": "docs/the-deafening-silence/01.jpg",
+        "thumb": "docs/the-deafening-silence/01-t.jpg",
+        "w": 1700,
+        "h": 1134
+       },
+       {
+        "src": "docs/the-deafening-silence/02.jpg",
+        "thumb": "docs/the-deafening-silence/02-t.jpg",
+        "w": 1700,
+        "h": 1134
+       },
+       {
+        "src": "docs/the-deafening-silence/03.jpg",
+        "thumb": "docs/the-deafening-silence/03-t.jpg",
+        "w": 1700,
+        "h": 1134
+       },
+       {
+        "src": "docs/the-deafening-silence/04.jpg",
+        "thumb": "docs/the-deafening-silence/04-t.jpg",
+        "w": 1700,
+        "h": 1134
+       },
+       {
+        "src": "docs/the-deafening-silence/05.jpg",
+        "thumb": "docs/the-deafening-silence/05-t.jpg",
+        "w": 1700,
+        "h": 1134
+       },
+       {
+        "src": "docs/the-deafening-silence/06.jpg",
+        "thumb": "docs/the-deafening-silence/06-t.jpg",
+        "w": 1700,
+        "h": 1134
+       },
+       {
+        "src": "docs/the-deafening-silence/07.jpg",
+        "thumb": "docs/the-deafening-silence/07-t.jpg",
+        "w": 1700,
+        "h": 1134
+       },
+       {
+        "src": "docs/the-deafening-silence/08.jpg",
+        "thumb": "docs/the-deafening-silence/08-t.jpg",
+        "w": 1700,
+        "h": 1134
+       },
+       {
+        "src": "docs/the-deafening-silence/09.jpg",
+        "thumb": "docs/the-deafening-silence/09-t.jpg",
+        "w": 1700,
+        "h": 1134
+       },
+       {
+        "src": "docs/the-deafening-silence/10.jpg",
+        "thumb": "docs/the-deafening-silence/10-t.jpg",
+        "w": 1700,
+        "h": 1134
+       }
+      ],
+      "sizeMB": 13.9
+     }
+    }
+   ]
+  }
+ ],
+ "intro": {
+  "src": "art/kinetic/merani-hero.jpg",
+  "thumb": "art/kinetic/merani-hero-t.jpg",
+  "w": 1402,
+  "h": 1122
+ }
+}

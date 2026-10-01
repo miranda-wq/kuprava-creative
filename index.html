@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KUPRAVA CREATIVE · Miranda Kuprava</title>
+  <meta name="description" content="KUPRAVA CREATIVE, the studio of artist Miranda Kuprava: sculpture, kinetic and automotive works, brand concepts, functional art, works with Melita, spaces & worlds and public art. Time is another material. Reality is editable." />
+  <meta name="theme-color" content="#030102" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Serif+Georgian:wght@300;400&family=Noto+Sans+Georgian:wght@300;400&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <div class="loader" aria-hidden="true">
+    <div class="loader-k">K</div>
+    <div class="loader-line"><i></i></div>
+  </div>
+
+  <header class="topbar">
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a class="brand-mini" href="#top" aria-label="KUPRAVA CREATIVE">KUPRAVA <em>CREATIVE</em></a>
+    <nav class="langs" aria-label="Language">
+      <button data-lang="en">EN</button><button data-lang="ge">GE</button><button data-lang="fr">FR</button><button data-lang="jp">JP</button>
+    </nav>
+  </header>
+
+  <nav class="menu" aria-hidden="true">
+    <div class="menu-inner">
+      <ol class="menu-list"></ol>
+      <div class="menu-side">
+        <div class="menu-preview"><img alt="" /></div>
+        <div class="menu-contact">
+          <div class="mc-label" data-i18n="contact"></div>
+          <a href="mailto:miranda@kupravacreative.com">miranda@kupravacreative.com</a>
+          <div class="mc-name">Miranda Kuprava</div>
+          <div class="mc-role" data-i18n="founder"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="stage">
+        <svg class="hero-svg" viewBox="0 0 1600 900" aria-hidden="true"></svg>
+        <div class="nodes"></div>
+        <div class="hero-text">
+          <div class="creative" data-i18n="creative">CREATIVE</div>
+          <div class="rule"></div>
+          <p class="tagline"><span class="tl1"></span><span class="tl2"></span></p>
+        </div>
+      </div>
+      <a class="explore" href="#sculpture"><span data-i18n="explore">Explore</span><i class="arrow"></i></a>
+      <h1 class="sr-only">KUPRAVA CREATIVE · Miranda Kuprava</h1>
+      <ul class="orbit-list"></ul>
+    </section>
+
+    <div id="sections"></div>
+  </main>
+
+  <aside class="rail" aria-hidden="true"><div class="rail-line"><i></i></div><ul></ul></aside>
+
+  <footer class="footer">
+    <div class="footer-k">K</div>
+    <p class="footer-tag"><span class="tl1"></span> <span class="tl2"></span></p>
+    <a class="footer-mail" href="mailto:miranda@kupravacreative.com">miranda@kupravacreative.com</a>
+    <div class="footer-meta">© 2026 KUPRAVA CREATIVE · Miranda Kuprava · Tbilisi</div>
+    <a class="footer-top" href="#top" data-i18n="back">Back to the universe</a>
+  </footer>
+
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="lb-top">
+      <div class="lb-title"><span class="lb-kicker"></span><span class="lb-name"></span></div>
+      <div class="lb-actions">
+        <a class="lb-pdf" target="_blank" rel="noopener" download></a>
+        <span class="lb-count"></span>
+        <button class="lb-close" aria-label="Close">×</button>
+      </div>
+    </div>
+    <button class="lb-prev" aria-label="Previous"><i></i></button>
+    <figure class="lb-fig"><img alt="" /></figure>
+    <button class="lb-next" aria-label="Next"><i></i></button>
+    <div class="lb-strip"></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
