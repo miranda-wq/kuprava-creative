@@ -21,6 +21,7 @@ Then open http://localhost:5173. `npm run build` writes a static site to `dist/`
 - `src/content.json` – which works go in which section (generated).
 - `tools/build_assets.py` – regenerates the two above from `source/`. Edit the section lists there, then run `python tools/build_assets.py` (needs Pillow and PyMuPDF).
 - `src/i18n.js` – EN / GE / FR / JP text.
+- `src/hero.js` – the home page, drawn in the pixel coordinates of Miranda's reference image (1672 × 941): the thread-woven K, staircase, orbits, construction lines, painted moons and the ten planet links. `src/cosmos.js` is the galaxy behind it.
 - `src/intro.js` – the opening scene (WebGL shader over the Merani render, 2D canvas fallback). Its timing comes from `src/engine-timeline.js`, which the sound is built from too, so picture and engine stay in step.
 - `public/audio/merani-engine.mp3` – the opening sound, rendered by `node tools/build_engine_audio.mjs <sprite.m4a> <sprite.json>` (needs ffmpeg; see the file for where the recording comes from).
 
@@ -62,3 +63,4 @@ Decisions made without her input (worth confirming):
 - Emails with only photos (colour rabbits, ceramic rabbits, chairs/chandeliers) were placed by subject.
 - Public Art holds Children's Park (Shanghai) and Pinocchios' Library (NYC); Spaces & Worlds holds Wine & Art and Tsinandali.
 - GE / FR / JP translations are drafts to proofread.
+- The reference shows seven planets; the three she named later (Outdoor Objects, Christmas Trees, Competitions / Submissions) sit on the reference's unlabelled moons and one new spot at the lower left.
