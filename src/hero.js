@@ -119,19 +119,19 @@ const ORBITS = [
 
 // Miranda's ten planets, placed as in the reference (the three she added later take its unlabelled moons)
 const NODES = [
-  { id: 'sculpture', x: 832, y: 70, d: 28, side: 'right', orbit: 2, line: true, dy: -4, tone: 'hot' },
-  { id: 'kinetic', x: 1226, y: 137, d: 30, side: 'right', orbit: 0, line: true, dy: -10 },
-  { id: 'christmas', x: 1358, y: 278, d: 42, side: 'right', orbit: 0, wrap: true, line: true, dy: 4, tone: 'grey' },
-  { id: 'brand', x: 1467, y: 354, d: 24, side: 'right', orbit: 2, wrap: true, line: true, dy: 8, tone: 'red' },
-  { id: 'functional', x: 1282, y: 641, d: 32, side: 'right', orbit: 0, line: true, dash: true },
-  { id: 'public', x: 417, y: 185, d: 24, side: 'left', orbit: 2, line: true, tone: 'hot' },
+  { id: 'sculpture', x: 832, y: 70, d: 28, side: 'right', orbit: 2, dy: -4, tone: 'hot' },
+  { id: 'kinetic', x: 1226, y: 137, d: 30, side: 'right', orbit: 0, dy: -10 },
+  { id: 'christmas', x: 1358, y: 278, d: 42, side: 'right', orbit: 0, wrap: true, dy: 4, tone: 'grey' },
+  { id: 'brand', x: 1467, y: 354, d: 24, side: 'right', orbit: 2, wrap: true, dy: 8, tone: 'red' },
+  { id: 'functional', x: 1282, y: 641, d: 32, side: 'right', orbit: 0, dash: true },
+  { id: 'public', x: 417, y: 185, d: 24, side: 'left', orbit: 2, tone: 'hot' },
   { id: 'spaces', x: 340, y: 400, d: 24, side: 'left', orbit: 0, wrap: true, dash: true, dy: 10, tone: 'red' },
   { id: 'competitions', x: 483, y: 483, d: 34, side: 'left', orbit: 3, wrap: true, dy: 10 },
-  { id: 'contact', x: 378, y: 628, d: 40, side: 'left', orbit: 0, dy: 24 },
+  { id: 'contact', x: 378, y: 628, d: 40, side: 'left', orbit: 0 },
   { id: 'outdoor', x: 548, y: 772, d: 26, side: 'left', orbit: 1, wrap: true, dy: 8, tone: 'grey' },
 ];
 const MOONS = [
-  { id: 'melita', x: 1240, y: 480, d: 142, tone: 'big', side: 'left', orbit: 0, wrap: true },
+  { id: 'melita', x: 1240, y: 480, d: 142, tone: 'big', side: 'right', orbit: 0, wrap: true },
   { x: 398, y: 362, d: 11, tone: 'grey' },
   { x: 1582, y: 262, d: 6, tone: 'red' },
 ];
@@ -341,7 +341,7 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
     const p0 = onEllipse(o, base);
     const off = { x: n.x - p0.x, y: n.y - p0.y };
     const a = document.createElement('a');
-    a.className = `node node-${n.side}${n.wrap ? ' node-wrap' : ''}${n.line ? ' has-line' : ''}${n.dash ? ' has-dash' : ''}`;
+    a.className = `node node-${n.side}${n.wrap ? ' node-wrap' : ''}${n.dash ? ' has-dash' : ''}`;
     a.href = `#${n.id}`;
     a.style.setProperty('--d', n.d);
     a.style.setProperty('--dy', n.dy || 0);

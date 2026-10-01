@@ -197,9 +197,9 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 .label { position: absolute; top: calc(var(--dy) * var(--u)); transform: translateY(-50%); display: grid; gap: calc(13 * var(--u)); white-space: nowrap; }
 .label b { font-family: 'Cormorant Garamond', var(--serif); font-weight: 600; font-size: max(9px, calc(14.2 * var(--u))); line-height: 1.32; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(226, 226, 224, 0.92); transition: color 0.4s, text-shadow 0.4s, letter-spacing 0.6s var(--ease); }
 body[data-lang='ge'] .label b, body[data-lang='jp'] .label b { font-family: var(--sans); font-weight: 400; letter-spacing: 0.14em; }
-.label i { display: none; height: 1px; width: calc(32 * var(--u)); background: rgba(255, 244, 240, 0.5); transition: width 0.6s var(--ease), background 0.4s; }
-.has-line .label i { display: block; }
+.label i { display: block; height: 1px; width: calc(32 * var(--u)); background: rgba(255, 244, 240, 0.5); transition: width 0.6s var(--ease), background 0.4s; }
 .node-right .label { left: calc((var(--d) / 2 + 18) * var(--u)); }
+.node-right .moon-big + .label { transition: left 0.6s var(--ease); }
 .node-left .label { right: calc((var(--d) / 2 + 18) * var(--u)); text-align: right; justify-items: end; }
 .node-right.has-dash .label { left: calc((var(--d) / 2 + 27) * var(--u)); }
 .node-left.has-dash .label { right: calc((var(--d) / 2 + 22) * var(--u)); }
@@ -208,6 +208,7 @@ body[data-lang='ge'] .label b, body[data-lang='jp'] .label b { font-family: var(
 .node-right.has-dash::before { left: calc((var(--d) / 2 + 3) * var(--u)); }
 .node-left.has-dash::before { right: calc((var(--d) / 2 + 3) * var(--u)); }
 .node:hover .moon, .node:focus-visible .moon { transform: translate(-50%, -50%) scale(1.35); filter: brightness(1.25) drop-shadow(0 0 8px rgba(255, 43, 43, 0.8)); }
+.node-right:hover .moon-big + .label, .node-right:focus-visible .moon-big + .label { left: calc((var(--d) * 1.35 / 2 + 18) * var(--u)); }
 .node:hover .label b, .node:focus-visible .label b { color: #fff; text-shadow: var(--glow); letter-spacing: 0.4em; }
 .node:hover .label i, .node:focus-visible .label i { width: calc(64 * var(--u)); background: var(--red); box-shadow: var(--glow); }
 .node:focus-visible { outline: none; }
