@@ -146,6 +146,10 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 .ready .k-layer { animation: kDraw 2.8s cubic-bezier(0.6, 0.05, 0.3, 1) 0.4s forwards; }
 @keyframes kDraw { 30% { opacity: 1; } to { opacity: 1; clip-path: inset(0 0 0 0); } }
 .arm path { stroke-width: 0.8; vector-effect: non-scaling-stroke; }
+.arm-line { fill: none; stroke: rgba(255, 46, 32, 0.85); stroke-width: 0.9; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 2px rgba(255, 30, 20, 0.9)); opacity: 0; }
+.arm-tail { fill: none; stroke: rgba(255, 236, 232, 0.45); stroke-width: 0.8; vector-effect: non-scaling-stroke; opacity: 0; }
+.ready .arm-line, .ready .arm-tail { animation: fadeIn 1.4s 2s forwards; }
+.construct line.cap-line { stroke: url(#capFade); stroke-width: 1.3; filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 6px rgba(255, 60, 50, 0.5)); }
 .arm, .arm-glow { opacity: 0; }
 .arm-glow { filter: blur(calc(var(--u) * 7)) brightness(1.4) saturate(1.3); }
 .ready .arm { animation: fadeIn 1.2s 1.4s forwards; }
