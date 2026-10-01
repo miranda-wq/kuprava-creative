@@ -214,7 +214,7 @@ body[data-lang='ge'] .label b, body[data-lang='jp'] .label b { font-family: var(
 .node:focus-visible { outline: none; }
 
 /* hero text */
-.hero-text { position: absolute; left: 0; right: 0; top: 75.2%; display: grid; justify-items: center; text-align: center; opacity: 0; transform: translateY(14px); transition: opacity 1.4s var(--ease) 3.4s, transform 1.4s var(--ease) 3.4s; }
+.hero-text { position: absolute; left: 0; right: 0; top: 75.2%; display: grid; justify-items: center; text-align: center; pointer-events: none; opacity: 0; transform: translateY(14px); transition: opacity 1.4s var(--ease) 3.4s, transform 1.4s var(--ease) 3.4s; }
 .ready .hero-text { opacity: 1; transform: none; }
 .creative { font-family: 'Jost', sans-serif; font-weight: 300; font-size: max(13px, calc(22 * var(--u))); line-height: 1.6; letter-spacing: 1.02em; margin-right: -1.02em; color: #e8e8e6; }
 .rule { width: calc(36 * var(--u)); height: 1px; background: rgba(255, 244, 240, 0.75); margin: calc(10 * var(--u)) 0 calc(15 * var(--u)); }
