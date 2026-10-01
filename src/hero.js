@@ -1,32 +1,79 @@
-// The hero emblem: a glowing serif K woven from fine threads, KUPRAVA climbing
-// its diagonal like a staircase, and the seven sections as orbiting nodes.
+// The home page, after Miranda's reference image: her K, framed by
+// construction lines, orbits and moons, with her ten planets as links.
+// Coordinates are pixels of the reference image, 1672 × 941.
+import { drawThreads } from './k-threads.js';
+
 const NS = 'http://www.w3.org/2000/svg';
+const W = 1672, H = 941;
 const el = (tag, attrs = {}, parent) => {
   const n = document.createElementNS(NS, tag);
   for (const k in attrs) n.setAttribute(k, attrs[k]);
   if (parent) parent.appendChild(n);
   return n;
 };
+const f1 = (n) => Math.round(n * 10) / 10;
 
-// Orbits the nodes travel along (viewBox 1600×900)
+/* ---------------------------------------------------------------- the K */
+// The K's threads are traced from the reference (tools/trace_k.py) and drawn by
+// k-threads.js; the arm and the KUPRAVA staircase are drawn here, on top of them.
+// the arm and its staircase
+const ARM = { x0: 808, y0: 497, slope: 0.88 }; // starts under the U, as in the reference
+const armY = (x) => ARM.y0 - ARM.slope * (x - ARM.x0);
+const STEPS = { x: 806, y: 458, w: 46, h: 40.5 };
+const LETTERS = ['U', 'P', 'R', 'A', 'V', 'A'];
+
+function drawArm(svg) {
+  const k = el('g', { class: 'k' }, svg);
+
+  // arm: a dark band that hides what runs behind it
+  const x1 = STEPS.x + STEPS.w * LETTERS.length;
+  el('path', { class: 'arm', d: `M${ARM.x0},${ARM.y0} L${x1},${f1(armY(x1))} L${x1 + 22},${f1(armY(x1))} L${x1 + 18},${f1(armY(x1) + 7)} L${ARM.x0 + 12},${ARM.y0 + 10} Z` }, k);
+  el('path', { class: 'arm-under', d: `M${ARM.x0 + 12},${ARM.y0 + 10} L${x1 + 18},${f1(armY(x1) + 7)}` }, k);
+
+  // staircase: blocks, treads and the letters of KUPRAVA
+  const stairs = el('g', { class: 'stairs' }, svg);
+  let prof = '';
+  LETTERS.forEach((ch, i) => {
+    const xl = STEPS.x + STEPS.w * i, xr = xl + STEPS.w, y = STEPS.y - STEPS.h * i;
+    el('path', { class: 'step-face', d: `M${xl},${y} L${xr},${y} L${xr},${f1(Math.max(y, armY(xr)))} L${xl},${f1(armY(xl))} Z` }, stairs);
+    prof += `${i ? 'L' : `M${xl},${f1(armY(xl))} L`}${xl},${y} L${xr},${y} `;
+    const g = el('g', { class: 'step', style: `--i:${i}` }, stairs);
+    el('text', { class: 'step-letter', x: xl + STEPS.w * 0.47, y: y - 3, 'text-anchor': 'middle' }, g).textContent = ch;
+    el('circle', { class: 'step-glint', cx: xl, cy: y, r: 2 }, g);
+  });
+  const yTop = STEPS.y - STEPS.h * (LETTERS.length - 1);
+  prof += `L${x1 + 30},${f1(yTop)}`;
+  el('path', { class: 'step-path', d: prof, pathLength: 1 }, stairs);
+  el('circle', { class: 'step-spark', cx: x1 + 34, cy: f1(yTop + 1), r: 3 }, stairs);
+}
+
+/* ---------------------------------------------------------------- orbits, construction, sparks */
 const ORBITS = [
-  { cx: 800, cy: 400, rx: 520, ry: 335, rot: -6 },
-  { cx: 805, cy: 395, rx: 690, ry: 250, rot: 9 },
-  { cx: 800, cy: 430, rx: 600, ry: 330, rot: 4 },
+  { cx: 835, cy: 415, rx: 495, ry: 470, rot: 0, cls: '' },
+  { cx: 830, cy: 522, rx: 795, ry: 150, rot: -6, cls: '' },
+  { cx: 880, cy: 330, rx: 612, ry: 285, rot: -8, cls: 'red' },
+  { cx: 840, cy: 472, rx: 425, ry: 152, rot: -8, cls: 'faint' },
+  { cx: 820, cy: 440, rx: 990, ry: 470, rot: -14, cls: 'faint' },
+  { cx: 640, cy: 600, rx: 300, ry: 290, rot: 0, cls: 'faint' },
 ];
 
-// Resting spots for Miranda's ten planets around the K
+// Miranda's ten planets, placed as in the reference (the three she added later take its unlabelled moons)
 const NODES = [
-  { id: 'sculpture', x: 792, y: 66, orbit: 0, side: 'right', size: 16 },
-  { id: 'kinetic', x: 1172, y: 128, orbit: 1, side: 'right', size: 14 },
-  { id: 'brand', x: 1365, y: 290, orbit: 1, side: 'right', size: 12, wrap: true },
-  { id: 'functional', x: 1300, y: 455, orbit: 2, side: 'right', size: 13 },
-  { id: 'christmas', x: 1226, y: 625, orbit: 0, side: 'right', size: 15 },
-  { id: 'public', x: 400, y: 176, orbit: 1, side: 'left', size: 12 },
-  { id: 'spaces', x: 335, y: 320, orbit: 1, side: 'left', size: 11, wrap: true },
-  { id: 'competitions', x: 300, y: 485, orbit: 2, side: 'left', size: 12, wrap: true, w: 13 },
-  { id: 'melita', x: 370, y: 630, orbit: 0, side: 'left', size: 17, wrap: true },
-  { id: 'outdoor', x: 440, y: 735, orbit: 2, side: 'left', size: 12, wrap: true },
+  { id: 'sculpture', x: 832, y: 70, d: 28, side: 'right', orbit: 2, line: true, dy: -4, tone: 'hot' },
+  { id: 'kinetic', x: 1226, y: 137, d: 30, side: 'right', orbit: 0, line: true, dy: -10 },
+  { id: 'christmas', x: 1358, y: 278, d: 42, side: 'right', orbit: 0, wrap: true, line: true, dy: 4, tone: 'grey' },
+  { id: 'brand', x: 1467, y: 354, d: 24, side: 'right', orbit: 2, wrap: true, line: true, dy: 8, tone: 'red' },
+  { id: 'functional', x: 1282, y: 641, d: 32, side: 'right', orbit: 0, line: true, dash: true },
+  { id: 'public', x: 417, y: 185, d: 24, side: 'left', orbit: 2, line: true, tone: 'hot' },
+  { id: 'spaces', x: 340, y: 400, d: 24, side: 'left', orbit: 0, wrap: true, dash: true, dy: 10, tone: 'red' },
+  { id: 'competitions', x: 483, y: 483, d: 34, side: 'left', orbit: 3, wrap: true, dy: 10 },
+  { id: 'melita', x: 378, y: 628, d: 40, side: 'left', orbit: 0, wrap: true, dy: 24 },
+  { id: 'outdoor', x: 548, y: 772, d: 26, side: 'left', orbit: 1, wrap: true, dy: 8, tone: 'grey' },
+];
+const MOONS = [
+  { x: 1240, y: 480, d: 142, tone: 'big' },
+  { x: 398, y: 362, d: 11, tone: 'grey' },
+  { x: 1582, y: 262, d: 6, tone: 'red' },
 ];
 
 function onEllipse(o, ang) {
@@ -41,129 +88,183 @@ function angleFor(o, p) {
   return Math.atan2(y / o.ry, x / o.rx);
 }
 
-export function buildHero({ svg, nodesBox, onNavigate, labels }) {
-  svg.innerHTML = '';
-  const defs = el('defs', {}, svg);
-  defs.innerHTML = `
-    <linearGradient id="kFill" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1c0000"/>
-      <stop offset="0.3" stop-color="#9e0b0b"/>
-      <stop offset="0.44" stop-color="#ff3b3b"/>
-      <stop offset="0.5" stop-color="#ffece7"/>
-      <stop offset="0.57" stop-color="#ff3030"/>
-      <stop offset="0.76" stop-color="#5e0404"/>
-      <stop offset="1" stop-color="#160000"/>
-      <animateTransform attributeName="gradientTransform" type="translate" values="-0.25 -0.25; 0.25 0.25; -0.25 -0.25" dur="14s" repeatCount="indefinite"/>
-    </linearGradient>
-    <linearGradient id="thread" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
-      <stop offset="1" stop-color="#ff2b2b" stop-opacity="0.65"/>
-    </linearGradient>
-    <radialGradient id="planet" cx="0.35" cy="0.35" r="0.75">
-      <stop offset="0" stop-color="#ffb3a6"/>
-      <stop offset="0.35" stop-color="#ff2b2b"/>
-      <stop offset="1" stop-color="#2a0000"/>
-    </radialGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="9" result="b"/>
-      <feColorMatrix in="b" type="matrix" values="1 0 0 0 0.2  0 0.15 0 0 0  0 0 0.15 0 0  0 0 0 1.4 0" result="r"/>
-      <feMerge><feMergeNode in="r"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
-    <mask id="kMask"><rect width="1600" height="900" fill="black"/><text class="k-glyph" x="805" y="672" text-anchor="middle" fill="white">K</text></mask>
-  `;
+/* ---------------------------------------------------------------- moons */
+// each moon is painted once into a canvas: a cratered sphere lit red from the
+// left (white from above for the grey ones), with a rim glow on the lit side
+const GLOW = 0.45; // canvas margin around the disc, as a share of the radius
+const LIGHTS = {
+  hot: { key: [-0.82, 0.1, 0.4], keyC: [1, 0.26, 0.22], keyI: 2.6, fill: [-0.2, 0.6, 0.77], fillC: [1, 0.72, 0.7], fillI: 0.3, albedo: [0.62, 0.55, 0.54], glow: 1 },
+  lit: { key: [-0.95, 0.08, -0.05], keyC: [1, 0.3, 0.26], keyI: 1.45, fill: [-0.3, 0.6, 0.74], fillC: [1, 0.85, 0.82], fillI: 0.26, albedo: [0.55, 0.5, 0.5], glow: 0.75 },
+  red: { key: [-0.6, 0.35, 0.72], keyC: [1, 0.32, 0.28], keyI: 1.05, fill: [0.2, 0.6, 0.77], fillC: [1, 0.55, 0.5], fillI: 0.3, albedo: [0.8, 0.42, 0.38], glow: 1 },
+  grey: { key: [-0.55, 0.62, 0.56], keyC: [1, 0.94, 0.92], keyI: 0.45, fill: [-0.95, -0.2, 0.25], fillC: [1, 0.25, 0.2], fillI: 0.38, albedo: [0.5, 0.46, 0.46], glow: 0.3 },
+  big: { key: [-0.86, 0.04, -0.52], keyC: [1, 0.4, 0.35], keyI: 2, fill: [-0.45, 0.4, 0.8], fillC: [1, 0.85, 0.82], fillI: 0.2, albedo: [0.45, 0.41, 0.41], glow: 0.6 },
+};
+const norm = (v) => { const l = Math.hypot(...v); return v.map((x) => x / l); };
 
-  // orbits
+function noise3(seed) {
+  const h = (x, y, z) => { const s = Math.sin(x * 127.1 + y * 311.7 + z * 74.7 + seed * 19.3) * 43758.5453; return s - Math.floor(s); };
+  const sm = (t) => t * t * (3 - 2 * t);
+  const n = (x, y, z) => {
+    const xi = Math.floor(x), yi = Math.floor(y), zi = Math.floor(z);
+    const xf = sm(x - xi), yf = sm(y - yi), zf = sm(z - zi);
+    const l = (a, b, t) => a + (b - a) * t;
+    return l(l(l(h(xi, yi, zi), h(xi + 1, yi, zi), xf), l(h(xi, yi + 1, zi), h(xi + 1, yi + 1, zi), xf), yf),
+      l(l(h(xi, yi, zi + 1), h(xi + 1, yi, zi + 1), xf), l(h(xi, yi + 1, zi + 1), h(xi + 1, yi + 1, zi + 1), xf), yf), zf);
+  };
+  return (x, y, z) => n(x, y, z) * 0.5 + n(x * 2.1, y * 2.1, z * 2.1) * 0.27 + n(x * 4.3, y * 4.3, z * 4.3) * 0.15 + n(x * 9, y * 9, z * 9) * 0.08;
+}
+
+function paintMoon(d, tone, seed) {
+  const L = LIGHTS[tone] || LIGHTS.lit;
+  const key = norm(L.key), fill = norm(L.fill);
+  const R = Math.round(Math.min(150, Math.max(14, d * 1.25)));
+  const M = Math.round(R * GLOW);
+  const S = (R + M) * 2;
+  const c = document.createElement('canvas');
+  c.width = c.height = S;
+  const x = c.getContext('2d');
+  // glow on the lit side
+  const gx = S / 2 + key[0] * R * 0.35, gy = S / 2 - key[1] * R * 0.35;
+  const g = x.createRadialGradient(gx, gy, R * 0.7, gx, gy, R + M);
+  g.addColorStop(0, `rgba(255,40,30,${0.55 * L.glow})`);
+  g.addColorStop(1, 'rgba(255,40,30,0)');
+  x.fillStyle = g;
+  x.fillRect(0, 0, S, S);
+  // the disc: height field first, then shade with its slopes
+  const rnd = (() => { let s = seed * 9301 + 49297; return () => ((s = (s * 16807) % 2147483647) / 2147483647); })();
+  const craters = Array.from({ length: 34 }, () => {
+    const v = norm([rnd() - 0.5, rnd() - 0.5, rnd() * 0.9 + 0.1]);
+    return { v, r: 0.03 + rnd() ** 2.5 * 0.22, k: 0.3 + rnd() * 0.5 };
+  });
+  const nz = noise3(seed);
+  const D = R * 2, hgt = new Float32Array(D * D), alb = new Float32Array(D * D), inside = new Uint8Array(D * D);
+  for (let j = 0; j < D; j++) for (let i = 0; i < D; i++) {
+    const px = (i + 0.5 - R) / R, py = (j + 0.5 - R) / R, q = px * px + py * py;
+    if (q > 1) continue;
+    const pz = Math.sqrt(1 - q), n = [px, -py, pz], k = j * D + i;
+    inside[k] = 1;
+    let h = nz(n[0] * 5 + 5, n[1] * 5, n[2] * 5) * 0.9;
+    let a = 0.7 + nz(n[0] * 1.6, n[1] * 1.6 + 9, n[2] * 1.6) * 0.6;
+    for (const cr of craters) {
+      const dist = Math.acos(Math.min(1, n[0] * cr.v[0] + n[1] * cr.v[1] + n[2] * cr.v[2])) / cr.r;
+      if (dist < 1.4) {
+        h += dist < 1 ? -cr.k * 0.35 * (1 - dist * dist) : 0;
+        h += cr.k * 0.22 * Math.exp(-(((dist - 1) / 0.18) ** 2));
+        if (dist < 1) a *= 0.88 + dist * 0.1;
+      }
+    }
+    hgt[k] = h; alb[k] = a;
+  }
+  const img = x.getImageData(M, M, D, D), px = img.data;
+  const bump = R * 0.03;
+  for (let j = 0; j < D; j++) for (let i = 0; i < D; i++) {
+    const k = j * D + i;
+    if (!inside[k]) continue;
+    const hx = (inside[k + 1] ? hgt[k + 1] : hgt[k]) - (inside[k - 1] ? hgt[k - 1] : hgt[k]);
+    const hy = (inside[k + D] ? hgt[k + D] : hgt[k]) - (inside[k - D] ? hgt[k - D] : hgt[k]);
+    const sx = (i + 0.5 - R) / R, sy = (j + 0.5 - R) / R, sz = Math.sqrt(Math.max(0, 1 - sx * sx - sy * sy));
+    const n = norm([sx - hx * bump * 0.5, -sy + hy * bump * 0.5, sz]);
+    const dk = Math.max(0, n[0] * key[0] + n[1] * key[1] + n[2] * key[2]);
+    const df = Math.max(0, n[0] * fill[0] + n[1] * fill[1] + n[2] * fill[2]);
+    const rim = Math.pow(1 - sz, 3) * Math.max(0, -sx * 0.9 + 0.2) * 1.6;
+    const edge = Math.min(1, (1 - Math.sqrt(sx * sx + sy * sy)) * R * 0.9); // antialias the limb
+    for (let ch = 0; ch < 3; ch++) {
+      const v = L.albedo[ch] * alb[k] * (dk * L.keyI * L.keyC[ch] + df * L.fillI * L.fillC[ch] + 0.025) + rim * L.keyC[ch];
+      const o = k * 4 + ch;
+      px[o] = px[o] * (1 - edge) + Math.min(255, v * 255) * edge;
+    }
+    px[k * 4 + 3] = Math.max(px[k * 4 + 3], edge * 255);
+  }
+  x.putImageData(img, M, M);
+  return c;
+}
+
+function moonEl(d, tone, seed) {
+  const c = paintMoon(d, tone, seed);
+  c.className = `moon moon-${tone}`;
+  c.style.setProperty('--d', d);
+  c.setAttribute('aria-hidden', 'true');
+  return c;
+}
+
+// two-line labels break where the reference breaks them: after the first word (or after a slash)
+function labelHTML(text, wrap) {
+  const w = text.split(' ');
+  if (!wrap || w.length < 2) return text;
+  const k = w[1] === '/' ? 2 : 1;
+  return `${w.slice(0, k).join(' ')}<br>${w.slice(k).join(' ')}`;
+}
+
+/* ---------------------------------------------------------------- build */
+export function buildHero({ svg, nodesBox, onNavigate, labels }) {
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.innerHTML = '';
   const orbitG = el('g', { class: 'orbits' }, svg);
   ORBITS.forEach((o, i) => {
-    el('ellipse', { cx: o.cx, cy: o.cy, rx: o.rx, ry: o.ry, transform: `rotate(${o.rot} ${o.cx} ${o.cy})`, class: `orbit orbit-${i}`, pathLength: 1000 }, orbitG);
+    el('ellipse', { cx: o.cx, cy: o.cy, rx: o.rx, ry: o.ry, transform: `rotate(${o.rot} ${o.cx} ${o.cy})`, class: `orbit orbit-${i} ${o.cls}`, pathLength: 1000 }, orbitG);
   });
-  el('ellipse', { cx: 820, cy: 470, rx: 760, ry: 170, transform: 'rotate(-4 820 470)', class: 'orbit orbit-faint', pathLength: 1000 }, orbitG);
-  el('ellipse', { cx: 760, cy: 450, rx: 380, ry: 380, class: 'orbit orbit-faint', pathLength: 1000 }, orbitG);
 
-  // construction lines
   const cons = el('g', { class: 'construct' }, svg);
-  const cV = el('line', { x1: 668, y1: 10, x2: 668, y2: 900, pathLength: 1000 }, cons);
-  const cT = el('line', { x1: 520, y1: 186, x2: 1120, y2: 186, pathLength: 1000 }, cons);
-  const cB = el('line', { x1: 480, y1: 690, x2: 1150, y2: 690, pathLength: 1000 }, cons);
+  [[669, 58, 669, 700], [405, 185, 885, 185], [560, 693, 1080, 693], [793, 252, 793, 697]].forEach(([a, b, c, d]) => {
+    el('line', { x1: a, y1: b, x2: c, y2: d, pathLength: 1000 }, cons);
+  });
+  [[669, 512], [669, 592], [793, 470]].forEach(([cx, cy]) => el('circle', { cx, cy, r: 2.6, class: 'node-dot' }, cons));
 
-  // K: glow, threads, fill, outline
-  const kG = el('g', { class: 'kgroup' }, svg);
-  const glow = el('text', { class: 'k-glyph k-glow', x: 805, y: 672, 'text-anchor': 'middle', filter: 'url(#glow)' }, kG);
-  glow.textContent = 'K';
-  const threads = el('g', { class: 'k-threads', mask: 'url(#kMask)' }, kG);
-  for (let i = 0; i <= 90; i++) {
-    const t = i / 90;
-    el('line', { x1: 560 + t * 260, y1: 160 + t * 30, x2: 760 + t * 420, y2: 720 - t * 520 }, threads);
-    el('line', { x1: 580 + t * 120, y1: 720, x2: 900 + t * 230, y2: 180 + t * 520, class: 'warp' }, threads);
-  }
-  const fill = el('text', { class: 'k-glyph k-fill', x: 805, y: 672, 'text-anchor': 'middle' }, kG);
-  fill.textContent = 'K';
-  const line = el('text', { class: 'k-glyph k-line', x: 805, y: 672, 'text-anchor': 'middle' }, kG);
-  line.textContent = 'K';
+  // the traced K, then the arm, the staircase and the cap-line glint on top of it
+  const stage = svg.parentElement;
+  stage.querySelectorAll('.k-layer, .hero-top').forEach((n) => n.remove());
+  const layer = document.createElement('div');
+  layer.className = 'k-layer';
+  layer.setAttribute('aria-hidden', 'true');
+  layer.innerHTML = '<canvas class="k-glow k-glow-wide"></canvas><canvas class="k-glow"></canvas><canvas class="k-lines"></canvas>';
+  svg.after(layer);
+  const top = el('svg', { class: 'hero-svg hero-top', viewBox: `0 0 ${W} ${H}`, 'aria-hidden': 'true' });
+  layer.after(top);
+  el('defs', {}, top).innerHTML = `
+    <linearGradient id="stepFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0ecec" stop-opacity="0.6"/>
+      <stop offset="0.45" stop-color="#ff6656" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ff1e14" stop-opacity="0"/>
+    </linearGradient>`;
+  drawArm(top);
+  drawThreads(layer);
 
-  // staircase of U P R A V A along the upper arm
-  const stairs = el('g', { class: 'stairs' }, svg);
-  const letters = ['U', 'P', 'R', 'A', 'V', 'A'];
+  const glint = el('g', { class: 'glint', transform: 'translate(669 185)' }, top);
+  el('path', { d: 'M-26,0 L26,0 M0,-26 L0,26' }, glint);
+  el('circle', { r: 3.2 }, glint);
 
-  function layoutStairs() {
-    stairs.innerHTML = '';
-    let bb;
-    try { bb = fill.getBBox(); } catch { return; }
-    if (!bb || !bb.width) return;
-    const sx0 = bb.x + bb.width * 0.2;
-    [['x1', sx0], ['x2', sx0]].forEach(([k, v]) => cV.setAttribute(k, v));
-    cT.setAttribute('x1', bb.x - 60); cT.setAttribute('x2', bb.x + bb.width + 40);
-    const topY = bb.y + bb.height * 0.125; cT.setAttribute('y1', topY); cT.setAttribute('y2', topY);
-    cB.setAttribute('x1', bb.x - 120); cB.setAttribute('x2', bb.x + bb.width + 80);
-    cB.setAttribute('y1', 672 + 4); cB.setAttribute('y2', 672 + 4);
-    // arm runs from the stem's middle up to the top-right serif
-    // fixed to the glyph's geometry (font-size 800, baseline 672, cap top ≈ 168)
-    const x0 = 748, y0 = 478;
-    const x1 = 1018, y1 = 214;
-    const n = letters.length;
-    const dx = (x1 - x0) / n, dy = (y0 - y1) / n;
-    let d = `M ${x0 - dx * 0.5} ${y0}`;
-    letters.forEach((ch, i) => {
-      const sx = x0 + dx * i, sy = y0 - dy * i;
-      d += ` L ${sx} ${sy} L ${sx} ${sy - dy} L ${sx + dx} ${sy - dy}`;
-      const g = el('g', { class: 'step', style: `--i:${i}` }, stairs);
-      const tx = el('text', { x: sx + dx * 0.5, y: sy - dy * 0.22, 'text-anchor': 'middle', class: 'step-letter', 'font-size': Math.min(dx, dy) * 0.92 }, g);
-      tx.textContent = ch;
-    });
-    d += ` L ${x1 + dx * 0.6} ${y1}`;
-    el('path', { d, class: 'step-path', pathLength: 1000 }, stairs);
-    el('circle', { cx: x1 + dx * 0.6, cy: y1, r: 3.2, class: 'step-spark' }, stairs);
-  }
-  layoutStairs();
-  document.fonts?.ready.then(layoutStairs);
-
-  // sparkles drifting near the emblem
   const sparks = el('g', { class: 'sparks' }, svg);
   for (let i = 0; i < 46; i++) {
-    const a = Math.random() * Math.PI * 2, r = 120 + Math.random() * 520;
-    el('circle', { cx: 800 + Math.cos(a) * r * 1.3, cy: 430 + Math.sin(a) * r * 0.55, r: Math.random() * 1.7 + 0.4, style: `--d:${(Math.random() * 6).toFixed(2)}s;--t:${(3 + Math.random() * 5).toFixed(2)}s` }, sparks);
+    const a = Math.random() * Math.PI * 2, r = 120 + Math.random() * 560;
+    el('circle', { cx: f1(835 + Math.cos(a) * r * 1.3), cy: f1(470 + Math.sin(a) * r * 0.5), r: f1(Math.random() * 1.5 + 0.4), style: `--d:${(Math.random() * 6).toFixed(2)}s;--t:${(3 + Math.random() * 5).toFixed(2)}s` }, sparks);
   }
 
-  // nodes
+  // planets and labels
   nodesBox.innerHTML = '';
+  const pos = (x, y) => ({ left: `${(x / W) * 100}%`, top: `${(y / H) * 100}%` });
+  MOONS.forEach((m, i) => {
+    const c = moonEl(m.d, m.tone, i + 3);
+    Object.assign(c.style, pos(m.x, m.y));
+    nodesBox.appendChild(c);
+  });
   const live = NODES.map((n, i) => {
     const o = ORBITS[n.orbit];
     const base = angleFor(o, n);
     const p0 = onEllipse(o, base);
     const off = { x: n.x - p0.x, y: n.y - p0.y };
-    const btn = document.createElement('a');
-    btn.className = `node node-${n.side}${n.wrap ? ' node-wrap' : ''}`;
-    btn.href = `#${n.id}`;
-    btn.style.setProperty('--size', `${n.size}px`);
-    btn.style.setProperty('--i', i);
-    if (n.w) btn.style.setProperty('--lw', `${n.w}em`);
-    btn.innerHTML = `<span class="planet"></span><span class="label"><b>${labels[n.id]}</b><i></i></span>`;
-    btn.addEventListener('click', (e) => { e.preventDefault(); onNavigate(n.id); });
-    btn.addEventListener('pointerenter', () => svg.classList.add(`hl-${n.orbit}`));
-    btn.addEventListener('pointerleave', () => svg.classList.remove(`hl-${n.orbit}`));
-    nodesBox.appendChild(btn);
-    return { ...n, o, base, off, btn, phase: Math.random() * 6.28 };
+    const a = document.createElement('a');
+    a.className = `node node-${n.side}${n.wrap ? ' node-wrap' : ''}${n.line ? ' has-line' : ''}${n.dash ? ' has-dash' : ''}`;
+    a.href = `#${n.id}`;
+    a.style.setProperty('--d', n.d);
+    a.style.setProperty('--dy', n.dy || 0);
+    a.style.setProperty('--i', i);
+    a.innerHTML = `<span class="label"><b>${labelHTML(labels[n.id], n.wrap)}</b><i></i></span>`;
+    a.prepend(moonEl(n.d, n.tone || 'lit', i + 11));
+    a.addEventListener('click', (e) => { e.preventDefault(); onNavigate(n.id); });
+    a.addEventListener('pointerenter', () => svg.classList.add(`hl-${n.orbit}`));
+    a.addEventListener('pointerleave', () => svg.classList.remove(`hl-${n.orbit}`));
+    nodesBox.appendChild(a);
+    return { ...n, o, base, off, a, phase: Math.random() * 6.28 };
   });
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -172,20 +273,16 @@ export function buildHero({ svg, nodesBox, onNavigate, labels }) {
   function tick(now) {
     const t = (now - t0) / 1000;
     live.forEach((n) => {
-      const a = n.base + (reduce ? 0 : Math.sin(t * 0.18 + n.phase) * 0.045);
-      const p = onEllipse(n.o, a);
-      n.btn.style.left = `${((p.x + n.off.x) / 1600) * 100}%`;
-      n.btn.style.top = `${((p.y + n.off.y) / 900) * 100}%`;
+      const p = onEllipse(n.o, n.base + (reduce ? 0 : Math.sin(t * 0.16 + n.phase) * 0.012));
+      Object.assign(n.a.style, pos(p.x + n.off.x, p.y + n.off.y));
     });
     raf = requestAnimationFrame(tick);
   }
   raf = requestAnimationFrame(tick);
 
   return {
-    setLabels(lb) {
-      live.forEach((n) => { n.btn.querySelector('b').textContent = lb[n.id]; });
-    },
-    relayout: layoutStairs,
+    setLabels(lb) { live.forEach((n) => { n.a.querySelector('b').innerHTML = labelHTML(lb[n.id], n.wrap); }); },
+    relayout() {},
     stop() { cancelAnimationFrame(raf); },
   };
 }
