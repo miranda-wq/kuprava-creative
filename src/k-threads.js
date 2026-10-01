@@ -3,8 +3,8 @@
 // reference is coloured where each thread runs, with a glow made from the lines
 // themselves. Redrawn whenever the stage changes size.
 
-const GAIN = 1.05; // threads are thinner than the glow they stand for in the reference
-const WIDTH = 0.75; // in reference pixels
+const GAIN = 1.8; // threads are thinner than the glow they stand for in the reference
+const WIDTH = 0.9; // in reference pixels
 
 export async function drawThreads(layer) {
   const { default: data } = await import('./k-threads.json');

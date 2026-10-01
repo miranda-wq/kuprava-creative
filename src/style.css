@@ -140,8 +140,8 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 /* the K: threads traced from the reference (k-threads.js), with a glow made from themselves */
 .k-layer { position: absolute; inset: 0; pointer-events: none; opacity: 0; clip-path: inset(100% 0 0 0); }
 .k-layer canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
-.k-glow { filter: blur(calc(var(--u) * 2)); opacity: 0.45; }
-.k-glow-wide { filter: blur(calc(var(--u) * 7)); opacity: 0.4; }
+.k-glow { filter: blur(calc(var(--u) * 2)); opacity: 0.85; }
+.k-glow-wide { filter: blur(calc(var(--u) * 7)) saturate(1.6); opacity: 0.9; }
 .ready .k-layer { animation: kDraw 2.8s cubic-bezier(0.6, 0.05, 0.3, 1) 0.4s forwards; }
 @keyframes kDraw { 30% { opacity: 1; } to { opacity: 1; clip-path: inset(0 0 0 0); } }
 .arm { fill: #040102; opacity: 0; }

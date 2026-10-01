@@ -72,10 +72,12 @@ function frame(W, H, img, s) {
   const toFrame = ([x, y]) => [(x - crop[0]) / crop[2], (y - crop[1]) / crop[3]];
   const e0 = toFrame(EYES[0]), e1 = toFrame(EYES[1]);
   const mid = [(e0[0] + e1[0]) / 2, (e0[1] + e1[1]) / 2];
-  const z = s.zoom;
+  // the start button is centred on screen: keep the headlights' midpoint on it,
+  // zooming in just enough that the shift never shows past the image edge
+  const z = Math.max(s.zoom, 0.5 / (1 - mid[0]), 0.5 / mid[0]);
   // settle from "head a little lower than it sits" to rest, then travel to the left headlight
   const P = [lerp(mid[0], e0[0], s.pan), lerp(mid[1], e0[1], s.pan)];
-  let A = [lerp(P[0], 0.5, s.pan), lerp(P[1] + 0.12 * (1 - s.back), 0.5, s.pan)];
+  let A = [0.5, lerp(P[1] + 0.12 * (1 - s.back), 0.5, s.pan)];
   // never show past the image edge more than the dark ceiling allows
   A = A.map((a, i) => clamp(a, 1 - (1 - P[i]) * z, P[i] * z + (i === 1 ? 0.06 : 0)));
   const toScreen = ([x, y]) => [A[0] + (x - P[0]) * z, A[1] + (y - P[1]) * z];
