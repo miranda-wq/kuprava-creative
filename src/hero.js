@@ -29,17 +29,23 @@ function drawArm(svg) {
   // steps catch the light, red beneath, glowing, and see-through like the letter
   const x1 = STEPS.x + STEPS.w * LETTERS.length;
   const arm = el('g', { class: 'arm' }, k);
-  // wide enough to fill the dark band the reference leaves under the stairs
-  const N = 34, dx0 = -14, dy0 = 22, dx1 = -8, dy1 = 15; // bottom-edge offsets at the start and the end
+  // wide enough to fill the dark band the reference leaves under the stairs; at the top,
+  // under the last A, every thread bends, as in the reference, into the line out to the spark
+  const N = 34, yTop = STEPS.y - STEPS.h * (LETTERS.length - 1);
+  const xBend = x1 - 30, xEnd = x1 + 32; // the bend starts under the A and flattens out at the spark
   for (let i = 0; i <= N; i++) {
     const t = i / N;
-    // the top edge runs exactly along the stairs' diagonal, so nothing dark opens up between them
-    const a = [ARM.x0 + dx0 * t, armY(ARM.x0) + dy0 * t], b = [x1 + dx1 * t, armY(x1) + dy1 * t];
+    const off = (x) => t * (22 - 16 * (x - ARM.x0) / (xBend - ARM.x0)); // the sheet narrows towards the top
+    const a = [ARM.x0 - 14 * t, armY(ARM.x0) + 22 * t];
+    const s0 = [xBend, armY(xBend) + off(xBend)];
+    const yH = yTop + 1.2 + 3.5 * t; // where the thread runs flat
+    const xc = ARM.x0 + (armY(ARM.x0) + off(xBend) - yH) / ARM.slope; // the diagonal meets the flat line here
+    const d = `M${f1(a[0])},${f1(a[1])} L${f1(s0[0])},${f1(s0[1])} Q${f1(xc)},${f1(yH)} ${f1(xEnd - 6 * t)},${f1(yH)}`;
     // silver along the top turning red, then fading into the threads below
     const r = Math.min(1, t / 0.35);
     const c = [Math.round(242 + 13 * r), Math.round(234 - 196 * r), Math.round(234 - 208 * r)];
     const o = t < 0.35 ? 0.6 : 0.6 * (1 - (t - 0.35) / 0.65) ** 1.4 + 0.04;
-    el('line', { x1: f1(a[0]), y1: f1(a[1]), x2: f1(b[0]), y2: f1(b[1]), stroke: `rgb(${c.join(',')})`, 'stroke-opacity': o.toFixed(2) }, arm);
+    el('path', { d, fill: 'none', stroke: `rgb(${c.join(',')})`, 'stroke-opacity': o.toFixed(2) }, arm);
   }
   // the same sheet, blurred, for the glow
   arm.id = 'armSheet';
@@ -50,13 +56,19 @@ function drawArm(svg) {
   let prof = '';
   LETTERS.forEach((ch, i) => {
     const xl = STEPS.x + STEPS.w * i, xr = xl + STEPS.w, y = STEPS.y - STEPS.h * i;
-    el('path', { class: 'step-face', d: `M${xl},${y} L${xr},${y} L${xr},${f1(Math.max(y, armY(xr)))} L${xl},${f1(armY(xl))} Z` }, stairs);
+    // the last block's underside follows the arm's bend instead of a straight diagonal
+    const last = i === LETTERS.length - 1;
+    const yH0 = yTop + 1.2, xc0 = ARM.x0 + (armY(ARM.x0) - yH0) / ARM.slope;
+    const d = last
+      ? `M${xl},${y} L${xEnd},${y} L${xEnd},${f1(yH0)} Q${f1(xc0)},${f1(yH0)} ${xBend},${f1(armY(xBend))} L${xl},${f1(armY(xl))} Z`
+      : `M${xl},${y} L${xr},${y} L${xr},${f1(Math.max(y, armY(xr)))} L${xl},${f1(armY(xl))} Z`;
+    el('path', { class: 'step-face', d }, stairs);
     prof += `${i ? 'L' : `M${xl},${f1(armY(xl))} L`}${xl},${y} L${xr},${y} `;
     const g = el('g', { class: 'step', style: `--i:${i}` }, stairs);
     el('text', { class: 'step-letter', x: xl + STEPS.w * 0.47, y: y - 3, 'text-anchor': 'middle' }, g).textContent = ch;
     el('circle', { class: 'step-glint', cx: xl, cy: y, r: 2 }, g);
   });
-  const yTop = STEPS.y - STEPS.h * (LETTERS.length - 1);
+
   prof += `L${x1 + 30},${f1(yTop)}`;
   el('path', { class: 'step-path', d: prof, pathLength: 1 }, stairs);
   el('circle', { class: 'step-spark', cx: x1 + 34, cy: f1(yTop + 1), r: 3 }, stairs);
