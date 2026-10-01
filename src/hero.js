@@ -270,7 +270,7 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   });
 
   const cons = el('g', { class: 'construct' }, svg);
-  [[669, 58, 669, 700], [405, 185, 885, 185], [560, 693, 1080, 693], [793, 252, 793, 697]].forEach(([a, b, c, d]) => {
+  [[669, 58, 669, 700], [405, 185, 520, 185], [560, 693, 1080, 693], [793, 252, 793, 697]].forEach(([a, b, c, d]) => {
     el('line', { x1: a, y1: b, x2: c, y2: d, pathLength: 1000 }, cons);
   });
   // the K's cap line: bright white across the serifs, fading out at both ends, as in the reference
