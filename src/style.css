@@ -473,3 +473,83 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
   .about-k { font-size: 140px; }
   .sec-doc { grid-column: 1; }
 }
+
+/* ---------------------------------------------------------------- planet view */
+/* the home page zooms past the clicked planet (origins set by planet-view.js) */
+.pv-anim .stage { transform-origin: var(--pv-ox) var(--pv-oy); transition: transform 1.3s cubic-bezier(0.7, 0, 0.2, 1), opacity 0.8s ease 0.3s; }
+.pv-zoom .stage { transform: scale(9); opacity: 0; }
+.pv-anim #cosmos { transform-origin: var(--pv-cx) var(--pv-cy); transition: transform 1.4s cubic-bezier(0.7, 0, 0.2, 1), filter 1.4s ease; }
+.pv-zoom #cosmos { transform: scale(1.4); filter: brightness(0.6); }
+.pv-anim .topbar, .pv-anim .explore, .pv-anim .orbit-list, .pv-anim .rail, .pv-anim #sections, .pv-anim .footer { transition: opacity 0.6s ease !important; }
+.pv-zoom .topbar, .pv-zoom .explore, .pv-zoom .orbit-list, .pv-zoom .rail, .pv-zoom #sections, .pv-zoom .footer { opacity: 0 !important; }
+.pv-zoom .cursor { mix-blend-mode: normal; }
+
+.pv { position: fixed; inset: 0; z-index: 70; visibility: hidden; pointer-events: none; overflow: hidden; touch-action: none; user-select: none; -webkit-user-select: none; }
+.pv.on { visibility: visible; pointer-events: auto; }
+.pv.fade { opacity: 0; transition: opacity 0.5s ease; }
+.pv-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 58%, rgba(46, 3, 3, 0.4), rgba(0, 0, 0, 0.8) 62%, rgba(0, 0, 0, 0.93)); opacity: 0; transition: opacity 0.8s ease; }
+.pv.on .pv-bg { opacity: 1; transition-delay: 0.3s; }
+.pv.leaving .pv-bg { opacity: 0; transition-delay: 0.25s; }
+.pv-warp { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+
+.pv-orbits { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.pv-orbits-back { z-index: 3; }
+.pv-orbits-front { z-index: 55; }
+.pv-orbits path { fill: none; stroke: rgba(255, 238, 234, 0.17); stroke-width: 1; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 0.6s ease; }
+.pv-orbits path.red { stroke: rgba(255, 64, 50, 0.42); filter: drop-shadow(0 0 3px rgba(255, 43, 43, 0.6)); }
+.pv.show .pv-orbits path { stroke-dashoffset: 0; transition: stroke-dashoffset 2s cubic-bezier(0.6, 0, 0.2, 1) 0.15s; }
+
+.pv-planet { position: absolute; z-index: 50; transform-origin: 50% 50%; will-change: transform; pointer-events: none; }
+.pv-planet canvas { display: block; width: 100%; height: 100%; }
+.pv.show .pv-planet canvas { animation: pvFloat 11s ease-in-out infinite; }
+@keyframes pvFloat { 50% { transform: translateY(-1.2%) rotate(-1.5deg); } }
+.pv-flare { position: absolute; z-index: 49; border-radius: 50%; pointer-events: none; opacity: 0; background: radial-gradient(circle, rgba(255, 110, 90, 0.5) 0, rgba(255, 40, 28, 0.22) 30%, rgba(255, 30, 20, 0) 62%); }
+.pv.show .pv-flare { animation: pvFlare 1.8s cubic-bezier(0.2, 0.7, 0.2, 1), pvHalo 6s ease-in-out 1.8s infinite; }
+@keyframes pvFlare { 0% { opacity: 0; transform: scale(0.7); } 18% { opacity: 1; } 100% { opacity: 0.35; transform: scale(1.25); } }
+@keyframes pvHalo { 0%, 100% { opacity: 0.35; transform: scale(1.25); } 50% { opacity: 0.55; transform: scale(1.32); } }
+
+/* works in orbit (positioned every frame by planet-view.js) */
+.pv-cards { position: absolute; inset: 0; pointer-events: none; }
+.pv-card { position: absolute; left: 0; top: 0; padding: 0; opacity: 0; pointer-events: none; will-change: transform, opacity; -webkit-tap-highlight-color: transparent; }
+.pv-frame { display: block; position: relative; overflow: hidden; border-radius: 2px; background: #140707; box-shadow: 0 0 0 1px rgba(255, 238, 234, 0.16), 0 20px 44px rgba(0, 0, 0, 0.65), 0 0 28px rgba(255, 40, 30, 0.16); transition: transform 0.5s var(--ease), box-shadow 0.5s; }
+.pv-frame img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.04); transition: opacity 0.6s ease, transform 0.9s var(--ease); }
+.pv-frame img.in { opacity: 1; }
+.pv-shade { position: absolute; inset: 0; background: #000; pointer-events: none; }
+.pv-card:hover .pv-frame, .pv-card:focus-visible .pv-frame { transform: scale(1.12); box-shadow: 0 0 0 1px rgba(255, 96, 84, 0.95), 0 0 34px rgba(255, 43, 43, 0.75), 0 26px 54px rgba(0, 0, 0, 0.7); }
+.pv-card:hover img { transform: scale(1.1); }
+.pv-card:focus-visible { outline: none; }
+.pv-cap { position: absolute; left: 50%; top: 100%; transform: translate(-50%, 8px); white-space: nowrap; font-family: 'Cormorant Garamond', var(--serif); font-weight: 500; font-size: 15px; letter-spacing: 0.08em; color: #fff; text-shadow: 0 0 10px #000, 0 0 18px rgba(255, 43, 43, 0.7); opacity: 0; transition: opacity 0.4s, transform 0.5s var(--ease); pointer-events: none; }
+.pv-card:hover .pv-cap, .pv-card:focus-visible .pv-cap { opacity: 1; transform: translate(-50%, 18px); }
+
+/* the section's title, intro and the way back */
+.pv-head { position: absolute; z-index: 100; left: 50%; top: clamp(64px, 9vh, 104px); width: min(640px, 84vw); transform: translateX(-50%); display: grid; justify-items: center; text-align: center; pointer-events: none; }
+.pv-head > * { opacity: 0; transform: translateY(18px); transition: opacity 0.35s ease, transform 0.35s ease; }
+.pv.show .pv-head > * { opacity: 1; transform: none; transition: opacity 1s var(--ease), transform 1.1s var(--ease); }
+.pv.show .pv-head > :nth-child(2) { transition-delay: 0.1s; }
+.pv.show .pv-head > :nth-child(3) { transition-delay: 0.22s; }
+.pv.show .pv-head > :nth-child(4) { transition-delay: 0.34s; }
+.pv-num { display: flex; align-items: center; gap: 14px; font-size: 11px; letter-spacing: 0.35em; color: var(--red); text-shadow: 0 0 10px rgba(255, 43, 43, 0.6); }
+.pv-num i { width: 36px; height: 1px; background: rgba(255, 238, 234, 0.5); }
+.pv-num em { font-style: normal; color: var(--dim); text-shadow: none; }
+.pv-title { margin: 14px 0 12px; font-family: var(--serif); font-weight: 300; font-size: clamp(30px, 3.6vw, 60px); line-height: 1.04; color: #fff; text-shadow: 0 0 34px rgba(255, 43, 43, 0.35); }
+.pv-intro { margin: 0; max-width: 58ch; font-size: clamp(13px, 0.95vw, 15px); line-height: 1.7; color: var(--dim); }
+.pv-all { pointer-events: auto; margin-top: 16px; display: inline-flex; align-items: center; gap: 12px; padding: 10px 0; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink); border-bottom: 1px solid rgba(255, 64, 50, 0.65); transition: color 0.3s, text-shadow 0.3s, gap 0.4s var(--ease); }
+.pv-all:hover, .pv-all:focus-visible { color: #fff; text-shadow: var(--glow); gap: 18px; outline: none; }
+body[data-lang='ge'] .pv-all, body[data-lang='jp'] .pv-all, body[data-lang='ge'] .pv-back, body[data-lang='jp'] .pv-back { letter-spacing: 0.12em; }
+.pv-back { position: absolute; z-index: 100; top: 26px; left: clamp(16px, 2.2vw, 36px); display: flex; align-items: center; gap: 14px; padding: 8px 0; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(244, 236, 232, 0.8); opacity: 0; transition: opacity 0.3s, color 0.3s; }
+.pv.show .pv-back { opacity: 1; transition: opacity 0.8s ease 0.5s, color 0.3s; }
+.pv-back:hover, .pv-back:focus-visible { color: #fff; text-shadow: var(--glow); outline: none; }
+.pv-arrow { position: relative; width: 38px; height: 1px; background: currentColor; transition: width 0.4s var(--ease); }
+.pv-arrow::before { content: ''; position: absolute; left: 0; top: 50%; width: 7px; height: 7px; border: solid currentColor; border-width: 0 0 1px 1px; transform: translate(1px, -50%) rotate(45deg); }
+.pv-back:hover .pv-arrow { width: 54px; }
+.pv-hint { position: absolute; z-index: 100; left: 0; right: 0; bottom: 22px; margin: 0; text-align: center; font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(244, 236, 232, 0.42); opacity: 0; transition: opacity 0.4s; pointer-events: none; }
+.pv.show .pv-hint { opacity: 1; transition: opacity 1.2s ease 1.8s; }
+@media (max-width: 760px), (max-aspect-ratio: 1/1) {
+  .pv-head { top: 62px; width: calc(100vw - 32px); }
+  .pv-title { margin: 10px 0 8px; font-size: 30px; }
+  .pv-intro { font-size: 12.5px; line-height: 1.6; }
+  .pv-all { margin-top: 8px; }
+  .pv-back { top: 18px; left: 16px; }
+  .pv-cap { font-size: 12px; }
+  .pv-hint { bottom: 16px; font-size: 9px; letter-spacing: 0.22em; }
+}

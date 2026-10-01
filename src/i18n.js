@@ -27,6 +27,8 @@ export const T = {
     about: 'About',
     founder: 'Founder & Creative Director',
     back: 'Back to the universe',
+    viewAll: 'See the whole section',
+    pvHint: 'Drag to turn the orbit · Open any work',
     portfolio: 'Download portfolio (PDF)',
     aboutText: [
       'Miranda Kuprava is an artist and the founder and creative director of KUPRAVA CREATIVE.',
@@ -70,6 +72,8 @@ export const T = {
     about: 'ჩემ შესახებ',
     founder: 'დამფუძნებელი და კრეატიული დირექტორი',
     back: 'სამყაროში დაბრუნება',
+    viewAll: 'მთელი განყოფილების ნახვა',
+    pvHint: 'გადაატრიალეთ ორბიტა · გახსენით ნებისმიერი ნამუშევარი',
     portfolio: 'პორტფოლიოს ჩამოტვირთვა (PDF)',
     aboutText: [
       'მირანდა კუპრავა მხატვარი და KUPRAVA CREATIVE-ის დამფუძნებელი და კრეატიული დირექტორია.',
@@ -113,6 +117,8 @@ export const T = {
     about: 'À propos',
     founder: 'Fondatrice & directrice de création',
     back: "Retour à l'univers",
+    viewAll: 'Voir toute la section',
+    pvHint: "Faites glisser pour tourner l'orbite · Ouvrez une œuvre",
     portfolio: 'Télécharger le portfolio (PDF)',
     aboutText: [
       'Miranda Kuprava est artiste, fondatrice et directrice de création de KUPRAVA CREATIVE.',
@@ -156,6 +162,8 @@ export const T = {
     about: 'プロフィール',
     founder: '創設者 / クリエイティブディレクター',
     back: '宇宙へ戻る',
+    viewAll: 'セクション全体を見る',
+    pvHint: 'ドラッグで軌道を回転 · 作品をひらく',
     portfolio: 'ポートフォリオをダウンロード（PDF）',
     aboutText: [
       'ミランダ・クプラヴァは、アーティストであり、KUPRAVA CREATIVEの創設者・クリエイティブディレクターです。',
