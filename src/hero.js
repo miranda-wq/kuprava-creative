@@ -25,10 +25,25 @@ const LETTERS = ['U', 'P', 'R', 'A', 'V', 'A'];
 function drawArm(svg) {
   const k = el('g', { class: 'k' }, svg);
 
-  // arm: a dark band that hides what runs behind it
+  // arm: a sheet of threads like the rest of the K, silver along the top where the
+  // steps catch the light, red beneath, glowing, and see-through like the letter
   const x1 = STEPS.x + STEPS.w * LETTERS.length;
-  el('path', { class: 'arm', d: `M${ARM.x0},${ARM.y0} L${x1},${f1(armY(x1))} L${x1 + 22},${f1(armY(x1))} L${x1 + 18},${f1(armY(x1) + 7)} L${ARM.x0 + 12},${ARM.y0 + 10} Z` }, k);
-  el('path', { class: 'arm-under', d: `M${ARM.x0 + 12},${ARM.y0 + 10} L${x1 + 18},${f1(armY(x1) + 7)}` }, k);
+  const arm = el('g', { class: 'arm' }, k);
+  // wide enough to fill the dark band the reference leaves under the stairs
+  const N = 34, dx0 = -14, dy0 = 22, dx1 = -8, dy1 = 15; // bottom-edge offsets at the start and the end
+  for (let i = 0; i <= N; i++) {
+    const t = i / N;
+    // the top edge runs exactly along the stairs' diagonal, so nothing dark opens up between them
+    const a = [ARM.x0 + dx0 * t, armY(ARM.x0) + dy0 * t], b = [x1 + dx1 * t, armY(x1) + dy1 * t];
+    // silver along the top turning red, then fading into the threads below
+    const r = Math.min(1, t / 0.35);
+    const c = [Math.round(242 + 13 * r), Math.round(234 - 196 * r), Math.round(234 - 208 * r)];
+    const o = t < 0.35 ? 0.6 : 0.6 * (1 - (t - 0.35) / 0.65) ** 1.4 + 0.04;
+    el('line', { x1: f1(a[0]), y1: f1(a[1]), x2: f1(b[0]), y2: f1(b[1]), stroke: `rgb(${c.join(',')})`, 'stroke-opacity': o.toFixed(2) }, arm);
+  }
+  // the same sheet, blurred, for the glow
+  arm.id = 'armSheet';
+  k.insertBefore(el('use', { href: '#armSheet', class: 'arm-glow' }), arm);
 
   // staircase: blocks, treads and the letters of KUPRAVA
   const stairs = el('g', { class: 'stairs' }, svg);
@@ -227,9 +242,9 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   layer.after(top);
   el('defs', {}, top).innerHTML = `
     <linearGradient id="stepFace" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f0ecec" stop-opacity="0.6"/>
-      <stop offset="0.45" stop-color="#ff6656" stop-opacity="0.3"/>
-      <stop offset="1" stop-color="#ff1e14" stop-opacity="0"/>
+      <stop offset="0" stop-color="#f4f0f0" stop-opacity="0.62"/>
+      <stop offset="0.55" stop-color="#ff8a7c" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ff4a3a" stop-opacity="0.68"/>
     </linearGradient>`;
   drawArm(top);
   drawThreads(layer);
