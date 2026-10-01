@@ -12,6 +12,7 @@ import { T, LANGS, ORDER } from './i18n.js';
 import { createCosmos } from './cosmos.js';
 import { buildHero } from './hero.js';
 import { runIntro } from './intro.js';
+import { createPlanetView } from './planet-view.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -31,7 +32,12 @@ let cosmos = null;
 try { cosmos = createCosmos($('#cosmos')); } catch (e) { document.body.classList.add('no-webgl'); }
 
 const labels = () => Object.fromEntries(ORDER.map((id) => [id, t().sections[id].title]));
-const hero = buildHero({ svg: $('.hero-svg'), nodesBox: $('.nodes'), labels: labels(), onNavigate: goTo });
+// a planet opens its section in the planet view (created further down, once the lightbox exists)
+const hero = buildHero({
+  svg: $('.hero-svg'), nodesBox: $('.nodes'), labels: labels(),
+  onNavigate: (id, el) => planetView.open(id, el),
+  onHover: (id) => planetView.prefetch(id),
+});
 
 function goTo(id) {
   const target = document.getElementById(id);
@@ -64,6 +70,7 @@ function docCard(d) {
 const docs = {};
 const portfolioDoc = content.sections.find((x) => x.id === 'sculpture')?.doc;
 const galleries = [];
+const sectionWorks = {}; // per section: each project's gallery and images, for the planet view
 
 function renderSections() {
   root.innerHTML = '';
@@ -91,6 +98,7 @@ function renderSections() {
       html += `<div class="works">`;
       s.projects.forEach((p, pi) => {
         const gi = galleries.push({ title: p.title, kicker: p.kicker || t().sections[s.id].title, images: p.images }) - 1;
+        (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images });
         html += `
           <figure class="work reveal" data-gallery="${gi}" data-idx="0" style="--d:${(pi % 4) * 70}ms">
             <div class="work-img">${imgTag(p.images[0], p.title)}</div>
@@ -101,6 +109,7 @@ function renderSections() {
     } else {
       s.projects.forEach((p) => {
         const gi = galleries.push({ title: p.title, kicker: p.kicker, images: p.images, doc: p.doc }) - 1;
+        (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images });
         if (p.doc) docs[p.doc.pdf] = p.doc;
         const sub = s.id === 'functional' && p.key && t().functionalSubs[p.key];
         const many = p.images.length > 12;
@@ -171,6 +180,7 @@ function applyLang() {
   renderMenu();
   renderOrbitList();
   renderRail();
+  planetView.refresh();
 }
 $$('.langs button').forEach((b) => b.addEventListener('click', () => {
   lang = b.dataset.lang;
@@ -202,7 +212,7 @@ burger.addEventListener('click', () => (menu.classList.contains('open') ? closeM
 
 function renderOrbitList() {
   $('.orbit-list').innerHTML = sections.map((s, i) => `<li><a href="#${s.id}" data-id="${s.id}"><i></i><span>${t().sections[s.id].title}</span><em>${pad(i + 1)}</em></a></li>`).join('');
-  $$('.orbit-list a').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); goTo(a.dataset.id); }));
+  $$('.orbit-list a').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); planetView.open(a.dataset.id, a.querySelector('i')); }));
 }
 
 /* ---------------------------------------------------------------- side rail */
@@ -247,7 +257,11 @@ function openDoc(pdf) {
   const d = docs[pdf];
   openGallery({ title: d.title, kicker: 'PDF', images: d.pages, doc: d }, 0);
 }
-function closeLB() { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); document.body.classList.remove('locked'); }
+function closeLB() {
+  lb.classList.remove('open');
+  lb.setAttribute('aria-hidden', 'true');
+  if (!document.body.classList.contains('pv-open')) document.body.classList.remove('locked');
+}
 const step = (d) => { cur.i = (cur.i + d + cur.g.images.length) % cur.g.images.length; showLB(); };
 $('.lb-close').addEventListener('click', closeLB);
 $('.lb-prev').addEventListener('click', () => step(-1));
@@ -258,6 +272,10 @@ window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeLB();
     if (e.key === 'ArrowRight') step(1);
     if (e.key === 'ArrowLeft') step(-1);
+  } else if (planetView.isOpen()) {
+    if (e.key === 'Escape') planetView.close();
+    if (e.key === 'ArrowRight') planetView.nudge(1);
+    if (e.key === 'ArrowLeft') planetView.nudge(-1);
   } else if (e.key === 'Escape') closeMenu();
 });
 let sx = null;
@@ -267,6 +285,33 @@ lb.addEventListener('touchend', (e) => {
   const dx = e.changedTouches[0].clientX - sx;
   if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
   sx = null;
+});
+
+/* ---------------------------------------------------------------- planet view */
+// up to `cap` works of a section, taking each project's images in turn so every project shows
+function planetItems(id, cap) {
+  const projects = sectionWorks[id] || [], out = [];
+  for (let r = 0; out.length < cap; r++) {
+    let any = false;
+    for (const p of projects) {
+      const im = p.images[r];
+      if (!im || out.length >= cap) continue;
+      out.push({ gi: p.gi, idx: r, thumb: url(im.thumb), w: im.w, h: im.h, title: p.title });
+      any = true;
+    }
+    if (!any) break;
+  }
+  return out;
+}
+const planetView = createPlanetView({
+  items: planetItems,
+  planet: (id) => hero.planet(id),
+  openItem: (it) => openLightbox(it.gi, it.idx),
+  toSection: goTo,
+  strings: t,
+  order: ORDER,
+  total: (id) => (sectionWorks[id] || []).reduce((a, p) => a + p.images.length, 0),
+  covered: () => lb.classList.contains('open'),
 });
 
 /* ---------------------------------------------------------------- reveal + scroll */
@@ -310,7 +355,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
   let cx = 0, cy = 0, tx = 0, ty = 0;
   window.addEventListener('pointermove', (e) => { tx = e.clientX; ty = e.clientY; cursor.classList.add('on'); });
   document.addEventListener('pointerover', (e) => {
-    cursor.classList.toggle('big', !!e.target.closest('[data-gallery], .doc'));
+    cursor.classList.toggle('big', !!e.target.closest('[data-gallery], .doc, .pv-card'));
     cursor.classList.toggle('link', !!e.target.closest('a, button'));
   });
   (function loop() {

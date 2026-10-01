@@ -114,10 +114,10 @@ function noise3(seed) {
   return (x, y, z) => n(x, y, z) * 0.5 + n(x * 2.1, y * 2.1, z * 2.1) * 0.27 + n(x * 4.3, y * 4.3, z * 4.3) * 0.15 + n(x * 9, y * 9, z * 9) * 0.08;
 }
 
-function paintMoon(d, tone, seed) {
+function paintMoon(d, tone, seed, radius, gain = 1) {
   const L = LIGHTS[tone] || LIGHTS.lit;
   const key = norm(L.key), fill = norm(L.fill);
-  const R = Math.round(Math.min(150, Math.max(14, d * 1.25)));
+  const R = Math.round(radius || Math.min(150, Math.max(14, d * 1.25)));
   const M = Math.round(R * GLOW);
   const S = (R + M) * 2;
   const c = document.createElement('canvas');
@@ -125,7 +125,9 @@ function paintMoon(d, tone, seed) {
   const x = c.getContext('2d');
   // glow on the lit side
   const gx = S / 2 + key[0] * R * 0.35, gy = S / 2 - key[1] * R * 0.35;
-  const g = x.createRadialGradient(gx, gy, R * 0.7, gx, gy, R + M);
+  // the glow must fade out before the canvas edge, or its square edge shows on big planets
+  const reach = S / 2 - Math.max(Math.abs(gx - S / 2), Math.abs(gy - S / 2)) - 1;
+  const g = x.createRadialGradient(gx, gy, Math.min(R * 0.7, reach * 0.6), gx, gy, reach);
   g.addColorStop(0, `rgba(255,40,30,${0.55 * L.glow})`);
   g.addColorStop(1, 'rgba(255,40,30,0)');
   x.fillStyle = g;
@@ -134,7 +136,8 @@ function paintMoon(d, tone, seed) {
   const rnd = (() => { let s = seed * 9301 + 49297; return () => ((s = (s * 16807) % 2147483647) / 2147483647); })();
   const craters = Array.from({ length: 34 }, () => {
     const v = norm([rnd() - 0.5, rnd() - 0.5, rnd() * 0.9 + 0.1]);
-    return { v, r: 0.03 + rnd() ** 2.5 * 0.22, k: 0.3 + rnd() * 0.5 };
+    const r = 0.03 + rnd() ** 2.5 * 0.22;
+    return { v, r, k: 0.3 + rnd() * 0.5, near: Math.cos(Math.min(Math.PI, r * 1.4)) };
   });
   const nz = noise3(seed);
   const D = R * 2, hgt = new Float32Array(D * D), alb = new Float32Array(D * D), inside = new Uint8Array(D * D);
@@ -146,7 +149,9 @@ function paintMoon(d, tone, seed) {
     let h = nz(n[0] * 5 + 5, n[1] * 5, n[2] * 5) * 0.9;
     let a = 0.7 + nz(n[0] * 1.6, n[1] * 1.6 + 9, n[2] * 1.6) * 0.6;
     for (const cr of craters) {
-      const dist = Math.acos(Math.min(1, n[0] * cr.v[0] + n[1] * cr.v[1] + n[2] * cr.v[2])) / cr.r;
+      const dot = n[0] * cr.v[0] + n[1] * cr.v[1] + n[2] * cr.v[2];
+      if (dot < cr.near) continue; // too far from this crater to be touched by it
+      const dist = Math.acos(Math.min(1, dot)) / cr.r;
       if (dist < 1.4) {
         h += dist < 1 ? -cr.k * 0.35 * (1 - dist * dist) : 0;
         h += cr.k * 0.22 * Math.exp(-(((dist - 1) / 0.18) ** 2));
@@ -169,7 +174,7 @@ function paintMoon(d, tone, seed) {
     const rim = Math.pow(1 - sz, 3) * Math.max(0, -sx * 0.9 + 0.2) * 1.6;
     const edge = Math.min(1, (1 - Math.sqrt(sx * sx + sy * sy)) * R * 0.9); // antialias the limb
     for (let ch = 0; ch < 3; ch++) {
-      const v = L.albedo[ch] * alb[k] * (dk * L.keyI * L.keyC[ch] + df * L.fillI * L.fillC[ch] + 0.025) + rim * L.keyC[ch];
+      const v = L.albedo[ch] * alb[k] * (dk * L.keyI * gain * L.keyC[ch] + df * L.fillI * gain * L.fillC[ch] + 0.025) + rim * L.keyC[ch];
       const o = k * 4 + ch;
       px[o] = px[o] * (1 - edge) + Math.min(255, v * 255) * edge;
     }
@@ -196,7 +201,7 @@ function labelHTML(text, wrap) {
 }
 
 /* ---------------------------------------------------------------- build */
-export function buildHero({ svg, nodesBox, onNavigate, labels }) {
+export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   svg.innerHTML = '';
   const orbitG = el('g', { class: 'orbits' }, svg);
@@ -260,8 +265,12 @@ export function buildHero({ svg, nodesBox, onNavigate, labels }) {
     a.style.setProperty('--i', i);
     a.innerHTML = `<span class="label"><b>${labelHTML(labels[n.id], n.wrap)}</b><i></i></span>`;
     a.prepend(moonEl(n.d, n.tone || 'lit', i + 11));
-    a.addEventListener('click', (e) => { e.preventDefault(); onNavigate(n.id); });
-    a.addEventListener('pointerenter', () => svg.classList.add(`hl-${n.orbit}`));
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      svg.classList.remove(`hl-${n.orbit}`);
+      onNavigate(n.id, a.querySelector('.moon'));
+    });
+    a.addEventListener('pointerenter', () => { svg.classList.add(`hl-${n.orbit}`); onHover?.(n.id); });
     a.addEventListener('pointerleave', () => svg.classList.remove(`hl-${n.orbit}`));
     nodesBox.appendChild(a);
     return { ...n, o, base, off, a, phase: Math.random() * 6.28 };
@@ -283,6 +292,15 @@ export function buildHero({ svg, nodesBox, onNavigate, labels }) {
   return {
     setLabels(lb) { live.forEach((n) => { n.a.querySelector('b').innerHTML = labelHTML(lb[n.id], n.wrap); }); },
     relayout() {},
+    // a planet's node, and a painter for a bigger copy of its moon (same surface and light)
+    planet(id) {
+      const i = NODES.findIndex((n) => n.id === id);
+      if (i < 0) return null;
+      const n = live[i];
+      // close up, the brightly lit planets are toned down so their surface doesn't wash out
+      const gain = { hot: 0.62, red: 0.72 }[n.tone] || 1;
+      return { el: n.a.querySelector('.moon'), paint: (radius) => paintMoon(n.d, n.tone || 'lit', i + 11, radius, gain) };
+    },
     stop() { cancelAnimationFrame(raf); },
   };
 }
