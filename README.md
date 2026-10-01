@@ -21,6 +21,18 @@ Then open http://localhost:5173. `npm run build` writes a static site to `dist/`
 - `src/content.json` – which works go in which section (generated).
 - `tools/build_assets.py` – regenerates the two above from `source/`. Edit the section lists there, then run `python tools/build_assets.py` (needs Pillow and PyMuPDF).
 - `src/i18n.js` – EN / GE / FR / JP text.
+- `src/intro.js` – the opening scene (WebGL shader over the Merani render, 2D canvas fallback). Its timing comes from `src/engine-timeline.js`, which the sound is built from too, so picture and engine stay in step.
+- `public/audio/merani-engine.mp3` – the opening sound, rendered by `node tools/build_engine_audio.mjs <sprite.m4a> <sprite.json>` (needs ffmpeg; see the file for where the recording comes from).
+
+## Opening sound
+
+A real recording, not a synth: a Mercedes-AMG C63 (6.2 V8) by Pole Position Production from the free
+Sonniss #GameAudioGDC 2020 bundle (royalty-free, commercial use allowed, no attribution required:
+https://sonniss.com/gdc-bundle-license/). The clip was taken from the processed version in
+github.com/yassinsolim/personal-portfolio (`static/sounds/race/amg-c63-507`), using only its recorded parts
+(start-up, idle, full-load and overrun loops). The start, the two blips and the pull to the limiter are cut and
+resampled from those. No free Ferrari recording was reachable; to use one, replace the mp3 (keep it about 9 s with
+the engine firing at 0.8 s, or edit `src/engine-timeline.js` to match).
 
 ## What Miranda asked for
 
@@ -30,7 +42,7 @@ From WhatsApp:
 - **Home page = her reference image**, with every direction as a planet that opens into its projects.
 - **Ten planets, in her order:** Sculpture / Artworks, Public Art, Outdoor Objects, Christmas Trees, Kinetic / Automotive, Spaces & Worlds, Functional Art, Brand Concepts, Works with Melita, Competitions / Submissions.
 - **On entering, KUPRAVA climbs the K's staircase letter by letter.**
-- **Opening render:** Merani rising out of darkness, headlights lighting up, with a Ferrari engine sound. She would like a short video here later. The site uses her dark Merani render and a synthesized engine; put a real recording at `public/audio/merani-engine.mp3` to replace it.
+- **Opening render:** Merani rising out of darkness, headlights lighting up, with a Ferrari engine sound. She would like a short video here later. The site opens on an engine START button: the starter cranks while the headlights flicker, the engine fires and the showroom lights up from the headlights, two throttle blips write her name, then a full pull dives into a headlight and the flash opens onto the universe. Sound: see *Opening sound* above.
 - **"Super modern" site**, visually led. She would like an **interactive 3D model** later.
 - **XPENG / VW / Geely (and Ferrari, Wendy's) concepts must read as independent conceptual proposals**, never as official collaborations.
 - **Melita collaborations kept separate with clear credits.**
