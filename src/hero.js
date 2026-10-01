@@ -75,6 +75,29 @@ function drawArm(svg) {
   el('circle', { class: 'step-spark', cx: x1 + 34, cy: f1(yTop + 1), r: 3 }, stairs);
 }
 
+// KUPRAVA climbs its staircase: each letter appears just below the first step and hops
+// up the stairs, one step at a time, to its own tread. The top A sets off first, the U last,
+// so they all arrive at about the same moment.
+function climb(svg) {
+  const letters = [...svg.querySelectorAll('.step-letter')];
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const HOP = 330, GAP = 380; // ms per hop, ms between letters setting off
+  letters.forEach((tx, i) => {
+    if (reduce || !tx.animate) { tx.style.opacity = 1; return; }
+    const hops = i + 1;
+    const at = (back, lift = 0) => `translate(${-back * STEPS.w}px, ${back * STEPS.h - lift}px) scaleY(1.15)`;
+    const frames = [{ transform: at(hops), opacity: 0, offset: 0 }];
+    for (let k = 0; k < hops; k++) {
+      const back = hops - k, apex = (k + 0.5) / hops;
+      // up and over the riser in an arc, then land on the next tread
+      frames.push({ transform: `translate(${-(back - 0.55) * STEPS.w}px, ${(back - 0.5) * STEPS.h - STEPS.h * 0.75}px) scaleY(1.2)`, opacity: 1, offset: apex, easing: 'cubic-bezier(0.4, 0, 1, 1)' });
+      frames.push({ transform: at(back - 1), opacity: 1, offset: (k + 1) / hops, easing: 'cubic-bezier(0, 0, 0.6, 1)' });
+    }
+    frames[0].easing = 'cubic-bezier(0, 0, 0.6, 1)';
+    tx.animate(frames, { duration: hops * HOP, delay: (letters.length - 1 - i) * GAP, fill: 'both' });
+  });
+}
+
 /* ---------------------------------------------------------------- orbits, construction, sparks */
 const ORBITS = [
   { cx: 835, cy: 415, rx: 495, ry: 470, rot: 0, cls: '' },
@@ -320,6 +343,7 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   return {
     setLabels(lb) { live.forEach((n) => { n.a.querySelector('b').innerHTML = labelHTML(lb[n.id], n.wrap); }); },
     relayout() {},
+    climb: () => climb(top),
     // a planet's node, and a painter for a bigger copy of its moon (same surface and light)
     planet(id) {
       const i = NODES.findIndex((n) => n.id === id);

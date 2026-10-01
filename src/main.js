@@ -378,6 +378,7 @@ const maybeReady = () => {
   if (!pageLoaded || !introDone || document.body.classList.contains('ready')) return;
   document.body.classList.add('ready');
   hero.relayout();
+  setTimeout(() => hero.climb(), 2500); // once the staircase has drawn itself
   if (location.hash && location.hash !== '#top') setTimeout(() => goTo(location.hash.slice(1)), 600);
 };
 window.addEventListener('load', () => { pageLoaded = true; maybeReady(); });
