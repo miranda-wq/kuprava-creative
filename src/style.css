@@ -145,10 +145,12 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 .k-glow-wide { filter: blur(calc(var(--u) * 7)) saturate(1.6); opacity: 0.9; }
 .ready .k-layer { animation: kDraw 2.8s cubic-bezier(0.6, 0.05, 0.3, 1) 0.4s forwards; }
 @keyframes kDraw { 30% { opacity: 1; } to { opacity: 1; clip-path: inset(0 0 0 0); } }
-.arm { fill: #040102; opacity: 0; }
+.arm path { stroke-width: 0.8; vector-effect: non-scaling-stroke; }
+.arm, .arm-glow { opacity: 0; }
+.arm-glow { filter: blur(calc(var(--u) * 3)) brightness(1.6); }
 .ready .arm { animation: fadeIn 1.2s 1.4s forwards; }
-.arm-under { fill: none; stroke: rgba(255, 40, 28, 0.7); stroke-width: 0.9; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 3px rgba(255, 30, 20, 0.7)); opacity: 0; }
-.ready .arm-under { animation: fadeIn 1.2s 1.6s forwards; }
+.ready .arm-glow { animation: armGlow 1.6s 1.6s forwards; }
+@keyframes armGlow { to { opacity: 0.8; } }
 
 .step-face { fill: url(#stepFace); opacity: 0; }
 .ready .step-face { animation: fadeIn 1.4s var(--ease) 2.4s forwards; }
