@@ -139,7 +139,7 @@ function renderSections() {
   about.id = 'about';
   about.innerHTML = `
     <div class="about-grid reveal">
-      <div class="about-k" aria-hidden="true">K</div>
+      <div class="about-k" aria-hidden="true"><img src="${url('k-emblem-m.webp')}" srcset="${url('k-emblem-m.webp')} 1x, ${url('k-emblem.webp')} 2x" width="628" height="552" alt="" loading="lazy" decoding="async" /></div>
       <div>
         <div class="kicker" data-i18n="about">${t().about}</div>
         <h2 class="about-name">Miranda Kuprava</h2>
