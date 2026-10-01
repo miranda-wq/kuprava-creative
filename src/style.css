@@ -137,32 +137,27 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 .glint circle { fill: #fff; }
 .ready .glint { animation: fadeIn 1s 1.8s forwards, breathe 4s ease-in-out 3s infinite; }
 
-/* the woven K */
-.weave path, .weave line { fill: none; stroke-width: 0.7; vector-effect: non-scaling-stroke; }
-.w-web line { stroke: rgba(255, 70, 60, 0.22); }
-.k .weave { opacity: 0; }
-.ready .w-stem { animation: fadeIn 2.4s var(--ease) 0.9s forwards; }
-.k-bloom { opacity: 0; filter: blur(3px) saturate(1.3) brightness(1.5); }
-.ready .k-bloom { animation: bloomIn 2.4s var(--ease) 1.2s forwards; }
-@keyframes bloomIn { to { opacity: 0.4; } }
-.ready .w-web { animation: fadeIn 2.4s var(--ease) 1.3s forwards; }
-.ready .w-leg { animation: fadeIn 2.2s var(--ease) 1.6s forwards; }
-.ready .w-tail { animation: fadeIn 2.6s var(--ease) 2s forwards; }
+/* the K: threads traced from the reference (k-threads.js), with a glow made from themselves */
+.k-layer { position: absolute; inset: 0; pointer-events: none; opacity: 0; clip-path: inset(100% 0 0 0); }
+.k-layer canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.k-glow { filter: blur(calc(var(--u) * 2)); opacity: 0.45; }
+.k-glow-wide { filter: blur(calc(var(--u) * 7)); opacity: 0.4; }
+.ready .k-layer { animation: kDraw 2.8s cubic-bezier(0.6, 0.05, 0.3, 1) 0.4s forwards; }
+@keyframes kDraw { 30% { opacity: 1; } to { opacity: 1; clip-path: inset(0 0 0 0); } }
 .arm { fill: #040102; opacity: 0; }
 .ready .arm { animation: fadeIn 1.2s 1.4s forwards; }
-.k-edge { fill: none; stroke-width: 1.3; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; }
-.k-edge.red { stroke: rgb(255, 34, 24); filter: drop-shadow(0 0 2px rgb(255, 30, 20)) drop-shadow(0 0 9px rgba(255, 24, 14, 0.85)) drop-shadow(0 0 22px rgba(255, 20, 10, 0.45)); }
-.k-edge.white { stroke: rgba(240, 236, 236, 0.85); filter: drop-shadow(0 0 3px rgba(255, 60, 50, 0.45)); }
-.k-edge.stem-l { stroke-width: 1.8; filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 8px rgba(255, 30, 20, 0.5)); }
-.ready .k-edge { animation: draw 3s cubic-bezier(0.6, 0.05, 0.3, 1) 0.4s forwards; }
+.arm-under { fill: none; stroke: rgba(255, 40, 28, 0.7); stroke-width: 0.9; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 3px rgba(255, 30, 20, 0.7)); opacity: 0; }
+.ready .arm-under { animation: fadeIn 1.2s 1.6s forwards; }
 
 .step-face { fill: url(#stepFace); opacity: 0; }
 .ready .step-face { animation: fadeIn 1.4s var(--ease) 2.4s forwards; }
 .step-path { fill: none; stroke: rgba(255, 244, 240, 0.85); stroke-width: 1.1; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; filter: drop-shadow(0 0 3px rgba(255, 43, 43, 0.9)); }
 .ready .step-path { animation: draw 2.4s var(--ease) 2.2s forwards; }
 .step { transform-box: fill-box; }
-.step-letter { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 37px; fill: #fff; opacity: 0; filter: drop-shadow(0 0 5px rgba(255, 43, 43, 0.95)); }
-.ready .step-letter { animation: rise 1s var(--ease) forwards; animation-delay: calc(2.7s + var(--i) * 0.16s); }
+/* the reference's letters: taller than the font draws them, warm white, lit red */
+.step-letter { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 38px; fill: #f6dfd8; opacity: 0; transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(1.15); filter: drop-shadow(0 0 1.5px rgba(255, 70, 55, 0.95)) drop-shadow(0 0 6px rgba(255, 30, 20, 0.85)); }
+.ready .step-letter { animation: riseTall 1s var(--ease) forwards; animation-delay: calc(2.7s + var(--i) * 0.16s); }
+@keyframes riseTall { from { opacity: 0; transform: translateY(18px) scaleY(1.15); } to { opacity: 1; transform: scaleY(1.15); } }
 .step-glint { fill: #ff6a5a; opacity: 0; filter: drop-shadow(0 0 4px #ff2b2b); }
 .ready .step-glint { animation: fadeIn 0.6s forwards; animation-delay: calc(2.9s + var(--i) * 0.16s); }
 .step-spark { fill: #fff; filter: drop-shadow(0 0 6px #ff2b2b) drop-shadow(0 0 14px #ff2b2b); opacity: 0; }

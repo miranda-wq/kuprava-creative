@@ -21,7 +21,8 @@ Then open http://localhost:5173. `npm run build` writes a static site to `dist/`
 - `src/content.json` – which works go in which section (generated).
 - `tools/build_assets.py` – regenerates the two above from `source/`. Edit the section lists there, then run `python tools/build_assets.py` (needs Pillow and PyMuPDF).
 - `src/i18n.js` – EN / GE / FR / JP text.
-- `src/hero.js` – the home page, drawn in the pixel coordinates of Miranda's reference image (1672 × 941): the thread-woven K, staircase, orbits, construction lines, painted moons and the ten planet links. `src/cosmos.js` is the galaxy behind it.
+- `src/hero.js` – the home page, drawn in the pixel coordinates of Miranda's reference image (1672 × 941): staircase, orbits, construction lines, painted moons and the ten planet links. `src/cosmos.js` is the galaxy behind it.
+- The K itself is traced from the reference: `python tools/trace_k.py [reference image]` (needs Pillow, numpy, scipy; defaults to `source/reference_design.png`) follows the direction of its threads and samples its colours into `src/k-threads.json`, which `src/k-threads.js` draws as crisp lines at the screen's resolution. Re-run it if the reference changes.
 - `src/intro.js` – the opening scene (WebGL shader over the Merani render, 2D canvas fallback). Its timing comes from `src/engine-timeline.js`, which the sound is built from too, so picture and engine stay in step.
 - `public/audio/merani-engine.mp3` – the opening sound, rendered by `node tools/build_engine_audio.mjs <sprite.m4a> <sprite.json>` (needs ffmpeg; see the file for where the recording comes from).
 

@@ -1,8 +1,8 @@
-// The home page emblem, drawn after Miranda's reference image: a K woven from
-// fine threads (an hourglass stem, a dark arm with KUPRAVA climbing its
-// staircase, a leg and a ribbon trailing off to the lower right), framed by
+// The home page, after Miranda's reference image: her K, framed by
 // construction lines, orbits and moons, with her ten planets as links.
 // Coordinates are pixels of the reference image, 1672 × 941.
+import { drawThreads } from './k-threads.js';
+
 const NS = 'http://www.w3.org/2000/svg';
 const W = 1672, H = 941;
 const el = (tag, attrs = {}, parent) => {
@@ -11,118 +11,24 @@ const el = (tag, attrs = {}, parent) => {
   if (parent) parent.appendChild(n);
   return n;
 };
-const lerp = (a, b, t) => a + (b - a) * t;
-const mix = (p, q, t) => [lerp(p[0], q[0], t), lerp(p[1], q[1], t)];
 const f1 = (n) => Math.round(n * 10) / 10;
 
-/* ---------------------------------------------------------------- curves */
-// a curve is [start, ...segments]; a segment is [c1, c2, end] (cubic) or [end] (line)
-function sample(curve, n = 72) {
-  const pts = [curve[0]];
-  let p = curve[0];
-  for (const seg of curve.slice(1)) {
-    for (let i = 1; i <= 40; i++) {
-      const t = i / 40;
-      if (seg.length === 1) pts.push(mix(p, seg[0], t));
-      else {
-        const u = 1 - t, [a, b, c] = seg;
-        pts.push([
-          u * u * u * p[0] + 3 * u * u * t * a[0] + 3 * u * t * t * b[0] + t * t * t * c[0],
-          u * u * u * p[1] + 3 * u * u * t * a[1] + 3 * u * t * t * b[1] + t * t * t * c[1],
-        ]);
-      }
-    }
-    p = seg[seg.length - 1];
-  }
-  // resample evenly by length so two edges can be woven point for point
-  const acc = [0];
-  for (let i = 1; i < pts.length; i++) acc.push(acc[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
-  const total = acc[acc.length - 1], out = [];
-  for (let k = 0, j = 0; k <= n; k++) {
-    const d = (k / n) * total;
-    while (j < acc.length - 2 && acc[j + 1] < d) j++;
-    const t = (d - acc[j]) / (acc[j + 1] - acc[j] || 1);
-    out.push(mix(pts[j], pts[j + 1], t));
-  }
-  return out;
-}
-const toD = (pts) => 'M' + pts.map((p) => `${f1(p[0])},${f1(p[1])}`).join('L');
-const curveD = (c) => `M${c[0].join(',')}` + c.slice(1).map((s) => (s.length === 1 ? `L${s[0].join(',')}` : `C${s.map((q) => q.join(',')).join(' ')}`)).join('');
-
-// threads strung between two edges; twist crosses them over from one edge to the other
-function weave(parent, A, B, n, color, { twist = false, cls = '' } = {}) {
-  const g = el('g', { class: `weave ${cls}` }, parent);
-  for (let i = 0; i <= n; i++) {
-    const t = i / n;
-    const pts = A.map((a, k) => mix(a, B[k], twist ? lerp(t, 1 - t, k / (A.length - 1)) : t));
-    const c = color(t); // [r, g, b, opacity], or [paint, opacity] for a gradient
-    el('path', c.length === 2 ? { d: toD(pts), stroke: c[0], 'stroke-opacity': c[1] } : { d: toD(pts), stroke: `rgba(${c.join(',')})` }, g);
-  }
-  return g;
-}
-
 /* ---------------------------------------------------------------- the K */
-const STEM_L = [[590, 185], [[660, 187], [690, 222], [690, 292]], [[690, 520]], [[690, 612], [662, 680], [604, 693]]];
-const STEM_R = [[880, 185], [[806, 189], [790, 262], [790, 332]], [[790, 470]], [[772, 504], [754, 545], [754, 592]], [[755, 642], [768, 684], [792, 693]]];
-const ARCH = [[754, 592], [[755, 532], [790, 494], [830, 492]]];
-const LEG_IN = [[826, 494], [[872, 524], [918, 604], [948, 693]]];
-const LEG_OUT = [[870, 456], [[924, 504], [980, 600], [1012, 693]]];
-const TAIL_L = [[904, 426], [[928, 545], [966, 640], [1012, 693]], [[1090, 790], [1320, 862], [1560, 884]]];
-const TAIL_R = [[966, 372], [[1032, 500], [1110, 598], [1190, 665]], [[1290, 750], [1430, 822], [1600, 850]]];
-
+// The K's threads are traced from the reference (tools/trace_k.py) and drawn by
+// k-threads.js; the arm and the KUPRAVA staircase are drawn here, on top of them.
 // the arm and its staircase
-const ARM = { x0: 790, y0: 511, slope: 0.88 };
+const ARM = { x0: 808, y0: 497, slope: 0.88 }; // starts under the U, as in the reference
 const armY = (x) => ARM.y0 - ARM.slope * (x - ARM.x0);
 const STEPS = { x: 806, y: 458, w: 46, h: 40.5 };
 const LETTERS = ['U', 'P', 'R', 'A', 'V', 'A'];
 
-const WHITE = [236, 232, 232], RED = [255, 30, 22];
-// threads are either the reference's saturated red or a neutral silver; where they overlap they blend on screen
-const tone = (w, o) => [...(w > 0.5 ? WHITE : RED), o];
-
-function drawK(svg) {
+function drawArm(svg) {
   const k = el('g', { class: 'k' }, svg);
 
-  // tail ribbon, fading out toward the corner
-  const tailL = sample(TAIL_L, 90), tailR = sample(TAIL_R, 90);
-  const tail = weave(k, tailL, tailR, 60, (t) => ['url(#tailTone)', t < 0.08 ? 0.5 : 0.32], { cls: 'w-tail' });
-  tail.setAttribute('mask', 'url(#tailFade)');
-
-  // stem: threads fan out of the serifs into a narrow waist
-  const sl = sample(STEM_L), sr = sample(STEM_R);
-  // the left threads turn silver down the stem's body and stay red in the serifs
-  const stem = weave(k, sl, sr, 84, (t) => (t < 0.16 ? ['url(#stemSilver)', 0.55] : t > 0.95 ? tone(1, 0.3) : tone(0, 0.24)), { cls: 'w-stem' });
-  // a soft bloom of the same threads behind them, for the reference's glowing red
-  stem.id = 'stemWeave';
-  k.insertBefore(el('use', { href: '#stemWeave', class: 'k-bloom' }), stem);
-  weave(k, sl, sr, 34, () => tone(0, 0.13), { twist: true, cls: 'w-stem w-twist' });
-
-  // the web strung from the cap line into the stem's brackets
-  const web = el('g', { class: 'weave w-web' }, k);
-  for (let i = 0; i <= 44; i++) {
-    const t = i / 44;
-    const a = [lerp(700, 880, t), 185], b = sr[Math.round(lerp(26, 2, t))];
-    el('line', { x1: a[0], y1: a[1], x2: f1(b[0]), y2: f1(b[1]) }, web);
-    const c = [lerp(590, 680, t), 185], d = sl[Math.round(lerp(1, 20, t))];
-    el('line', { x1: c[0], y1: c[1], x2: f1(d[0]), y2: f1(d[1]) }, web);
-  }
-
-  // leg
-  const li = sample(LEG_IN, 48), lo = sample(LEG_OUT, 48);
-  weave(k, li, lo, 44, (t) => (t > 0.95 ? tone(0, 0.45) : tone(1, 0.6)), { cls: 'w-leg' });
-
-  // arm: a dark band that hides the threads behind it
+  // arm: a dark band that hides what runs behind it
   const x1 = STEPS.x + STEPS.w * LETTERS.length;
-  el('path', { class: 'arm', d: `M${ARM.x0},${ARM.y0} L${x1},${f1(armY(x1))} L${x1 + 22},${f1(armY(x1))} L${x1 + 18},${f1(armY(x1) + 8)} L${ARM.x0 + 16},${ARM.y0 + 14} Z` }, k);
-  el('path', { class: 'k-edge red arm-under', d: `M${ARM.x0 + 16},${ARM.y0 + 14} L${x1 + 18},${f1(armY(x1) + 8)}`, pathLength: 1 }, k);
-
-  // glowing edges
-  const edges = el('g', { class: 'k-edges' }, k);
-  [[STEM_L, 'red stem-l'], [STEM_R, 'red stem-r'], [ARCH, 'red'], [LEG_IN, 'white'], [LEG_OUT, 'white'], [TAIL_L, 'red tail']].forEach(([c, cls]) => {
-    const e = el('path', { d: curveD(c), class: `k-edge ${cls}`, pathLength: 1 }, edges);
-    if (cls.includes('stem')) e.style.stroke = `url(#${cls.includes('stem-l') ? 'edgeL' : 'edgeR'})`;
-    if (cls.includes('tail')) e.style.stroke = 'url(#tailEdge)';
-  });
+  el('path', { class: 'arm', d: `M${ARM.x0},${ARM.y0} L${x1},${f1(armY(x1))} L${x1 + 22},${f1(armY(x1))} L${x1 + 18},${f1(armY(x1) + 7)} L${ARM.x0 + 12},${ARM.y0 + 10} Z` }, k);
+  el('path', { class: 'arm-under', d: `M${ARM.x0 + 12},${ARM.y0 + 10} L${x1 + 18},${f1(armY(x1) + 7)}` }, k);
 
   // staircase: blocks, treads and the letters of KUPRAVA
   const stairs = el('g', { class: 'stairs' }, svg);
@@ -293,57 +199,37 @@ function labelHTML(text, wrap) {
 export function buildHero({ svg, nodesBox, onNavigate, labels }) {
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   svg.innerHTML = '';
-  const defs = el('defs', {}, svg);
-  defs.innerHTML = `
-    <linearGradient id="stepFace" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f0ecec" stop-opacity="0.6"/>
-      <stop offset="0.45" stop-color="#ff6656" stop-opacity="0.3"/>
-      <stop offset="1" stop-color="#ff1e14" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="stemSilver" gradientUnits="userSpaceOnUse" x1="0" y1="185" x2="0" y2="693">
-      <stop offset="0" stop-color="#ff2a1e"/><stop offset="0.15" stop-color="#ff2a1e"/><stop offset="0.27" stop-color="#ece8e8"/>
-      <stop offset="0.76" stop-color="#ece8e8"/><stop offset="0.9" stop-color="#ff8a7c"/><stop offset="1" stop-color="#ff5a4c"/>
-    </linearGradient>
-    <linearGradient id="tailTone" gradientUnits="userSpaceOnUse" x1="930" y1="480" x2="1250" y2="760">
-      <stop offset="0" stop-color="#ff1e16"/>
-      <stop offset="0.3" stop-color="#ff3a2e"/>
-      <stop offset="0.65" stop-color="#e6e2e2"/>
-    </linearGradient>
-    <linearGradient id="tailEdge" gradientUnits="userSpaceOnUse" x1="900" y1="430" x2="1200" y2="760">
-      <stop offset="0" stop-color="#ff2418"/>
-      <stop offset="0.6" stop-color="#ff2418" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="#ff2418" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="tailGrad" gradientUnits="userSpaceOnUse" x1="960" y1="560" x2="1580" y2="880">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="0.3" stop-color="#fff" stop-opacity="0.85"/>
-      <stop offset="0.7" stop-color="#fff" stop-opacity="0.3"/>
-      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="edgeL" gradientUnits="userSpaceOnUse" x1="0" y1="185" x2="0" y2="693">
-      <stop offset="0" stop-color="#ff4a3c"/><stop offset="0.24" stop-color="#ff4a3c"/><stop offset="0.36" stop-color="#fff2ee" stop-opacity="0.75"/>
-      <stop offset="0.7" stop-color="#fff2ee" stop-opacity="0.75"/><stop offset="0.84" stop-color="#ff4a3c"/><stop offset="1" stop-color="#ff4a3c"/>
-    </linearGradient>
-    <linearGradient id="edgeR" gradientUnits="userSpaceOnUse" x1="0" y1="185" x2="0" y2="693">
-      <stop offset="0" stop-color="#ff4a3c"/><stop offset="0.3" stop-color="#ff4a3c"/><stop offset="0.42" stop-color="#fff2ee" stop-opacity="0.45"/>
-      <stop offset="0.58" stop-color="#fff2ee" stop-opacity="0.45"/><stop offset="0.72" stop-color="#ff4a3c"/><stop offset="1" stop-color="#ff4a3c"/>
-    </linearGradient>
-    <mask id="tailFade" maskUnits="userSpaceOnUse" x="0" y="0" width="${W}" height="${H}"><rect width="${W}" height="${H}" fill="url(#tailGrad)"/></mask>`;
-
   const orbitG = el('g', { class: 'orbits' }, svg);
   ORBITS.forEach((o, i) => {
     el('ellipse', { cx: o.cx, cy: o.cy, rx: o.rx, ry: o.ry, transform: `rotate(${o.rot} ${o.cx} ${o.cy})`, class: `orbit orbit-${i} ${o.cls}`, pathLength: 1000 }, orbitG);
   });
 
   const cons = el('g', { class: 'construct' }, svg);
-  [[669, 58, 669, 700], [405, 185, 885, 185], [560, 693, 1080, 693], [790, 300, 790, 470]].forEach(([a, b, c, d]) => {
+  [[669, 58, 669, 700], [405, 185, 885, 185], [560, 693, 1080, 693], [793, 252, 793, 697]].forEach(([a, b, c, d]) => {
     el('line', { x1: a, y1: b, x2: c, y2: d, pathLength: 1000 }, cons);
   });
-  [[669, 512], [669, 592], [790, 470]].forEach(([cx, cy]) => el('circle', { cx, cy, r: 2.6, class: 'node-dot' }, cons));
+  [[669, 512], [669, 592], [793, 470]].forEach(([cx, cy]) => el('circle', { cx, cy, r: 2.6, class: 'node-dot' }, cons));
 
-  drawK(svg);
+  // the traced K, then the arm, the staircase and the cap-line glint on top of it
+  const stage = svg.parentElement;
+  stage.querySelectorAll('.k-layer, .hero-top').forEach((n) => n.remove());
+  const layer = document.createElement('div');
+  layer.className = 'k-layer';
+  layer.setAttribute('aria-hidden', 'true');
+  layer.innerHTML = '<canvas class="k-glow k-glow-wide"></canvas><canvas class="k-glow"></canvas><canvas class="k-lines"></canvas>';
+  svg.after(layer);
+  const top = el('svg', { class: 'hero-svg hero-top', viewBox: `0 0 ${W} ${H}`, 'aria-hidden': 'true' });
+  layer.after(top);
+  el('defs', {}, top).innerHTML = `
+    <linearGradient id="stepFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0ecec" stop-opacity="0.6"/>
+      <stop offset="0.45" stop-color="#ff6656" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ff1e14" stop-opacity="0"/>
+    </linearGradient>`;
+  drawArm(top);
+  drawThreads(layer);
 
-  const glint = el('g', { class: 'glint', transform: 'translate(669 185)' }, svg);
+  const glint = el('g', { class: 'glint', transform: 'translate(669 185)' }, top);
   el('path', { d: 'M-26,0 L26,0 M0,-26 L0,26' }, glint);
   el('circle', { r: 3.2 }, glint);
 
