@@ -127,11 +127,11 @@ const NODES = [
   { id: 'public', x: 417, y: 185, d: 24, side: 'left', orbit: 2, line: true, tone: 'hot' },
   { id: 'spaces', x: 340, y: 400, d: 24, side: 'left', orbit: 0, wrap: true, dash: true, dy: 10, tone: 'red' },
   { id: 'competitions', x: 483, y: 483, d: 34, side: 'left', orbit: 3, wrap: true, dy: 10 },
-  { id: 'melita', x: 378, y: 628, d: 40, side: 'left', orbit: 0, wrap: true, dy: 24 },
+  { id: 'contact', x: 378, y: 628, d: 40, side: 'left', orbit: 0, dy: 24 },
   { id: 'outdoor', x: 548, y: 772, d: 26, side: 'left', orbit: 1, wrap: true, dy: 8, tone: 'grey' },
 ];
 const MOONS = [
-  { x: 1240, y: 480, d: 142, tone: 'big' },
+  { id: 'melita', x: 1240, y: 480, d: 142, tone: 'big', side: 'left', orbit: 0, wrap: true },
   { x: 398, y: 362, d: 11, tone: 'grey' },
   { x: 1582, y: 262, d: 6, tone: 'red' },
 ];
@@ -312,10 +312,28 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   // planets and labels
   nodesBox.innerHTML = '';
   const pos = (x, y) => ({ left: `${(x / W) * 100}%`, top: `${(y / H) * 100}%` });
+  const moonLinks = [];
   MOONS.forEach((m, i) => {
     const c = moonEl(m.d, m.tone, i + 3);
-    Object.assign(c.style, pos(m.x, m.y));
-    nodesBox.appendChild(c);
+    if (!m.id) {
+      Object.assign(c.style, pos(m.x, m.y));
+      nodesBox.appendChild(c);
+      return;
+    }
+    const a = document.createElement('a');
+    a.className = `node node-${m.side}${m.wrap ? ' node-wrap' : ''}`;
+    a.href = `#${m.id}`;
+    a.style.setProperty('--d', m.d);
+    a.style.setProperty('--dy', m.dy || 0);
+    a.style.setProperty('--i', i);
+    Object.assign(a.style, pos(m.x, m.y));
+    a.innerHTML = `<span class="label"><b>${labelHTML(labels[m.id], m.wrap)}</b><i></i></span>`;
+    a.prepend(c);
+    a.addEventListener('click', (e) => { e.preventDefault(); onNavigate(m.id, c); });
+    a.addEventListener('pointerenter', () => { svg.classList.add(`hl-${m.orbit}`); onHover?.(m.id); });
+    a.addEventListener('pointerleave', () => svg.classList.remove(`hl-${m.orbit}`));
+    nodesBox.appendChild(a);
+    moonLinks.push({ a, id: m.id, wrap: m.wrap, el: c, moon: m, index: i });
   });
   const live = NODES.map((n, i) => {
     const o = ORBITS[n.orbit];
@@ -355,11 +373,17 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   raf = requestAnimationFrame(tick);
 
   return {
-    setLabels(lb) { live.forEach((n) => { n.a.querySelector('b').innerHTML = labelHTML(lb[n.id], n.wrap); }); },
+    setLabels(lb) {
+      [...live.map((n) => ({ a: n.a, id: n.id, wrap: n.wrap })), ...moonLinks].forEach(({ a, id, wrap }) => {
+        a.querySelector('b').innerHTML = labelHTML(lb[id], wrap);
+      });
+    },
     relayout() {},
     climb: () => climb(top),
     // a planet's node, and a painter for a bigger copy of its moon (same surface and light)
     planet(id) {
+      const moon = moonLinks.find((n) => n.id === id);
+      if (moon) return { el: moon.el, paint: (radius) => paintMoon(moon.moon.d, moon.moon.tone, moon.index + 3, radius) };
       const i = NODES.findIndex((n) => n.id === id);
       if (i < 0) return null;
       const n = live[i];

@@ -11,7 +11,6 @@ import content from './content.json';
 import { T, LANGS, ORDER } from './i18n.js';
 import { createCosmos } from './cosmos.js';
 import { buildHero } from './hero.js';
-import { runIntro } from './intro.js';
 import { createPlanetView } from './planet-view.js';
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -31,12 +30,12 @@ const sections = ORDER.map((id) => content.sections.find((s) => s.id === id));
 let cosmos = null;
 try { cosmos = createCosmos($('#cosmos')); } catch (e) { document.body.classList.add('no-webgl'); }
 
-const labels = () => Object.fromEntries(ORDER.map((id) => [id, t().sections[id].title]));
+const labels = () => ({ ...Object.fromEntries(ORDER.map((id) => [id, t().sections[id].title])), contact: t().contact });
 // a planet opens its section in the planet view (created further down, once the lightbox exists)
 const hero = buildHero({
   svg: $('.hero-svg'), nodesBox: $('.nodes'), labels: labels(),
-  onNavigate: (id, el) => planetView.open(id, el),
-  onHover: (id) => planetView.prefetch(id),
+  onNavigate: (id, el) => id === 'contact' ? goTo('contact') : planetView.open(id, el),
+  onHover: (id) => { if (id !== 'contact') planetView.prefetch(id); },
 });
 
 function goTo(id) {
@@ -153,6 +152,18 @@ function renderSections() {
     </div>`;
   root.appendChild(about);
 
+  const contact = document.createElement('section');
+  contact.className = 'sec sec-contact';
+  contact.id = 'contact';
+  contact.innerHTML = `
+    <div class="contact-card reveal">
+      <div class="kicker" data-i18n="contact">${t().contact}</div>
+      <h2 class="contact-title" data-i18n="contactTitle">${t().contactTitle}</h2>
+      <p class="contact-text" data-i18n="contactText">${t().contactText}</p>
+      <a class="contact-email" href="mailto:miranda@kupravacreative.com"><span>miranda@kupravacreative.com</span><i aria-hidden="true">↗</i></a>
+    </div>`;
+  root.appendChild(contact);
+
   $$('.gallery .more').forEach((b) => b.addEventListener('click', () => { b.parentElement.classList.remove('is-clamped'); b.remove(); }));
   $$('[data-gallery]').forEach((f) => f.addEventListener('click', () => openLightbox(+f.dataset.gallery, +f.dataset.idx)));
   $$('.doc').forEach((b) => b.addEventListener('click', () => openDoc(b.dataset.doc)));
@@ -194,7 +205,8 @@ const burger = $('.burger');
 function renderMenu() {
   $('.menu-list').innerHTML = sections.map((s, i) => `
     <li style="--i:${i}"><a href="#${s.id}" data-id="${s.id}"><span class="m-num">${pad(i + 1)}</span><span class="m-title">${t().sections[s.id].title}</span></a></li>`).join('') +
-    `<li style="--i:${sections.length}"><a href="#about" data-id="about"><span class="m-num">✦</span><span class="m-title">${t().about}</span></a></li>`;
+    `<li style="--i:${sections.length}"><a href="#about" data-id="about"><span class="m-num">✦</span><span class="m-title">${t().about}</span></a></li>` +
+    `<li style="--i:${sections.length + 1}"><a href="#contact" data-id="contact"><span class="m-num">↗</span><span class="m-title">${t().contact}</span></a></li>`;
   $$('.menu-list a').forEach((a) => {
     a.addEventListener('click', (e) => { e.preventDefault(); goTo(a.dataset.id); });
     a.addEventListener('pointerenter', () => {
@@ -209,15 +221,21 @@ function renderMenu() {
 function openMenu() { menu.classList.add('open'); menu.setAttribute('aria-hidden', 'false'); burger.classList.add('x'); burger.setAttribute('aria-expanded', 'true'); document.body.classList.add('locked'); }
 function closeMenu() { menu.classList.remove('open'); menu.setAttribute('aria-hidden', 'true'); burger.classList.remove('x'); burger.setAttribute('aria-expanded', 'false'); document.body.classList.remove('locked'); }
 burger.addEventListener('click', () => (menu.classList.contains('open') ? closeMenu() : openMenu()));
+$('.top-contact').addEventListener('click', (e) => { e.preventDefault(); goTo('contact'); });
 
 function renderOrbitList() {
-  $('.orbit-list').innerHTML = sections.map((s, i) => `<li><a href="#${s.id}" data-id="${s.id}"><i></i><span>${t().sections[s.id].title}</span><em>${pad(i + 1)}</em></a></li>`).join('');
-  $$('.orbit-list a').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); planetView.open(a.dataset.id, a.querySelector('i')); }));
+  $('.orbit-list').innerHTML = sections.map((s, i) => `<li><a href="#${s.id}" data-id="${s.id}"><i></i><span>${t().sections[s.id].title}</span><em>${pad(i + 1)}</em></a></li>`).join('') +
+    `<li><a href="#contact" data-id="contact"><i></i><span>${t().contact}</span><em>↗</em></a></li>`;
+  $$('.orbit-list a').forEach((a) => a.addEventListener('click', (e) => {
+    e.preventDefault();
+    a.dataset.id === 'contact' ? goTo('contact') : planetView.open(a.dataset.id, a.querySelector('i'));
+  }));
 }
 
 /* ---------------------------------------------------------------- side rail */
 function renderRail() {
-  $('.rail ul').innerHTML = sections.map((s, i) => `<li data-id="${s.id}"><a href="#${s.id}"><i></i><span>${t().sections[s.id].title}</span></a></li>`).join('');
+  $('.rail ul').innerHTML = sections.map((s, i) => `<li data-id="${s.id}"><a href="#${s.id}"><i></i><span>${t().sections[s.id].title}</span></a></li>`).join('') +
+    `<li data-id="contact"><a href="#contact"><i></i><span>${t().contact}</span></a></li>`;
   $$('.rail a').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); goTo(a.parentElement.dataset.id); }));
 }
 
@@ -373,16 +391,7 @@ onScroll();
 
 document.addEventListener('visibilitychange', () => (document.hidden ? cosmos?.pause() : cosmos?.resume()));
 
-let pageLoaded = false, introDone = false;
-const maybeReady = () => {
-  if (!pageLoaded || !introDone || document.body.classList.contains('ready')) return;
-  document.body.classList.add('ready');
-  hero.relayout();
-  setTimeout(() => hero.climb(), 2500); // once the staircase has drawn itself
-  if (location.hash && location.hash !== '#top') setTimeout(() => goTo(location.hash.slice(1)), 600);
-};
-window.addEventListener('load', () => { pageLoaded = true; maybeReady(); });
-setTimeout(() => { pageLoaded = true; maybeReady(); }, 4000);
-const deepLink = location.hash && location.hash !== '#top';
-const startIntro = () => runIntro({ image: deepLink ? null : content.intro, t: t(), onDone: () => { introDone = true; maybeReady(); } });
-startIntro();
+document.body.classList.add('ready');
+hero.relayout();
+setTimeout(() => hero.climb(), 2500); // once the staircase has drawn itself
+if (location.hash && location.hash !== '#top') setTimeout(() => goTo(location.hash.slice(1)), 600);
