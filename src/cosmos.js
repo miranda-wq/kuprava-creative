@@ -7,9 +7,9 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js';
 
-const RED = new THREE.Color('#ff2b2b');
-const EMBER = new THREE.Color('#ff6a4d');
-const WHITE = new THREE.Color('#ffe9e4');
+const RED = new THREE.Color('#ff2414');
+const EMBER = new THREE.Color('#ff9a8c'); // the reference's dust is mostly this rosy red
+const WHITE = new THREE.Color('#f2e8e6');
 
 function softPointMaterial() {
   return new THREE.ShaderMaterial({
@@ -64,8 +64,9 @@ function galaxy(count) {
     pos[i * 3] = Math.cos(a) * rr;
     pos[i * 3 + 1] = gauss() * (tight ? 0.25 : 0.9) * (1 - r / 46);
     pos[i * 3 + 2] = Math.sin(a) * rr;
-    const red = Math.random() < (tight ? 0.5 : 0.3);
-    c.copy(red ? (Math.random() < 0.6 ? RED : EMBER) : WHITE);
+    const roll = Math.random();
+    const red = roll < 0.82;
+    c.copy(roll < 0.12 ? RED : red ? EMBER : WHITE);
     let dim = (red ? 0.16 : 0.12) + Math.random() ** 2 * (red ? 0.95 : 0.85);
     dim *= 1.2 - r / 46; // brighter toward the middle, as in the reference
     if (r < 10) dim *= 0.35 + (r - 6) * 0.16;

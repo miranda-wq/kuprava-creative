@@ -55,8 +55,8 @@ function weave(parent, A, B, n, color, { twist = false, cls = '' } = {}) {
   for (let i = 0; i <= n; i++) {
     const t = i / n;
     const pts = A.map((a, k) => mix(a, B[k], twist ? lerp(t, 1 - t, k / (A.length - 1)) : t));
-    const [r, gg, b, o] = color(t);
-    el('path', { d: toD(pts), stroke: `rgba(${r},${gg},${b},${o})` }, g);
+    const c = color(t); // [r, g, b, opacity], or [paint, opacity] for a gradient
+    el('path', c.length === 2 ? { d: toD(pts), stroke: c[0], 'stroke-opacity': c[1] } : { d: toD(pts), stroke: `rgba(${c.join(',')})` }, g);
   }
   return g;
 }
@@ -76,21 +76,26 @@ const armY = (x) => ARM.y0 - ARM.slope * (x - ARM.x0);
 const STEPS = { x: 806, y: 458, w: 46, h: 40.5 };
 const LETTERS = ['U', 'P', 'R', 'A', 'V', 'A'];
 
-const WHITE = [255, 238, 232], RED = [255, 46, 38];
-const tone = (w, o) => [...WHITE.map((c, i) => Math.round(lerp(RED[i], c, w))), o];
+const WHITE = [236, 232, 232], RED = [255, 30, 22];
+// threads are either the reference's saturated red or a neutral silver; where they overlap they blend on screen
+const tone = (w, o) => [...(w > 0.5 ? WHITE : RED), o];
 
 function drawK(svg) {
   const k = el('g', { class: 'k' }, svg);
 
   // tail ribbon, fading out toward the corner
   const tailL = sample(TAIL_L, 90), tailR = sample(TAIL_R, 90);
-  const tail = weave(k, tailL, tailR, 60, (t) => tone(t < 0.08 ? t * 6 : 0.9, t < 0.08 ? 0.45 : 0.3), { cls: 'w-tail' });
+  const tail = weave(k, tailL, tailR, 60, (t) => ['url(#tailTone)', t < 0.08 ? 0.5 : 0.32], { cls: 'w-tail' });
   tail.setAttribute('mask', 'url(#tailFade)');
 
   // stem: threads fan out of the serifs into a narrow waist
   const sl = sample(STEM_L), sr = sample(STEM_R);
-  weave(k, sl, sr, 120, (t) => { const w = Math.max(Math.exp(-(((t - 0.12) / 0.14) ** 2)), 0.8 * Math.exp(-(((t - 0.97) / 0.06) ** 2))); return tone(w, 0.16 + 0.46 * w); }, { cls: 'w-stem' });
-  weave(k, sl, sr, 40, () => tone(0.85, 0.12), { twist: true, cls: 'w-stem w-twist' });
+  // the left threads turn silver down the stem's body and stay red in the serifs
+  const stem = weave(k, sl, sr, 84, (t) => (t < 0.16 ? ['url(#stemSilver)', 0.55] : t > 0.95 ? tone(1, 0.3) : tone(0, 0.24)), { cls: 'w-stem' });
+  // a soft bloom of the same threads behind them, for the reference's glowing red
+  stem.id = 'stemWeave';
+  k.insertBefore(el('use', { href: '#stemWeave', class: 'k-bloom' }), stem);
+  weave(k, sl, sr, 34, () => tone(0, 0.13), { twist: true, cls: 'w-stem w-twist' });
 
   // the web strung from the cap line into the stem's brackets
   const web = el('g', { class: 'weave w-web' }, k);
@@ -104,7 +109,7 @@ function drawK(svg) {
 
   // leg
   const li = sample(LEG_IN, 48), lo = sample(LEG_OUT, 48);
-  weave(k, li, lo, 76, (t) => tone(t > 0.9 ? 0.35 : 0.95, 0.55), { cls: 'w-leg' });
+  weave(k, li, lo, 44, (t) => (t > 0.95 ? tone(0, 0.45) : tone(1, 0.6)), { cls: 'w-leg' });
 
   // arm: a dark band that hides the threads behind it
   const x1 = STEPS.x + STEPS.w * LETTERS.length;
@@ -113,10 +118,10 @@ function drawK(svg) {
 
   // glowing edges
   const edges = el('g', { class: 'k-edges' }, k);
-  [[STEM_L, 'red stem-l'], [STEM_R, 'red stem-r'], [ARCH, 'red'], [LEG_IN, 'red'], [LEG_OUT, 'white'], [TAIL_L, 'red tail']].forEach(([c, cls]) => {
+  [[STEM_L, 'red stem-l'], [STEM_R, 'red stem-r'], [ARCH, 'red'], [LEG_IN, 'white'], [LEG_OUT, 'white'], [TAIL_L, 'red tail']].forEach(([c, cls]) => {
     const e = el('path', { d: curveD(c), class: `k-edge ${cls}`, pathLength: 1 }, edges);
     if (cls.includes('stem')) e.style.stroke = `url(#${cls.includes('stem-l') ? 'edgeL' : 'edgeR'})`;
-    if (cls.includes('tail')) e.setAttribute('mask', 'url(#tailFade)');
+    if (cls.includes('tail')) e.style.stroke = 'url(#tailEdge)';
   });
 
   // staircase: blocks, treads and the letters of KUPRAVA
@@ -148,14 +153,14 @@ const ORBITS = [
 
 // Miranda's ten planets, placed as in the reference (the three she added later take its unlabelled moons)
 const NODES = [
-  { id: 'sculpture', x: 832, y: 70, d: 28, side: 'right', orbit: 2, line: true, dy: -4 },
+  { id: 'sculpture', x: 832, y: 70, d: 28, side: 'right', orbit: 2, line: true, dy: -4, tone: 'hot' },
   { id: 'kinetic', x: 1226, y: 137, d: 30, side: 'right', orbit: 0, line: true, dy: -10 },
   { id: 'christmas', x: 1358, y: 278, d: 42, side: 'right', orbit: 0, wrap: true, line: true, dy: 4, tone: 'grey' },
   { id: 'brand', x: 1467, y: 354, d: 24, side: 'right', orbit: 2, wrap: true, line: true, dy: 8, tone: 'red' },
   { id: 'functional', x: 1282, y: 641, d: 32, side: 'right', orbit: 0, line: true, dash: true },
-  { id: 'public', x: 417, y: 185, d: 24, side: 'left', orbit: 2, line: true, tone: 'lit' },
+  { id: 'public', x: 417, y: 185, d: 24, side: 'left', orbit: 2, line: true, tone: 'hot' },
   { id: 'spaces', x: 340, y: 400, d: 24, side: 'left', orbit: 0, wrap: true, dash: true, dy: 10, tone: 'red' },
-  { id: 'competitions', x: 483, y: 483, d: 34, side: 'left', orbit: 3, wrap: true, dy: 10, tone: 'grey' },
+  { id: 'competitions', x: 483, y: 483, d: 34, side: 'left', orbit: 3, wrap: true, dy: 10 },
   { id: 'melita', x: 378, y: 628, d: 40, side: 'left', orbit: 0, wrap: true, dy: 24 },
   { id: 'outdoor', x: 548, y: 772, d: 26, side: 'left', orbit: 1, wrap: true, dy: 8, tone: 'grey' },
 ];
@@ -182,10 +187,11 @@ function angleFor(o, p) {
 // left (white from above for the grey ones), with a rim glow on the lit side
 const GLOW = 0.45; // canvas margin around the disc, as a share of the radius
 const LIGHTS = {
-  lit: { key: [-0.95, 0.08, -0.05], keyC: [1, 0.26, 0.2], keyI: 1.7, fill: [-0.3, 0.6, 0.74], fillC: [1, 0.95, 0.92], fillI: 0.48, albedo: [0.6, 0.56, 0.55], glow: 0.75 },
-  red: { key: [-0.6, 0.35, 0.72], keyC: [1, 0.22, 0.16], keyI: 1.6, fill: [0.2, 0.6, 0.77], fillC: [1, 0.55, 0.5], fillI: 0.35, albedo: [0.95, 0.42, 0.38], glow: 1 },
-  grey: { key: [-0.55, 0.62, 0.56], keyC: [1, 0.96, 0.94], keyI: 0.95, fill: [-0.95, -0.2, 0.25], fillC: [1, 0.25, 0.2], fillI: 0.6, albedo: [0.6, 0.56, 0.55], glow: 0.3 },
-  big: { key: [-0.86, 0.04, -0.52], keyC: [1, 0.26, 0.18], keyI: 2.4, fill: [-0.45, 0.4, 0.8], fillC: [1, 0.92, 0.9], fillI: 0.26, albedo: [0.5, 0.46, 0.46], glow: 0.6 },
+  hot: { key: [-0.82, 0.1, 0.4], keyC: [1, 0.26, 0.22], keyI: 2.6, fill: [-0.2, 0.6, 0.77], fillC: [1, 0.72, 0.7], fillI: 0.3, albedo: [0.62, 0.55, 0.54], glow: 1 },
+  lit: { key: [-0.95, 0.08, -0.05], keyC: [1, 0.3, 0.26], keyI: 1.45, fill: [-0.3, 0.6, 0.74], fillC: [1, 0.85, 0.82], fillI: 0.26, albedo: [0.55, 0.5, 0.5], glow: 0.75 },
+  red: { key: [-0.6, 0.35, 0.72], keyC: [1, 0.32, 0.28], keyI: 1.05, fill: [0.2, 0.6, 0.77], fillC: [1, 0.55, 0.5], fillI: 0.3, albedo: [0.8, 0.42, 0.38], glow: 1 },
+  grey: { key: [-0.55, 0.62, 0.56], keyC: [1, 0.94, 0.92], keyI: 0.45, fill: [-0.95, -0.2, 0.25], fillC: [1, 0.25, 0.2], fillI: 0.38, albedo: [0.5, 0.46, 0.46], glow: 0.3 },
+  big: { key: [-0.86, 0.04, -0.52], keyC: [1, 0.4, 0.35], keyI: 2, fill: [-0.45, 0.4, 0.8], fillC: [1, 0.85, 0.82], fillI: 0.2, albedo: [0.45, 0.41, 0.41], glow: 0.6 },
 };
 const norm = (v) => { const l = Math.hypot(...v); return v.map((x) => x / l); };
 
@@ -290,9 +296,23 @@ export function buildHero({ svg, nodesBox, onNavigate, labels }) {
   const defs = el('defs', {}, svg);
   defs.innerHTML = `
     <linearGradient id="stepFace" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fff4f0" stop-opacity="0.62"/>
-      <stop offset="0.55" stop-color="#d9c9c5" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#d9c9c5" stop-opacity="0"/>
+      <stop offset="0" stop-color="#f0ecec" stop-opacity="0.6"/>
+      <stop offset="0.45" stop-color="#ff6656" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ff1e14" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stemSilver" gradientUnits="userSpaceOnUse" x1="0" y1="185" x2="0" y2="693">
+      <stop offset="0" stop-color="#ff2a1e"/><stop offset="0.15" stop-color="#ff2a1e"/><stop offset="0.27" stop-color="#ece8e8"/>
+      <stop offset="0.76" stop-color="#ece8e8"/><stop offset="0.9" stop-color="#ff8a7c"/><stop offset="1" stop-color="#ff5a4c"/>
+    </linearGradient>
+    <linearGradient id="tailTone" gradientUnits="userSpaceOnUse" x1="930" y1="480" x2="1250" y2="760">
+      <stop offset="0" stop-color="#ff1e16"/>
+      <stop offset="0.3" stop-color="#ff3a2e"/>
+      <stop offset="0.65" stop-color="#e6e2e2"/>
+    </linearGradient>
+    <linearGradient id="tailEdge" gradientUnits="userSpaceOnUse" x1="900" y1="430" x2="1200" y2="760">
+      <stop offset="0" stop-color="#ff2418"/>
+      <stop offset="0.6" stop-color="#ff2418" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#ff2418" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="tailGrad" gradientUnits="userSpaceOnUse" x1="960" y1="560" x2="1580" y2="880">
       <stop offset="0" stop-color="#fff"/>
