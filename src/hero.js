@@ -109,31 +109,38 @@ function climb(svg) {
 
 /* ---------------------------------------------------------------- orbits, construction, sparks */
 const ORBITS = [
-  { cx: 835, cy: 415, rx: 495, ry: 470, rot: 0, cls: '' },
-  { cx: 830, cy: 522, rx: 795, ry: 150, rot: -6, cls: '' },
-  { cx: 880, cy: 330, rx: 612, ry: 285, rot: -8, cls: 'red' },
-  { cx: 840, cy: 472, rx: 425, ry: 152, rot: -8, cls: 'faint' },
-  { cx: 820, cy: 440, rx: 990, ry: 470, rot: -14, cls: 'faint' },
-  { cx: 640, cy: 600, rx: 300, ry: 290, rot: 0, cls: 'faint' },
+  { cx: 827.6, cy: 397.3, rx: 970.1, ry: 368.6, rot: -12.7, cls: '' },
+  { cx: 824.5, cy: 517.7, rx: 776.6, ry: 158.3, rot: -7, cls: '' },
+  { cx: 865.9, cy: 309, rx: 660.3, ry: 223.7, rot: -31.6, cls: 'red' },
+  { cx: 840, cy: 472, rx: 433.2, ry: 154.9, rot: -8, cls: 'faint' },
+  { cx: 830.6, cy: 447, rx: 1063.5, ry: 399.4, rot: -19, cls: 'faint' },
+  { cx: 633.5, cy: 571.7, rx: 332.3, ry: 119.1, rot: -7.9, cls: 'faint' },
+  { cx: 761.4, cy: 435.8, rx: 580.5, ry: 220.6, rot: -40.4, cls: 'faint' },
+  { cx: 922.4, cy: 405.2, rx: 943.4, ry: 236, rot: 11.8, cls: 'faint' },
+  { cx: 860.2, cy: 450.6, rx: 523.9, ry: 198.1, rot: 4, cls: 'faint' },
+  { cx: 756.1, cy: 464.8, rx: 419.7, ry: 151.1, rot: -19, cls: 'faint' },
+  { cx: 781.9, cy: 479.5, rx: 409, ry: 147.2, rot: -41.6, cls: 'faint' },
+  { cx: 644, cy: 603.5, rx: 586.2, ry: 222.8, rot: 10.1, cls: 'faint' },
+  { cx: 865.7, cy: 327.8, rx: 771.9, ry: 293.3, rot: 4, cls: 'faint' },
 ];
 
 // Miranda's ten planets, placed as in the reference (the three she added later take its unlabelled moons)
 const NODES = [
-  { id: 'sculpture', x: 832, y: 70, d: 28, side: 'right', orbit: 2, dy: -4, tone: 'hot' },
-  { id: 'kinetic', x: 1226, y: 137, d: 30, side: 'right', orbit: 0, dy: -10 },
-  { id: 'christmas', x: 1358, y: 278, d: 42, side: 'right', orbit: 0, wrap: true, dy: 4, tone: 'grey' },
-  { id: 'brand', x: 1467, y: 354, d: 24, side: 'right', orbit: 2, wrap: true, dy: 8, tone: 'red' },
-  { id: 'functional', x: 1282, y: 641, d: 32, side: 'right', orbit: 0, dash: true },
-  { id: 'public', x: 417, y: 185, d: 24, side: 'left', orbit: 2, tone: 'hot' },
-  { id: 'spaces', x: 340, y: 400, d: 24, side: 'left', orbit: 0, wrap: true, dash: true, dy: 10, tone: 'red' },
-  { id: 'competitions', x: 483, y: 483, d: 34, side: 'left', orbit: 3, wrap: true, dy: 10 },
-  { id: 'contact', x: 378, y: 628, d: 40, side: 'left', orbit: 0 },
-  { id: 'outdoor', x: 548, y: 772, d: 26, side: 'left', orbit: 1, wrap: true, dy: 8, tone: 'grey' },
+  { id: 'sculpture', x: 832, y: 70, d: 28, side: 'right', orbit: 2, tone: 'hot' },
+  { id: 'kinetic', x: 1226, y: 137, d: 30, side: 'right', orbit: 6 },
+  { id: 'christmas', x: 1358, y: 278, d: 42, side: 'right', orbit: 7, wrap: true, tone: 'grey' },
+  { id: 'brand', x: 1467, y: 354, d: 24, side: 'right', orbit: 1, wrap: true, tone: 'red' },
+  { id: 'functional', x: 1282, y: 641, d: 32, side: 'right', orbit: 0 },
+  { id: 'public', x: 417, y: 185, d: 24, side: 'left', orbit: 4, tone: 'hot' },
+  { id: 'spaces', x: 340, y: 400, d: 24, side: 'left', orbit: 8, wrap: true, tone: 'red' },
+  { id: 'competitions', x: 483, y: 483, d: 34, side: 'left', orbit: 5, wrap: true },
+  { id: 'contact', x: 378, y: 628, d: 40, side: 'left', orbit: 9 },
+  { id: 'outdoor', x: 548, y: 772, d: 26, side: 'left', orbit: 10, wrap: true, tone: 'grey' },
 ];
 const MOONS = [
-  { id: 'melita', x: 1240, y: 480, d: 142, tone: 'big', side: 'right', orbit: 0, wrap: true },
-  { x: 398, y: 362, d: 11, tone: 'grey' },
-  { x: 1582, y: 262, d: 6, tone: 'red' },
+  { id: 'melita', x: 1240, y: 480, d: 142, tone: 'big', side: 'right', orbit: 3, wrap: true },
+  { x: 398, y: 362, d: 11, tone: 'grey', orbit: 11 },
+  { x: 1582, y: 262, d: 6, tone: 'red', orbit: 12 },
 ];
 
 function onEllipse(o, ang) {
@@ -264,10 +271,16 @@ function labelHTML(text, wrap) {
 export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   svg.innerHTML = '';
-  const orbitG = el('g', { class: 'orbits' }, svg);
-  ORBITS.forEach((o, i) => {
-    el('ellipse', { cx: o.cx, cy: o.cy, rx: o.rx, ry: o.ry, transform: `rotate(${o.rot} ${o.cx} ${o.cy})`, class: `orbit orbit-${i} ${o.cls}`, pathLength: 1000 }, orbitG);
+  // Every planet has its own ellipse, fitted through its starting center.
+  const planets = [...NODES, ...MOONS];
+  const orbits = ORBITS.map((o, i) => {
+    const n = planets.find((n) => n.orbit === i);
+    const p = onEllipse(o, angleFor(o, n));
+    const scale = Math.hypot(n.x - o.cx, n.y - o.cy) / Math.hypot(p.x - o.cx, p.y - o.cy);
+    return { ...o, rx: o.rx * scale, ry: o.ry * scale };
   });
+  const orbitG = el('g', { class: 'orbits' }, svg);
+  const orbitEls = orbits.map((o, i) => el('ellipse', { cx: o.cx, cy: o.cy, rx: o.rx, ry: o.ry, transform: `rotate(${o.rot} ${o.cx} ${o.cy})`, class: `orbit orbit-${i} ${o.cls}`, pathLength: 1000 }, orbitG));
 
   const cons = el('g', { class: 'construct' }, svg);
   [[669, 58, 669, 700], [405, 185, 520, 185], [560, 693, 1080, 693], [793, 252, 793, 697]].forEach(([a, b, c, d]) => {
@@ -315,8 +328,10 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   const moonLinks = [];
   MOONS.forEach((m, i) => {
     const c = moonEl(m.d, m.tone, i + 3);
+    const o = orbits[m.orbit];
+    const p = onEllipse(o, angleFor(o, m));
     if (!m.id) {
-      Object.assign(c.style, pos(m.x, m.y));
+      Object.assign(c.style, pos(p.x, p.y));
       nodesBox.appendChild(c);
       return;
     }
@@ -324,39 +339,35 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
     a.className = `node node-${m.side}${m.wrap ? ' node-wrap' : ''}`;
     a.href = `#${m.id}`;
     a.style.setProperty('--d', m.d);
-    a.style.setProperty('--dy', m.dy || 0);
     a.style.setProperty('--i', i);
-    Object.assign(a.style, pos(m.x, m.y));
+    Object.assign(a.style, pos(p.x, p.y));
     a.innerHTML = `<span class="label"><b>${labelHTML(labels[m.id], m.wrap)}</b><i></i></span>`;
     a.prepend(c);
-    a.addEventListener('click', (e) => { e.preventDefault(); onNavigate(m.id, c); });
-    a.addEventListener('pointerenter', () => { svg.classList.add(`hl-${m.orbit}`); onHover?.(m.id); });
-    a.addEventListener('pointerleave', () => svg.classList.remove(`hl-${m.orbit}`));
+    a.addEventListener('click', (e) => { e.preventDefault(); orbitEls[m.orbit].classList.remove('highlighted'); onNavigate(m.id, c); });
+    a.addEventListener('pointerenter', () => { orbitEls[m.orbit].classList.add('highlighted'); onHover?.(m.id); });
+    a.addEventListener('pointerleave', () => orbitEls[m.orbit].classList.remove('highlighted'));
     nodesBox.appendChild(a);
     moonLinks.push({ a, id: m.id, wrap: m.wrap, el: c, moon: m, index: i });
   });
   const live = NODES.map((n, i) => {
-    const o = ORBITS[n.orbit];
+    const o = orbits[n.orbit];
     const base = angleFor(o, n);
-    const p0 = onEllipse(o, base);
-    const off = { x: n.x - p0.x, y: n.y - p0.y };
     const a = document.createElement('a');
-    a.className = `node node-${n.side}${n.wrap ? ' node-wrap' : ''}${n.dash ? ' has-dash' : ''}`;
+    a.className = `node node-${n.side}${n.wrap ? ' node-wrap' : ''}`;
     a.href = `#${n.id}`;
     a.style.setProperty('--d', n.d);
-    a.style.setProperty('--dy', n.dy || 0);
     a.style.setProperty('--i', i);
     a.innerHTML = `<span class="label"><b>${labelHTML(labels[n.id], n.wrap)}</b><i></i></span>`;
     a.prepend(moonEl(n.d, n.tone || 'lit', i + 11));
     a.addEventListener('click', (e) => {
       e.preventDefault();
-      svg.classList.remove(`hl-${n.orbit}`);
+      orbitEls[n.orbit].classList.remove('highlighted');
       onNavigate(n.id, a.querySelector('.moon'));
     });
-    a.addEventListener('pointerenter', () => { svg.classList.add(`hl-${n.orbit}`); onHover?.(n.id); });
-    a.addEventListener('pointerleave', () => svg.classList.remove(`hl-${n.orbit}`));
+    a.addEventListener('pointerenter', () => { orbitEls[n.orbit].classList.add('highlighted'); onHover?.(n.id); });
+    a.addEventListener('pointerleave', () => orbitEls[n.orbit].classList.remove('highlighted'));
     nodesBox.appendChild(a);
-    return { ...n, o, base, off, a, phase: Math.random() * 6.28 };
+    return { ...n, o, base, a, phase: Math.random() * 6.28 };
   });
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -366,7 +377,7 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
     const t = (now - t0) / 1000;
     live.forEach((n) => {
       const p = onEllipse(n.o, n.base + (reduce ? 0 : Math.sin(t * 0.16 + n.phase) * 0.012));
-      Object.assign(n.a.style, pos(p.x + n.off.x, p.y + n.off.y));
+      Object.assign(n.a.style, pos(p.x, p.y));
     });
     raf = requestAnimationFrame(tick);
   }

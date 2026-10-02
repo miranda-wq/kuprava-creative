@@ -173,7 +173,7 @@ export function createCosmos(canvas) {
   // orbital rings
   const rings = [
     ring(40, 17, 0xffe2dc, 0.07, [0.0, 0, 0.0]),
-    ring(30, 30, 0xffe2dc, 0.05, [1.2, 0.3, 0.2]),
+    ring(30, 10, 0xffe2dc, 0.05, [0.15, 0.3, 0.2]),
     ring(52, 22, 0xffffff, 0.05, [0.15, 0.2, 0.05]),
     ring(24, 10, 0xff4a4a, 0.1, [-0.05, 0.5, 0.1]),
     ring(64, 26, 0xffd9d0, 0.035, [0.25, -0.2, -0.1]),

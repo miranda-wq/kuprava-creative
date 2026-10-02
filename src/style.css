@@ -94,10 +94,12 @@ main, .footer { position: relative; z-index: 2; }
 .menu-list a { display: flex; align-items: baseline; gap: 22px; padding: 6px 0; transform: translateY(110%); transition: transform 0.9s var(--ease); transition-delay: calc(var(--i) * 55ms + 150ms); }
 .menu.open .menu-list a { transform: none; }
 .m-num { font-size: 11px; letter-spacing: 0.3em; color: var(--red); min-width: 2.2em; }
-.m-title { font-family: var(--serif); font-weight: 300; font-size: clamp(28px, min(4.6vw, 5.2vh), 66px); line-height: 1.12; letter-spacing: 0.02em; transition: color 0.4s, text-shadow 0.4s; }
+.m-title { position: relative; font-family: var(--serif); font-weight: 300; font-size: clamp(28px, min(4.6vw, 5.2vh), 66px); line-height: 1.12; letter-spacing: 0.02em; transition: transform 0.45s var(--ease), color 0.4s, text-shadow 0.4s; }
+.m-title::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.45s var(--ease); }
 body[data-lang='ge'] .m-title, body[data-lang='jp'] .m-title { font-size: clamp(22px, min(3.2vw, 5.4vh), 46px); line-height: 1.3; }
 body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: clamp(34px, 5vw, 84px); line-height: 1.15; }
-.menu-list a:hover .m-title { color: #fff; text-shadow: var(--glow); }
+.menu-list a:hover .m-title, .menu-list a:focus-visible .m-title { transform: translateX(8px); color: #fff; text-shadow: var(--glow); }
+.menu-list a:hover .m-title::after, .menu-list a:focus-visible .m-title::after { transform: scaleX(1); }
 .menu-side { display: grid; gap: 40px; }
 .menu-preview { aspect-ratio: 4/5; max-height: 52vh; border-radius: 50% 50% 4px 4px / 34% 34% 4px 4px; overflow: hidden; opacity: 0; transform: scale(0.94); transition: opacity 0.6s, transform 0.8s var(--ease); box-shadow: 0 0 60px rgba(255, 43, 43, 0.2); border: 1px solid rgba(255, 43, 43, 0.3); }
 .menu-preview.on { opacity: 1; transform: none; }
@@ -113,6 +115,12 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
   .menu-side { display: none; }
   .menu-list a { gap: 16px; padding: 3px 0; }
   .m-title { font-size: clamp(26px, 4.7vh, 44px); line-height: 1.08; }
+}
+
+@media (min-width: 900px) and (max-height: 850px) {
+  .menu-inner { max-width: 1100px; grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr); gap: 4vw; }
+  .menu-side { display: grid; gap: 24px; }
+  .menu-preview { width: min(100%, calc(38vh * 4 / 5)); max-height: 38vh; }
 }
 
 /* ---------------------------------------------------------------- hero */
@@ -136,7 +144,7 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 .orbit.red { stroke: rgba(255, 70, 60, 0.3); }
 .orbit.faint { stroke: rgba(255, 240, 236, 0.08); }
 .ready .orbit { animation: draw 3.2s var(--ease) 0.6s forwards; }
-.hl-0 .orbit-0, .hl-1 .orbit-1, .hl-2 .orbit-2, .hl-3 .orbit-3 { stroke: rgba(255, 70, 70, 0.95); stroke-width: 1.6; filter: drop-shadow(0 0 6px rgba(255, 43, 43, 0.9)); }
+.orbits .orbit.highlighted { stroke: rgba(255, 70, 70, 0.95); stroke-width: 1.6; filter: drop-shadow(0 0 6px rgba(255, 43, 43, 0.9)); }
 
 .construct line { stroke: rgba(255, 244, 240, 0.55); stroke-width: 0.9; vector-effect: non-scaling-stroke; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
 .construct line.faint { stroke: rgba(255, 244, 240, 0.16); }
@@ -188,28 +196,22 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 
 /* moons and planets: painted canvases, the disc plus a glow margin (see GLOW in hero.js) */
 .nodes { position: absolute; inset: 0; pointer-events: none; }
-.moon { position: absolute; left: 0; top: 0; width: calc(var(--d) * 1.45 * var(--u)); height: auto; aspect-ratio: 1; transform: translate(-50%, -50%); transition: transform 0.6s var(--ease), filter 0.6s; }
+.moon { position: absolute; left: 0; top: 0; width: calc(var(--d) * 1.45 * var(--u)); height: auto; aspect-ratio: 1; transform: translate(-50%, -50%) scale(var(--planet-scale, 1)); transition: transform 0.6s var(--ease), filter 0.6s; }
 .nodes > .moon { opacity: 0; transition: opacity 1.6s var(--ease) 2.6s; }
 .ready .nodes > .moon { opacity: 1; }
 
-.node { position: absolute; pointer-events: auto; display: block; width: 0; height: 0; opacity: 0; transition: opacity 1s var(--ease); }
+.node { --planet-scale: 1; position: absolute; pointer-events: auto; display: block; width: 0; height: 0; opacity: 0; transition: opacity 1s var(--ease); }
 .ready .node { opacity: 1; transition-delay: calc(3.2s + var(--i) * 0.12s); }
-.label { position: absolute; top: calc(var(--dy) * var(--u)); transform: translateY(-50%); display: grid; gap: calc(13 * var(--u)); white-space: nowrap; }
-.label b { font-family: 'Cormorant Garamond', var(--serif); font-weight: 600; font-size: max(9px, calc(14.2 * var(--u))); line-height: 1.32; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(226, 226, 224, 0.92); transition: color 0.4s, text-shadow 0.4s, letter-spacing 0.6s var(--ease); }
-body[data-lang='ge'] .label b, body[data-lang='jp'] .label b { font-family: var(--sans); font-weight: 400; letter-spacing: 0.14em; }
-.label i { display: block; height: 1px; width: calc(32 * var(--u)); background: rgba(255, 244, 240, 0.5); transition: width 0.6s var(--ease), background 0.4s; }
-.node-right .label { left: calc((var(--d) / 2 + 18) * var(--u)); }
-.node-right .moon-big + .label { transition: left 0.6s var(--ease); }
-.node-left .label { right: calc((var(--d) / 2 + 18) * var(--u)); text-align: right; justify-items: end; }
-.node-right.has-dash .label { left: calc((var(--d) / 2 + 27) * var(--u)); }
-.node-left.has-dash .label { right: calc((var(--d) / 2 + 22) * var(--u)); }
-.label b { margin-right: -0.3em; }
-.has-dash::before { content: ''; position: absolute; top: 0; width: calc(14 * var(--u)); height: 1px; background: rgba(255, 244, 240, 0.55); }
-.node-right.has-dash::before { left: calc((var(--d) / 2 + 3) * var(--u)); }
-.node-left.has-dash::before { right: calc((var(--d) / 2 + 3) * var(--u)); }
-.node:hover .moon, .node:focus-visible .moon { transform: translate(-50%, -50%) scale(1.35); filter: brightness(1.25) drop-shadow(0 0 8px rgba(255, 43, 43, 0.8)); }
-.node-right:hover .moon-big + .label, .node-right:focus-visible .moon-big + .label { left: calc((var(--d) * 1.35 / 2 + 18) * var(--u)); }
-.node:hover .label b, .node:focus-visible .label b { color: #fff; text-shadow: var(--glow); letter-spacing: 0.4em; }
+.label { position: absolute; top: 0; transform: translateY(-50%); white-space: nowrap; transition: left 0.6s var(--ease), right 0.6s var(--ease); }
+.label b { display: block; margin-right: -0.3em; font-family: 'Cormorant Garamond', var(--serif); font-weight: 600; font-size: max(9px, calc(14.2 * var(--u))); line-height: 1.32; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(226, 226, 224, 0.92); transition: color 0.4s, text-shadow 0.4s; }
+body[data-lang='ge'] .label b, body[data-lang='jp'] .label b { margin-right: -0.14em; font-family: var(--sans); font-weight: 400; letter-spacing: 0.14em; }
+.label i { position: absolute; top: calc(100% + 13 * var(--u)); left: 0; display: block; height: 1px; width: calc(32 * var(--u)); background: rgba(255, 244, 240, 0.5); transition: width 0.6s var(--ease), background 0.4s; }
+.node-right .label { left: calc((var(--d) * var(--planet-scale) / 2 + 18) * var(--u)); }
+.node-left .label { right: calc((var(--d) * var(--planet-scale) / 2 + 18) * var(--u)); text-align: right; }
+.node-left .label i { left: auto; right: 0; }
+.node:hover, .node:focus-visible { --planet-scale: 1.35; }
+.node:hover .moon, .node:focus-visible .moon { filter: brightness(1.25) drop-shadow(0 0 8px rgba(255, 43, 43, 0.8)); }
+.node:hover .label b, .node:focus-visible .label b { color: #fff; text-shadow: var(--glow); }
 .node:hover .label i, .node:focus-visible .label i { width: calc(64 * var(--u)); background: var(--red); box-shadow: var(--glow); }
 .node:focus-visible { outline: none; }
 
@@ -412,7 +414,6 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
 
 /* ---------------------------------------------------------------- third orbit */
 .orbit-2 { stroke: rgba(255, 220, 214, 0.16); }
-.hl-2 .orbit-2 { stroke: rgba(255, 70, 70, 0.95); stroke-width: 1.6; filter: drop-shadow(0 0 6px rgba(255, 43, 43, 0.9)); }
 
 /* ---------------------------------------------------------------- Merani intro */
 .intro { position: fixed; inset: 0; z-index: 120; background: #000; overflow: hidden; color: #fff; }
@@ -489,8 +490,9 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
 .contact-card { width: min(100%, 920px); margin: 0 auto; padding: clamp(32px, 7vw, 88px) clamp(20px, 5vw, 64px); text-align: center; border: 1px solid rgba(255, 90, 90, 0.2); background: radial-gradient(ellipse at 50% 0, rgba(255, 43, 43, 0.12), rgba(3, 1, 2, 0) 68%); box-shadow: 0 0 80px rgba(255, 43, 43, 0.08); }
 .contact-title { margin: 16px 0; font-family: var(--serif); font-size: clamp(38px, 7vw, 92px); font-weight: 300; line-height: 1; color: var(--ink); }
 .contact-text { max-width: 54ch; margin: 0 auto clamp(24px, 4vh, 42px); color: var(--dim); font-size: clamp(15px, 1.3vw, 19px); }
-.contact-email { display: inline-flex; align-items: center; gap: 14px; max-width: 100%; padding: 14px 22px; border: 1px solid rgba(255, 43, 43, 0.68); border-radius: 999px; color: var(--ink); font-family: var(--serif); font-size: clamp(19px, 3vw, 32px); line-height: 1.2; overflow-wrap: anywhere; transition: background 0.3s, color 0.3s, box-shadow 0.3s; }
-.contact-email i { color: var(--red); font-family: var(--sans); font-size: 14px; font-style: normal; }
+.contact-email { position: relative; display: inline-grid; place-items: center; max-width: 100%; padding: 14px 44px; border: 1px solid rgba(255, 43, 43, 0.68); border-radius: 999px; color: var(--ink); font-family: var(--serif); font-size: clamp(19px, 3vw, 32px); line-height: 1.2; overflow-wrap: anywhere; transition: background 0.3s, color 0.3s, box-shadow 0.3s; }
+.contact-email span { min-width: 0; text-align: center; }
+.contact-email i { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); width: 14px; text-align: center; color: var(--red); font-family: var(--sans); font-size: 14px; line-height: 1; font-style: normal; }
 .contact-email:hover, .contact-email:focus-visible { background: var(--red); color: #fff; box-shadow: var(--glow); outline: none; }
 .contact-email:hover i, .contact-email:focus-visible i { color: #fff; }
 .btn { padding: 12px 22px; border: 1px solid var(--red); border-radius: 999px; font-size: 12px; letter-spacing: 0.12em; background: var(--red); color: #fff; transition: 0.4s var(--ease); }
@@ -506,7 +508,8 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
   .sec-contact { min-height: 60svh; }
   .contact-card { padding: 32px 16px; }
   .contact-title { font-size: clamp(34px, 9vw, 56px); }
-  .contact-email { gap: 10px; padding: 12px 14px; font-size: clamp(15px, 4.5vw, 24px); }
+  .contact-email { padding: 12px 26px; font-size: clamp(15px, 4.5vw, 24px); }
+  .contact-email i { right: 6px; width: 12px; }
 }
 
 /* ---------------------------------------------------------------- planet view */

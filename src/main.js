@@ -215,6 +215,9 @@ function renderMenu() {
       const img = $('.menu-preview img');
       img.src = url(im.thumb);
       $('.menu-preview').classList.add('on');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        img.animate([{ opacity: 0, transform: 'scale(1.06)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 450, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+      }
     });
   });
 }
