@@ -43,7 +43,7 @@ function drawArm(svg) {
     // silver along the top turning red, then fading into the threads below
     // no hard edge anywhere: the colour turns gradually and the light fades out smoothly
     const r = t ** 0.7;
-    const c = [Math.round(180 + 24 * r), Math.round(7 + 6 * r), Math.round(11 + 6 * r)];
+    const c = [Math.round(205 + 35 * r), Math.round(9 + 12 * r), Math.round(14 + 14 * r)];
     const o = 0.5 * (1 - t) ** 1.8 + 0.02;
     el('path', { d, fill: 'none', stroke: `rgb(${c.join(',')})`, 'stroke-opacity': o.toFixed(2) }, arm);
   }
@@ -304,9 +304,9 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   layer.after(top);
   el('defs', {}, top).innerHTML = `
     <linearGradient id="stepFace" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#d8141a" stop-opacity="0.65"/>
-      <stop offset="0.55" stop-color="#9c0d14" stop-opacity="0.54"/>
-      <stop offset="1" stop-color="#65070b" stop-opacity="0.6"/>
+      <stop offset="0" stop-color="#f02b36" stop-opacity="0.7"/>
+      <stop offset="0.55" stop-color="#ca1723" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#8a1015" stop-opacity="0.6"/>
     </linearGradient>`;
   drawArm(top);
   drawThreads(layer);

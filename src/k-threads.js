@@ -32,7 +32,7 @@ export async function drawThreads(layer) {
     // Keep only the strongest neutral threads white; shift the softer neutral and red threads to blood red.
     const keepWhite = neutral && sourceMax >= 221 && sourceMax - sourceMin <= 17;
     if (keepWhite) return `rgba(255,255,255,${(m / 255).toFixed(3)})`;
-    if (neutral || (r >= g && r >= b)) return `rgba(190,8,14,${(m / 255 * 0.72).toFixed(3)})`;
+    if (neutral || (r >= g && r >= b)) return `rgba(255,18,26,${(m / 255 * 0.82).toFixed(3)})`;
     return `rgba(${Math.round((r / m) * 255)},${Math.round((g / m) * 255)},${Math.round((b / m) * 255)},${(m / 255).toFixed(3)})`;
   });
   const segments = [...buckets.values()];
