@@ -273,6 +273,7 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   const planets = [...NODES, ...MOONS];
   const orbits = ORBITS.map((o, i) => {
     const n = planets.find((n) => n.orbit === i);
+    if (!n) return o;
     const p = onEllipse(o, angleFor(o, n));
     const scale = Math.hypot(n.x - o.cx, n.y - o.cy) / Math.hypot(p.x - o.cx, p.y - o.cy);
     return { ...o, rx: o.rx * scale, ry: o.ry * scale };
