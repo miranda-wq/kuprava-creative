@@ -1042,283 +1042,83 @@
    "projects": [
     {
      "title": "Merani",
-     "kicker": "Independent conceptual proposal · inspired by Ferrari design",
-     "text": "Born from the meeting of Ferrari design and Nikoloz Baratashvili’s poem “Merani”, where the horse becomes an image of freedom, sacrifice and the courage to open an untrodden path. Original concept and hand-sculpted model by Miranda Kuprava.",
+     "kicker": "Independent concept project · Merani",
+     "text": "An independent sculptural concept inspired by Nikoloz Baratashvili’s poem “Merani”. The horse becomes an image of freedom, sacrifice and the courage to open an untrodden path. Original concept and hand-sculpted model by Miranda Kuprava.",
      "images": [
       {
-       "src": "art/kinetic/merani-hero.jpg",
-       "thumb": "art/kinetic/merani-hero-t.jpg",
+       "src": "art/automotive-concepts/3B7F8C20-1EA4-4455-A546-62A504673236(5).jpeg",
+       "thumb": "art/automotive-concepts/3B7F8C20-1EA4-4455-A546-62A504673236(5).jpeg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/automotive-concepts/a_glossy_hyper_realistic_luxury_car_showroom_inte.png",
+       "thumb": "art/automotive-concepts/a_glossy_hyper_realistic_luxury_car_showroom_inte.png",
        "w": 1402,
        "h": 1122
       },
       {
-       "src": "docs/merani/04.jpg",
-       "thumb": "docs/merani/04-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/merani/06.jpg",
-       "thumb": "docs/merani/06-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/merani/07.jpg",
-       "thumb": "docs/merani/07-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/merani/09.jpg",
-       "thumb": "docs/merani/09-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/merani/12.jpg",
-       "thumb": "docs/merani/12-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/merani/13.jpg",
-       "thumb": "docs/merani/13-t.jpg",
-       "w": 1203,
-       "h": 1700
+       "src": "art/automotive-concepts/a_high_end_modern_luxury_car_showroom_interior_wit.png",
+       "thumb": "art/automotive-concepts/a_high_end_modern_luxury_car_showroom_interior_wit.png",
+       "w": 1087,
+       "h": 1447
       }
-     ],
-     "doc": {
-      "title": "Merani",
-      "pdf": "docs/merani.pdf",
-      "pages": [
-       {
-        "src": "docs/merani/01.jpg",
-        "thumb": "docs/merani/01-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/02.jpg",
-        "thumb": "docs/merani/02-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/03.jpg",
-        "thumb": "docs/merani/03-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/04.jpg",
-        "thumb": "docs/merani/04-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/05.jpg",
-        "thumb": "docs/merani/05-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/06.jpg",
-        "thumb": "docs/merani/06-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/07.jpg",
-        "thumb": "docs/merani/07-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/08.jpg",
-        "thumb": "docs/merani/08-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/09.jpg",
-        "thumb": "docs/merani/09-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/10.jpg",
-        "thumb": "docs/merani/10-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/11.jpg",
-        "thumb": "docs/merani/11-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/12.jpg",
-        "thumb": "docs/merani/12-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/13.jpg",
-        "thumb": "docs/merani/13-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/14.jpg",
-        "thumb": "docs/merani/14-t.jpg",
-        "w": 1203,
-        "h": 1700
-       }
-      ],
-      "sizeMB": 7.1
-     }
+     ]
     },
     {
      "title": "Space Age",
-     "kicker": "Kinetic monument · Dubai",
-     "text": "A kinetic sculpture inspired by the visual memory of the 1960s Space Age. Independently moving rings orbit a luminous central structure; in Christmas mode the whole work becomes a celebration of light.",
+     "kicker": "Independent concept project · sculptural light installation",
+     "text": "A sculptural concept for automotive environments, where light, orbital movement and architectural scale create a spatial experience. A festive lighting proposal explores a seasonal variation while preserving the sculpture’s form.",
      "images": [
       {
-       "src": "docs/space-age/04.jpg",
-       "thumb": "docs/space-age/04-t.jpg",
-       "w": 1700,
-       "h": 1203
-      },
-      {
-       "src": "docs/space-age/03.jpg",
-       "thumb": "docs/space-age/03-t.jpg",
-       "w": 1700,
-       "h": 1203
-      },
-      {
-       "src": "docs/space-age/05.jpg",
-       "thumb": "docs/space-age/05-t.jpg",
-       "w": 1700,
-       "h": 1203
-      },
-      {
-       "src": "docs/space-age/06.jpg",
-       "thumb": "docs/space-age/06-t.jpg",
-       "w": 1700,
-       "h": 1203
-      },
-      {
-       "src": "docs/space-age/07.jpg",
-       "thumb": "docs/space-age/07-t.jpg",
-       "w": 1700,
-       "h": 1203
+       "src": "art/automotive-concepts/9A35F069-3E5B-4671-9775-F9015D5D8CE3(1).jpeg",
+       "thumb": "art/automotive-concepts/9A35F069-3E5B-4671-9775-F9015D5D8CE3(1).jpeg",
+       "w": 1024,
+       "h": 1536
       }
-     ],
-     "doc": {
-      "title": "Space Age",
-      "pdf": "docs/space-age.pdf",
-      "pages": [
-       {
-        "src": "docs/space-age/01.jpg",
-        "thumb": "docs/space-age/01-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/space-age/02.jpg",
-        "thumb": "docs/space-age/02-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/space-age/03.jpg",
-        "thumb": "docs/space-age/03-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/space-age/04.jpg",
-        "thumb": "docs/space-age/04-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/space-age/05.jpg",
-        "thumb": "docs/space-age/05-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/space-age/06.jpg",
-        "thumb": "docs/space-age/06-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/space-age/07.jpg",
-        "thumb": "docs/space-age/07-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/space-age/08.jpg",
-        "thumb": "docs/space-age/08-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/space-age/09.jpg",
-        "thumb": "docs/space-age/09-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/space-age/10.jpg",
-        "thumb": "docs/space-age/10-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/space-age/11.jpg",
-        "thumb": "docs/space-age/11-t.jpg",
-        "w": 1700,
-        "h": 1203
-       }
-      ],
-      "sizeMB": 21.8
-     }
+     ]
     },
     {
      "title": "From One Root, Every Future",
-     "kicker": "Independent conceptual proposal for XPENG · kinetic tree",
-     "text": "The tree is not decoration. It is a spatial metaphor of evolution: root as origin and energy, central spine as intelligence, spiral roads as mobility, orbital nodes as transition, and the upper air-space as the point where movement becomes three-dimensional. Road → intelligence → physical AI → flight.",
+     "kicker": "Independent concept project · mobility sculpture",
+     "text": "The tree becomes a spatial metaphor for movement and evolution: root as origin and energy, a central spine as intelligence, spiral roads as mobility, orbital nodes as transition, and upper air space where movement becomes three-dimensional. Road → intelligence → physical AI → flight.",
      "images": [
       {
-       "src": "art/kinetic/xpeng-tree-01.jpg",
-       "thumb": "art/kinetic/xpeng-tree-01-t.jpg",
-       "w": 1496,
-       "h": 1051
+       "src": "art/automotive-concepts/F0089C39-6D61-4A18-8EB9-0850A7A7BC40(1).jpeg",
+       "thumb": "art/automotive-concepts/F0089C39-6D61-4A18-8EB9-0850A7A7BC40(1).jpeg",
+       "w": 1022,
+       "h": 1536
+      },
+      {
+       "src": "art/automotive-concepts/IMG_6270.jpg",
+       "thumb": "art/automotive-concepts/IMG_6270.jpg",
+       "w": 1170,
+       "h": 1244
       }
      ]
     },
     {
      "title": "Automotive Tree",
-     "kicker": "Independent conceptual proposal · technological sculptural tree",
+     "kicker": "Independent concept project · automotive sculpture",
      "text": "A sculptural tree conceived as a dialogue between automotive engineering and seasonal ritual, designed for showroom and atrium scale.",
      "images": [
       {
-       "src": "art/kinetic/automotive-tree-01.jpg",
-       "thumb": "art/kinetic/automotive-tree-01-t.jpg",
-       "w": 1024,
-       "h": 1536
+       "src": "art/automotive-concepts/13836663-9593-4FD6-AE2C-9D36A028FBF9.jpeg",
+       "thumb": "art/automotive-concepts/13836663-9593-4FD6-AE2C-9D36A028FBF9.jpeg",
+       "w": 1315,
+       "h": 1197
       },
       {
-       "src": "art/kinetic/automotive-tree-02.jpg",
-       "thumb": "art/kinetic/automotive-tree-02-t.jpg",
+       "src": "art/automotive-concepts/456C321A-46A4-40FC-B39A-4240BA06D365.jpeg",
+       "thumb": "art/automotive-concepts/456C321A-46A4-40FC-B39A-4240BA06D365.jpeg",
        "w": 1199,
        "h": 1312
+      },
+      {
+       "src": "art/automotive-concepts/DC09464B-46DA-4C56-AE7A-D7EF429320A8(1).jpeg",
+       "thumb": "art/automotive-concepts/DC09464B-46DA-4C56-AE7A-D7EF429320A8(1).jpeg",
+       "w": 1213,
+       "h": 1296
       }
      ]
     }

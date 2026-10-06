@@ -74,7 +74,7 @@ const sectionWorks = {}; // per section: each project's gallery and images, for 
 function renderSections() {
   root.innerHTML = '';
   sections.forEach((s, si) => {
-    const total = s.id === 'christmas' ? s.projects.length : s.projects.reduce((a, p) => a + p.images.length, 0);
+    const total = ['christmas', 'kinetic'].includes(s.id) ? s.projects.length : s.projects.reduce((a, p) => a + p.images.length, 0);
     const sec = document.createElement('section');
     sec.className = `sec sec-${s.id}`;
     sec.id = s.id;
@@ -83,6 +83,7 @@ function renderSections() {
       <header class="sec-head reveal">
         <div class="sec-orbit" aria-hidden="true"><svg viewBox="0 0 120 120"><ellipse cx="60" cy="60" rx="56" ry="22" transform="rotate(-18 60 60)"/><circle class="sp" r="5"/></svg><span>${pad(si + 1)}</span></div>
         <h2 class="sec-title" data-sec-title="${s.id}">${t().sections[s.id].title}</h2>
+        ${t().sections[s.id].subtitle ? `<p class="sec-subtitle" data-sec-subtitle="${s.id}">${t().sections[s.id].subtitle}</p>` : ''}
         <p class="sec-intro" data-sec-intro="${s.id}">${t().sections[s.id].intro}</p>
         ${s.id === 'brand' ? `<ul class="commission-services" data-commission-services>${t().commissionServices.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
         <div class="sec-count">${total} <span data-i18n="works">${t().works}</span></div>
@@ -132,6 +133,7 @@ function renderSections() {
           </article>`;
       });
     }
+    if (t().sections[s.id].closing) html += `<p class="sec-closing reveal" data-sec-closing="${s.id}">${t().sections[s.id].closing}</p>`;
     sec.innerHTML = html;
     root.appendChild(sec);
   });
@@ -186,7 +188,9 @@ function applyLang() {
   $$('.tl1').forEach((n) => (n.textContent = t().tagline[0]));
   $$('.tl2').forEach((n) => (n.textContent = t().tagline[1]));
   $$('[data-sec-title]').forEach((n) => (n.textContent = t().sections[n.dataset.secTitle].title));
+  $$('[data-sec-subtitle]').forEach((n) => (n.textContent = t().sections[n.dataset.secSubtitle].subtitle));
   $$('[data-sec-intro]').forEach((n) => (n.textContent = t().sections[n.dataset.secIntro].intro));
+  $$('[data-sec-closing]').forEach((n) => (n.textContent = t().sections[n.dataset.secClosing].closing));
   const services = $('[data-commission-services]');
   if (services) services.replaceChildren(...t().commissionServices.map((label) => {
     const item = document.createElement('li');
@@ -220,12 +224,12 @@ function renderMenu() {
     a.addEventListener('click', (e) => { e.preventDefault(); goTo(a.dataset.id); });
     a.addEventListener('pointerenter', () => {
       const s = sections.find((x) => x.id === a.dataset.id);
-      $('.menu-preview').classList.toggle('preserve-proportions', s?.id === 'christmas');
+      $('.menu-preview').classList.toggle('preserve-proportions', ['christmas', 'kinetic'].includes(s?.id));
       const im = s ? s.projects[0].images[0] : content.intro;
       const img = $('.menu-preview img');
       img.src = url(im.thumb);
       $('.menu-preview').classList.add('on');
-      if (s?.id !== 'christmas' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (!['christmas', 'kinetic'].includes(s?.id) && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         img.animate([{ opacity: 0, transform: 'scale(1.06)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 450, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
       }
     });
@@ -278,7 +282,7 @@ function showLB() {
 }
 function openGallery(g, i) {
   cur = { g, i };
-  lb.classList.toggle('preserve-proportions', g.sectionId === 'christmas');
+  lb.classList.toggle('preserve-proportions', ['christmas', 'kinetic'].includes(g.sectionId));
   $('.lb-strip').innerHTML = g.images.length > 1 ? g.images.map((im, k) => `<button data-k="${k}"><img src="${url(im.thumb)}" alt="" loading="lazy"/></button>`).join('') : '';
   $$('.lb-strip button').forEach((b) => b.addEventListener('click', () => { cur.i = +b.dataset.k; showLB(); }));
   lb.classList.add('open');
@@ -325,7 +329,7 @@ lb.addEventListener('touchend', (e) => {
 // up to `cap` works of a section, taking each project's images in turn so every project shows
 function planetItems(id, cap) {
   const projects = sectionWorks[id] || [], out = [];
-  if (id === 'christmas') {
+  if (id === 'christmas' || id === 'kinetic') {
     return projects.slice(0, cap).map((p) => {
       const im = p.images[0];
       return { gi: p.gi, idx: 0, thumb: url(im.thumb), w: im.w, h: im.h, title: p.title, preserveProportions: true };
@@ -336,7 +340,7 @@ function planetItems(id, cap) {
     for (const p of projects) {
       const im = p.images[r];
       if (!im || out.length >= cap) continue;
-      out.push({ gi: p.gi, idx: r, thumb: url(im.thumb), w: im.w, h: im.h, title: p.title, preserveProportions: id === 'christmas' });
+      out.push({ gi: p.gi, idx: r, thumb: url(im.thumb), w: im.w, h: im.h, title: p.title, preserveProportions: ['christmas', 'kinetic'].includes(id) });
       any = true;
     }
     if (!any) break;
@@ -350,7 +354,7 @@ const planetView = createPlanetView({
   toSection: goTo,
   strings: t,
   order: ORDER,
-  total: (id) => id === 'christmas' ? (sectionWorks[id] || []).length : (sectionWorks[id] || []).reduce((a, p) => a + p.images.length, 0),
+  total: (id) => ['christmas', 'kinetic'].includes(id) ? (sectionWorks[id] || []).length : (sectionWorks[id] || []).reduce((a, p) => a + p.images.length, 0),
   covered: () => lb.classList.contains('open'),
 });
 
