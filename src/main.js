@@ -108,7 +108,7 @@ function renderSections() {
       html += `</div>`;
     } else {
       s.projects.forEach((p) => {
-        const gi = galleries.push({ title: p.title, kicker: p.kicker, images: p.images, doc: p.doc }) - 1;
+        const gi = galleries.push({ title: p.title, kicker: p.kicker, status: p.status, location: p.location, images: p.images, doc: p.doc }) - 1;
         (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images });
         if (p.doc) docs[p.doc.pdf] = p.doc;
         const sub = s.id === 'functional' && p.key && t().functionalSubs[p.key];
@@ -118,6 +118,8 @@ function renderSections() {
             <div class="proj-meta reveal">
               ${p.kicker ? `<div class="kicker">${p.kicker}</div>` : ''}
               <h3>${p.title}</h3>
+              ${p.status ? `<p class="proj-status">${p.status}</p>` : ''}
+              ${p.location ? `<p class="proj-location">${p.location}</p>` : ''}
               ${sub ? `<p class="proj-sub" data-fa="${p.key}">${sub}</p>` : ''}
               ${p.credit ? `<p class="proj-credit">${p.credit}</p>` : ''}
               ${p.text ? `<p class="proj-text">${p.text}</p>` : ''}
@@ -264,6 +266,8 @@ function showLB() {
   lbImg.alt = `${g.title} ${cur.i + 1}`;
   $('.lb-kicker').textContent = g.kicker || '';
   $('.lb-name').textContent = g.title;
+  $('.lb-status').textContent = g.status || '';
+  $('.lb-location').textContent = g.location || '';
   $('.lb-count').textContent = `${pad(cur.i + 1)} / ${pad(g.images.length)}`;
   const pdf = $('.lb-pdf');
   if (g.doc) { pdf.href = url(g.doc.pdf); pdf.textContent = t().downloadPdf; pdf.hidden = false; } else { pdf.hidden = true; }

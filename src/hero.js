@@ -132,7 +132,6 @@ const NODES = [
   { id: 'functional', x: 1282, y: 641, d: 32, side: 'right', orbit: 0 },
   { id: 'public', x: 417, y: 185, d: 24, side: 'left', orbit: 4, tone: 'hot' },
   { id: 'spaces', x: 340, y: 400, d: 24, side: 'left', orbit: 8, wrap: true, tone: 'red' },
-  { id: 'competitions', x: 483, y: 483, d: 34, side: 'left', orbit: 5, wrap: true },
   { id: 'contact', x: 378, y: 628, d: 40, side: 'left', orbit: 9 },
   { id: 'outdoor', x: 548, y: 772, d: 26, side: 'left', orbit: 10, wrap: true, tone: 'grey' },
 ];

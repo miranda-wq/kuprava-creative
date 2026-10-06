@@ -291,6 +291,8 @@ body[data-lang='ge'] .tagline, body[data-lang='jp'] .tagline { letter-spacing: 0
 .proj-meta { position: sticky; top: 110px; align-self: start; display: grid; gap: 16px; }
 .kicker { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); }
 .proj h3 { margin: 0; font-family: var(--serif); font-weight: 300; font-size: clamp(30px, 3.2vw, 52px); line-height: 1.04; }
+.proj-status { margin: -6px 0 0; color: var(--ink); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; }
+.proj-location { margin: -10px 0 0; color: var(--dim); font-family: var(--serif); font-size: 19px; }
 .proj-sub { margin: 0; color: var(--ink); font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.5; }
 body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: normal; font-size: 16px; }
 .proj-text { margin: 0; color: var(--dim); font-size: 15px; }
@@ -337,6 +339,8 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
 .lb-title { display: grid; gap: 2px; }
 .lb-kicker { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); }
 .lb-name { font-family: var(--serif); font-size: 26px; line-height: 1.1; }
+.lb-status { color: var(--ink); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; }
+.lb-location { color: var(--dim); font-family: var(--serif); font-size: 15px; }
 .lb-actions { display: flex; align-items: center; gap: 24px; }
 .lb-count { font-size: 11px; letter-spacing: 0.25em; color: var(--dim); }
 .lb-pdf { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; padding: 9px 16px; border: 1px solid var(--red); border-radius: 999px; transition: 0.3s; }

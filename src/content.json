@@ -656,6 +656,56 @@
    "id": "public",
    "projects": [
     {
+     "title": "Who Flew the Kite?",
+     "status": "Competition Proposal · 2026",
+     "location": "Winter Stations, Toronto",
+     "images": [
+      {
+       "src": "art/public-art/who-flew-the-kite.jpg",
+       "thumb": "art/public-art/who-flew-the-kite-t.jpg",
+       "w": 1536,
+       "h": 1024
+      }
+     ]
+    },
+    {
+     "title": "The Man Who Was the Shadow",
+     "kicker": "Light sculpture",
+     "text": "A bronze-toned figure whose head is a lamp: he lights the street for others while his own face stays in shadow.",
+     "images": [
+      {
+       "src": "art/public-art/the-man-who-was-the-shadow.jpg",
+       "thumb": "art/public-art/the-man-who-was-the-shadow-t.jpg",
+       "w": 1672,
+       "h": 941
+      }
+     ],
+     "status": "Competition Proposal · 2026",
+     "location": "Amsterdam"
+    },
+    {
+     "title": "The Deafening Silence",
+     "kicker": "Public art / light & sound installation",
+     "credit": "Concept & artistic direction: Miranda Kuprava · Original inspiration: Melita Iosava’s drawing Freedom",
+     "text": "Dedicated to the children affected by the war in Ukraine. Child-sized, faceless figures stand within a field of light, each holding a balloon. Made from unpainted fiberglass, all visible colour is created by light. The installation unfolds in three acts: everyday city life, the sudden interruption of an air-raid siren, and finally silence accompanied by Mahler’s Kindertotenlieder.",
+     "images": [
+      {
+       "src": "art/public-art/the-deafening-silence-cover.jpg",
+       "thumb": "art/public-art/the-deafening-silence-cover-t.jpg",
+       "w": 1536,
+       "h": 1024
+      },
+      {
+       "src": "art/public-art/the-deafening-silence-renders.jpg",
+       "thumb": "art/public-art/the-deafening-silence-renders-t.jpg",
+       "w": 1536,
+       "h": 1024
+      }
+     ],
+     "status": "Competition Proposal · 2026",
+     "location": "Germany"
+    },
+    {
      "title": "Children's Park of Imagination",
      "kicker": "Shanghai · public park concept",
      "credit": "Original idea: Melita Iosava · Concept & artistic direction: Miranda Kuprava",
@@ -697,158 +747,7 @@
        "w": 1700,
        "h": 1063
       }
-     ],
-     "doc": {
-      "title": "Children's Park of Imagination",
-      "pdf": "docs/children-s-park-of-imagination.pdf",
-      "pages": [
-       {
-        "src": "docs/children-s-park-of-imagination/01.jpg",
-        "thumb": "docs/children-s-park-of-imagination/01-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/02.jpg",
-        "thumb": "docs/children-s-park-of-imagination/02-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/03.jpg",
-        "thumb": "docs/children-s-park-of-imagination/03-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/04.jpg",
-        "thumb": "docs/children-s-park-of-imagination/04-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/05.jpg",
-        "thumb": "docs/children-s-park-of-imagination/05-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/06.jpg",
-        "thumb": "docs/children-s-park-of-imagination/06-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/07.jpg",
-        "thumb": "docs/children-s-park-of-imagination/07-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/08.jpg",
-        "thumb": "docs/children-s-park-of-imagination/08-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/09.jpg",
-        "thumb": "docs/children-s-park-of-imagination/09-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/10.jpg",
-        "thumb": "docs/children-s-park-of-imagination/10-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/11.jpg",
-        "thumb": "docs/children-s-park-of-imagination/11-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/12.jpg",
-        "thumb": "docs/children-s-park-of-imagination/12-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/13.jpg",
-        "thumb": "docs/children-s-park-of-imagination/13-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/14.jpg",
-        "thumb": "docs/children-s-park-of-imagination/14-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/15.jpg",
-        "thumb": "docs/children-s-park-of-imagination/15-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/16.jpg",
-        "thumb": "docs/children-s-park-of-imagination/16-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/17.jpg",
-        "thumb": "docs/children-s-park-of-imagination/17-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/18.jpg",
-        "thumb": "docs/children-s-park-of-imagination/18-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/19.jpg",
-        "thumb": "docs/children-s-park-of-imagination/19-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/20.jpg",
-        "thumb": "docs/children-s-park-of-imagination/20-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/21.jpg",
-        "thumb": "docs/children-s-park-of-imagination/21-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/22.jpg",
-        "thumb": "docs/children-s-park-of-imagination/22-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/23.jpg",
-        "thumb": "docs/children-s-park-of-imagination/23-t.jpg",
-        "w": 1700,
-        "h": 1063
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/24.jpg",
-        "thumb": "docs/children-s-park-of-imagination/24-t.jpg",
-        "w": 1700,
-        "h": 1063
-       }
-      ],
-      "sizeMB": 20.5
-     }
+     ]
     },
     {
      "title": "Pinocchios' Library",
@@ -892,146 +791,7 @@
        "w": 1700,
        "h": 1010
       }
-     ],
-     "doc": {
-      "title": "Pinocchios' Library",
-      "pdf": "docs/pinocchios-library.pdf",
-      "pages": [
-       {
-        "src": "docs/pinocchios-library/01.jpg",
-        "thumb": "docs/pinocchios-library/01-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/02.jpg",
-        "thumb": "docs/pinocchios-library/02-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/03.jpg",
-        "thumb": "docs/pinocchios-library/03-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/04.jpg",
-        "thumb": "docs/pinocchios-library/04-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/05.jpg",
-        "thumb": "docs/pinocchios-library/05-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/06.jpg",
-        "thumb": "docs/pinocchios-library/06-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/07.jpg",
-        "thumb": "docs/pinocchios-library/07-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/08.jpg",
-        "thumb": "docs/pinocchios-library/08-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/09.jpg",
-        "thumb": "docs/pinocchios-library/09-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/10.jpg",
-        "thumb": "docs/pinocchios-library/10-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/11.jpg",
-        "thumb": "docs/pinocchios-library/11-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/12.jpg",
-        "thumb": "docs/pinocchios-library/12-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/13.jpg",
-        "thumb": "docs/pinocchios-library/13-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/14.jpg",
-        "thumb": "docs/pinocchios-library/14-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/15.jpg",
-        "thumb": "docs/pinocchios-library/15-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/16.jpg",
-        "thumb": "docs/pinocchios-library/16-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/17.jpg",
-        "thumb": "docs/pinocchios-library/17-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/18.jpg",
-        "thumb": "docs/pinocchios-library/18-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/19.jpg",
-        "thumb": "docs/pinocchios-library/19-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/20.jpg",
-        "thumb": "docs/pinocchios-library/20-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/21.jpg",
-        "thumb": "docs/pinocchios-library/21-t.jpg",
-        "w": 1700,
-        "h": 1010
-       },
-       {
-        "src": "docs/pinocchios-library/22.jpg",
-        "thumb": "docs/pinocchios-library/22-t.jpg",
-        "w": 1700,
-        "h": 1010
-       }
-      ],
-      "sizeMB": 15.6
-     }
+     ]
     }
    ]
   },
@@ -1312,7 +1072,7 @@
         "h": 1700
        }
       ],
-      "sizeMB": 19.0
+      "sizeMB": 19
      }
     },
     {
@@ -2911,7 +2671,7 @@
     {
      "title": "Also with Melita",
      "kicker": "Projects that began with Melita’s drawings",
-     "text": "Children's Park of Imagination (Shanghai) and Pinocchios' Library (New York) in Public Art, the Tsinandali exhibition in Spaces & Worlds, and The Deafening Silence, which grew from Melita’s drawing Freedom, in Competitions / Submissions.",
+     "text": "Children's Park of Imagination (Shanghai) and Pinocchios' Library (New York) in Public Art, the Tsinandali exhibition in Spaces & Worlds, and The Deafening Silence, which grew from Melita’s drawing Freedom, in Public Art.",
      "images": [
       {
        "src": "docs/children-s-park-of-imagination/01.jpg",
@@ -2932,177 +2692,6 @@
        "h": 1203
       }
      ]
-    }
-   ]
-  },
-  {
-   "id": "competitions",
-   "projects": [
-    {
-     "title": "The Man Who Was a Shadow",
-     "kicker": "Light sculpture · submitted to Amsterdam Light Festival, Edition 16, 2027–2028",
-     "text": "A bronze-toned figure whose head is a lamp: he lights the street for others while his own face stays in shadow.",
-     "images": [
-      {
-       "src": "art/competitions/man-who-was-a-shadow-01.jpg",
-       "thumb": "art/competitions/man-who-was-a-shadow-01-t.jpg",
-       "w": 1672,
-       "h": 941
-      },
-      {
-       "src": "art/competitions/man-who-was-a-shadow-02.jpg",
-       "thumb": "art/competitions/man-who-was-a-shadow-02-t.jpg",
-       "w": 924,
-       "h": 2000
-      },
-      {
-       "src": "art/competitions/man-who-was-a-shadow-03.jpg",
-       "thumb": "art/competitions/man-who-was-a-shadow-03-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/competitions/man-who-was-a-shadow-04.jpg",
-       "thumb": "art/competitions/man-who-was-a-shadow-04-t.jpg",
-       "w": 1024,
-       "h": 1536
-      }
-     ]
-    },
-    {
-     "title": "The Deafening Silence",
-     "kicker": "Public art / light & sound installation · competition submission, Germany, 2026",
-     "credit": "Concept & artistic direction: Miranda Kuprava · Original inspiration: Melita Iosava’s drawing Freedom",
-     "text": "Dedicated to the children affected by the war in Ukraine. Child-sized, faceless figures stand within a field of light, each holding a balloon. Made from unpainted fiberglass, all visible colour is created by light. The installation unfolds in three acts: everyday city life, the sudden interruption of an air-raid siren, and finally silence accompanied by Mahler’s Kindertotenlieder.",
-     "images": [
-      {
-       "src": "docs/the-deafening-silence/01.jpg",
-       "thumb": "docs/the-deafening-silence/01-t.jpg",
-       "w": 1700,
-       "h": 1134
-      },
-      {
-       "src": "docs/the-deafening-silence/02.jpg",
-       "thumb": "docs/the-deafening-silence/02-t.jpg",
-       "w": 1700,
-       "h": 1134
-      },
-      {
-       "src": "docs/the-deafening-silence/03.jpg",
-       "thumb": "docs/the-deafening-silence/03-t.jpg",
-       "w": 1700,
-       "h": 1134
-      },
-      {
-       "src": "docs/the-deafening-silence/04.jpg",
-       "thumb": "docs/the-deafening-silence/04-t.jpg",
-       "w": 1700,
-       "h": 1134
-      },
-      {
-       "src": "docs/the-deafening-silence/05.jpg",
-       "thumb": "docs/the-deafening-silence/05-t.jpg",
-       "w": 1700,
-       "h": 1134
-      },
-      {
-       "src": "docs/the-deafening-silence/06.jpg",
-       "thumb": "docs/the-deafening-silence/06-t.jpg",
-       "w": 1700,
-       "h": 1134
-      },
-      {
-       "src": "docs/the-deafening-silence/07.jpg",
-       "thumb": "docs/the-deafening-silence/07-t.jpg",
-       "w": 1700,
-       "h": 1134
-      },
-      {
-       "src": "docs/the-deafening-silence/08.jpg",
-       "thumb": "docs/the-deafening-silence/08-t.jpg",
-       "w": 1700,
-       "h": 1134
-      },
-      {
-       "src": "docs/the-deafening-silence/09.jpg",
-       "thumb": "docs/the-deafening-silence/09-t.jpg",
-       "w": 1700,
-       "h": 1134
-      },
-      {
-       "src": "docs/the-deafening-silence/10.jpg",
-       "thumb": "docs/the-deafening-silence/10-t.jpg",
-       "w": 1700,
-       "h": 1134
-      }
-     ],
-     "doc": {
-      "title": "The Deafening Silence",
-      "pdf": "docs/the-deafening-silence.pdf",
-      "pages": [
-       {
-        "src": "docs/the-deafening-silence/01.jpg",
-        "thumb": "docs/the-deafening-silence/01-t.jpg",
-        "w": 1700,
-        "h": 1134
-       },
-       {
-        "src": "docs/the-deafening-silence/02.jpg",
-        "thumb": "docs/the-deafening-silence/02-t.jpg",
-        "w": 1700,
-        "h": 1134
-       },
-       {
-        "src": "docs/the-deafening-silence/03.jpg",
-        "thumb": "docs/the-deafening-silence/03-t.jpg",
-        "w": 1700,
-        "h": 1134
-       },
-       {
-        "src": "docs/the-deafening-silence/04.jpg",
-        "thumb": "docs/the-deafening-silence/04-t.jpg",
-        "w": 1700,
-        "h": 1134
-       },
-       {
-        "src": "docs/the-deafening-silence/05.jpg",
-        "thumb": "docs/the-deafening-silence/05-t.jpg",
-        "w": 1700,
-        "h": 1134
-       },
-       {
-        "src": "docs/the-deafening-silence/06.jpg",
-        "thumb": "docs/the-deafening-silence/06-t.jpg",
-        "w": 1700,
-        "h": 1134
-       },
-       {
-        "src": "docs/the-deafening-silence/07.jpg",
-        "thumb": "docs/the-deafening-silence/07-t.jpg",
-        "w": 1700,
-        "h": 1134
-       },
-       {
-        "src": "docs/the-deafening-silence/08.jpg",
-        "thumb": "docs/the-deafening-silence/08-t.jpg",
-        "w": 1700,
-        "h": 1134
-       },
-       {
-        "src": "docs/the-deafening-silence/09.jpg",
-        "thumb": "docs/the-deafening-silence/09-t.jpg",
-        "w": 1700,
-        "h": 1134
-       },
-       {
-        "src": "docs/the-deafening-silence/10.jpg",
-        "thumb": "docs/the-deafening-silence/10-t.jpg",
-        "w": 1700,
-        "h": 1134
-       }
-      ],
-      "sizeMB": 13.9
-     }
     }
    ]
   }

@@ -5,8 +5,8 @@
 
 export const LANGS = ['en', 'ge', 'fr', 'jp'];
 
-// Miranda's ten "planets", in the order she listed them on WhatsApp.
-export const ORDER = ['sculpture', 'public', 'outdoor', 'christmas', 'kinetic', 'spaces', 'functional', 'brand', 'melita', 'competitions'];
+// Miranda's nine "planets", in the order she listed them on WhatsApp.
+export const ORDER = ['sculpture', 'public', 'outdoor', 'christmas', 'kinetic', 'spaces', 'functional', 'brand', 'melita'];
 
 export const T = {
   en: {
@@ -48,7 +48,6 @@ export const T = {
       functional: { title: 'Functional Art', intro: 'Art that performs a function. KUPRAVA CREATIVE creates functional art in which utility becomes part of the artwork. Lighting, chandeliers, furniture and sculptural objects are conceived not simply as design pieces, but as artworks made to inhabit and transform a space.' },
       brand: { title: 'Commission', intro: 'Art-driven concepts created for brands. KUPRAVA CREATIVE transforms brand identity, history and visual language into original objects, installations and spatial experiences. Each concept begins with the character of the brand and develops into a new physical or experiential form, from collectible art and functional objects to interiors, installations and large-scale environments.' },
       melita: { title: 'Works with Melita', intro: 'A continuing creative collaboration between Miranda Kuprava and her daughter, Melita Iosava. Ideas and drawings initiated by Melita are transformed through Miranda’s artistic practice into physical artworks and objects. The collaboration began with Nine Lives, when Melita asked if one of her drawings could become a real sculpture.' },
-      competitions: { title: 'Competitions / Submissions', intro: 'Works submitted to international competitions and festivals.' },
     },
     functionalSubs: {
       lighting: 'Light is treated as both a function and an artistic material. Each object works simultaneously as a source of light and as an independent sculptural presence.',
@@ -96,7 +95,6 @@ export const T = {
       functional: { title: 'ფუნქციური ხელოვნება', intro: 'ხელოვნება, რომელიც ფუნქციას ასრულებს. KUPRAVA CREATIVE ქმნის ფუნქციურ ხელოვნებას, სადაც გამოყენებადობა ნამუშევრის ნაწილი ხდება. სანათები, ჭაღები, ავეჯი და სკულპტურული ობიექტები ჩაფიქრებულია არა უბრალოდ დიზაინის ნივთებად, არამედ ხელოვნების ნიმუშებად, რომლებიც სივრცეს ავსებენ და გარდაქმნიან.' },
       brand: { title: 'შეკვეთები', intro: 'ხელოვნებაზე დაფუძნებული კონცეფციები ბრენდებისთვის. KUPRAVA CREATIVE ბრენდის იდენტობას, ისტორიასა და ვიზუალურ ენას ორიგინალურ ობიექტებად, ინსტალაციებად და სივრცით გამოცდილებად აქცევს. თითოეული კონცეფცია ბრენდის ხასიათით იწყება და ახალ ფიზიკურ ფორმად ვითარდება: საკოლექციო ხელოვნებიდან და ფუნქციური ობიექტებიდან ინტერიერებამდე, ინსტალაციებამდე და დიდი მასშტაბის გარემომდე.' },
       melita: { title: 'ნამუშევრები მელიტასთან', intro: 'მირანდა კუპრავასა და მისი ქალიშვილის, მელიტა იოსავას მუდმივი შემოქმედებითი თანამშრომლობა. მელიტას იდეები და ნახატები მირანდას მხატვრული პრაქტიკით ფიზიკურ ნამუშევრებად და ობიექტებად იქცევა. თანამშრომლობა ცხრა სიცოცხლით დაიწყო, როცა მელიტამ იკითხა, შეიძლებოდა თუ არა მისი ერთ-ერთი ნახატი ნამდვილ ქანდაკებად ქცეულიყო.' },
-      competitions: { title: 'კონკურსები / წარდგენები', intro: 'საერთაშორისო კონკურსებსა და ფესტივალებზე წარდგენილი ნამუშევრები.' },
     },
     functionalSubs: {
       lighting: 'სინათლე ერთდროულად ფუნქციაც არის და მხატვრული მასალაც. თითოეული ობიექტი სინათლის წყაროცაა და დამოუკიდებელი სკულპტურული არსებობაც.',
@@ -144,7 +142,6 @@ export const T = {
       functional: { title: 'Art fonctionnel', intro: "Un art qui remplit une fonction. KUPRAVA CREATIVE crée un art fonctionnel où l'usage devient partie intégrante de l'œuvre. Luminaires, lustres, mobilier et objets sculpturaux ne sont pas conçus comme de simples pièces de design, mais comme des œuvres faites pour habiter et transformer un espace." },
       brand: { title: 'Commandes', intro: "Des concepts portés par l'art, créés pour les marques. KUPRAVA CREATIVE transforme l'identité, l'histoire et le langage visuel d'une marque en objets, installations et expériences spatiales originaux. Chaque concept naît du caractère de la marque et se développe en une nouvelle forme physique ou expérientielle, de l'art de collection et des objets fonctionnels aux intérieurs, installations et environnements à grande échelle." },
       melita: { title: 'Œuvres avec Melita', intro: "Une collaboration créative continue entre Miranda Kuprava et sa fille, Melita Iosava. Les idées et dessins de Melita sont transformés, par la pratique artistique de Miranda, en œuvres et objets réels. La collaboration a commencé avec Nine Lives, lorsque Melita a demandé si l'un de ses dessins pouvait devenir une vraie sculpture." },
-      competitions: { title: 'Concours / Candidatures', intro: 'Œuvres présentées à des concours et festivals internationaux.' },
     },
     functionalSubs: {
       lighting: "La lumière est à la fois fonction et matériau artistique. Chaque objet est en même temps une source de lumière et une présence sculpturale autonome.",
@@ -192,7 +189,6 @@ export const T = {
       functional: { title: 'ファンクショナルアート', intro: '機能を果たすアート。KUPRAVA CREATIVEは、実用性そのものが作品の一部となるファンクショナルアートを制作します。照明、シャンデリア、家具、彫刻的オブジェは、単なるデザインではなく、空間に住まい、空間を変えるアート作品として構想されています。' },
       brand: { title: 'コミッション', intro: 'ブランドのためのアート主導のコンセプト。KUPRAVA CREATIVEは、ブランドのアイデンティティ、歴史、ビジュアル言語を、オリジナルのオブジェ、インスタレーション、空間体験へと変換します。各コンセプトはブランドの個性から始まり、コレクタブルアートや機能的なオブジェから、インテリア、インスタレーション、大規模な環境まで、新しいかたちへと展開します。' },
       melita: { title: 'メリタとの作品', intro: 'ミランダ・クプラヴァと娘メリタ・イオサヴァによる、続いていく創作のコラボレーション。メリタが生み出したアイデアや絵は、ミランダの芸術を通して実在の作品やオブジェへと姿を変えます。始まりは《Nine Lives》。メリタが「自分の絵を本物の彫刻にできる？」と尋ねたことでした。' },
-      competitions: { title: 'コンペティション / 応募作品', intro: '国際的なコンペティションやフェスティバルに応募した作品。' },
     },
     functionalSubs: {
       lighting: '光は機能であり、芸術の素材でもあります。各オブジェは光源であると同時に、自立した彫刻として存在します。',
