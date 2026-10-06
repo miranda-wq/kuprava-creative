@@ -74,7 +74,7 @@ const sectionWorks = {}; // per section: each project's gallery and images, for 
 function renderSections() {
   root.innerHTML = '';
   sections.forEach((s, si) => {
-    const total = s.projects.reduce((a, p) => a + p.images.length, 0);
+    const total = s.id === 'christmas' ? s.projects.length : s.projects.reduce((a, p) => a + p.images.length, 0);
     const sec = document.createElement('section');
     sec.className = `sec sec-${s.id}`;
     sec.id = s.id;
@@ -325,6 +325,12 @@ lb.addEventListener('touchend', (e) => {
 // up to `cap` works of a section, taking each project's images in turn so every project shows
 function planetItems(id, cap) {
   const projects = sectionWorks[id] || [], out = [];
+  if (id === 'christmas') {
+    return projects.slice(0, cap).map((p) => {
+      const im = p.images[0];
+      return { gi: p.gi, idx: 0, thumb: url(im.thumb), w: im.w, h: im.h, title: p.title, preserveProportions: true };
+    });
+  }
   for (let r = 0; out.length < cap; r++) {
     let any = false;
     for (const p of projects) {
@@ -344,7 +350,7 @@ const planetView = createPlanetView({
   toSection: goTo,
   strings: t,
   order: ORDER,
-  total: (id) => (sectionWorks[id] || []).reduce((a, p) => a + p.images.length, 0),
+  total: (id) => id === 'christmas' ? (sectionWorks[id] || []).length : (sectionWorks[id] || []).reduce((a, p) => a + p.images.length, 0),
   covered: () => lb.classList.contains('open'),
 });
 
