@@ -151,7 +151,7 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 .ready .construct line { animation: draw 2.4s var(--ease) 0.3s forwards; }
 .node-dot { fill: #fff; opacity: 0; filter: drop-shadow(0 0 4px #ff2b2b); }
 .ready .node-dot { animation: fadeIn 1s 2s forwards; }
-.glint { opacity: 0; filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 10px rgba(242, 16, 24, 0.9)); }
+.glint { opacity: 0; filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 10px rgba(255, 43, 47, 0.9)); }
 .glint path { stroke: rgba(255, 255, 255, 0.9); stroke-width: 1; vector-effect: non-scaling-stroke; }
 .glint circle { fill: #fff; }
 .ready .glint { animation: fadeIn 1s 1.8s forwards, breathe 4s ease-in-out 3s infinite; }
@@ -169,7 +169,7 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 .ready .k-layer { animation: kDraw 2.8s cubic-bezier(0.6, 0.05, 0.3, 1) 0.4s forwards; }
 @keyframes kDraw { 30% { opacity: 1; } to { opacity: 1; clip-path: inset(0 0 0 0); } }
 .arm path { stroke-width: 0.8; vector-effect: non-scaling-stroke; }
-.arm-line { fill: none; stroke: rgba(242, 16, 24, 0.45); stroke-width: 0.6; vector-effect: non-scaling-stroke; opacity: 0; }
+.arm-line { fill: none; stroke: rgba(255, 43, 47, 0.45); stroke-width: 0.6; vector-effect: non-scaling-stroke; opacity: 0; }
 .arm-tail { fill: none; stroke: rgba(255, 255, 255, 0.98); stroke-width: 0.8; vector-effect: non-scaling-stroke; opacity: 0; }
 .ready .arm-line, .ready .arm-tail { animation: fadeIn 1.4s 2s forwards; }
 .construct line.cap-line { stroke: url(#capFade); stroke-width: 1; } /* crisp, no halo, like the reference */
@@ -181,15 +181,15 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 
 .step-face { fill: url(#stepFace); opacity: 0; }
 .ready .step-face { animation: fadeIn 1.4s var(--ease) 2.4s forwards; }
-.step-path { fill: none; stroke: rgba(255, 255, 255, 0.98); stroke-width: 1.1; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; filter: drop-shadow(0 0 3px rgba(242, 16, 24, 0.9)); }
+.step-path { fill: none; stroke: rgba(255, 255, 255, 0.98); stroke-width: 1.1; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; filter: drop-shadow(0 0 3px rgba(255, 43, 47, 0.9)); }
 .ready .step-path { animation: draw 2.4s var(--ease) 2.2s forwards; }
 .step { transform-box: fill-box; }
 /* the reference's letters: taller than the font draws them, crisp white, lit red */
-.step-letter { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 38px; fill: #fff; opacity: 0; transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(1.15); filter: drop-shadow(0 0 1.5px rgba(242, 16, 24, 0.95)) drop-shadow(0 0 6px rgba(242, 16, 24, 0.85)); }
+.step-letter { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 38px; fill: #fff; opacity: 0; transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(1.15); filter: drop-shadow(0 0 1.5px rgba(255, 43, 47, 0.95)) drop-shadow(0 0 6px rgba(255, 43, 47, 0.85)); }
 /* the letters climb the stairs (climb() in hero.js) */
-.step-glint { fill: #f21018; opacity: 0; filter: drop-shadow(0 0 4px #f21018); }
+.step-glint { fill: #ff2b2f; opacity: 0; filter: drop-shadow(0 0 4px #ff2b2f); }
 .ready .step-glint { animation: fadeIn 0.6s forwards; animation-delay: calc(2.9s + var(--i) * 0.16s); }
-.step-spark { fill: #fff; filter: drop-shadow(0 0 6px #f21018) drop-shadow(0 0 14px #f21018); opacity: 0; }
+.step-spark { fill: #fff; filter: drop-shadow(0 0 6px #ff2b2f) drop-shadow(0 0 14px #ff2b2f); opacity: 0; }
 .ready .step-spark { animation: fadeIn 0.6s 3.8s forwards, breathe 2.4s ease-in-out 4.4s infinite; }
 
 .sparks circle { fill: #ffd5cc; opacity: 0; animation: twinkle var(--t) ease-in-out var(--d) infinite; }
