@@ -704,95 +704,7 @@
      ],
      "status": "Competition Proposal · 2026",
      "location": "Germany"
-    },
-    {
-     "title": "Children's Park of Imagination",
-     "kicker": "Shanghai · public park concept",
-     "credit": "Original idea: Melita Iosava · Concept & artistic direction: Miranda Kuprava",
-     "text": "A real place for children’s ideas. “I believe children’s drawings should not disappear in drawers. They can become sculptures, places, furniture, lights, gardens and even architecture.” (Melita Iosava, 12)",
-     "images": [
-      {
-       "src": "docs/children-s-park-of-imagination/01.jpg",
-       "thumb": "docs/children-s-park-of-imagination/01-t.jpg",
-       "w": 1700,
-       "h": 1063
-      },
-      {
-       "src": "docs/children-s-park-of-imagination/04.jpg",
-       "thumb": "docs/children-s-park-of-imagination/04-t.jpg",
-       "w": 1700,
-       "h": 1063
-      },
-      {
-       "src": "docs/children-s-park-of-imagination/06.jpg",
-       "thumb": "docs/children-s-park-of-imagination/06-t.jpg",
-       "w": 1700,
-       "h": 1063
-      },
-      {
-       "src": "docs/children-s-park-of-imagination/09.jpg",
-       "thumb": "docs/children-s-park-of-imagination/09-t.jpg",
-       "w": 1700,
-       "h": 1063
-      },
-      {
-       "src": "docs/children-s-park-of-imagination/12.jpg",
-       "thumb": "docs/children-s-park-of-imagination/12-t.jpg",
-       "w": 1700,
-       "h": 1063
-      },
-      {
-       "src": "docs/children-s-park-of-imagination/15.jpg",
-       "thumb": "docs/children-s-park-of-imagination/15-t.jpg",
-       "w": 1700,
-       "h": 1063
-      }
-     ]
-    },
-    {
-     "title": "Pinocchios' Library",
-     "kicker": "New York City · public library concept",
-     "credit": "Original thought & first drawing: Melita Iosava · Project author, artist & designer: Miranda Kuprava",
-     "text": "“As many Pinocchios can exist as there are logs, if there is someone who can carve a person out of a log.” A child’s thought and drawing became the starting point for an artist’s library.",
-     "images": [
-      {
-       "src": "docs/pinocchios-library/01.jpg",
-       "thumb": "docs/pinocchios-library/01-t.jpg",
-       "w": 1700,
-       "h": 1010
-      },
-      {
-       "src": "docs/pinocchios-library/04.jpg",
-       "thumb": "docs/pinocchios-library/04-t.jpg",
-       "w": 1700,
-       "h": 1010
-      },
-      {
-       "src": "docs/pinocchios-library/07.jpg",
-       "thumb": "docs/pinocchios-library/07-t.jpg",
-       "w": 1700,
-       "h": 1010
-      },
-      {
-       "src": "docs/pinocchios-library/10.jpg",
-       "thumb": "docs/pinocchios-library/10-t.jpg",
-       "w": 1700,
-       "h": 1010
-      },
-      {
-       "src": "docs/pinocchios-library/13.jpg",
-       "thumb": "docs/pinocchios-library/13-t.jpg",
-       "w": 1700,
-       "h": 1010
-      },
-      {
-       "src": "docs/pinocchios-library/16.jpg",
-       "thumb": "docs/pinocchios-library/16-t.jpg",
-       "w": 1700,
-       "h": 1010
-      }
-     ]
-    }
+     }
    ]
   },
   {
@@ -2671,7 +2583,7 @@
     {
      "title": "Also with Melita",
      "kicker": "Projects that began with Melita’s drawings",
-     "text": "Children's Park of Imagination (Shanghai) and Pinocchios' Library (New York) in Public Art, the Tsinandali exhibition in Spaces & Worlds, and The Deafening Silence, which grew from Melita’s drawing Freedom, in Public Art.",
+     "text": "Children's Park of Imagination (Shanghai) and Pinocchios' Library (New York) began with Melita’s drawings, alongside the Tsinandali exhibition in Spaces & Worlds and The Deafening Silence, which grew from her drawing Freedom.",
      "images": [
       {
        "src": "docs/children-s-park-of-imagination/01.jpg",
