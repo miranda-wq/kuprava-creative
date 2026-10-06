@@ -25,8 +25,7 @@ const LETTERS = ['U', 'P', 'R', 'A', 'V', 'A'];
 function drawArm(svg) {
   const k = el('g', { class: 'k' }, svg);
 
-  // arm: a sheet of threads like the rest of the K, silver along the top where the
-  // steps catch the light, red beneath, glowing, and see-through like the letter
+  // arm: translucent blood-red threads, with the white catchlights reserved for the K's edges
   const x1 = STEPS.x + STEPS.w * LETTERS.length;
   const arm = el('g', { class: 'arm' }, k);
   // wide enough to fill the dark band the reference leaves under the stairs; at the top,
@@ -44,7 +43,7 @@ function drawArm(svg) {
     // silver along the top turning red, then fading into the threads below
     // no hard edge anywhere: the colour turns gradually and the light fades out smoothly
     const r = t ** 0.7;
-    const c = [Math.round(242 + 13 * r), Math.round(234 - 196 * r), Math.round(234 - 208 * r)];
+    const c = [Math.round(180 + 24 * r), Math.round(7 + 6 * r), Math.round(11 + 6 * r)];
     const o = 0.5 * (1 - t) ** 1.8 + 0.02;
     el('path', { d, fill: 'none', stroke: `rgb(${c.join(',')})`, 'stroke-opacity': o.toFixed(2) }, arm);
   }
@@ -305,9 +304,9 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   layer.after(top);
   el('defs', {}, top).innerHTML = `
     <linearGradient id="stepFace" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f4f0f0" stop-opacity="0.62"/>
-      <stop offset="0.55" stop-color="#ff8a7c" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#ff4a3a" stop-opacity="0.68"/>
+      <stop offset="0" stop-color="#d8141a" stop-opacity="0.65"/>
+      <stop offset="0.55" stop-color="#9c0d14" stop-opacity="0.54"/>
+      <stop offset="1" stop-color="#65070b" stop-opacity="0.6"/>
     </linearGradient>`;
   drawArm(top);
   drawThreads(layer);
