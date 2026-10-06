@@ -108,7 +108,7 @@ function renderSections() {
       html += `</div>`;
     } else {
       s.projects.forEach((p) => {
-        const gi = galleries.push({ title: p.title, kicker: p.kicker, status: p.status, location: p.location, images: p.images, doc: p.doc }) - 1;
+        const gi = galleries.push({ sectionId: s.id, title: p.title, kicker: p.kicker, status: p.status, location: p.location, images: p.images, doc: p.doc }) - 1;
         (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images });
         if (p.doc) docs[p.doc.pdf] = p.doc;
         const sub = s.id === 'functional' && p.key && t().functionalSubs[p.key];
@@ -220,11 +220,12 @@ function renderMenu() {
     a.addEventListener('click', (e) => { e.preventDefault(); goTo(a.dataset.id); });
     a.addEventListener('pointerenter', () => {
       const s = sections.find((x) => x.id === a.dataset.id);
+      $('.menu-preview').classList.toggle('preserve-proportions', s?.id === 'christmas');
       const im = s ? s.projects[0].images[0] : content.intro;
       const img = $('.menu-preview img');
       img.src = url(im.thumb);
       $('.menu-preview').classList.add('on');
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (s?.id !== 'christmas' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         img.animate([{ opacity: 0, transform: 'scale(1.06)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 450, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
       }
     });
@@ -277,6 +278,7 @@ function showLB() {
 }
 function openGallery(g, i) {
   cur = { g, i };
+  lb.classList.toggle('preserve-proportions', g.sectionId === 'christmas');
   $('.lb-strip').innerHTML = g.images.length > 1 ? g.images.map((im, k) => `<button data-k="${k}"><img src="${url(im.thumb)}" alt="" loading="lazy"/></button>`).join('') : '';
   $$('.lb-strip button').forEach((b) => b.addEventListener('click', () => { cur.i = +b.dataset.k; showLB(); }));
   lb.classList.add('open');
@@ -328,7 +330,7 @@ function planetItems(id, cap) {
     for (const p of projects) {
       const im = p.images[r];
       if (!im || out.length >= cap) continue;
-      out.push({ gi: p.gi, idx: r, thumb: url(im.thumb), w: im.w, h: im.h, title: p.title });
+      out.push({ gi: p.gi, idx: r, thumb: url(im.thumb), w: im.w, h: im.h, title: p.title, preserveProportions: id === 'christmas' });
       any = true;
     }
     if (!any) break;

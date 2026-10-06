@@ -104,6 +104,8 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 .menu-preview { aspect-ratio: 4/5; max-height: 52vh; border-radius: 50% 50% 4px 4px / 34% 34% 4px 4px; overflow: hidden; opacity: 0; transform: scale(0.94); transition: opacity 0.6s, transform 0.8s var(--ease); box-shadow: 0 0 60px rgba(255, 43, 43, 0.2); border: 1px solid rgba(255, 43, 43, 0.3); }
 .menu-preview.on { opacity: 1; transform: none; }
 .menu-preview img { width: 100%; height: 100%; object-fit: cover; }
+.menu-preview.preserve-proportions { border-radius: 2px; }
+.menu-preview.preserve-proportions img { object-fit: contain; }
 .menu-contact { font-size: 14px; color: var(--dim); display: grid; gap: 4px; }
 .mc-label { font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--red); margin-bottom: 8px; }
 .menu-contact a { color: var(--ink); font-size: 17px; }
@@ -303,6 +305,12 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
 .g-item::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(255, 90, 90, 0); transition: box-shadow 0.5s; }
 .g-item:hover img { transform: scale(1.05); filter: brightness(1.05); }
 .g-item:hover::after { box-shadow: inset 0 0 0 1px rgba(255, 90, 90, 0.8), inset 0 0 50px rgba(255, 43, 43, 0.22); }
+.sec-christmas .g-item { overflow: visible; background: transparent; border-radius: 0; }
+.sec-christmas .g-item img,
+.sec-christmas .g-item:hover img { display: block; height: auto; filter: none; transform: none; transition: none; }
+.sec-christmas .g-item::after,
+.sec-christmas .g-item:hover::after { content: none; }
+.lightbox.preserve-proportions .lb-strip img { object-fit: contain; }
 .gallery.is-clamped .g-item:nth-child(n + 13) { display: none; }
 .more { display: block; width: 100%; column-span: all; margin-top: 6px; padding: 16px; border: 1px solid rgba(255, 90, 90, 0.4); letter-spacing: 0.3em; font-size: 12px; transition: 0.4s var(--ease); }
 .more:hover { background: var(--red); color: #fff; box-shadow: var(--glow); }
@@ -561,6 +569,8 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
 .pv-frame { display: block; position: relative; overflow: hidden; border-radius: 2px; background: #140707; box-shadow: 0 0 0 1px rgba(255, 238, 234, 0.16), 0 20px 44px rgba(0, 0, 0, 0.65), 0 0 28px rgba(255, 40, 30, 0.16); transition: transform 0.5s var(--ease), box-shadow 0.5s; }
 .pv-frame img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.04); transition: opacity 0.6s ease, transform 0.9s var(--ease); }
 .pv-frame img.in { opacity: 1; }
+.pv-card.preserve-proportions .pv-frame img,
+.pv-card.preserve-proportions:hover .pv-frame img { object-fit: contain; transform: none; }
 .pv-shade { position: absolute; inset: 0; background: #000; pointer-events: none; }
 .pv-card:hover .pv-frame, .pv-card:focus-visible .pv-frame { transform: scale(1.12); box-shadow: 0 0 0 1px rgba(255, 96, 84, 0.95), 0 0 34px rgba(255, 43, 43, 0.75), 0 26px 54px rgba(0, 0, 0, 0.7); }
 .pv-card:hover img { transform: scale(1.1); }

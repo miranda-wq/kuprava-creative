@@ -812,448 +812,228 @@
    "id": "christmas",
    "projects": [
     {
-     "title": "Art at the Centre of Christmas",
-     "kicker": "Completed works · The Promise of Tomorrow · Illuminated Figure",
-     "text": "Two sculptural Christmas works conceived as art objects first and seasonal installations second. The surrounding environment adapts to the space; the original sculptures remain the focal point.",
+     "title": "Sculptural Tree of Figures",
      "images": [
       {
-       "src": "docs/art-at-the-centre-of-christmas/04.jpg",
-       "thumb": "docs/art-at-the-centre-of-christmas/04-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/art-at-the-centre-of-christmas/05.jpg",
-       "thumb": "docs/art-at-the-centre-of-christmas/05-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/art-at-the-centre-of-christmas/07.jpg",
-       "thumb": "docs/art-at-the-centre-of-christmas/07-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/art-at-the-centre-of-christmas/08.jpg",
-       "thumb": "docs/art-at-the-centre-of-christmas/08-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/art-at-the-centre-of-christmas/11.jpg",
-       "thumb": "docs/art-at-the-centre-of-christmas/11-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/art-at-the-centre-of-christmas/14.jpg",
-       "thumb": "docs/art-at-the-centre-of-christmas/14-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/art-at-the-centre-of-christmas/15.jpg",
-       "thumb": "docs/art-at-the-centre-of-christmas/15-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/art-at-the-centre-of-christmas/16.jpg",
-       "thumb": "docs/art-at-the-centre-of-christmas/16-t.jpg",
-       "w": 1203,
-       "h": 1700
+       "src": "art/festive-sculptures/3C86ECC9-94E1-4A04-B720-96E789843E12(1).jpeg",
+       "thumb": "art/festive-sculptures/3C86ECC9-94E1-4A04-B720-96E789843E12(1).jpeg",
+       "h": 1402,
+       "w": 1122
       }
-     ],
-     "doc": {
-      "title": "Art at the Centre of Christmas",
-      "pdf": "docs/art-at-the-centre-of-christmas.pdf",
-      "pages": [
-       {
-        "src": "docs/art-at-the-centre-of-christmas/01.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/01-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/02.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/02-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/03.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/03-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/04.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/04-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/05.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/05-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/06.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/06-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/07.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/07-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/08.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/08-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/09.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/09-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/10.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/10-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/11.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/11-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/12.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/12-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/13.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/13-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/14.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/14-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/15.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/15-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/16.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/16-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/17.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/17-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/18.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/18-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/art-at-the-centre-of-christmas/19.jpg",
-        "thumb": "docs/art-at-the-centre-of-christmas/19-t.jpg",
-        "w": 1203,
-        "h": 1700
-       }
-      ],
-      "sizeMB": 19
-     }
+     ]
     },
     {
-     "title": "Christmas Tree Proposals",
-     "kicker": "Three sculptural concepts",
-     "text": "Three original Christmas installations conceived for a monumental, brick-vaulted hospitality interior, each with its own night identity.",
+     "title": "Starburst Figure",
      "images": [
       {
-       "src": "docs/christmas-tree-proposals/01.jpg",
-       "thumb": "docs/christmas-tree-proposals/01-t.jpg",
-       "w": 1203,
-       "h": 1700
+       "src": "art/festive-sculptures/IMG_0452.jpeg",
+       "thumb": "art/festive-sculptures/IMG_0452.jpeg",
+       "h": 1536,
+       "w": 1152
       },
       {
-       "src": "docs/christmas-tree-proposals/04.jpg",
-       "thumb": "docs/christmas-tree-proposals/04-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/christmas-tree-proposals/07.jpg",
-       "thumb": "docs/christmas-tree-proposals/07-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/christmas-tree-proposals/10.jpg",
-       "thumb": "docs/christmas-tree-proposals/10-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/christmas-tree-proposals/13.jpg",
-       "thumb": "docs/christmas-tree-proposals/13-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/christmas-tree-proposals/16.jpg",
-       "thumb": "docs/christmas-tree-proposals/16-t.jpg",
-       "w": 1203,
-       "h": 1700
+       "src": "art/festive-sculptures/IMG_6512.jpeg",
+       "thumb": "art/festive-sculptures/IMG_6512.jpeg",
+       "h": 1536,
+       "w": 753
       }
-     ],
-     "doc": {
-      "title": "Christmas Tree Proposals",
-      "pdf": "docs/christmas-tree-proposals.pdf",
-      "pages": [
-       {
-        "src": "docs/christmas-tree-proposals/01.jpg",
-        "thumb": "docs/christmas-tree-proposals/01-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/02.jpg",
-        "thumb": "docs/christmas-tree-proposals/02-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/03.jpg",
-        "thumb": "docs/christmas-tree-proposals/03-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/04.jpg",
-        "thumb": "docs/christmas-tree-proposals/04-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/05.jpg",
-        "thumb": "docs/christmas-tree-proposals/05-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/06.jpg",
-        "thumb": "docs/christmas-tree-proposals/06-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/07.jpg",
-        "thumb": "docs/christmas-tree-proposals/07-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/08.jpg",
-        "thumb": "docs/christmas-tree-proposals/08-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/09.jpg",
-        "thumb": "docs/christmas-tree-proposals/09-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/10.jpg",
-        "thumb": "docs/christmas-tree-proposals/10-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/11.jpg",
-        "thumb": "docs/christmas-tree-proposals/11-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/12.jpg",
-        "thumb": "docs/christmas-tree-proposals/12-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/13.jpg",
-        "thumb": "docs/christmas-tree-proposals/13-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/14.jpg",
-        "thumb": "docs/christmas-tree-proposals/14-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/15.jpg",
-        "thumb": "docs/christmas-tree-proposals/15-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/16.jpg",
-        "thumb": "docs/christmas-tree-proposals/16-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/17.jpg",
-        "thumb": "docs/christmas-tree-proposals/17-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/christmas-tree-proposals/18.jpg",
-        "thumb": "docs/christmas-tree-proposals/18-t.jpg",
-        "w": 1203,
-        "h": 1700
-       }
-      ],
-      "sizeMB": 22.5
-     }
+     ]
     },
     {
-     "title": "Homage to Salvador Dalí",
-     "kicker": "Christmas sculpture proposal",
-     "text": "An elongated golden silhouette, sculptural lips, egg-like forms and butterflies transform the traditional Christmas tree into a monumental art object: theatrical, luminous and deliberately unexpected.",
+     "title": "Hanging Ornament Figure",
      "images": [
       {
-       "src": "docs/homage-to-salvador-dali/01.jpg",
-       "thumb": "docs/homage-to-salvador-dali/01-t.jpg",
-       "w": 1203,
-       "h": 1700
+       "src": "art/festive-sculptures/IMG_7701(1).jpeg",
+       "thumb": "art/festive-sculptures/IMG_7701(1).jpeg",
+       "h": 1536,
+       "w": 1152
       },
       {
-       "src": "docs/homage-to-salvador-dali/02.jpg",
-       "thumb": "docs/homage-to-salvador-dali/02-t.jpg",
-       "w": 1203,
-       "h": 1700
+       "src": "art/festive-sculptures/IMG_7736.jpeg",
+       "thumb": "art/festive-sculptures/IMG_7736.jpeg",
+       "h": 1536,
+       "w": 1152
       },
       {
-       "src": "docs/homage-to-salvador-dali/03.jpg",
-       "thumb": "docs/homage-to-salvador-dali/03-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/homage-to-salvador-dali/04.jpg",
-       "thumb": "docs/homage-to-salvador-dali/04-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/homage-to-salvador-dali/05.jpg",
-       "thumb": "docs/homage-to-salvador-dali/05-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/homage-to-salvador-dali/06.jpg",
-       "thumb": "docs/homage-to-salvador-dali/06-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/homage-to-salvador-dali/07.jpg",
-       "thumb": "docs/homage-to-salvador-dali/07-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/homage-to-salvador-dali/08.jpg",
-       "thumb": "docs/homage-to-salvador-dali/08-t.jpg",
-       "w": 1203,
-       "h": 1700
+       "src": "art/festive-sculptures/IMG_7697.jpeg",
+       "thumb": "art/festive-sculptures/IMG_7697.jpeg",
+       "h": 1536,
+       "w": 1152
       }
-     ],
-     "doc": {
-      "title": "Homage to Salvador Dali",
-      "pdf": "docs/homage-to-salvador-dali.pdf",
-      "pages": [
-       {
-        "src": "docs/homage-to-salvador-dali/01.jpg",
-        "thumb": "docs/homage-to-salvador-dali/01-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/homage-to-salvador-dali/02.jpg",
-        "thumb": "docs/homage-to-salvador-dali/02-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/homage-to-salvador-dali/03.jpg",
-        "thumb": "docs/homage-to-salvador-dali/03-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/homage-to-salvador-dali/04.jpg",
-        "thumb": "docs/homage-to-salvador-dali/04-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/homage-to-salvador-dali/05.jpg",
-        "thumb": "docs/homage-to-salvador-dali/05-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/homage-to-salvador-dali/06.jpg",
-        "thumb": "docs/homage-to-salvador-dali/06-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/homage-to-salvador-dali/07.jpg",
-        "thumb": "docs/homage-to-salvador-dali/07-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/homage-to-salvador-dali/08.jpg",
-        "thumb": "docs/homage-to-salvador-dali/08-t.jpg",
-        "w": 1203,
-        "h": 1700
-       }
-      ],
-      "sizeMB": 3.7
-     }
+     ]
+    },
+    {
+     "title": "Butterfly Tree",
+     "images": [
+      {
+       "src": "art/festive-sculptures/141BB918-30B8-4609-B696-E60E000FEE86(6).jpeg",
+       "thumb": "art/festive-sculptures/141BB918-30B8-4609-B696-E60E000FEE86(6).jpeg",
+       "h": 1536,
+       "w": 1022
+      },
+      {
+       "src": "art/festive-sculptures/3E401D56-716D-46DC-82EF-0945D0332F0A(2).jpeg",
+       "thumb": "art/festive-sculptures/3E401D56-716D-46DC-82EF-0945D0332F0A(2).jpeg",
+       "h": 1086,
+       "w": 1448
+      },
+      {
+       "src": "art/festive-sculptures/45FEBA4C-FE19-4B95-A64C-907B2B5557D1(2).jpeg",
+       "thumb": "art/festive-sculptures/45FEBA4C-FE19-4B95-A64C-907B2B5557D1(2).jpeg",
+       "h": 1086,
+       "w": 1448
+      }
+     ]
+    },
+    {
+     "title": "Green Figure Tree",
+     "images": [
+      {
+       "src": "art/festive-sculptures/IMG_0421(2).jpeg",
+       "thumb": "art/festive-sculptures/IMG_0421(2).jpeg",
+       "h": 1536,
+       "w": 919
+      },
+      {
+       "src": "art/festive-sculptures/IMG_0422(2).jpeg",
+       "thumb": "art/festive-sculptures/IMG_0422(2).jpeg",
+       "h": 1536,
+       "w": 1152
+      },
+      {
+       "src": "art/festive-sculptures/IMG_6500(3).jpeg",
+       "thumb": "art/festive-sculptures/IMG_6500(3).jpeg",
+       "h": 1536,
+       "w": 852
+      },
+      {
+       "src": "art/festive-sculptures/IMG_0423(2).jpeg",
+       "thumb": "art/festive-sculptures/IMG_0423(2).jpeg",
+       "h": 1536,
+       "w": 1152
+      },
+      {
+       "src": "art/festive-sculptures/9BBD9598-991F-4E0C-BCA5-7B114687B5F6(3).jpeg",
+       "thumb": "art/festive-sculptures/9BBD9598-991F-4E0C-BCA5-7B114687B5F6(3).jpeg",
+       "h": 2080,
+       "w": 1170
+      }
+     ]
+    },
+    {
+     "title": "Crescent Moon Figure",
+     "images": [
+      {
+       "src": "art/festive-sculptures/IMG_0507.jpeg",
+       "thumb": "art/festive-sculptures/IMG_0507.jpeg",
+       "h": 1536,
+       "w": 1024
+      },
+      {
+       "src": "art/festive-sculptures/IMG_0505.jpeg",
+       "thumb": "art/festive-sculptures/IMG_0505.jpeg",
+       "h": 1536,
+       "w": 1024
+      },
+      {
+       "src": "art/festive-sculptures/IMG_0516.jpeg",
+       "thumb": "art/festive-sculptures/IMG_0516.jpeg",
+       "h": 1536,
+       "w": 1024
+      },
+      {
+       "src": "art/festive-sculptures/IMG_0445.jpeg",
+       "thumb": "art/festive-sculptures/IMG_0445.jpeg",
+       "h": 1536,
+       "w": 1152
+      }
+     ]
+    },
+    {
+     "title": "Illuminated Tree Installation",
+     "images": [
+      {
+       "src": "art/festive-sculptures/2D1DF357-6868-4BDA-9AA1-5DEF827F76D5.jpeg",
+       "thumb": "art/festive-sculptures/2D1DF357-6868-4BDA-9AA1-5DEF827F76D5.jpeg",
+       "h": 1536,
+       "w": 1024
+      },
+      {
+       "src": "art/festive-sculptures/1F9C8E0F-B394-4C5E-BFC2-89D44625C2FB(4).jpeg",
+       "thumb": "art/festive-sculptures/1F9C8E0F-B394-4C5E-BFC2-89D44625C2FB(4).jpeg",
+       "h": 1536,
+       "w": 1024
+      },
+      {
+       "src": "art/festive-sculptures/4BDB777B-5E71-4E65-85AF-E50E5F1D50B6(3).jpeg",
+       "thumb": "art/festive-sculptures/4BDB777B-5E71-4E65-85AF-E50E5F1D50B6(3).jpeg",
+       "h": 1536,
+       "w": 1024
+      }
+     ]
+    },
+    {
+     "title": "Starburst Tree Figure",
+     "images": [
+      {
+       "src": "art/festive-sculptures/81E1B252-8ADB-4F67-B85B-DD500782E2BB(3).jpeg",
+       "thumb": "art/festive-sculptures/81E1B252-8ADB-4F67-B85B-DD500782E2BB(3).jpeg",
+       "h": 1199,
+       "w": 1312
+      },
+      {
+       "src": "art/festive-sculptures/IMG_6887(1).jpeg",
+       "thumb": "art/festive-sculptures/IMG_6887(1).jpeg",
+       "h": 1554,
+       "w": 1170
+      },
+      {
+       "src": "art/festive-sculptures/2C9FA51B-9DDC-43D0-9001-F5D131099BE6(2).jpeg",
+       "thumb": "art/festive-sculptures/2C9FA51B-9DDC-43D0-9001-F5D131099BE6(2).jpeg",
+       "h": 1536,
+       "w": 1229
+      },
+      {
+       "src": "art/festive-sculptures/66B39C93-35B3-4A00-BBC2-EC7BB0ED8042(1).jpeg",
+       "thumb": "art/festive-sculptures/66B39C93-35B3-4A00-BBC2-EC7BB0ED8042(1).jpeg",
+       "h": 1393,
+       "w": 1129
+      },
+      {
+       "src": "art/festive-sculptures/5150EB5F-95D7-491B-80A8-2ADE031865BB(4).jpeg",
+       "thumb": "art/festive-sculptures/5150EB5F-95D7-491B-80A8-2ADE031865BB(4).jpeg",
+       "h": 1199,
+       "w": 1312
+      }
+     ]
+    },
+    {
+     "title": "Blue Light Figure",
+     "images": [
+      {
+       "src": "art/festive-sculptures/IMG_0367(8).jpeg",
+       "thumb": "art/festive-sculptures/IMG_0367(8).jpeg",
+       "h": 1536,
+       "w": 1152
+      }
+     ]
+    },
+    {
+     "title": "Modern Sculptural Tree",
+     "images": [
+      {
+       "src": "art/festive-sculptures/01C9DBFF-791C-4727-A130-D7F602A262D6.jpeg",
+       "thumb": "art/festive-sculptures/01C9DBFF-791C-4727-A130-D7F602A262D6.jpeg",
+       "h": 1189,
+       "w": 1323
+      },
+      {
+       "src": "art/festive-sculptures/06CE139F-5D36-4870-A1A1-E32C9FA16A18(1).jpeg",
+       "thumb": "art/festive-sculptures/06CE139F-5D36-4870-A1A1-E32C9FA16A18(1).jpeg",
+       "h": 1024,
+       "w": 1536
+      }
+     ]
     }
    ]
   },

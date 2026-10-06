@@ -110,6 +110,7 @@ export function createPlanetView({ items, planet, openItem, toSection, strings, 
       const b = document.createElement('button');
       b.type = 'button';
       b.className = 'pv-card';
+      b.classList.toggle('preserve-proportions', !!it.preserveProportions);
       b.setAttribute('aria-label', it.title);
       b.innerHTML = '<span class="pv-frame"><img alt="" decoding="async" /><i class="pv-shade"></i></span><span class="pv-cap"></span>';
       const img = b.querySelector('img');
@@ -126,7 +127,7 @@ export function createPlanetView({ items, planet, openItem, toSection, strings, 
       b.addEventListener('focus', enter);
       b.addEventListener('blur', leave);
       cardsBox.appendChild(b);
-      const c = { el: b, frame: b.querySelector('.pv-frame'), shade: b.querySelector('.pv-shade'), ring, a: (idx / count) * Math.PI * 2 + (ring ? 0.35 : 0), k: n > 1 ? k / (n - 1) : 0, phase: Math.random() * 6.28, ar: clamp(it.w / it.h, 0.62, 1.6) };
+      const c = { el: b, frame: b.querySelector('.pv-frame'), shade: b.querySelector('.pv-shade'), ring, a: (idx / count) * Math.PI * 2 + (ring ? 0.35 : 0), k: n > 1 ? k / (n - 1) : 0, phase: Math.random() * 6.28, ar: it.preserveProportions ? it.w / it.h : clamp(it.w / it.h, 0.62, 1.6) };
       sizeCard(c);
       return c;
     });
