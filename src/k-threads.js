@@ -28,11 +28,9 @@ export async function drawThreads(layer) {
     const [r, g, b] = source.map((c) => Math.min(255, c * GAIN));
     const m = Math.max(r, g, b, 1);
     const sourceMax = Math.max(...source), sourceMin = Math.min(...source);
-    const neutral = sourceMax > 0 && sourceMax - sourceMin <= sourceMax * 0.24;
-    // Keep only the strongest neutral threads white; shift the softer neutral and red threads to blood red.
-    const keepWhite = neutral && sourceMax >= 221 && sourceMax - sourceMin <= 17;
-    if (keepWhite) return `rgba(255,255,255,${(m / 255).toFixed(3)})`;
-    if (neutral || (r >= g && r >= b)) return `rgba(242,16,24,${(m / 255 * 0.82).toFixed(3)})`;
+    const isRed = source[0] === sourceMax && source[0] - sourceMin >= sourceMax * 0.28 && source[1] <= source[0] * 0.82;
+    // Recolor only the original red threads; preserve every neutral and other-color thread.
+    if (isRed) return `rgba(255,40,0,${(m / 255).toFixed(3)})`;
     return `rgba(${Math.round((r / m) * 255)},${Math.round((g / m) * 255)},${Math.round((b / m) * 255)},${(m / 255).toFixed(3)})`;
   });
   const segments = [...buckets.values()];

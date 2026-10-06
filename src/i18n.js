@@ -32,6 +32,7 @@ export const T = {
     viewAll: 'See the whole section',
     pvHint: 'Drag to turn the orbit · Open any work',
     portfolio: 'Download portfolio (PDF)',
+    commissionServices: ['Public Art', 'Sculptures & Installations', 'Furniture', 'Custom Creative Products'],
     aboutText: [
       'Miranda Kuprava is an artist and the founder and creative director of KUPRAVA CREATIVE.',
       'Her path runs from music, through PR and public culture, to contemporary art. At the centre of her practice is her own papier-mâché method, in which paper, including paper that has already lived another life, becomes sculpture, light and functional objects.',
@@ -79,6 +80,7 @@ export const T = {
     viewAll: 'მთელი განყოფილების ნახვა',
     pvHint: 'გადაატრიალეთ ორბიტა · გახსენით ნებისმიერი ნამუშევარი',
     portfolio: 'პორტფოლიოს ჩამოტვირთვა (PDF)',
+    commissionServices: ['საჯარო ხელოვნება', 'ქანდაკებები და ინსტალაციები', 'ავეჯი', 'ინდივიდუალური კრეატიული პროდუქტები'],
     aboutText: [
       'მირანდა კუპრავა მხატვარი და KUPRAVA CREATIVE-ის დამფუძნებელი და კრეატიული დირექტორია.',
       'მისი გზა მუსიკიდან, PR-ისა და საჯარო კულტურის გავლით, თანამედროვე ხელოვნებამდე მიდის. მისი პრაქტიკის ცენტრშია პაპიე-მაშეს საკუთარი მეთოდი, რომლითაც ქაღალდი, მათ შორის უკვე ერთხელ გამოყენებული, ქანდაკებად, სინათლედ და ფუნქციურ ობიექტებად იქცევა.',
@@ -126,6 +128,7 @@ export const T = {
     viewAll: 'Voir toute la section',
     pvHint: "Faites glisser pour tourner l'orbite · Ouvrez une œuvre",
     portfolio: 'Télécharger le portfolio (PDF)',
+    commissionServices: ['Art public', 'Sculptures & installations', 'Mobilier', 'Créations personnalisées'],
     aboutText: [
       'Miranda Kuprava est artiste, fondatrice et directrice de création de KUPRAVA CREATIVE.',
       "Son parcours va de la musique, en passant par les relations publiques et la culture, jusqu'à l'art contemporain. Au cœur de sa pratique se trouve sa propre méthode de papier mâché, par laquelle le papier, y compris celui qui a déjà vécu une autre vie, devient sculpture, lumière et objet fonctionnel.",
@@ -173,6 +176,7 @@ export const T = {
     viewAll: 'セクション全体を見る',
     pvHint: 'ドラッグで軌道を回転 · 作品をひらく',
     portfolio: 'ポートフォリオをダウンロード（PDF）',
+    commissionServices: ['パブリックアート', '彫刻・インスタレーション', '家具', 'カスタムクリエイティブプロダクト'],
     aboutText: [
       'ミランダ・クプラヴァは、アーティストであり、KUPRAVA CREATIVEの創設者・クリエイティブディレクターです。',
       '音楽から、PRとパブリックカルチャーを経て、現代アートへ。その実践の中心にあるのは独自の張り子（パピエ・マシェ）の技法です。ときに別の人生を生きてきた紙が、彫刻に、光に、機能をもつオブジェに生まれ変わります。',

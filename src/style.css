@@ -151,7 +151,7 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 .ready .construct line { animation: draw 2.4s var(--ease) 0.3s forwards; }
 .node-dot { fill: #fff; opacity: 0; filter: drop-shadow(0 0 4px #ff2b2b); }
 .ready .node-dot { animation: fadeIn 1s 2s forwards; }
-.glint { opacity: 0; filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 10px rgba(255, 80, 70, 0.9)); }
+.glint { opacity: 0; filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 10px rgba(255, 40, 0, 0.9)); }
 .glint path { stroke: rgba(255, 255, 255, 0.9); stroke-width: 1; vector-effect: non-scaling-stroke; }
 .glint circle { fill: #fff; }
 .ready .glint { animation: fadeIn 1s 1.8s forwards, breathe 4s ease-in-out 3s infinite; }
@@ -169,7 +169,7 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 .ready .k-layer { animation: kDraw 2.8s cubic-bezier(0.6, 0.05, 0.3, 1) 0.4s forwards; }
 @keyframes kDraw { 30% { opacity: 1; } to { opacity: 1; clip-path: inset(0 0 0 0); } }
 .arm path { stroke-width: 0.8; vector-effect: non-scaling-stroke; }
-.arm-line { fill: none; stroke: rgba(255, 46, 32, 0.45); stroke-width: 0.6; vector-effect: non-scaling-stroke; opacity: 0; }
+.arm-line { fill: none; stroke: rgba(255, 40, 0, 0.45); stroke-width: 0.6; vector-effect: non-scaling-stroke; opacity: 0; }
 .arm-tail { fill: none; stroke: rgba(255, 255, 255, 0.98); stroke-width: 0.8; vector-effect: non-scaling-stroke; opacity: 0; }
 .ready .arm-line, .ready .arm-tail { animation: fadeIn 1.4s 2s forwards; }
 .construct line.cap-line { stroke: url(#capFade); stroke-width: 1; } /* crisp, no halo, like the reference */
@@ -181,15 +181,15 @@ body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: cl
 
 .step-face { fill: url(#stepFace); opacity: 0; }
 .ready .step-face { animation: fadeIn 1.4s var(--ease) 2.4s forwards; }
-.step-path { fill: none; stroke: rgba(255, 255, 255, 0.98); stroke-width: 1.1; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; filter: drop-shadow(0 0 3px rgba(255, 43, 43, 0.9)); }
+.step-path { fill: none; stroke: rgba(255, 255, 255, 0.98); stroke-width: 1.1; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; filter: drop-shadow(0 0 3px rgba(255, 40, 0, 0.9)); }
 .ready .step-path { animation: draw 2.4s var(--ease) 2.2s forwards; }
 .step { transform-box: fill-box; }
 /* the reference's letters: taller than the font draws them, crisp white, lit red */
-.step-letter { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 38px; fill: #fff; opacity: 0; transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(1.15); filter: drop-shadow(0 0 1.5px rgba(255, 70, 55, 0.95)) drop-shadow(0 0 6px rgba(255, 30, 20, 0.85)); }
+.step-letter { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 38px; fill: #fff; opacity: 0; transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(1.15); filter: drop-shadow(0 0 1.5px rgba(255, 40, 0, 0.95)) drop-shadow(0 0 6px rgba(255, 40, 0, 0.85)); }
 /* the letters climb the stairs (climb() in hero.js) */
-.step-glint { fill: #ff6a5a; opacity: 0; filter: drop-shadow(0 0 4px #ff2b2b); }
+.step-glint { fill: #ff2800; opacity: 0; filter: drop-shadow(0 0 4px #ff2800); }
 .ready .step-glint { animation: fadeIn 0.6s forwards; animation-delay: calc(2.9s + var(--i) * 0.16s); }
-.step-spark { fill: #fff; filter: drop-shadow(0 0 6px #ff2b2b) drop-shadow(0 0 14px #ff2b2b); opacity: 0; }
+.step-spark { fill: #fff; filter: drop-shadow(0 0 6px #ff2800) drop-shadow(0 0 14px #ff2800); opacity: 0; }
 .ready .step-spark { animation: fadeIn 0.6s 3.8s forwards, breathe 2.4s ease-in-out 4.4s infinite; }
 
 .sparks circle { fill: #ffd5cc; opacity: 0; animation: twinkle var(--t) ease-in-out var(--d) infinite; }
@@ -262,6 +262,9 @@ body[data-lang='ge'] .tagline, body[data-lang='jp'] .tagline { letter-spacing: 0
 .sec-orbit span { font-size: 12px; letter-spacing: 0.3em; color: var(--red); margin-right: -0.3em; }
 .sec-title { grid-area: title; margin: 0; font-family: var(--serif); font-weight: 300; font-size: clamp(44px, 7vw, 118px); line-height: 0.98; letter-spacing: 0.01em; background: linear-gradient(100deg, #fff 0%, #ffd8d0 40%, #ff3d3d 75%, #8f0b0b 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .sec-intro { grid-area: intro; margin: 0; max-width: 60ch; color: var(--dim); font-size: clamp(15px, 1.15vw, 18px); }
+.sec-brand .sec-head { grid-template-areas: 'orb title' 'orb intro' 'orb services' 'orb count'; }
+.commission-services { grid-area: services; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; list-style: none; margin: 0; padding: 0; max-width: 60ch; }
+.commission-services li { padding: 9px 0; border-bottom: 1px solid rgba(255, 235, 230, 0.1); color: var(--ink); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; }
 .sec-count { grid-area: count; font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--red); }
 
 .subnav { display: flex; flex-wrap: wrap; gap: 12px; margin: -4vh 0 9vh; }
@@ -387,6 +390,7 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
   .menu { align-items: flex-start; overflow-y: auto; }
   .sec { padding: 12vh 16px 6vh; }
   .sec-head { grid-template-columns: 1fr; grid-template-areas: 'orb' 'title' 'intro' 'count'; margin-bottom: 7vh; }
+  .sec-brand .sec-head { grid-template-areas: 'orb' 'title' 'intro' 'services' 'count'; }
   .sec-orbit { width: 70px; height: 70px; }
   .works { grid-template-columns: repeat(2, 1fr); gap: 26px 12px; }
   .w-title { font-size: 18px; }

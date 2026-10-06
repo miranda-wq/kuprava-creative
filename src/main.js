@@ -84,6 +84,7 @@ function renderSections() {
         <div class="sec-orbit" aria-hidden="true"><svg viewBox="0 0 120 120"><ellipse cx="60" cy="60" rx="56" ry="22" transform="rotate(-18 60 60)"/><circle class="sp" r="5"/></svg><span>${pad(si + 1)}</span></div>
         <h2 class="sec-title" data-sec-title="${s.id}">${t().sections[s.id].title}</h2>
         <p class="sec-intro" data-sec-intro="${s.id}">${t().sections[s.id].intro}</p>
+        ${s.id === 'brand' ? `<ul class="commission-services" data-commission-services>${t().commissionServices.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
         <div class="sec-count">${total} <span data-i18n="works">${t().works}</span></div>
         ${s.doc ? `<div class="sec-doc">${docCard(s.doc)}</div>` : ''}
       </header>`;
@@ -184,6 +185,12 @@ function applyLang() {
   $$('.tl2').forEach((n) => (n.textContent = t().tagline[1]));
   $$('[data-sec-title]').forEach((n) => (n.textContent = t().sections[n.dataset.secTitle].title));
   $$('[data-sec-intro]').forEach((n) => (n.textContent = t().sections[n.dataset.secIntro].intro));
+  const services = $('[data-commission-services]');
+  if (services) services.replaceChildren(...t().commissionServices.map((label) => {
+    const item = document.createElement('li');
+    item.textContent = label;
+    return item;
+  }));
   $$('[data-fa]').forEach((n) => (n.textContent = t().functionalSubs[n.dataset.fa]));
   const at = $('.about-text');
   if (at) at.innerHTML = t().aboutText.map((x) => `<p>${x}</p>`).join('');
