@@ -107,6 +107,26 @@ function renderSections() {
           </figure>`;
       });
       html += `</div>`;
+    } else if (s.id === 'spaces') {
+      s.projects.forEach((p) => {
+        const gi = galleries.push({ sectionId: s.id, title: p.title, images: p.images }) - 1;
+        (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images });
+        html += `
+          <article class="proj vitis-project">
+            <div class="vitis-groups">
+              ${p.groups.map((group) => `
+                <section class="vitis-group">
+                  <h3 class="vitis-group-title kicker">${t().sections[s.id].groups[group.key]}</h3>
+                  <div class="gallery">
+                    ${group.imageIndexes.map((imageIndex, i) => {
+                      const im = p.images[imageIndex];
+                      return `<figure class="g-item reveal" data-gallery="${gi}" data-idx="${imageIndex}" style="--d:${(i % 3) * 60}ms">${imgTag(im, im.alt || `${p.title} ${imageIndex + 1}`)}</figure>`;
+                    }).join('')}
+                  </div>
+                </section>`).join('')}
+            </div>
+          </article>`;
+      });
     } else {
       s.projects.forEach((p) => {
         const gi = galleries.push({ sectionId: s.id, title: p.title, kicker: p.kicker, status: p.status, location: p.location, images: p.images, doc: p.doc }) - 1;

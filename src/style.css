@@ -294,7 +294,10 @@ body[data-lang='ge'] .tagline, body[data-lang='jp'] .tagline { letter-spacing: 0
 .proj { display: grid; grid-template-columns: minmax(260px, 1fr) 2.4fr; gap: 5vw; padding: 7vh 0; border-top: 1px solid rgba(255, 235, 230, 0.07); scroll-margin-top: 80px; }
 .proj:first-of-type { border-top: 0; }
 .sec-spaces .proj { grid-template-columns: minmax(0, 1fr); }
-.sec-spaces .proj-meta { display: none; }
+.vitis-groups { display: grid; gap: 6vh; }
+.vitis-group { padding-top: 4vh; border-top: 1px solid rgba(255, 235, 230, 0.07); }
+.vitis-group:first-child { padding-top: 0; border-top: 0; }
+.vitis-group-title { margin: 0 0 22px; }
 .proj-meta { position: sticky; top: 110px; align-self: start; display: grid; gap: 16px; }
 .kicker { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); }
 .proj h3 { margin: 0; font-family: var(--serif); font-weight: 300; font-size: clamp(30px, 3.2vw, 52px); line-height: 1.04; }

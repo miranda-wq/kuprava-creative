@@ -1219,6 +1219,39 @@
        "label": "Spider Light · Object view",
        "alt": "Spider Light sculptural lamp shown against a clean white background."
       }
+     ],
+     "groups": [
+      {
+       "key": "objectDetails",
+       "imageIndexes": [
+        0,
+        1
+       ]
+      },
+      {
+       "key": "displayCase",
+       "imageIndexes": [
+        2,
+        3,
+        4
+       ]
+      },
+      {
+       "key": "vineyardOutdoor",
+       "imageIndexes": [
+        5,
+        6,
+        7
+       ]
+      },
+      {
+       "key": "spiderLight",
+       "imageIndexes": [
+        8,
+        9,
+        10
+       ]
+      }
      ]
     }
    ]
