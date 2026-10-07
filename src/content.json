@@ -1126,197 +1126,100 @@
   },
   {
    "id": "spaces",
+   "workCount": 12,
    "projects": [
     {
-     "title": "Wine & Art · Vitis Vinifera",
-     "kicker": "Collectible art & lighting for wine estates, châteaux and wineries",
-     "text": "A singular sculptural object built around an old grapevine, the central and irreplaceable element of the work. Functional art and site-specific design for European wine estates.",
+     "title": "Vitis Vinifera",
      "images": [
       {
-       "src": "docs/vitis-vinifera/01.jpg",
-       "thumb": "docs/vitis-vinifera/01-t.jpg",
-       "w": 1700,
-       "h": 1203
+       "src": "art/vitis-vinifera-website/01_318B00AA-35F1-4260-A6C8-E97D7C48E109.jpeg",
+       "thumb": "art/vitis-vinifera-website/01_318B00AA-35F1-4260-A6C8-E97D7C48E109.jpeg",
+       "w": 1091,
+       "h": 1442,
+       "label": "Vitis Vinifera · Object view",
+       "alt": "Vitis Vinifera sculpture shown against a clean white background, full object view."
       },
       {
-       "src": "docs/vitis-vinifera/03.jpg",
-       "thumb": "docs/vitis-vinifera/03-t.jpg",
-       "w": 1700,
-       "h": 1203
+       "src": "art/vitis-vinifera-website/02_IMG_7681(2).jpeg",
+       "thumb": "art/vitis-vinifera-website/02_IMG_7681(2).jpeg",
+       "w": 1159,
+       "h": 1436,
+       "label": "Vitis Vinifera · Detail",
+       "alt": "Close view of the Vitis Vinifera sculpture and its grape leaves."
       },
       {
-       "src": "docs/vitis-vinifera/04.jpg",
-       "thumb": "docs/vitis-vinifera/04-t.jpg",
-       "w": 1700,
-       "h": 1203
+       "src": "art/vitis-vinifera-website/03_IMG_7679(2).jpeg",
+       "thumb": "art/vitis-vinifera-website/03_IMG_7679(2).jpeg",
+       "w": 1164,
+       "h": 1763,
+       "label": "Display case · Installation",
+       "alt": "Vitis Vinifera sculpture displayed in a glass case in a brick wine cellar."
       },
       {
-       "src": "docs/vitis-vinifera/05.jpg",
-       "thumb": "docs/vitis-vinifera/05-t.jpg",
-       "w": 1700,
-       "h": 1203
+       "src": "art/vitis-vinifera-website/04_IMG_7677(3).jpeg",
+       "thumb": "art/vitis-vinifera-website/04_IMG_7677(3).jpeg",
+       "w": 1170,
+       "h": 1344,
+       "label": "Display case · Context",
+       "alt": "Vitis Vinifera sculpture installed in a lit display case in the wine estate."
       },
       {
-       "src": "docs/vitis-vinifera/06.jpg",
-       "thumb": "docs/vitis-vinifera/06-t.jpg",
-       "w": 1700,
-       "h": 1203
+       "src": "art/vitis-vinifera-website/05_IMG_7678(4).jpeg",
+       "thumb": "art/vitis-vinifera-website/05_IMG_7678(4).jpeg",
+       "w": 1170,
+       "h": 1730,
+       "label": "Wine cellar · Installation",
+       "alt": "Full view of the Vitis Vinifera sculpture in its display case in a brick cellar."
       },
       {
-       "src": "docs/vitis-vinifera/07.jpg",
-       "thumb": "docs/vitis-vinifera/07-t.jpg",
-       "w": 1700,
-       "h": 1203
+       "src": "art/vitis-vinifera-website/06_IMG_7682(1).jpeg",
+       "thumb": "art/vitis-vinifera-website/06_IMG_7682(1).jpeg",
+       "w": 1170,
+       "h": 734,
+       "label": "Numen Vinae · Outdoor concept",
+       "alt": "Original Numen Vinae outdoor concept board with a vineyard sculpture image."
+      },
+      {
+       "src": "art/vitis-vinifera-website/07_8343A1D4-6215-44E0-BD0A-801A1A27D654.jpeg",
+       "thumb": "art/vitis-vinifera-website/07_8343A1D4-6215-44E0-BD0A-801A1A27D654.jpeg",
+       "w": 1125,
+       "h": 1398,
+       "label": "Vineyard · Installation",
+       "alt": "Vitis Vinifera sculpture standing among the grape vines at sunset."
+      },
+      {
+       "src": "art/vitis-vinifera-website/08_64156352-0676-451B-B8AC-496E1B7FD355.jpeg",
+       "thumb": "art/vitis-vinifera-website/08_64156352-0676-451B-B8AC-496E1B7FD355.jpeg",
+       "w": 1125,
+       "h": 1398,
+       "label": "Vineyard · Context",
+       "alt": "Vitis Vinifera sculpture standing among green grape vines."
+      },
+      {
+       "src": "art/vitis-vinifera-website/09_IMG_7689(3).jpeg",
+       "thumb": "art/vitis-vinifera-website/09_IMG_7689(3).jpeg",
+       "w": 1155,
+       "h": 843,
+       "label": "Spider Light · Concept",
+       "alt": "Original Spider Light concept board shown within the wine cellar."
+      },
+      {
+       "src": "art/vitis-vinifera-website/10_030ECCED-A619-4979-A5BE-4B0A72403530.jpeg",
+       "thumb": "art/vitis-vinifera-website/10_030ECCED-A619-4979-A5BE-4B0A72403530.jpeg",
+       "w": 1536,
+       "h": 1024,
+       "label": "Spider Light · Cellar installation",
+       "alt": "Spider Light installed within the arched wine cellar."
+      },
+      {
+       "src": "art/vitis-vinifera-website/11_A1A4EB59-14F1-4446-B808-402A0EC734D7.jpeg",
+       "thumb": "art/vitis-vinifera-website/11_A1A4EB59-14F1-4446-B808-402A0EC734D7.jpeg",
+       "w": 1536,
+       "h": 1024,
+       "label": "Spider Light · Object view",
+       "alt": "Spider Light sculptural lamp shown against a clean white background."
       }
-     ],
-     "doc": {
-      "title": "Vitis Vinifera",
-      "pdf": "docs/vitis-vinifera.pdf",
-      "pages": [
-       {
-        "src": "docs/vitis-vinifera/01.jpg",
-        "thumb": "docs/vitis-vinifera/01-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/vitis-vinifera/02.jpg",
-        "thumb": "docs/vitis-vinifera/02-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/vitis-vinifera/03.jpg",
-        "thumb": "docs/vitis-vinifera/03-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/vitis-vinifera/04.jpg",
-        "thumb": "docs/vitis-vinifera/04-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/vitis-vinifera/05.jpg",
-        "thumb": "docs/vitis-vinifera/05-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/vitis-vinifera/06.jpg",
-        "thumb": "docs/vitis-vinifera/06-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/vitis-vinifera/07.jpg",
-        "thumb": "docs/vitis-vinifera/07-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/vitis-vinifera/08.jpg",
-        "thumb": "docs/vitis-vinifera/08-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/vitis-vinifera/09.jpg",
-        "thumb": "docs/vitis-vinifera/09-t.jpg",
-        "w": 1700,
-        "h": 1203
-       }
-      ],
-      "sizeMB": 19.2
-     }
-    },
-    {
-     "title": "Sculpting a Child’s Imagination",
-     "kicker": "Tsinandali · exhibition & outdoor sculpture space",
-     "credit": "Miranda Kuprava × Melita Iosava",
-     "text": "The adult author does not “correct” the child’s figures: proportion, movement, strange form and colour remain untouched. That raw precision is the work’s main value.",
-     "images": [
-      {
-       "src": "docs/tsinandali/01.jpg",
-       "thumb": "docs/tsinandali/01-t.jpg",
-       "w": 1700,
-       "h": 1203
-      },
-      {
-       "src": "docs/tsinandali/02.jpg",
-       "thumb": "docs/tsinandali/02-t.jpg",
-       "w": 1700,
-       "h": 1203
-      },
-      {
-       "src": "docs/tsinandali/03.jpg",
-       "thumb": "docs/tsinandali/03-t.jpg",
-       "w": 1700,
-       "h": 1203
-      },
-      {
-       "src": "docs/tsinandali/04.jpg",
-       "thumb": "docs/tsinandali/04-t.jpg",
-       "w": 1700,
-       "h": 1203
-      },
-      {
-       "src": "docs/tsinandali/05.jpg",
-       "thumb": "docs/tsinandali/05-t.jpg",
-       "w": 1700,
-       "h": 1203
-      },
-      {
-       "src": "docs/tsinandali/06.jpg",
-       "thumb": "docs/tsinandali/06-t.jpg",
-       "w": 1700,
-       "h": 1203
-      }
-     ],
-     "doc": {
-      "title": "Tsinandali",
-      "pdf": "docs/tsinandali.pdf",
-      "pages": [
-       {
-        "src": "docs/tsinandali/01.jpg",
-        "thumb": "docs/tsinandali/01-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/tsinandali/02.jpg",
-        "thumb": "docs/tsinandali/02-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/tsinandali/03.jpg",
-        "thumb": "docs/tsinandali/03-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/tsinandali/04.jpg",
-        "thumb": "docs/tsinandali/04-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/tsinandali/05.jpg",
-        "thumb": "docs/tsinandali/05-t.jpg",
-        "w": 1700,
-        "h": 1203
-       },
-       {
-        "src": "docs/tsinandali/06.jpg",
-        "thumb": "docs/tsinandali/06-t.jpg",
-        "w": 1700,
-        "h": 1203
-       }
-      ],
-      "sizeMB": 8.8
-     }
+     ]
     }
    ]
   },

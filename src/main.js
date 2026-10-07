@@ -74,7 +74,7 @@ const sectionWorks = {}; // per section: each project's gallery and images, for 
 function renderSections() {
   root.innerHTML = '';
   sections.forEach((s, si) => {
-    const total = ['christmas', 'kinetic'].includes(s.id) ? s.projects.length : s.projects.reduce((a, p) => a + p.images.length, 0);
+    const total = s.workCount ?? (['christmas', 'kinetic'].includes(s.id) ? s.projects.length : s.projects.reduce((a, p) => a + p.images.length, 0));
     const sec = document.createElement('section');
     sec.className = `sec sec-${s.id}`;
     sec.id = s.id;
@@ -127,7 +127,7 @@ function renderSections() {
               ${p.doc ? docCard(p.doc) : ''}
             </div>
             <div class="gallery ${many ? 'is-clamped' : ''}">
-              ${p.images.map((im, i) => `<figure class="g-item reveal" data-gallery="${gi}" data-idx="${i}" style="--d:${(i % 3) * 60}ms">${imgTag(im, `${p.title} ${i + 1}`)}</figure>`).join('')}
+              ${p.images.map((im, i) => `<figure class="g-item reveal" data-gallery="${gi}" data-idx="${i}" style="--d:${(i % 3) * 60}ms">${imgTag(im, im.alt || `${p.title} ${i + 1}`)}</figure>`).join('')}
               ${many ? `<button class="more">+ ${p.images.length - 12}</button>` : ''}
             </div>
           </article>`;
@@ -224,12 +224,12 @@ function renderMenu() {
     a.addEventListener('click', (e) => { e.preventDefault(); goTo(a.dataset.id); });
     a.addEventListener('pointerenter', () => {
       const s = sections.find((x) => x.id === a.dataset.id);
-      $('.menu-preview').classList.toggle('preserve-proportions', ['christmas', 'kinetic'].includes(s?.id));
+      $('.menu-preview').classList.toggle('preserve-proportions', ['christmas', 'kinetic', 'spaces'].includes(s?.id));
       const im = s ? s.projects[0].images[0] : content.intro;
       const img = $('.menu-preview img');
       img.src = url(im.thumb);
       $('.menu-preview').classList.add('on');
-      if (!['christmas', 'kinetic'].includes(s?.id) && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (!['christmas', 'kinetic', 'spaces'].includes(s?.id) && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         img.animate([{ opacity: 0, transform: 'scale(1.06)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 450, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
       }
     });
@@ -282,7 +282,7 @@ function showLB() {
 }
 function openGallery(g, i) {
   cur = { g, i };
-  lb.classList.toggle('preserve-proportions', ['christmas', 'kinetic'].includes(g.sectionId));
+  lb.classList.toggle('preserve-proportions', ['christmas', 'kinetic', 'spaces'].includes(g.sectionId));
   $('.lb-strip').innerHTML = g.images.length > 1 ? g.images.map((im, k) => `<button data-k="${k}"><img src="${url(im.thumb)}" alt="" loading="lazy"/></button>`).join('') : '';
   $$('.lb-strip button').forEach((b) => b.addEventListener('click', () => { cur.i = +b.dataset.k; showLB(); }));
   lb.classList.add('open');
@@ -340,7 +340,7 @@ function planetItems(id, cap) {
     for (const p of projects) {
       const im = p.images[r];
       if (!im || out.length >= cap) continue;
-      out.push({ gi: p.gi, idx: r, thumb: url(im.thumb), w: im.w, h: im.h, title: p.title, preserveProportions: ['christmas', 'kinetic'].includes(id) });
+      out.push({ gi: p.gi, idx: r, thumb: url(im.thumb), w: im.w, h: im.h, title: im.label || p.title, preserveProportions: ['christmas', 'kinetic', 'spaces'].includes(id) });
       any = true;
     }
     if (!any) break;
@@ -354,7 +354,10 @@ const planetView = createPlanetView({
   toSection: goTo,
   strings: t,
   order: ORDER,
-  total: (id) => ['christmas', 'kinetic'].includes(id) ? (sectionWorks[id] || []).length : (sectionWorks[id] || []).reduce((a, p) => a + p.images.length, 0),
+  total: (id) => {
+    const section = sections.find((s) => s.id === id);
+    return section?.workCount ?? (['christmas', 'kinetic'].includes(id) ? (sectionWorks[id] || []).length : (sectionWorks[id] || []).reduce((a, p) => a + p.images.length, 0));
+  },
   covered: () => lb.classList.contains('open'),
 });
 

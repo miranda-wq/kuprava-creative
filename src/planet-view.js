@@ -31,6 +31,7 @@ export function createPlanetView({ items, planet, openItem, toSection, strings, 
     <header class="pv-head">
       <div class="pv-num"><span></span><i></i><em></em></div>
       <h2 class="pv-title" id="pv-title"></h2>
+      <p class="pv-subtitle" hidden></p>
       <p class="pv-intro"></p>
       <button class="pv-all" type="button"><span></span><i aria-hidden="true">→</i></button>
     </header>
@@ -138,11 +139,16 @@ export function createPlanetView({ items, planet, openItem, toSection, strings, 
     const t = strings(), i = order.indexOf(cur.id);
     $('.pv-num span').textContent = pad(i + 1);
     $('.pv-num em').textContent = pad(order.length);
-    $('.pv-title').textContent = t.sections[cur.id].title;
-    $('.pv-intro').textContent = t.sections[cur.id].intro;
-    $('.pv-all span').textContent = `${t.viewAll} · ${total(cur.id)} ${t.works}`;
+    const section = t.sections[cur.id];
+    root.classList.toggle('has-subtitle', !!section.subtitle);
+    $('.pv-title').textContent = section.title;
+    const subtitle = $('.pv-subtitle');
+    subtitle.textContent = section.subtitle || '';
+    subtitle.hidden = !section.subtitle;
+    $('.pv-intro').textContent = section.intro;
+    $('.pv-all span').textContent = section.cta || `${t.viewAll} · ${total(cur.id)} ${t.works}`;
     $('.pv-back span').textContent = t.back;
-    $('.pv-hint').textContent = t.pvHint;
+    $('.pv-hint').textContent = section.hint || t.pvHint;
   }
 
   /* ---------------------------------------------------------------- the loop */
