@@ -306,6 +306,36 @@ body[data-lang='ge'] .tagline, body[data-lang='jp'] .tagline { letter-spacing: 0
 .proj-sub { margin: 0; color: var(--ink); font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.5; }
 body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: normal; font-size: 16px; }
 .proj-text { margin: 0; color: var(--dim); font-size: 15px; }
+.artwork-card-link { justify-self: start; display: inline-flex; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px solid rgba(255, 235, 230, 0.28); color: var(--ink); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; transition: color 0.3s, border-color 0.3s; }
+.artwork-card-link span { color: var(--red); }
+.artwork-card-link:hover { color: #fff; border-color: var(--red); }
+
+/* individual artwork presentation */
+.artwork-detail { display: none; min-height: calc(100svh - 72px); padding: 105px 7vw 12vh; }
+.artwork-open main > .hero, .artwork-open #sections, .artwork-open .rail, .artwork-open .footer { display: none !important; }
+.artwork-open .artwork-detail { display: block; }
+.artwork-detail-inner { width: min(1380px, 100%); margin: 0 auto; }
+.artwork-back { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 44px; color: var(--dim); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; transition: color 0.25s; }
+.artwork-back:hover { color: #fff; }
+.artwork-detail-head { max-width: 760px; margin-bottom: 38px; }
+.artwork-detail-head .kicker { margin: 0 0 16px; }
+.artwork-detail-head h1 { margin: 0; font: 300 clamp(42px, 7vw, 86px)/0.98 var(--serif); }
+.artwork-description { max-width: 620px; margin: 24px 0 0; color: var(--dim); font: 400 19px/1.55 var(--serif); white-space: pre-line; }
+.artwork-main-image { display: grid; place-items: center; width: 100%; min-height: 38vh; max-height: 82vh; padding: 0; overflow: hidden; background: rgba(255,255,255,0.02); cursor: zoom-in; }
+.artwork-main-photo { width: 100%; max-height: 82vh; object-fit: contain; }
+.artwork-thumbnails { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; margin-top: 12px; }
+.artwork-thumb { aspect-ratio: 4 / 3; padding: 0; overflow: hidden; background: rgba(255,255,255,0.03); cursor: pointer; }
+.artwork-thumb img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.45s var(--ease); }
+.artwork-thumb:hover img { transform: scale(1.06); }
+.artwork-detail-bottom { display: flex; justify-content: space-between; align-items: end; gap: 36px; margin-top: 46px; }
+.artwork-information { display: grid; grid-template-columns: repeat(2, minmax(150px, 1fr)); gap: 22px 50px; margin: 0; }
+.artwork-information div { display: grid; gap: 6px; }
+.artwork-information dt { color: var(--dim); font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; }
+.artwork-information dd { margin: 0; font: 400 18px/1.25 var(--serif); }
+.artwork-inquiry { display: inline-flex; align-items: center; gap: 16px; flex: none; padding: 13px 18px; border: 1px solid rgba(255, 90, 90, 0.55); color: var(--ink); font-size: 10px; letter-spacing: 0.2em; transition: background 0.3s, color 0.3s; }
+.artwork-inquiry span { color: var(--red); }
+.artwork-inquiry:hover { background: var(--red); color: #fff; }
+.artwork-inquiry:hover span { color: #fff; }
 
 .gallery { columns: 3 220px; column-gap: 16px; position: relative; }
 .g-item { margin: 0 0 16px; break-inside: avoid; cursor: pointer; overflow: hidden; background: #0d0405; border-radius: 2px; position: relative; }
@@ -411,6 +441,13 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
   .menu-side { display: none; }
   .menu { align-items: flex-start; overflow-y: auto; }
   .sec { padding: 12vh 16px 6vh; }
+  .artwork-detail { padding: 95px 16px 9vh; }
+  .artwork-back { margin-bottom: 32px; }
+  .artwork-detail-head { margin-bottom: 26px; }
+  .artwork-main-image, .artwork-main-photo { max-height: 68vh; }
+  .artwork-detail-bottom { align-items: flex-start; flex-direction: column; margin-top: 32px; }
+  .artwork-information { width: 100%; gap: 18px 20px; }
+  .artwork-information dd { font-size: 16px; }
   .sec-head { grid-template-columns: 1fr; grid-template-areas: 'orb' 'title' 'intro' 'count'; margin-bottom: 7vh; }
   .sec-brand .sec-head { grid-template-areas: 'orb' 'title' 'intro' 'services' 'count'; }
   .sec-orbit { width: 70px; height: 70px; }

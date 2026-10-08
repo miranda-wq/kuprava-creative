@@ -8,6 +8,8 @@ import '@fontsource/jost/latin-300.css';
 import '@fontsource/jost/latin-400.css';
 import '@fontsource/jost/latin-500.css';
 import content from './content.json';
+import artworkDrafts from './artwork-drafts.json';
+import artworkMetadata from './artwork-metadata.json';
 import { T, LANGS, ORDER } from './i18n.js';
 import { createCosmos } from './cosmos.js';
 import { buildHero } from './hero.js';
@@ -48,6 +50,86 @@ function goTo(id) {
 
 /* ---------------------------------------------------------------- sections */
 const root = $('#sections');
+const draftArtworkSlugs = new Set(artworkDrafts.filter((artwork) => artwork.status === 'draft').map((artwork) => artwork.slug));
+const artworkMetadataBySlug = new Map(artworkMetadata.map((entry) => [entry.slug, entry]));
+const artworkView = document.createElement('section');
+artworkView.className = 'artwork-detail';
+artworkView.id = 'artwork-view';
+artworkView.setAttribute('aria-live', 'polite');
+document.querySelector('main').appendChild(artworkView);
+let detailGalleryIndex = null;
+
+const escapeHTML = (value = '') => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+const slugFor = (project) => project.key || project.title.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const getArtworkRecords = () => {
+  const functional = content.sections.find((section) => section.id === 'functional');
+  return (functional?.projects || []).map((project) => {
+    const slug = slugFor(project);
+    return {
+      ...project,
+      ...artworkMetadataBySlug.get(slug),
+      slug,
+      category: artworkMetadataBySlug.get(slug)?.category || 'Functional Art',
+      productionTime: artworkMetadataBySlug.get(slug)?.productionTime || 'Upon Inquiry',
+      status: 'published',
+    };
+  });
+};
+
+function renderArtworkPage(slug) {
+  const record = getArtworkRecords().find((artwork) => artwork.slug === slug);
+  if (!record || record.status !== 'published' || !record.images?.length) return false;
+  const images = record.images;
+  if (detailGalleryIndex !== null) galleries[detailGalleryIndex] = { title: record.title, images };
+  else detailGalleryIndex = galleries.push({ title: record.title, images }) - 1;
+  const imageAlt = (image, index) => image.alt || `${record.title}, view ${index + 1}`;
+  const inquiryBody = `Hello KUPRAVA CREATIVE,\n\nI would like to inquire about ${record.title}.\n\nArtwork: ${record.title}\nCategory: ${record.category}\nWebsite: ${location.origin}${location.pathname}#artwork/${record.slug}`;
+  const fields = [
+    ['Category', record.category], ['Type', record.type], ['Materials', record.materials], ['Dimensions', record.dimensions],
+    ['Edition', record.edition], ['Production Time', record.productionTime], ['Installation', record.installationRequirements],
+  ].filter(([, value]) => value);
+  artworkView.innerHTML = `
+    <div class="artwork-detail-inner">
+      <a class="artwork-back" href="#functional">← <span>Back to Functional Art</span></a>
+      <header class="artwork-detail-head">
+        <p class="kicker">${escapeHTML(record.category)}</p>
+        <h1>${escapeHTML(record.title)}</h1>
+        ${(record.description || record.text) ? `<p class="artwork-description">${escapeHTML(record.description || record.text)}</p>` : ''}
+      </header>
+      <button class="artwork-main-image" type="button" data-artwork-image="0" aria-label="Enlarge ${escapeHTML(record.title)}">
+        ${imgTag(images[0], imageAlt(images[0], 0), 'artwork-main-photo')}
+      </button>
+      ${images.length > 1 ? `<div class="artwork-thumbnails" aria-label="Artwork photographs">${images.map((image, index) => `
+        <button class="artwork-thumb" type="button" data-artwork-image="${index}" aria-label="View ${escapeHTML(imageAlt(image, index))}">${imgTag(image, imageAlt(image, index))}</button>`).join('')}</div>` : ''}
+      <div class="artwork-detail-bottom">
+        ${fields.length ? `<dl class="artwork-information">${fields.map(([label, value]) => `<div><dt>${escapeHTML(label)}</dt><dd>${escapeHTML(value)}</dd></div>`).join('')}</dl>` : ''}
+        <a class="artwork-inquiry" href="mailto:miranda@kupravacreative.com?subject=${encodeURIComponent(`Inquiry about ${record.title}`)}&body=${encodeURIComponent(inquiryBody)}">INQUIRE ABOUT THIS WORK <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>`;
+  const mainPhoto = $('.artwork-main-photo', artworkView);
+  mainPhoto.src = url(images[0].src);
+  mainPhoto.removeAttribute('data-full');
+  document.body.classList.add('artwork-open');
+  $$('.artwork-detail [data-artwork-image]').forEach((button) => button.addEventListener('click', () => openLightbox(detailGalleryIndex, +button.dataset.artworkImage)));
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  return true;
+}
+
+function syncArtworkRoute() {
+  const match = location.hash.match(/^#artwork\/([a-z0-9-]+)$/i);
+  if (!match) {
+    document.body.classList.remove('artwork-open');
+    artworkView.replaceChildren();
+    return;
+  }
+  if (draftArtworkSlugs.has(match[1].toLowerCase()) || !renderArtworkPage(match[1].toLowerCase())) {
+    // Drafts are intentionally not routable until their approved photography is added.
+    history.replaceState(null, '', '#functional');
+    document.body.classList.remove('artwork-open');
+    artworkView.replaceChildren();
+  }
+}
+window.addEventListener('hashchange', syncArtworkRoute);
 
 function imgTag(im, alt, cls = '') {
   return `<img class="${cls}" src="${url(im.thumb)}" data-full="${url(im.src)}" width="${im.w}" height="${im.h}" alt="${alt.replace(/"/g, '&quot;')}" loading="lazy" decoding="async" />`;
@@ -139,6 +221,7 @@ function renderSections() {
             <div class="proj-meta reveal">
               ${p.kicker ? `<div class="kicker">${p.kicker}</div>` : ''}
               <h3>${p.title}</h3>
+              ${s.id === 'functional' ? `<a class="artwork-card-link" href="#artwork/${slugFor(p)}">View artwork <span aria-hidden="true">↗</span></a>` : ''}
               ${p.status ? `<p class="proj-status">${p.status}</p>` : ''}
               ${p.location ? `<p class="proj-location">${p.location}</p>` : ''}
               ${sub ? `<p class="proj-sub" data-fa="${p.key}">${sub}</p>` : ''}
@@ -352,7 +435,7 @@ function planetItems(id, cap) {
   if (id === 'christmas' || id === 'kinetic') {
     return projects.slice(0, cap).map((p) => {
       const im = p.images[0];
-      return { gi: p.gi, idx: 0, thumb: url(im.thumb), w: im.w, h: im.h, title: p.title, preserveProportions: true };
+      return { gi: p.gi, idx: 0, thumb: url(im.thumb), w: im.w, h: im.h, title: p.title, projectSlug: p.slug, sectionId: id, preserveProportions: true };
     });
   }
   for (let r = 0; out.length < cap; r++) {
@@ -360,7 +443,7 @@ function planetItems(id, cap) {
     for (const p of projects) {
       const im = p.images[r];
       if (!im || out.length >= cap) continue;
-      out.push({ gi: p.gi, idx: r, thumb: url(im.thumb), w: im.w, h: im.h, title: im.label || p.title, preserveProportions: ['christmas', 'kinetic', 'spaces'].includes(id) });
+      out.push({ gi: p.gi, idx: r, thumb: url(im.thumb), w: im.w, h: im.h, title: im.label || p.title, projectSlug: p.key ? slugFor(p) : null, sectionId: id, preserveProportions: ['christmas', 'kinetic', 'spaces'].includes(id) });
       any = true;
     }
     if (!any) break;
@@ -370,7 +453,7 @@ function planetItems(id, cap) {
 const planetView = createPlanetView({
   items: planetItems,
   planet: (id) => hero.planet(id),
-  openItem: (it) => openLightbox(it.gi, it.idx),
+  openItem: (it) => it.sectionId === 'functional' && it.projectSlug ? (location.hash = `#artwork/${it.projectSlug}`) : openLightbox(it.gi, it.idx),
   toSection: goTo,
   strings: t,
   order: ORDER,
@@ -435,6 +518,7 @@ if (window.matchMedia('(pointer: fine)').matches) {
 /* ---------------------------------------------------------------- boot */
 renderSections();
 applyLang();
+syncArtworkRoute();
 $$('.sec').forEach((s) => secObs.observe(s));
 onScroll();
 
