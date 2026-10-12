@@ -53,6 +53,9 @@ function goTo(id) {
 const root = $('#sections');
 const draftArtworkSlugs = new Set(artworkDrafts.filter((artwork) => artwork.status === 'draft').map((artwork) => artwork.slug));
 const artworkMetadataBySlug = new Map(artworkMetadata.map((entry) => [entry.slug, entry]));
+const functionalProducts = functionalArtworks.products.filter((project) =>
+  Array.isArray(project.images) && project.images.some((image) => image?.src && image?.thumb),
+);
 const artworkView = document.createElement('section');
 artworkView.className = 'artwork-detail';
 artworkView.id = 'artwork-view';
@@ -63,7 +66,7 @@ let detailGalleryIndex = null;
 const escapeHTML = (value = '') => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const slugFor = (project) => project.key || project.title.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const getArtworkRecords = () => {
-  return functionalArtworks.products.map((project) => ({
+  return functionalProducts.map((project) => ({
     ...project,
     key: project.slug,
     category: project.group,
@@ -153,7 +156,7 @@ const sectionWorks = {}; // per section: each project's gallery and images, for 
 function renderSections() {
   root.innerHTML = '';
   sections.forEach((s, si) => {
-    const total = s.id === 'functional' ? functionalArtworks.products.length : (s.workCount ?? (['christmas', 'kinetic'].includes(s.id) ? s.projects.length : s.projects.reduce((a, p) => a + p.images.length, 0)));
+    const total = s.id === 'functional' ? functionalProducts.length : (s.workCount ?? (['christmas', 'kinetic'].includes(s.id) ? s.projects.length : s.projects.reduce((a, p) => a + p.images.length, 0)));
     const sec = document.createElement('section');
     sec.className = `sec sec-${s.id}`;
     sec.id = s.id;
@@ -189,7 +192,7 @@ function renderSections() {
     } else if (s.id === 'functional') {
       functionalArtworks.categories.forEach((category) => {
         const categorySlug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-        const works = functionalArtworks.products.filter((p) => p.group === category);
+        const works = functionalProducts.filter((p) => p.group === category);
         html += `<section class="functional-category" id="fa-${categorySlug}"><h3 class="functional-category-title kicker">${category}</h3><div class="functional-grid">`;
         works.forEach((p, pi) => {
           const gi = galleries.push({ sectionId: s.id, title: p.title, images: p.images }) - 1;
@@ -538,3 +541,4 @@ document.body.classList.add('ready');
 hero.relayout();
 setTimeout(() => hero.climb(), 2500); // once the staircase has drawn itself
 if (location.hash && location.hash !== '#top') setTimeout(() => goTo(location.hash.slice(1)), 600);
+
