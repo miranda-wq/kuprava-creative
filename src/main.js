@@ -10,6 +10,7 @@ import '@fontsource/jost/latin-500.css';
 import content from './content.json';
 import artworkDrafts from './artwork-drafts.json';
 import artworkMetadata from './artwork-metadata.json';
+import functionalArtworks from './functional-artworks.json';
 import { T, LANGS, ORDER } from './i18n.js';
 import { createCosmos } from './cosmos.js';
 import { buildHero } from './hero.js';
@@ -62,18 +63,13 @@ let detailGalleryIndex = null;
 const escapeHTML = (value = '') => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const slugFor = (project) => project.key || project.title.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const getArtworkRecords = () => {
-  const functional = content.sections.find((section) => section.id === 'functional');
-  return (functional?.projects || []).map((project) => {
-    const slug = slugFor(project);
-    return {
-      ...project,
-      ...artworkMetadataBySlug.get(slug),
-      slug,
-      category: artworkMetadataBySlug.get(slug)?.category || 'Functional Art',
-      productionTime: artworkMetadataBySlug.get(slug)?.productionTime || 'Upon Inquiry',
-      status: 'published',
-    };
-  });
+  return functionalArtworks.products.map((project) => ({
+    ...project,
+    key: project.slug,
+    category: project.group,
+    productionTime: undefined,
+    status: 'published',
+  }));
 };
 
 function renderArtworkPage(slug) {
@@ -85,8 +81,8 @@ function renderArtworkPage(slug) {
   const imageAlt = (image, index) => image.alt || `${record.title}, view ${index + 1}`;
   const inquiryBody = `Hello KUPRAVA CREATIVE,\n\nI would like to inquire about ${record.title}.\n\nArtwork: ${record.title}\nCategory: ${record.category}\nWebsite: ${location.origin}${location.pathname}#artwork/${record.slug}`;
   const fields = [
-    ['Category', record.category], ['Type', record.type], ['Materials', record.materials], ['Dimensions', record.dimensions],
-    ['Edition', record.edition], ['Production Time', record.productionTime], ['Installation', record.installationRequirements],
+    ['Artist', 'Miranda Kuprava'], ['Brand', 'KUPRAVA CREATIVE'], ['Category', record.category], ['Type', record.type], ['Materials', record.materials], ['Dimensions', record.dimensions],
+    ['Edition', record.edition], ['Availability', record.availability], ['Production Time', record.productionTime], ['Installation', record.installationRequirements],
   ].filter(([, value]) => value);
   artworkView.innerHTML = `
     <div class="artwork-detail-inner">
@@ -132,7 +128,8 @@ function syncArtworkRoute() {
 window.addEventListener('hashchange', syncArtworkRoute);
 
 function imgTag(im, alt, cls = '') {
-  return `<img class="${cls}" src="${url(im.thumb)}" data-full="${url(im.src)}" width="${im.w}" height="${im.h}" alt="${alt.replace(/"/g, '&quot;')}" loading="lazy" decoding="async" />`;
+  const dimensions = im.w && im.h ? ` width="${im.w}" height="${im.h}"` : '';
+  return `<img class="${cls}" src="${url(im.thumb)}" data-full="${url(im.src)}"${dimensions} alt="${alt.replace(/"/g, '&quot;')}" loading="lazy" decoding="async" />`;
 }
 
 function docCard(d) {
@@ -156,7 +153,7 @@ const sectionWorks = {}; // per section: each project's gallery and images, for 
 function renderSections() {
   root.innerHTML = '';
   sections.forEach((s, si) => {
-    const total = s.workCount ?? (['christmas', 'kinetic'].includes(s.id) ? s.projects.length : s.projects.reduce((a, p) => a + p.images.length, 0));
+    const total = s.id === 'functional' ? functionalArtworks.products.length : (s.workCount ?? (['christmas', 'kinetic'].includes(s.id) ? s.projects.length : s.projects.reduce((a, p) => a + p.images.length, 0)));
     const sec = document.createElement('section');
     sec.className = `sec sec-${s.id}`;
     sec.id = s.id;
@@ -174,7 +171,7 @@ function renderSections() {
     if (s.doc) docs[s.doc.pdf] = s.doc;
 
     if (s.id === 'functional') {
-      html += `<div class="subnav reveal">${s.projects.map((p) => `<a href="#fa-${p.key}">${p.kicker.replace(/^\d+ — /, '')}</a>`).join('')}</div>`;
+      html += `<div class="subnav reveal">${functionalArtworks.categories.map((category) => `<a href="#fa-${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${category}</a>`).join('')}</div>`;
     }
 
     if (s.id === 'sculpture') {
@@ -189,6 +186,19 @@ function renderSections() {
           </figure>`;
       });
       html += `</div>`;
+    } else if (s.id === 'functional') {
+      functionalArtworks.categories.forEach((category) => {
+        const categorySlug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        const works = functionalArtworks.products.filter((p) => p.group === category);
+        html += `<section class="functional-category" id="fa-${categorySlug}"><h3 class="functional-category-title kicker">${category}</h3><div class="functional-grid">`;
+        works.forEach((p, pi) => {
+          const gi = galleries.push({ sectionId: s.id, title: p.title, images: p.images }) - 1;
+          const artwork = { ...p, key: p.slug };
+          (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images, key: p.slug, slug: p.slug });
+          html += `<article class="functional-art-card reveal" style="--d:${(pi % 4) * 70}ms"><a href="#artwork/${p.slug}" aria-label="View ${escapeHTML(p.title)}"><div class="functional-art-image">${imgTag(p.images[0], p.images[0].alt || p.title)}</div><div class="functional-art-meta"><span class="functional-art-title">${escapeHTML(p.title)}</span><span class="functional-art-arrow" aria-hidden="true">↗</span></div>${p.edition ? `<span class="functional-art-edition">${escapeHTML(p.edition)}</span>` : ''}</a></article>`;
+        });
+        html += `</div></section>`;
+      });
     } else if (s.id === 'spaces') {
       s.projects.forEach((p) => {
         const gi = galleries.push({ sectionId: s.id, title: p.title, images: p.images }) - 1;

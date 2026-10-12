@@ -1,0 +1,503 @@
+{
+  "categories": [
+    "THE LANGUAGE OF SILENCE",
+    "THE LIGHT OF STYLE",
+    "SCULPTURAL CHANDELIERS",
+    "INTERIOR ART OBJECTS"
+  ],
+  "products": [
+    {
+      "slug": "language-of-silence",
+      "title": "THE LANGUAGE OF SILENCE",
+      "group": "THE LANGUAGE OF SILENCE",
+      "section": "THE LANGUAGE OF SILENCE",
+      "edition": "Limited Edition of 98",
+      "images": [
+        {
+          "src": "art/functional-replacement/language-of-silence/01-0810A93D-B782-479A-A85C-42CCDA6409B2-4-.jpeg",
+          "thumb": "art/functional-replacement/language-of-silence/01-0810A93D-B782-479A-A85C-42CCDA6409B2-4-.jpeg",
+          "alt": "THE LANGUAGE OF SILENCE — view 1"
+        },
+        {
+          "src": "art/functional-replacement/language-of-silence/02-1D05C4E3-E3A0-45C7-A1D4-451A917A691E-5-.jpeg",
+          "thumb": "art/functional-replacement/language-of-silence/02-1D05C4E3-E3A0-45C7-A1D4-451A917A691E-5-.jpeg",
+          "alt": "THE LANGUAGE OF SILENCE — view 2"
+        },
+        {
+          "src": "art/functional-replacement/language-of-silence/03-78E9930A-403A-4037-BAB7-701AB4F4CA28-3-.jpeg",
+          "thumb": "art/functional-replacement/language-of-silence/03-78E9930A-403A-4037-BAB7-701AB4F4CA28-3-.jpeg",
+          "alt": "THE LANGUAGE OF SILENCE — view 3"
+        },
+        {
+          "src": "art/functional-replacement/language-of-silence/04-829F659F-CEC3-4A4E-A588-9E128C0346F6-1-.jpeg",
+          "thumb": "art/functional-replacement/language-of-silence/04-829F659F-CEC3-4A4E-A588-9E128C0346F6-1-.jpeg",
+          "alt": "THE LANGUAGE OF SILENCE — view 4"
+        },
+        {
+          "src": "art/functional-replacement/language-of-silence/05-99E161E2-522F-4FB1-9C2C-F375FAD15EEE-2-.jpeg",
+          "thumb": "art/functional-replacement/language-of-silence/05-99E161E2-522F-4FB1-9C2C-F375FAD15EEE-2-.jpeg",
+          "alt": "THE LANGUAGE OF SILENCE — view 5"
+        },
+        {
+          "src": "art/functional-replacement/language-of-silence/06-A90A889E-3F32-4B9E-827A-0E98B182E6D1-4-.jpeg",
+          "thumb": "art/functional-replacement/language-of-silence/06-A90A889E-3F32-4B9E-827A-0E98B182E6D1-4-.jpeg",
+          "alt": "THE LANGUAGE OF SILENCE — view 6"
+        },
+        {
+          "src": "art/functional-replacement/language-of-silence/07-DA440F4C-D3C3-4C31-B05C-972140794FBC-3-.jpeg",
+          "thumb": "art/functional-replacement/language-of-silence/07-DA440F4C-D3C3-4C31-B05C-972140794FBC-3-.jpeg",
+          "alt": "THE LANGUAGE OF SILENCE — view 7"
+        },
+        {
+          "src": "art/functional-replacement/language-of-silence/08-FCE33EA2-341B-4F56-9350-7802820FF4C6-2-.jpeg",
+          "thumb": "art/functional-replacement/language-of-silence/08-FCE33EA2-341B-4F56-9350-7802820FF4C6-2-.jpeg",
+          "alt": "THE LANGUAGE OF SILENCE — view 8"
+        },
+        {
+          "src": "art/functional-replacement/language-of-silence/09-FF4BE977-2CB7-4BCD-8D24-51F7E1489F48-6-.jpeg",
+          "thumb": "art/functional-replacement/language-of-silence/09-FF4BE977-2CB7-4BCD-8D24-51F7E1489F48-6-.jpeg",
+          "alt": "THE LANGUAGE OF SILENCE — view 9"
+        },
+        {
+          "src": "art/functional-replacement/language-of-silence/10-AA420DA2-C75F-441E-894B-4B13C7CFFDAF-1-.jpeg",
+          "thumb": "art/functional-replacement/language-of-silence/10-AA420DA2-C75F-441E-894B-4B13C7CFFDAF-1-.jpeg",
+          "alt": "THE LANGUAGE OF SILENCE — view 10"
+        }
+      ]
+    },
+    {
+      "slug": "the-light-of-style",
+      "title": "THE LIGHT OF STYLE",
+      "group": "THE LIGHT OF STYLE",
+      "section": "THE LIGHT OF STYLE",
+      "edition": "Each artwork is unique — One of a Kind (1/1)",
+      "images": [
+        {
+          "src": "art/functional-replacement/the-light-of-style/01-152BCB73-6E06-48CF-B72E-53BC26E2E54D-5-.jpeg",
+          "thumb": "art/functional-replacement/the-light-of-style/01-152BCB73-6E06-48CF-B72E-53BC26E2E54D-5-.jpeg",
+          "alt": "THE LIGHT OF STYLE — view 1"
+        },
+        {
+          "src": "art/functional-replacement/the-light-of-style/02-6AC16FB9-7246-4DD7-B301-2F5203D4BE20-5-.jpeg",
+          "thumb": "art/functional-replacement/the-light-of-style/02-6AC16FB9-7246-4DD7-B301-2F5203D4BE20-5-.jpeg",
+          "alt": "THE LIGHT OF STYLE — view 2"
+        },
+        {
+          "src": "art/functional-replacement/the-light-of-style/03-A27BFEAC-AF5F-41C1-AB05-39E8904F103E-4-.jpeg",
+          "thumb": "art/functional-replacement/the-light-of-style/03-A27BFEAC-AF5F-41C1-AB05-39E8904F103E-4-.jpeg",
+          "alt": "THE LIGHT OF STYLE — view 3"
+        },
+        {
+          "src": "art/functional-replacement/the-light-of-style/04-B8BDFA03-23CD-493B-B0E1-E6BEBA85C8E0-5-.jpeg",
+          "thumb": "art/functional-replacement/the-light-of-style/04-B8BDFA03-23CD-493B-B0E1-E6BEBA85C8E0-5-.jpeg",
+          "alt": "THE LIGHT OF STYLE — view 4"
+        },
+        {
+          "src": "art/functional-replacement/the-light-of-style/01-7B3F890C-5518-4097-97A7-ED0A1E82C9D5-4-.jpeg",
+          "thumb": "art/functional-replacement/the-light-of-style/01-7B3F890C-5518-4097-97A7-ED0A1E82C9D5-4-.jpeg",
+          "alt": "THE LIGHT OF STYLE — view 5"
+        },
+        {
+          "src": "art/functional-replacement/the-light-of-style/01-att-koXN_gm0LXTcgIEICHwnuVGWGqi1AMcCn1qgB8r6dUA-1-.jpeg",
+          "thumb": "art/functional-replacement/the-light-of-style/01-att-koXN_gm0LXTcgIEICHwnuVGWGqi1AMcCn1qgB8r6dUA-1-.jpeg",
+          "alt": "THE LIGHT OF STYLE — view 6"
+        }
+      ]
+    },
+    {
+      "slug": "bright-mind",
+      "title": "BRIGHT MIND",
+      "group": "INTERIOR ART OBJECTS",
+      "section": "INTERIOR ART OBJECTS",
+      "images": [
+        {
+          "src": "art/functional-replacement/bright-mind/01-04DB82E5-A3C3-462E-AF93-C62EDE72AAE8.jpeg",
+          "thumb": "art/functional-replacement/bright-mind/01-04DB82E5-A3C3-462E-AF93-C62EDE72AAE8.jpeg",
+          "alt": "BRIGHT MIND — view 1"
+        }
+      ]
+    },
+    {
+      "slug": "i-see-you",
+      "title": "I SEE YOU",
+      "group": "INTERIOR ART OBJECTS",
+      "section": "INTERIOR ART OBJECTS",
+      "images": [
+        {
+          "src": "art/functional-replacement/i-see-you/01-0EB90220-B41F-4845-9E6E-63E06B6C86D5.jpeg",
+          "thumb": "art/functional-replacement/i-see-you/01-0EB90220-B41F-4845-9E6E-63E06B6C86D5.jpeg",
+          "alt": "I SEE YOU — view 1"
+        }
+      ]
+    },
+    {
+      "slug": "colour-me",
+      "title": "COLOUR ME",
+      "group": "INTERIOR ART OBJECTS",
+      "section": "INTERIOR ART OBJECTS",
+      "images": [
+        {
+          "src": "art/functional-replacement/colour-me/01-0FB1101C-985C-40D8-ABB6-3D066E10DE7C.jpeg",
+          "thumb": "art/functional-replacement/colour-me/01-0FB1101C-985C-40D8-ABB6-3D066E10DE7C.jpeg",
+          "alt": "COLOUR ME — view 1"
+        },
+        {
+          "src": "art/functional-replacement/colour-me/02-0BDCC18E-8010-4E80-A7B8-A65AE1AA18A8-1-.jpeg",
+          "thumb": "art/functional-replacement/colour-me/02-0BDCC18E-8010-4E80-A7B8-A65AE1AA18A8-1-.jpeg",
+          "alt": "COLOUR ME — view 2"
+        },
+        {
+          "src": "art/functional-replacement/colour-me/12-a_clean_professional_gallery_catalog_presentation.png",
+          "thumb": "art/functional-replacement/colour-me/12-a_clean_professional_gallery_catalog_presentation.png",
+          "alt": "COLOUR ME — product presentation"
+        }
+      ]
+    },
+    {
+      "slug": "black-cat",
+      "title": "BLACK CAT",
+      "group": "INTERIOR ART OBJECTS",
+      "section": "INTERIOR ART OBJECTS",
+      "images": [
+        {
+          "src": "art/functional-replacement/black-cat/01-B3550728-A242-4ACE-822A-F77FE80389FA.jpeg",
+          "thumb": "art/functional-replacement/black-cat/01-B3550728-A242-4ACE-822A-F77FE80389FA.jpeg",
+          "alt": "BLACK CAT — view 1"
+        },
+        {
+          "src": "art/functional-replacement/black-cat/02-456198C6-C77D-489F-8CF3-086FF5DB63A4-5-.jpeg",
+          "thumb": "art/functional-replacement/black-cat/02-456198C6-C77D-489F-8CF3-086FF5DB63A4-5-.jpeg",
+          "alt": "BLACK CAT — view 2"
+        },
+        {
+          "src": "art/functional-replacement/black-cat/03-903DE2C6-D825-4F88-9941-30923E512ED3-4-.jpeg",
+          "thumb": "art/functional-replacement/black-cat/03-903DE2C6-D825-4F88-9941-30923E512ED3-4-.jpeg",
+          "alt": "BLACK CAT — view 3"
+        },
+        {
+          "src": "art/functional-replacement/black-cat/04-B58D268C-88D6-4450-88E4-C95FBD8BEED0-5-.jpeg",
+          "thumb": "art/functional-replacement/black-cat/04-B58D268C-88D6-4450-88E4-C95FBD8BEED0-5-.jpeg",
+          "alt": "BLACK CAT — view 4"
+        },
+        {
+          "src": "art/functional-replacement/black-cat/05-C6C47BCB-C079-485B-8C1F-BCF835ED3651-2-.jpeg",
+          "thumb": "art/functional-replacement/black-cat/05-C6C47BCB-C079-485B-8C1F-BCF835ED3651-2-.jpeg",
+          "alt": "BLACK CAT — view 5"
+        },
+        {
+          "src": "art/functional-replacement/black-cat/06-a_clean_editorial_studio_product_portfolio_layout.png",
+          "thumb": "art/functional-replacement/black-cat/06-a_clean_editorial_studio_product_portfolio_layout.png",
+          "alt": "BLACK CAT — view 6"
+        },
+        {
+          "src": "art/functional-replacement/black-cat/07-a_polished_high_end_product_catalog_layout_advert.png",
+          "thumb": "art/functional-replacement/black-cat/07-a_polished_high_end_product_catalog_layout_advert.png",
+          "alt": "BLACK CAT — view 7"
+        }
+      ]
+    },
+    {
+      "slug": "the-balance",
+      "title": "THE BALANCE",
+      "group": "INTERIOR ART OBJECTS",
+      "section": "INTERIOR ART OBJECTS",
+      "images": [
+        {
+          "src": "art/functional-replacement/the-balance/01-D7218031-EC9A-49F3-AC7B-E44D8205481B.jpeg",
+          "thumb": "art/functional-replacement/the-balance/01-D7218031-EC9A-49F3-AC7B-E44D8205481B.jpeg",
+          "alt": "THE BALANCE — view 1"
+        }
+      ]
+    },
+    {
+      "slug": "the-last-harlequin",
+      "title": "THE LAST HARLEQUIN",
+      "group": "INTERIOR ART OBJECTS",
+      "section": "INTERIOR ART OBJECTS",
+      "images": [
+        {
+          "src": "art/functional-replacement/the-last-harlequin/01-E033BEE0-D5AB-45E9-BBBE-248136EA5ADC.jpeg",
+          "thumb": "art/functional-replacement/the-last-harlequin/01-E033BEE0-D5AB-45E9-BBBE-248136EA5ADC.jpeg",
+          "alt": "THE LAST HARLEQUIN — view 1"
+        }
+      ]
+    },
+    {
+      "slug": "the-first-light",
+      "title": "THE FIRST LIGHT",
+      "group": "INTERIOR ART OBJECTS",
+      "section": "INTERIOR ART OBJECTS",
+      "images": [
+        {
+          "src": "art/functional-replacement/the-first-light/01-F7345095-6DFE-49C2-969B-D30F6DB83549.jpeg",
+          "thumb": "art/functional-replacement/the-first-light/01-F7345095-6DFE-49C2-969B-D30F6DB83549.jpeg",
+          "alt": "THE FIRST LIGHT — view 1"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/02-2068E3BE-772D-44F2-B33E-2FC1E8F7ADBC-2-.jpeg",
+          "thumb": "art/functional-replacement/the-first-light/02-2068E3BE-772D-44F2-B33E-2FC1E8F7ADBC-2-.jpeg",
+          "alt": "THE FIRST LIGHT — view 2"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/03-4CB98A79-F92C-4AB1-BE3F-95A325B60D8B.jpeg",
+          "thumb": "art/functional-replacement/the-first-light/03-4CB98A79-F92C-4AB1-BE3F-95A325B60D8B.jpeg",
+          "alt": "THE FIRST LIGHT — view 3"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/04-72B7B31A-C7CC-4D82-AB45-5009F37FE488.jpeg",
+          "thumb": "art/functional-replacement/the-first-light/04-72B7B31A-C7CC-4D82-AB45-5009F37FE488.jpeg",
+          "alt": "THE FIRST LIGHT — view 4"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/05-E8CB752F-BD04-45DD-933F-8E0B5637F2C4-1-.jpeg",
+          "thumb": "art/functional-replacement/the-first-light/05-E8CB752F-BD04-45DD-933F-8E0B5637F2C4-1-.jpeg",
+          "alt": "THE FIRST LIGHT — view 5"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/06-a_clean_high_end_gallery_brochure_style_layout_m.png",
+          "thumb": "art/functional-replacement/the-first-light/06-a_clean_high_end_gallery_brochure_style_layout_m.png",
+          "alt": "THE FIRST LIGHT — view 6"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/07-a_clean_high_end_gallery_catalog_style_composite.png",
+          "thumb": "art/functional-replacement/the-first-light/07-a_clean_high_end_gallery_catalog_style_composite.png",
+          "alt": "THE FIRST LIGHT — view 7"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/08-a_clean_high_end_gallery_catalog_style_poster_lay.png",
+          "thumb": "art/functional-replacement/the-first-light/08-a_clean_high_end_gallery_catalog_style_poster_lay.png",
+          "alt": "THE FIRST LIGHT — view 8"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/09-a_clean_high_end_photorealistic_studio_render_sce.png",
+          "thumb": "art/functional-replacement/the-first-light/09-a_clean_high_end_photorealistic_studio_render_sce.png",
+          "alt": "THE FIRST LIGHT — view 9"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/10-a_clean_high_end_studio_catalog_presentation_comp.png",
+          "thumb": "art/functional-replacement/the-first-light/10-a_clean_high_end_studio_catalog_presentation_comp.png",
+          "alt": "THE FIRST LIGHT — view 10"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/11-a_clean_professional_contemporary_gallery_style_r.png",
+          "thumb": "art/functional-replacement/the-first-light/11-a_clean_professional_contemporary_gallery_style_r.png",
+          "alt": "THE FIRST LIGHT — view 11"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/13-a_polished_high_end_product_catalog_layout_advert.png",
+          "thumb": "art/functional-replacement/the-first-light/13-a_polished_high_end_product_catalog_layout_advert.png",
+          "alt": "THE FIRST LIGHT — view 13"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/14-THE_FIRST_LIGHT_correct_original_logo.png",
+          "thumb": "art/functional-replacement/the-first-light/14-THE_FIRST_LIGHT_correct_original_logo.png",
+          "alt": "THE FIRST LIGHT — view 14"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/15-THE_FIRST_LIGHT_website_white_original_logo.png",
+          "thumb": "art/functional-replacement/the-first-light/15-THE_FIRST_LIGHT_website_white_original_logo.png",
+          "alt": "THE FIRST LIGHT — view 15"
+        },
+        {
+          "src": "art/functional-replacement/the-first-light/16-wide_studio_like_product_catalog_render_layout_c.png",
+          "thumb": "art/functional-replacement/the-first-light/16-wide_studio_like_product_catalog_render_layout_c.png",
+          "alt": "THE FIRST LIGHT — view 16"
+        }
+      ]
+    },
+    {
+      "slug": "elephant-of-light",
+      "title": "ELEPHANT OF LIGHT",
+      "group": "INTERIOR ART OBJECTS",
+      "section": "INTERIOR ART OBJECTS",
+      "images": [
+        {
+          "src": "art/functional-replacement/elephant-of-light/01-FAD901BC-67B7-471C-9151-CC166CED4D48.jpeg",
+          "thumb": "art/functional-replacement/elephant-of-light/01-FAD901BC-67B7-471C-9151-CC166CED4D48.jpeg",
+          "alt": "ELEPHANT OF LIGHT — view 1"
+        }
+      ]
+    },
+    {
+      "slug": "pomona",
+      "title": "POMONA",
+      "group": "SCULPTURAL CHANDELIERS",
+      "section": "SCULPTURAL CHANDELIERS",
+      "edition": "Limited Edition of 18",
+      "dimensions": "Ø 100 cm; 45 cm body; 80 cm upper drop",
+      "images": []
+    },
+    {
+      "slug": "persephone",
+      "title": "PERSEPHONE",
+      "group": "SCULPTURAL CHANDELIERS",
+      "section": "SCULPTURAL CHANDELIERS",
+      "dimensions": "Ø 100 cm; 45 cm body; adjustable drop 30–60 cm",
+      "materials": "Ceiling canopy Ø 12 cm; burgundy textile cable; antique brass chain; E27 socket / LED bulb E27; hand-painted ceramic elements",
+      "images": [
+        {
+          "src": "art/functional-replacement/persephone/01-18C3C4C6-4A8D-40A6-AA16-D8BDEF8F7FDD.jpeg",
+          "thumb": "art/functional-replacement/persephone/01-18C3C4C6-4A8D-40A6-AA16-D8BDEF8F7FDD.jpeg",
+          "alt": "PERSEPHONE — view 1"
+        },
+        {
+          "src": "art/functional-replacement/persephone/02-2AD65DF7-F5C2-4B97-9BC5-EE96D4726647.jpeg",
+          "thumb": "art/functional-replacement/persephone/02-2AD65DF7-F5C2-4B97-9BC5-EE96D4726647.jpeg",
+          "alt": "PERSEPHONE — view 2"
+        },
+        {
+          "src": "art/functional-replacement/persephone/03-2B15EB72-7BFF-46F0-A667-4687BB1BB3E3.jpeg",
+          "thumb": "art/functional-replacement/persephone/03-2B15EB72-7BFF-46F0-A667-4687BB1BB3E3.jpeg",
+          "alt": "PERSEPHONE — view 3"
+        },
+        {
+          "src": "art/functional-replacement/persephone/04-30D66A4E-A499-4CD9-BA9E-596625B398C4.jpeg",
+          "thumb": "art/functional-replacement/persephone/04-30D66A4E-A499-4CD9-BA9E-596625B398C4.jpeg",
+          "alt": "PERSEPHONE — view 4"
+        },
+        {
+          "src": "art/functional-replacement/persephone/05-35BA8C45-6F7D-4379-83F9-7E8BE27DA704.jpeg",
+          "thumb": "art/functional-replacement/persephone/05-35BA8C45-6F7D-4379-83F9-7E8BE27DA704.jpeg",
+          "alt": "PERSEPHONE — view 5"
+        },
+        {
+          "src": "art/functional-replacement/persephone/06-548E4DA4-FA73-41B1-872D-8696AE17ABEF.jpeg",
+          "thumb": "art/functional-replacement/persephone/06-548E4DA4-FA73-41B1-872D-8696AE17ABEF.jpeg",
+          "alt": "PERSEPHONE — view 6"
+        },
+        {
+          "src": "art/functional-replacement/persephone/07-7A0D1F73-FFA5-428B-A95C-D34A84BDBEBA.jpeg",
+          "thumb": "art/functional-replacement/persephone/07-7A0D1F73-FFA5-428B-A95C-D34A84BDBEBA.jpeg",
+          "alt": "PERSEPHONE — view 7"
+        },
+        {
+          "src": "art/functional-replacement/persephone/08-B06072BF-1074-4768-87DF-54FA24C77684.jpeg",
+          "thumb": "art/functional-replacement/persephone/08-B06072BF-1074-4768-87DF-54FA24C77684.jpeg",
+          "alt": "PERSEPHONE — view 8"
+        },
+        {
+          "src": "art/functional-replacement/persephone/09-EC123190-0C51-4324-BB00-1149589E2DE5.jpeg",
+          "thumb": "art/functional-replacement/persephone/09-EC123190-0C51-4324-BB00-1149589E2DE5.jpeg",
+          "alt": "PERSEPHONE — view 9"
+        },
+        {
+          "src": "art/functional-replacement/persephone/10-FF02B6FC-A672-454E-A99E-70B39002F705.jpeg",
+          "thumb": "art/functional-replacement/persephone/10-FF02B6FC-A672-454E-A99E-70B39002F705.jpeg",
+          "alt": "PERSEPHONE — view 10"
+        }
+      ]
+    },
+    {
+      "slug": "the-flock",
+      "title": "THE FLOCK",
+      "group": "INTERIOR ART OBJECTS",
+      "section": "INTERIOR ART OBJECTS",
+      "type": "Sculptural Light Installation",
+      "edition": "Unique Work / One of a Kind",
+      "images": [
+        {
+          "src": "art/functional-replacement/the-flock/01-02A6FEAC-B22B-4495-912B-E53ECE436E2A-1-.jpeg",
+          "thumb": "art/functional-replacement/the-flock/01-02A6FEAC-B22B-4495-912B-E53ECE436E2A-1-.jpeg",
+          "alt": "THE FLOCK — view 1"
+        }
+      ]
+    },
+    {
+      "slug": "the-flock-ii",
+      "title": "THE FLOCK II",
+      "group": "SCULPTURAL CHANDELIERS",
+      "section": "SCULPTURAL CHANDELIERS",
+      "type": "Sculptural Chandelier",
+      "edition": "Limited Edition of 18",
+      "dimensions": "120 cm diameter; 50 cm and 70 cm ring levels; 80 cm ceiling drop, adjustable",
+      "materials": "Handcrafted papier-mâché birds; metal structure and chains; integrated lighting",
+      "images": [
+        {
+          "src": "art/functional-replacement/the-flock-ii/01-94D9EF8B-F474-4A1C-A3B2-02742B120401-1-.jpeg",
+          "thumb": "art/functional-replacement/the-flock-ii/01-94D9EF8B-F474-4A1C-A3B2-02742B120401-1-.jpeg",
+          "alt": "THE FLOCK II — view 1"
+        },
+        {
+          "src": "art/functional-replacement/the-flock-ii/02-A96E7F22-BC27-456B-9C55-4D87564D096E-1-.jpeg",
+          "thumb": "art/functional-replacement/the-flock-ii/02-A96E7F22-BC27-456B-9C55-4D87564D096E-1-.jpeg",
+          "alt": "THE FLOCK II — view 2"
+        }
+      ]
+    },
+    {
+      "slug": "the-flock-iii",
+      "title": "THE FLOCK III",
+      "group": "SCULPTURAL CHANDELIERS",
+      "section": "SCULPTURAL CHANDELIERS",
+      "type": "Sculptural Chandelier",
+      "edition": "Limited Edition of 18",
+      "dimensions": "120 cm diameter; 50 cm and 70 cm ring levels; 80 cm ceiling drop, adjustable",
+      "materials": "Handcrafted papier-mâché birds; metal structure and chains; integrated lighting",
+      "images": [
+        {
+          "src": "art/functional-replacement/the-flock-iii/01-4880DD1C-7172-4DBC-98C4-C05E793E63B9-1-.jpeg",
+          "thumb": "art/functional-replacement/the-flock-iii/01-4880DD1C-7172-4DBC-98C4-C05E793E63B9-1-.jpeg",
+          "alt": "THE FLOCK III — view 1"
+        }
+      ]
+    },
+    {
+      "slug": "astraeon",
+      "title": "ASTRAEON",
+      "group": "SCULPTURAL CHANDELIERS",
+      "section": "SCULPTURAL CHANDELIERS",
+      "edition": "Limited Edition of 18",
+      "materials": "Hand-painted / printed backlit paper; papier-mâché; brass; glass beads",
+      "dimensions": "Diameter 150–180 cm; hanging elements add 100–130 cm in height",
+      "images": [
+        {
+          "src": "art/functional-replacement/astraeon/01-3D884DBD-06CF-42DF-9738-6B8B47CFCF03-2-.jpeg",
+          "thumb": "art/functional-replacement/astraeon/01-3D884DBD-06CF-42DF-9738-6B8B47CFCF03-2-.jpeg",
+          "alt": "ASTRAEON — view 1"
+        }
+      ]
+    },
+    {
+      "slug": "cascata",
+      "title": "CASCATA",
+      "group": "SCULPTURAL CHANDELIERS",
+      "section": "SCULPTURAL CHANDELIERS",
+      "dimensions": "Ø 80 cm; adjustable 120 cm",
+      "materials": "E14 socket, max 40 W / LED compatible; glass beads; crystal drop; antique brass frame; 1980s sawdust balls (5 cm); pressed paper, foil, rubber bands and paper disk",
+      "images": [
+        {
+          "src": "art/functional-replacement/cascata/01-C8943288-D6F0-4112-8E43-F630A0388AA5-2-.jpeg",
+          "thumb": "art/functional-replacement/cascata/01-C8943288-D6F0-4112-8E43-F630A0388AA5-2-.jpeg",
+          "alt": "CASCATA — view 1"
+        }
+      ]
+    },
+    {
+      "slug": "onda",
+      "title": "ONDA",
+      "group": "SCULPTURAL CHANDELIERS",
+      "section": "SCULPTURAL CHANDELIERS",
+      "dimensions": "120 × 60 cm",
+      "images": [
+        {
+          "src": "art/functional-replacement/onda/01-EDA5818C-0CCE-4F6B-BF4C-24AD66E4A919-2-.jpeg",
+          "thumb": "art/functional-replacement/onda/01-EDA5818C-0CCE-4F6B-BF4C-24AD66E4A919-2-.jpeg",
+          "alt": "ONDA — view 1"
+        }
+      ]
+    },
+    {
+      "slug": "wall-sconces",
+      "title": "WALL SCONCES",
+      "group": "INTERIOR ART OBJECTS",
+      "section": "INTERIOR ART OBJECTS",
+      "images": [
+        {
+          "src": "art/functional-replacement/wall-sconces/01-C439B8AF-C523-431F-92F1-896D60D1860C-2-.jpeg",
+          "thumb": "art/functional-replacement/wall-sconces/01-C439B8AF-C523-431F-92F1-896D60D1860C-2-.jpeg",
+          "alt": "WALL SCONCES — view 1"
+        }
+      ]
+    }
+  ]
+}
