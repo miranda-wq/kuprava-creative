@@ -573,6 +573,11 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
 .contact-card { width: min(100%, 920px); margin: 0 auto; padding: clamp(32px, 7vw, 88px) clamp(20px, 5vw, 64px); text-align: center; border: 1px solid rgba(255, 90, 90, 0.2); background: radial-gradient(ellipse at 50% 0, rgba(255, 43, 43, 0.12), rgba(3, 1, 2, 0) 68%); box-shadow: 0 0 80px rgba(255, 43, 43, 0.08); }
 .contact-title { margin: 16px 0; font-family: var(--serif); font-size: clamp(38px, 7vw, 92px); font-weight: 300; line-height: 1; color: var(--ink); }
 .contact-text { max-width: 54ch; margin: 0 auto clamp(24px, 4vh, 42px); color: var(--dim); font-size: clamp(15px, 1.3vw, 19px); }
+.china-contact { margin: 0 auto clamp(24px, 4vh, 42px); display: grid; justify-items: center; gap: 8px; }
+.china-contact-name { color: var(--ink); font-family: var(--serif); font-size: clamp(21px, 2.4vw, 29px); line-height: 1.2; }
+.china-contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; color: var(--dim); font-size: clamp(14px, 1.1vw, 17px); }
+.china-contact-links a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(255, 43, 43, 0.48); padding-bottom: 2px; transition: color 0.25s, border-color 0.25s; }
+.china-contact-links a:hover, .china-contact-links a:focus-visible { color: var(--ink); border-color: var(--red); outline: none; }
 .contact-email { position: relative; display: inline-grid; place-items: center; max-width: 100%; padding: 14px 44px; border: 1px solid rgba(255, 43, 43, 0.68); border-radius: 999px; color: var(--ink); font-family: var(--serif); font-size: clamp(19px, 3vw, 32px); line-height: 1.2; overflow-wrap: anywhere; transition: background 0.3s, color 0.3s, box-shadow 0.3s; }
 .contact-email span { min-width: 0; text-align: center; }
 .contact-email i { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); width: 14px; text-align: center; color: var(--red); font-family: var(--sans); font-size: 14px; line-height: 1; font-style: normal; }

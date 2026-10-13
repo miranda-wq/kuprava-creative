@@ -656,15 +656,14 @@
    "id": "public",
    "projects": [
     {
-     "title": "Who Flew the Kite?",
-     "status": "Competition Proposal · 2026",
-     "location": "Winter Stations, Toronto",
+     "title": "Ariadne",
      "images": [
       {
-       "src": "art/public-art/who-flew-the-kite.jpg",
-       "thumb": "art/public-art/who-flew-the-kite-t.jpg",
-       "w": 1536,
-       "h": 1024
+       "src": "art/public-art/ariadne-labyrinth.png",
+       "thumb": "art/public-art/ariadne-labyrinth.png",
+       "w": 1145,
+       "h": 1374,
+       "alt": "Ariadne supporting a circular labyrinth sculpture at sunset, with a labyrinth plan and detail views."
       }
      ]
     },
@@ -704,7 +703,7 @@
      ],
      "status": "Competition Proposal · 2026",
      "location": "Germany"
-     }
+    }
    ]
   },
   {
@@ -1263,252 +1262,7 @@
   },
   {
    "id": "brand",
-   "projects": [
-    {
-     "title": "Merani",
-     "kicker": "Independent conceptual proposal · Ferrari × Georgian Romanticism",
-     "text": "Every great design begins with an emotion. An original concept and hand-sculpted model uniting the language of Ferrari design with the Georgian poem “Merani”.",
-     "images": [
-      {
-       "src": "docs/merani/01.jpg",
-       "thumb": "docs/merani/01-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/merani/03.jpg",
-       "thumb": "docs/merani/03-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/merani/05.jpg",
-       "thumb": "docs/merani/05-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/merani/07.jpg",
-       "thumb": "docs/merani/07-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/merani/10.jpg",
-       "thumb": "docs/merani/10-t.jpg",
-       "w": 1203,
-       "h": 1700
-      },
-      {
-       "src": "docs/merani/11.jpg",
-       "thumb": "docs/merani/11-t.jpg",
-       "w": 1203,
-       "h": 1700
-      }
-     ],
-     "doc": {
-      "title": "Merani",
-      "pdf": "docs/merani.pdf",
-      "pages": [
-       {
-        "src": "docs/merani/01.jpg",
-        "thumb": "docs/merani/01-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/02.jpg",
-        "thumb": "docs/merani/02-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/03.jpg",
-        "thumb": "docs/merani/03-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/04.jpg",
-        "thumb": "docs/merani/04-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/05.jpg",
-        "thumb": "docs/merani/05-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/06.jpg",
-        "thumb": "docs/merani/06-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/07.jpg",
-        "thumb": "docs/merani/07-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/08.jpg",
-        "thumb": "docs/merani/08-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/09.jpg",
-        "thumb": "docs/merani/09-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/10.jpg",
-        "thumb": "docs/merani/10-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/11.jpg",
-        "thumb": "docs/merani/11-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/12.jpg",
-        "thumb": "docs/merani/12-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/13.jpg",
-        "thumb": "docs/merani/13-t.jpg",
-        "w": 1203,
-        "h": 1700
-       },
-       {
-        "src": "docs/merani/14.jpg",
-        "thumb": "docs/merani/14-t.jpg",
-        "w": 1203,
-        "h": 1700
-       }
-      ],
-      "sizeMB": 7.1
-     }
-    },
-    {
-     "title": "Wendy's / China",
-     "kicker": "Independent conceptual proposal · from packaging to papier-mâché",
-     "text": "Ecological, educational and functional art: used Wendy's paper is collected, transformed into papier-mâché and returned to the restaurants as tables, lamps and public art.",
-     "images": [
-      {
-       "src": "docs/wendy-s-china/01.jpg",
-       "thumb": "docs/wendy-s-china/01-t.jpg",
-       "w": 1700,
-       "h": 957
-      },
-      {
-       "src": "docs/wendy-s-china/03.jpg",
-       "thumb": "docs/wendy-s-china/03-t.jpg",
-       "w": 1700,
-       "h": 957
-      },
-      {
-       "src": "docs/wendy-s-china/05.jpg",
-       "thumb": "docs/wendy-s-china/05-t.jpg",
-       "w": 1700,
-       "h": 957
-      },
-      {
-       "src": "docs/wendy-s-china/07.jpg",
-       "thumb": "docs/wendy-s-china/07-t.jpg",
-       "w": 1700,
-       "h": 957
-      },
-      {
-       "src": "docs/wendy-s-china/09.jpg",
-       "thumb": "docs/wendy-s-china/09-t.jpg",
-       "w": 1700,
-       "h": 957
-      }
-     ],
-     "doc": {
-      "title": "Wendy's China",
-      "pdf": "docs/wendy-s-china.pdf",
-      "pages": [
-       {
-        "src": "docs/wendy-s-china/01.jpg",
-        "thumb": "docs/wendy-s-china/01-t.jpg",
-        "w": 1700,
-        "h": 957
-       },
-       {
-        "src": "docs/wendy-s-china/02.jpg",
-        "thumb": "docs/wendy-s-china/02-t.jpg",
-        "w": 1700,
-        "h": 957
-       },
-       {
-        "src": "docs/wendy-s-china/03.jpg",
-        "thumb": "docs/wendy-s-china/03-t.jpg",
-        "w": 1700,
-        "h": 957
-       },
-       {
-        "src": "docs/wendy-s-china/04.jpg",
-        "thumb": "docs/wendy-s-china/04-t.jpg",
-        "w": 1700,
-        "h": 957
-       },
-       {
-        "src": "docs/wendy-s-china/05.jpg",
-        "thumb": "docs/wendy-s-china/05-t.jpg",
-        "w": 1700,
-        "h": 957
-       },
-       {
-        "src": "docs/wendy-s-china/06.jpg",
-        "thumb": "docs/wendy-s-china/06-t.jpg",
-        "w": 1700,
-        "h": 957
-       },
-       {
-        "src": "docs/wendy-s-china/07.jpg",
-        "thumb": "docs/wendy-s-china/07-t.jpg",
-        "w": 1700,
-        "h": 957
-       },
-       {
-        "src": "docs/wendy-s-china/08.jpg",
-        "thumb": "docs/wendy-s-china/08-t.jpg",
-        "w": 1700,
-        "h": 957
-       },
-       {
-        "src": "docs/wendy-s-china/09.jpg",
-        "thumb": "docs/wendy-s-china/09-t.jpg",
-        "w": 1700,
-        "h": 957
-       },
-       {
-        "src": "docs/wendy-s-china/10.jpg",
-        "thumb": "docs/wendy-s-china/10-t.jpg",
-        "w": 1700,
-        "h": 957
-       },
-       {
-        "src": "docs/wendy-s-china/11.jpg",
-        "thumb": "docs/wendy-s-china/11-t.jpg",
-        "w": 1700,
-        "h": 957
-       }
-      ],
-      "sizeMB": 23.1
-     }
-    }
-   ]
+   "projects": []
   },
   {
    "id": "melita",
@@ -1739,31 +1493,6 @@
        "thumb": "art/melita/melita-37-t.jpg",
        "w": 1153,
        "h": 2000
-      }
-     ]
-    },
-    {
-     "title": "Also with Melita",
-     "kicker": "Projects that began with Melita’s drawings",
-     "text": "Children's Park of Imagination (Shanghai) and Pinocchios' Library (New York) began with Melita’s drawings, alongside the Tsinandali exhibition in Spaces & Worlds and The Deafening Silence, which grew from her drawing Freedom.",
-     "images": [
-      {
-       "src": "docs/children-s-park-of-imagination/01.jpg",
-       "thumb": "docs/children-s-park-of-imagination/01-t.jpg",
-       "w": 1700,
-       "h": 1063
-      },
-      {
-       "src": "docs/pinocchios-library/01.jpg",
-       "thumb": "docs/pinocchios-library/01-t.jpg",
-       "w": 1700,
-       "h": 1010
-      },
-      {
-       "src": "docs/tsinandali/01.jpg",
-       "thumb": "docs/tsinandali/01-t.jpg",
-       "w": 1700,
-       "h": 1203
       }
      ]
     }

@@ -168,7 +168,7 @@ function renderSections() {
         ${t().sections[s.id].subtitle ? `<p class="sec-subtitle" data-sec-subtitle="${s.id}">${t().sections[s.id].subtitle}</p>` : ''}
         <p class="sec-intro" data-sec-intro="${s.id}">${t().sections[s.id].intro}</p>
         ${s.id === 'brand' ? `<ul class="commission-services" data-commission-services>${t().commissionServices.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
-        <div class="sec-count">${total} <span data-i18n="works">${t().works}</span></div>
+        ${total > 0 ? `<div class="sec-count">${total} <span data-i18n="works">${t().works}</span></div>` : ''}
         ${s.doc ? `<div class="sec-doc">${docCard(s.doc)}</div>` : ''}
       </header>`;
     if (s.doc) docs[s.doc.pdf] = s.doc;
@@ -281,6 +281,14 @@ function renderSections() {
       <div class="kicker" data-i18n="contact">${t().contact}</div>
       <h2 class="contact-title" data-i18n="contactTitle">${t().contactTitle}</h2>
       <p class="contact-text" data-i18n="contactText">${t().contactText}</p>
+      <div class="china-contact">
+        <div class="kicker" data-i18n="chinaContact">${t().chinaContact}</div>
+        <div class="china-contact-name">Andria Kvirikashvili</div>
+        <div class="china-contact-links">
+          <a href="tel:+8618801035330">+8618801035330</a>
+          <a href="mailto:akvirikashvili2026@gmail.com">akvirikashvili2026@gmail.com</a>
+        </div>
+      </div>
       <a class="contact-email" href="mailto:miranda@kupravacreative.com"><span>miranda@kupravacreative.com</span><i aria-hidden="true">↗</i></a>
     </div>`;
   root.appendChild(contact);
