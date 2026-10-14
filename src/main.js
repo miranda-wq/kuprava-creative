@@ -53,9 +53,7 @@ function goTo(id) {
 const root = $('#sections');
 const draftArtworkSlugs = new Set(artworkDrafts.filter((artwork) => artwork.status === 'draft').map((artwork) => artwork.slug));
 const artworkMetadataBySlug = new Map(artworkMetadata.map((entry) => [entry.slug, entry]));
-const functionalProducts = functionalArtworks.products.filter((project) =>
-  Array.isArray(project.images) && project.images.some((image) => image?.src && image?.thumb),
-);
+const functionalProducts = functionalArtworks.products;
 const artworkView = document.createElement('section');
 artworkView.className = 'artwork-detail';
 artworkView.id = 'artwork-view';
@@ -77,7 +75,7 @@ const getArtworkRecords = () => {
 
 function renderArtworkPage(slug) {
   const record = getArtworkRecords().find((artwork) => artwork.slug === slug);
-  if (!record || record.status !== 'published' || !record.images?.length) return false;
+  if (!record || record.status !== 'published') return false;
   const images = record.images;
   if (detailGalleryIndex !== null) galleries[detailGalleryIndex] = { title: record.title, images };
   else detailGalleryIndex = galleries.push({ title: record.title, images }) - 1;
@@ -95,9 +93,9 @@ function renderArtworkPage(slug) {
         <h1>${escapeHTML(record.title)}</h1>
         ${(record.description || record.text) ? `<p class="artwork-description">${escapeHTML(record.description || record.text)}</p>` : ''}
       </header>
-      <button class="artwork-main-image" type="button" data-artwork-image="0" aria-label="Enlarge ${escapeHTML(record.title)}">
+      ${images.length ? `<button class="artwork-main-image" type="button" data-artwork-image="0" aria-label="Enlarge ${escapeHTML(record.title)}">
         ${imgTag(images[0], imageAlt(images[0], 0), 'artwork-main-photo')}
-      </button>
+      </button>` : ''}
       ${images.length > 1 ? `<div class="artwork-thumbnails" aria-label="Artwork photographs">${images.map((image, index) => `
         <button class="artwork-thumb" type="button" data-artwork-image="${index}" aria-label="View ${escapeHTML(imageAlt(image, index))}">${imgTag(image, imageAlt(image, index))}</button>`).join('')}</div>` : ''}
       <div class="artwork-detail-bottom">
@@ -106,8 +104,10 @@ function renderArtworkPage(slug) {
       </div>
     </div>`;
   const mainPhoto = $('.artwork-main-photo', artworkView);
-  mainPhoto.src = url(images[0].src);
-  mainPhoto.removeAttribute('data-full');
+  if (mainPhoto) {
+    mainPhoto.src = url(images[0].src);
+    mainPhoto.removeAttribute('data-full');
+  }
   document.body.classList.add('artwork-open');
   $$('.artwork-detail [data-artwork-image]').forEach((button) => button.addEventListener('click', () => openLightbox(detailGalleryIndex, +button.dataset.artworkImage)));
   window.scrollTo({ top: 0, behavior: 'instant' });
@@ -198,7 +198,8 @@ function renderSections() {
           const gi = galleries.push({ sectionId: s.id, title: p.title, images: p.images }) - 1;
           const artwork = { ...p, key: p.slug };
           (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images, key: p.slug, slug: p.slug });
-          html += `<article class="functional-art-card reveal" style="--d:${(pi % 4) * 70}ms"><a href="#artwork/${p.slug}" aria-label="View ${escapeHTML(p.title)}"><div class="functional-art-image">${imgTag(p.images[0], p.images[0].alt || p.title)}</div><div class="functional-art-meta"><span class="functional-art-title">${escapeHTML(p.title)}</span><span class="functional-art-arrow" aria-hidden="true">↗</span></div>${p.edition ? `<span class="functional-art-edition">${escapeHTML(p.edition)}</span>` : ''}</a></article>`;
+          const cover = p.images?.[0];
+          html += `<article class="functional-art-card reveal" style="--d:${(pi % 4) * 70}ms"><a href="#artwork/${p.slug}" aria-label="View ${escapeHTML(p.title)}"><div class="functional-art-image">${cover ? imgTag(cover, cover.alt || p.title) : '<span class="functional-art-placeholder" aria-hidden="true"></span>'}</div><div class="functional-art-meta"><span class="functional-art-title">${escapeHTML(p.title)}</span><span class="functional-art-arrow" aria-hidden="true">↗</span></div>${p.edition ? `<span class="functional-art-edition">${escapeHTML(p.edition)}</span>` : ''}</a></article>`;
         });
         html += `</div></section>`;
       });
@@ -266,6 +267,7 @@ function renderSections() {
         <div class="about-role" data-i18n="artistRole">${t().artistRole}</div>
         <div class="about-text">${t().aboutText.map((x) => `<p>${x}</p>`).join('')}</div>
         <div class="about-actions">
+          <a class="btn" href="tel:+995599282806">+995599282806</a>
           <a class="btn" href="mailto:miranda@kupravacreative.com">miranda@kupravacreative.com</a>
           ${portfolioDoc ? `<a class="btn ghost" href="${url(portfolioDoc.pdf)}" download data-i18n="portfolio">${t().portfolio}</a>` : ''}
         </div>
@@ -281,6 +283,7 @@ function renderSections() {
       <div class="kicker" data-i18n="contact">${t().contact}</div>
       <h2 class="contact-title" data-i18n="contactTitle">${t().contactTitle}</h2>
       <p class="contact-text" data-i18n="contactText">${t().contactText}</p>
+      <a class="contact-phone" href="tel:+995599282806">+995599282806</a>
       <div class="china-contact">
         <div class="kicker" data-i18n="chinaContact">${t().chinaContact}</div>
         <div class="china-contact-name">Andria Kvirikashvili</div>
@@ -349,7 +352,7 @@ function renderMenu() {
     a.addEventListener('pointerenter', () => {
       const s = sections.find((x) => x.id === a.dataset.id);
       $('.menu-preview').classList.toggle('preserve-proportions', ['christmas', 'kinetic', 'spaces'].includes(s?.id));
-      const im = s ? s.projects[0].images[0] : content.intro;
+      const im = s?.projects?.[0]?.images?.[0] || content.intro;
       const img = $('.menu-preview img');
       img.src = url(im.thumb);
       $('.menu-preview').classList.add('on');

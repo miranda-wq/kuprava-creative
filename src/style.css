@@ -283,6 +283,7 @@ body[data-lang='ge'] .tagline, body[data-lang='jp'] .tagline { letter-spacing: 0
 .functional-art-card { min-width: 0; }
 .functional-art-card a { display: block; height: 100%; }
 .functional-art-image { display: grid; place-items: center; aspect-ratio: 4 / 3; overflow: hidden; background: rgba(255,255,255,0.035); }
+.functional-art-placeholder { padding: 24px; color: var(--dim); font: 400 20px/1.25 var(--serif); text-align: center; }
 .functional-art-image img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.8s var(--ease), filter 0.6s; }
 .functional-art-card a:hover .functional-art-image img { transform: scale(1.035); filter: brightness(1.08); }
 .functional-art-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 14px 0 4px; }
@@ -573,6 +574,8 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
 .contact-card { width: min(100%, 920px); margin: 0 auto; padding: clamp(32px, 7vw, 88px) clamp(20px, 5vw, 64px); text-align: center; border: 1px solid rgba(255, 90, 90, 0.2); background: radial-gradient(ellipse at 50% 0, rgba(255, 43, 43, 0.12), rgba(3, 1, 2, 0) 68%); box-shadow: 0 0 80px rgba(255, 43, 43, 0.08); }
 .contact-title { margin: 16px 0; font-family: var(--serif); font-size: clamp(38px, 7vw, 92px); font-weight: 300; line-height: 1; color: var(--ink); }
 .contact-text { max-width: 54ch; margin: 0 auto clamp(24px, 4vh, 42px); color: var(--dim); font-size: clamp(15px, 1.3vw, 19px); }
+.contact-phone { display: block; width: fit-content; margin: 0 auto 22px; color: var(--ink); font: 400 clamp(21px, 3vw, 30px)/1.2 var(--serif); }
+.contact-phone:hover, .contact-phone:focus-visible { color: var(--red); outline: none; }
 .china-contact { margin: 0 auto clamp(24px, 4vh, 42px); display: grid; justify-items: center; gap: 8px; }
 .china-contact-name { color: var(--ink); font-family: var(--serif); font-size: clamp(21px, 2.4vw, 29px); line-height: 1.2; }
 .china-contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; color: var(--dim); font-size: clamp(14px, 1.1vw, 17px); }
