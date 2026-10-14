@@ -3,7 +3,7 @@
 // are Miranda's own English text from her emails; the GE/FR/JP versions and the
 // About text are drafts that Miranda should proofread.
 
-export const LANGS = ['en', 'ge', 'fr', 'zh', 'jp']; // English, Georgian, French, Simplified Chinese, Japanese
+export const LANGS = ['en', 'ge', 'fr', 'zh']; // English, Georgian, French and Simplified Chinese
 
 // Miranda's nine "planets", in the order she listed them on WhatsApp.
 export const ORDER = ['sculpture', 'public', 'outdoor', 'christmas', 'kinetic', 'spaces', 'functional', 'brand', 'melita', 'about'];
