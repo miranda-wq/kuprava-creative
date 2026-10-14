@@ -137,7 +137,7 @@ const NODES = [
 ];
 const MOONS = [
   { id: 'melita', x: 1240, y: 480, d: 142, tone: 'big', side: 'right', orbit: 3, wrap: true },
-  { x: 398, y: 362, d: 11, tone: 'grey', orbit: 11 },
+  { id: 'about', x: 398, y: 362, d: 27, tone: 'lit', side: 'left', orbit: 11, wrap: true },
   { x: 1582, y: 262, d: 6, tone: 'red', orbit: 12 },
 ];
 

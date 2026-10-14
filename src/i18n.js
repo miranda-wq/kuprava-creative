@@ -3,10 +3,10 @@
 // are Miranda's own English text from her emails; the GE/FR/JP versions and the
 // About text are drafts that Miranda should proofread.
 
-export const LANGS = ['en', 'ge', 'fr', 'jp'];
+export const LANGS = ['en', 'ge', 'fr', 'zh', 'jp']; // English, Georgian, French, Simplified Chinese, Japanese
 
 // Miranda's nine "planets", in the order she listed them on WhatsApp.
-export const ORDER = ['sculpture', 'public', 'outdoor', 'christmas', 'kinetic', 'spaces', 'functional', 'brand', 'melita'];
+export const ORDER = ['sculpture', 'public', 'outdoor', 'christmas', 'kinetic', 'spaces', 'functional', 'brand', 'melita', 'about'];
 
 export const T = {
   en: {
@@ -33,11 +33,14 @@ export const T = {
     viewAll: 'See the whole section',
     pvHint: 'Drag to turn the orbit · Open any work',
     portfolio: 'Download portfolio (PDF)',
+    downloadCv: 'Download CV (PDF)',
+    commissionLink: 'Explore commissions',
     commissionServices: ['Furniture Design', 'Functional Art', 'Sculpture', 'Major Commissions & Competitions'],
     aboutText: [
-      'Miranda Kuprava is an artist and the founder and creative director of KUPRAVA CREATIVE.',
-      'Her path runs from music, through PR and public culture, to contemporary art. At the centre of her practice is her own papier-mâché method, in which paper, including paper that has already lived another life, becomes sculpture, light and functional objects.',
-      'Her work moves between gallery sculpture, functional art, brand concepts and large-scale public installations.',
+      'Miranda Kuprava is a Georgian visual artist and sculptor working across contemporary sculpture, installation and functional art. Using papier-mâché and recycled paper, she transforms everyday materials into forms that explore memory, ecology, imagination and human relationships.',
+      'Alongside her exhibitions, she creates collectible functional artworks and sculptural lighting for architectural and interior spaces, including bespoke works for private homes, boutique hotels, restaurants and clubs.',
+      'In recent years, Miranda has developed collaborative projects with her daughter, Melita Iosava. Their projects have been realised in different countries around the world.',
+      'Miranda holds a master’s degree in Public Administration from the Georgian Institute of Public Affairs (GIPA). Her selected exhibitions include Nine Lives, Christmas from the Rabbit’s Point of View and Bright Mind.',
     ],
     sections: {
       sculpture: { title: 'Sculpture / Artworks', intro: 'Original sculptural works. Mythic figures, animals and characters, each one built by hand and carrying its own story.' },
@@ -48,7 +51,8 @@ export const T = {
       spaces: { title: 'VITIS VINIFERA', subtitle: 'Wine, Light & Sculpture', intro: 'A site-specific sculptural world conceived for wine estates — bringing together original artwork, light objects, architectural installations and outdoor interventions.', cta: 'EXPLORE THE PROJECT · 12 WORKS', hint: 'DRAG TO EXPLORE · OPEN ANY WORK', groups: { objectDetails: 'SCULPTURE · OBJECT & DETAIL', displayCase: 'DISPLAY-CASE INSTALLATIONS', vineyardOutdoor: 'VINEYARD & OUTDOOR CONTEXT', spiderLight: 'SPIDER LIGHT · OBJECT, INSTALLATION & CONCEPT' } },
       functional: { title: 'Functional Art', intro: 'Art that performs a function. KUPRAVA CREATIVE creates functional art in which utility becomes part of the artwork. Lighting, chandeliers, furniture and sculptural objects are conceived not simply as design pieces, but as artworks made to inhabit and transform a space.' },
       brand: { title: 'Commission', intro: 'I work to commission, creating original artworks, sculptural objects and installations. Each piece is developed individually around your idea, space and needs.' },
-      melita: { title: 'Works with Melita', intro: 'A creative collaboration between Miranda Kuprava and her daughter, Melita Iosava. This gallery presents sculptures made by Miranda from Melita’s drawings and ideas.' },
+      melita: { title: 'Miranda & Melita', intro: 'A creative collaboration between artist Miranda Kuprava and her daughter, Melita Iosava. Their shared ideas become sculptural works, realised in projects across different countries.' },
+      about: { title: 'About', intro: 'Miranda Kuprava · Georgian visual artist, sculptor and founder of KUPRAVA CREATIVE.', cta: 'Read the biography' },
     },
     functionalSubs: {
       lighting: 'Light is treated as both a function and an artistic material. Each object works simultaneously as a source of light and as an independent sculptural presence.',
@@ -81,6 +85,8 @@ export const T = {
     viewAll: 'მთელი განყოფილების ნახვა',
     pvHint: 'გადაატრიალეთ ორბიტა · გახსენით ნებისმიერი ნამუშევარი',
     portfolio: 'პორტფოლიოს ჩამოტვირთვა (PDF)',
+    downloadCv: 'CV-ის ჩამოტვირთვა (PDF)',
+    commissionLink: 'შეკვეთების ნახვა',
     commissionServices: ['ავეჯის დიზაინი', 'ფუნქციური ხელოვნება', 'ქანდაკება', 'მსხვილი შეკვეთები და კონკურსები'],
     aboutText: [
       'მირანდა კუპრავა მხატვარი და KUPRAVA CREATIVE-ის დამფუძნებელი და კრეატიული დირექტორია.',
@@ -96,7 +102,8 @@ export const T = {
       spaces: { title: 'VITIS VINIFERA', subtitle: 'ღვინო, სინათლე და ქანდაკება', intro: 'ღვინის მამულებისთვის შექმნილი კონკრეტულ ადგილს მორგებული სკულპტურული სამყარო, რომელიც აერთიანებს ორიგინალურ ნამუშევრებს, მანათობელ ობიექტებს, არქიტექტურულ ინსტალაციებსა და გარე სივრცეში განხორციელებულ ჩარევებს.', cta: 'პროექტის დათვალიერება · 12 ნამუშევარი', hint: 'გადაათრიეთ დასათვალიერებლად · გახსენით ნებისმიერი ნამუშევარი', groups: { objectDetails: 'ქანდაკება · ობიექტი და დეტალი', displayCase: 'ვიტრინის ინსტალაციები', vineyardOutdoor: 'ვენახი და გარე სივრცე', spiderLight: 'Spider Light · ობიექტი, ინსტალაცია და კონცეფცია' } },
       functional: { title: 'ფუნქციური ხელოვნება', intro: 'ხელოვნება, რომელიც ფუნქციას ასრულებს. KUPRAVA CREATIVE ქმნის ფუნქციურ ხელოვნებას, სადაც გამოყენებადობა ნამუშევრის ნაწილი ხდება. სანათები, ჭაღები, ავეჯი და სკულპტურული ობიექტები ჩაფიქრებულია არა უბრალოდ დიზაინის ნივთებად, არამედ ხელოვნების ნიმუშებად, რომლებიც სივრცეს ავსებენ და გარდაქმნიან.' },
       brand: { title: 'შეკვეთები', intro: 'შეკვეთით ვქმნი ორიგინალურ ხელოვნების ნიმუშებს, სკულპტურულ ობიექტებსა და ინსტალაციებს. თითოეული ნამუშევარი ინდივიდუალურად მუშავდება თქვენი იდეის, სივრცისა და საჭიროებების მიხედვით.' },
-      melita: { title: 'ნამუშევრები მელიტასთან', intro: 'მირანდა კუპრავასა და მისი ქალიშვილის, მელიტა იოსავას შემოქმედებითი თანამშრომლობა. ამ გალერეაში წარმოდგენილია ქანდაკებები, რომლებიც მირანდამ მელიტას ნახატებისა და იდეების მიხედვით შექმნა.' },
+      melita: { title: 'მირანდა და მელიტა', intro: 'ხელოვანი მირანდა კუპრავასა და მისი ქალიშვილის, მელიტა იოსავას შემოქმედებითი თანამშრომლობა. მათი საერთო იდეები სკულპტურულ ნამუშევრებად იქცევა და სხვადასხვა ქვეყანაში განხორციელებულ პროექტებში გვხვდება.' },
+      about: { title: 'ჩემ შესახებ', intro: 'მირანდა კუპრავა · ქართველი ვიზუალური ხელოვანი, მოქანდაკე და KUPRAVA CREATIVE-ის დამფუძნებელი.', cta: 'ბიოგრაფიის ნახვა' },
     },
     functionalSubs: {
       lighting: 'სინათლე ერთდროულად ფუნქციაც არის და მხატვრული მასალაც. თითოეული ობიექტი სინათლის წყაროცაა და დამოუკიდებელი სკულპტურული არსებობაც.',
@@ -129,11 +136,14 @@ export const T = {
     viewAll: 'Voir toute la section',
     pvHint: "Faites glisser pour tourner l'orbite · Ouvrez une œuvre",
     portfolio: 'Télécharger le portfolio (PDF)',
+    downloadCv: 'Télécharger le CV (PDF)',
+    commissionLink: 'Découvrir les commandes',
     commissionServices: ['Design de mobilier', 'Art fonctionnel', 'Sculpture', 'Commandes majeures & concours'],
     aboutText: [
-      'Miranda Kuprava est artiste, fondatrice et directrice de création de KUPRAVA CREATIVE.',
-      "Son parcours va de la musique, en passant par les relations publiques et la culture, jusqu'à l'art contemporain. Au cœur de sa pratique se trouve sa propre méthode de papier mâché, par laquelle le papier, y compris celui qui a déjà vécu une autre vie, devient sculpture, lumière et objet fonctionnel.",
-      'Son travail circule entre sculpture de galerie, art fonctionnel, concepts de marque et installations publiques à grande échelle.',
+      'Miranda Kuprava est une artiste visuelle et sculptrice géorgienne dont la pratique relie sculpture contemporaine, installation et art fonctionnel. Elle travaille le papier mâché et le papier recyclé, transformant des matériaux ordinaires en formes qui explorent la mémoire, l’écologie, l’imagination et les relations humaines.',
+      'En parallèle de ses expositions, elle crée des œuvres fonctionnelles de collection et des luminaires sculpturaux pour des espaces architecturaux et intérieurs, notamment des pièces sur mesure pour des résidences, hôtels-boutiques, restaurants et clubs.',
+      'Ces dernières années, Miranda développe des projets avec sa fille, Melita Iosava. Leurs projets ont été réalisés dans différents pays du monde.',
+      'Miranda est titulaire d’un master en administration publique de l’Institut géorgien des affaires publiques (GIPA). Parmi ses expositions : Nine Lives, Christmas from the Rabbit’s Point of View et Bright Mind.',
     ],
     sections: {
       sculpture: { title: 'Sculpture / Œuvres', intro: 'Œuvres sculpturales originales. Figures mythiques, animaux et personnages, chacun façonné à la main et porteur de sa propre histoire.' },
@@ -144,7 +154,8 @@ export const T = {
       spaces: { title: 'VITIS VINIFERA', subtitle: 'Vin, lumière & sculpture', intro: 'Un univers sculptural conçu spécifiquement pour des domaines viticoles, réunissant œuvres originales, objets lumineux, installations architecturales et interventions en plein air.', cta: 'Explorer le projet · 12 œuvres', hint: 'Faites glisser pour explorer · Ouvrez une œuvre', groups: { objectDetails: 'SCULPTURE · OBJET & DÉTAIL', displayCase: 'INSTALLATIONS EN VITRINE', vineyardOutdoor: 'VIGNOBLE & CONTEXTE EXTÉRIEUR', spiderLight: 'SPIDER LIGHT · OBJET, INSTALLATION & CONCEPT' } },
       functional: { title: 'Art fonctionnel', intro: "Un art qui remplit une fonction. KUPRAVA CREATIVE crée un art fonctionnel où l'usage devient partie intégrante de l'œuvre. Luminaires, lustres, mobilier et objets sculpturaux ne sont pas conçus comme de simples pièces de design, mais comme des œuvres faites pour habiter et transformer un espace." },
       brand: { title: 'Commandes', intro: 'Je réalise sur commande des œuvres originales, des objets sculpturaux et des installations. Chaque création est conçue sur mesure selon votre idée, votre espace et vos besoins.' },
-      melita: { title: 'Œuvres avec Melita', intro: 'Une collaboration créative entre Miranda Kuprava et sa fille, Melita Iosava. Cette galerie présente les sculptures réalisées par Miranda à partir des dessins et des idées de Melita.' },
+      melita: { title: 'Miranda & Melita', intro: 'Une collaboration créative entre l’artiste Miranda Kuprava et sa fille, Melita Iosava. Leurs idées communes deviennent des œuvres sculpturales réalisées dans des projets à travers différents pays.' },
+      about: { title: 'À propos', intro: 'Miranda Kuprava · artiste visuelle géorgienne, sculptrice et fondatrice de KUPRAVA CREATIVE.', cta: 'Lire la biographie' },
     },
     functionalSubs: {
       lighting: "La lumière est à la fois fonction et matériau artistique. Chaque objet est en même temps une source de lumière et une présence sculpturale autonome.",
@@ -177,11 +188,14 @@ export const T = {
     viewAll: 'セクション全体を見る',
     pvHint: 'ドラッグで軌道を回転 · 作品をひらく',
     portfolio: 'ポートフォリオをダウンロード（PDF）',
+    downloadCv: 'CVをダウンロード（PDF）',
+    commissionLink: 'オーダー制作を見る',
     commissionServices: ['家具デザイン', 'ファンクショナルアート', '彫刻', '大規模な依頼・コンペティション'],
     aboutText: [
-      'ミランダ・クプラヴァは、アーティストであり、KUPRAVA CREATIVEの創設者・クリエイティブディレクターです。',
-      '音楽から、PRとパブリックカルチャーを経て、現代アートへ。その実践の中心にあるのは独自の張り子（パピエ・マシェ）の技法です。ときに別の人生を生きてきた紙が、彫刻に、光に、機能をもつオブジェに生まれ変わります。',
-      'その作品は、ギャラリーの彫刻、ファンクショナルアート、ブランドコンセプト、そして大規模なパブリックインスタレーションを行き来します。',
+      'ミランダ・クプラヴァは、現代彫刻、インスタレーション、ファンクショナルアートを横断して活動するジョージアのビジュアルアーティスト、彫刻家です。張り子と再生紙を用い、記憶、環境、想像力、人間関係を探る造形へと日常素材を変容させます。',
+      '展覧会活動と並行して、建築・インテリア空間のためのコレクタブルな機能作品や彫刻的照明を制作。個人邸宅、ブティックホテル、レストラン、クラブのための特注作品も手がけています。',
+      '近年は、娘のメリタ・イオサヴァと共同プロジェクトに取り組んでいます。二人のプロジェクトは世界各地の国々で実現しています。',
+      'ジョージア公共問題研究所（GIPA）で公共行政の修士号を取得。主な展覧会に「Nine Lives」「Christmas from the Rabbit’s Point of View」「Bright Mind」があります。',
     ],
     sections: {
       sculpture: { title: '彫刻 / 作品', intro: 'オリジナルの彫刻作品。神話の人物、動物、キャラクター。ひとつひとつが手で形づくられ、それぞれの物語を宿しています。' },
@@ -192,7 +206,8 @@ export const T = {
       spaces: { title: 'VITIS VINIFERA', subtitle: 'ワイン、光、彫刻', intro: 'ワインエステートのために場所に合わせて構想された彫刻的な世界。オリジナル作品、光のオブジェ、建築的インスタレーション、屋外への介入をひとつに結びます。', cta: 'プロジェクトを見る · 12作品', hint: 'ドラッグして探索 · 作品を開く', groups: { objectDetails: '彫刻・オブジェとディテール', displayCase: '展示ケースのインスタレーション', vineyardOutdoor: 'ブドウ畑と屋外の風景', spiderLight: 'Spider Light・オブジェ、展示、コンセプト' } },
       functional: { title: 'ファンクショナルアート', intro: '機能を果たすアート。KUPRAVA CREATIVEは、実用性そのものが作品の一部となるファンクショナルアートを制作します。照明、シャンデリア、家具、彫刻的オブジェは、単なるデザインではなく、空間に住まい、空間を変えるアート作品として構想されています。' },
       brand: { title: 'コミッション', intro: 'ご依頼に応じて、オリジナル作品、彫刻的なオブジェ、インスタレーションを制作します。一つひとつの作品を、ご希望や空間、用途に合わせて個別にデザインします。' },
-      melita: { title: 'メリタとの作品', intro: 'ミランダ・クプラヴァと娘メリタ・イオサヴァによる創作コラボレーション。このギャラリーでは、メリタの絵やアイデアをもとにミランダが制作した彫刻を紹介します。' },
+      melita: { title: 'ミランダ & メリタ', intro: 'アーティストのミランダ・クプラヴァと娘メリタ・イオサヴァによる創作コラボレーション。二人のアイデアは彫刻作品となり、さまざまな国のプロジェクトで実現しています。' },
+      about: { title: 'プロフィール', intro: 'ミランダ・クプラヴァ · ジョージアのビジュアルアーティスト、彫刻家、KUPRAVA CREATIVE創設者。', cta: '略歴を読む' },
     },
     functionalSubs: {
       lighting: '光は機能であり、芸術の素材でもあります。各オブジェは光源であると同時に、自立した彫刻として存在します。',
@@ -200,5 +215,44 @@ export const T = {
       furniture: '家具と彫刻のあいだに位置する機能的オブジェ。テーブル、椅子、キャビネットなどは、一般的な家具ではなく一点ものの作品として制作されます。',
       paper: '既存の紙から生まれるファンクショナルアート。紙は決して塗装されません。元の色、タイポグラフィ、グラフィック、かつてのアイデンティティの痕跡が、新しいオブジェの表面となります。',
     },
+  },
+};
+
+// Simplified Chinese support for the studio's future work with the Chinese market.
+T.zh = {
+  ...T.en,
+  tagline: ['时间是另一种材料。', '现实可以被重新塑造。'],
+  explore: '探索', enter: '进入', skip: '跳过', sound: '声音',
+  artistRole: '艺术家与创意总监', menu: '菜单', close: '关闭', works: '件作品',
+  viewProposal: '查看方案', downloadPdf: '下载 PDF', pages: '页', contact: '联系',
+  contactTitle: '有项目想法吗？', contactText: '如需委托创作、合作或探讨新想法，欢迎联系。',
+  chinaContact: '中国联络人', about: '关于', founder: '创始人兼创意总监',
+  back: '返回作品宇宙', viewAll: '查看整个分类', pvHint: '拖动以旋转轨道 · 点击查看作品',
+  portfolio: '下载作品集（PDF）', downloadCv: '下载简历（PDF）', commissionLink: '了解委托创作',
+  commissionServices: ['家具设计', '功能艺术', '雕塑', '大型委托与竞赛'],
+  aboutText: [
+    '米兰达·库普拉瓦是格鲁吉亚视觉艺术家与雕塑家，创作涉及当代雕塑、装置艺术与功能艺术。她以纸浆和再生纸为主要材料，将日常材料转化为探索记忆、生态、想象与人际关系的艺术形式。',
+    '在展览创作之外，她还为建筑与室内空间创作收藏级功能艺术品和雕塑灯具，包括为私人住宅、精品酒店、餐厅和俱乐部定制的作品。',
+    '近几年，米兰达与女儿梅莉塔·伊奥萨瓦共同开展创作项目。他们的项目已在世界各地不同国家落地实现。',
+    '米兰达拥有格鲁吉亚公共事务学院（GIPA）公共管理硕士学位。其代表性展览包括《Nine Lives》《Christmas from the Rabbit’s Point of View》和《Bright Mind》。',
+  ],
+  sections: {
+    ...T.en.sections,
+    sculpture: { title: '雕塑 / 艺术作品', intro: '原创雕塑作品。神话人物、动物与角色，每件作品均由手工塑造，并承载自己的故事。' },
+    public: { title: '公共艺术', intro: '公共艺术与大型装置：为城市及其居民构思的场所、公园与图书馆。' },
+    outdoor: { title: '户外艺术品', intro: '为花园、露台、庭院与泳池创作的雕塑物件，在户外与变化的光线中呈现。' },
+    christmas: { title: '节庆雕塑', intro: '为节庆季创作的雕塑树、人物与灯光作品。每个图库汇集同一作品的安装场景与细节。' },
+    kinetic: { title: '汽车概念', subtitle: '将艺术、运动与身份转化为空间体验。', intro: '为汽车空间、展厅和品牌环境创作的概念装置。每个项目都将汽车视为空间雕塑与建筑体验的一部分。', closing: '汽车成为雕塑的一部分。' },
+    spaces: { title: 'VITIS VINIFERA', subtitle: '葡萄酒、光与雕塑', intro: '为葡萄酒庄园构思的场域雕塑世界，汇集原创艺术品、灯光物件、建筑装置与户外创作。', cta: '探索项目 · 12 件作品', hint: '拖动以探索 · 点击查看作品', groups: { objectDetails: '雕塑 · 物件与细节', displayCase: '展示柜装置', vineyardOutdoor: '葡萄园与户外场景', spiderLight: 'Spider Light · 物件、装置与概念' } },
+    functional: { title: '功能艺术', intro: '兼具实用功能的艺术。KUPRAVA CREATIVE 将实用性融入作品之中，创作灯具、吊灯、家具与雕塑物件，让艺术作品融入并改变空间。' },
+    brand: { title: '委托创作', intro: '接受委托创作原创艺术品、雕塑物件与装置。每件作品都根据您的构想、空间与需求进行专属设计。' },
+    melita: { title: '米兰达与梅莉塔', intro: '艺术家米兰达·库普拉瓦与女儿梅莉塔·伊奥萨瓦共同创作。她们的想法化为雕塑作品，并在不同国家的项目中实现。' },
+    about: { title: '关于', intro: '米兰达·库普拉瓦 · 格鲁吉亚视觉艺术家、雕塑家、KUPRAVA CREATIVE 创始人。', cta: '阅读艺术家简介' },
+  },
+  functionalSubs: {
+    lighting: '光既是功能，也是艺术材料。每件作品既是光源，也是独立的雕塑存在。',
+    chandeliers: '作为悬挂艺术品构思的吊灯，让形态、材料、影子与光成为空间建筑的一部分。',
+    furniture: '介于家具与雕塑之间的功能物件。桌椅、柜体及其他实用作品均作为独立艺术品创作。',
+    paper: '以现成纸材创作的功能艺术。纸张不作涂色，其原有色彩、文字、图像与过往痕迹成为新物件的表面。',
   },
 };

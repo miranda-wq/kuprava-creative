@@ -177,7 +177,22 @@ function renderSections() {
       html += `<div class="subnav reveal">${functionalArtworks.categories.map((category) => `<a href="#fa-${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${category}</a>`).join('')}</div>`;
     }
 
-    if (s.id === 'sculpture') {
+    if (s.id === 'about') {
+      html += `
+        <div class="about-grid reveal">
+          <div class="about-portrait"><img src="${url('artist/miranda-kuprava-portrait.png')}" width="1103" height="1471" alt="Portrait of Miranda Kuprava" loading="lazy" decoding="async" /></div>
+          <div class="about-copy">
+            <h3 class="about-name">Miranda Kuprava</h3>
+            <div class="about-role" data-i18n="artistRole">${t().artistRole}</div>
+            <div class="about-text">${t().aboutText.map((x) => `<p>${x}</p>`).join('')}</div>
+            <div class="about-actions">
+              <a class="btn" href="${url('cv/miranda-kuprava-cv.pdf')}" download data-i18n="downloadCv">${t().downloadCv}</a>
+              <a class="btn ghost" href="#brand" data-i18n="commissionLink">${t().commissionLink}</a>
+              <a class="about-email" href="mailto:miranda@kupravacreative.com">miranda@kupravacreative.com</a>
+            </div>
+          </div>
+        </div>`;
+    } else if (s.id === 'sculpture') {
       html += `<div class="works">`;
       s.projects.forEach((p, pi) => {
         const gi = galleries.push({ title: p.title, kicker: p.kicker || t().sections[s.id].title, images: p.images }) - 1;
@@ -255,26 +270,6 @@ function renderSections() {
     root.appendChild(sec);
   });
 
-  const about = document.createElement('section');
-  about.className = 'sec sec-about';
-  about.id = 'about';
-  about.innerHTML = `
-    <div class="about-grid reveal">
-      <div class="about-k" aria-hidden="true"><img src="${url('k-emblem-m.webp')}" srcset="${url('k-emblem-m.webp')} 1x, ${url('k-emblem.webp')} 2x" width="628" height="552" alt="" loading="lazy" decoding="async" /></div>
-      <div>
-        <div class="kicker" data-i18n="about">${t().about}</div>
-        <h2 class="about-name">Miranda Kuprava</h2>
-        <div class="about-role" data-i18n="artistRole">${t().artistRole}</div>
-        <div class="about-text">${t().aboutText.map((x) => `<p>${x}</p>`).join('')}</div>
-        <div class="about-actions">
-          <a class="btn" href="tel:+995599282806">+995599282806</a>
-          <a class="btn" href="mailto:miranda@kupravacreative.com">miranda@kupravacreative.com</a>
-          ${portfolioDoc ? `<a class="btn ghost" href="${url(portfolioDoc.pdf)}" download data-i18n="portfolio">${t().portfolio}</a>` : ''}
-        </div>
-      </div>
-    </div>`;
-  root.appendChild(about);
-
   const contact = document.createElement('section');
   contact.className = 'sec sec-contact';
   contact.id = 'contact';
@@ -308,7 +303,7 @@ function renderSections() {
 
 /* ---------------------------------------------------------------- language */
 function applyLang() {
-  document.documentElement.lang = { en: 'en', ge: 'ka', fr: 'fr', jp: 'ja' }[lang];
+  document.documentElement.lang = { en: 'en', ge: 'ka', fr: 'fr', zh: 'zh-CN', jp: 'ja' }[lang];
   document.body.dataset.lang = lang;
   $$('.langs button').forEach((b) => b.classList.toggle('on', b.dataset.lang === lang));
   $$('[data-i18n]').forEach((n) => { const v = t()[n.dataset.i18n]; if (typeof v === 'string') n.textContent = v; });
@@ -345,8 +340,7 @@ const burger = $('.burger');
 function renderMenu() {
   $('.menu-list').innerHTML = sections.map((s, i) => `
     <li style="--i:${i}"><a href="#${s.id}" data-id="${s.id}"><span class="m-num">${pad(i + 1)}</span><span class="m-title">${t().sections[s.id].title}</span></a></li>`).join('') +
-    `<li style="--i:${sections.length}"><a href="#about" data-id="about"><span class="m-num">✦</span><span class="m-title">${t().about}</span></a></li>` +
-    `<li style="--i:${sections.length + 1}"><a href="#contact" data-id="contact"><span class="m-num">↗</span><span class="m-title">${t().contact}</span></a></li>`;
+    `<li style="--i:${sections.length}"><a href="#contact" data-id="contact"><span class="m-num">↗</span><span class="m-title">${t().contact}</span></a></li>`;
   $$('.menu-list a').forEach((a) => {
     a.addEventListener('click', (e) => { e.preventDefault(); goTo(a.dataset.id); });
     a.addEventListener('pointerenter', () => {

@@ -98,6 +98,8 @@ main, .footer { position: relative; z-index: 2; }
 .m-title::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.45s var(--ease); }
 body[data-lang='ge'] .m-title, body[data-lang='jp'] .m-title { font-size: clamp(22px, min(3.2vw, 5.4vh), 46px); line-height: 1.3; }
 body[data-lang='ge'] .sec-title, body[data-lang='jp'] .sec-title { font-size: clamp(34px, 5vw, 84px); line-height: 1.15; }
+body[data-lang='zh'] { --serif: 'Noto Serif SC', 'Songti SC', serif; --sans: 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+body[data-lang='zh'] .sec-title, body[data-lang='zh'] .m-title { line-height: 1.2; }
 .menu-list a:hover .m-title, .menu-list a:focus-visible .m-title { transform: translateX(8px); color: #fff; text-shadow: var(--glow); }
 .menu-list a:hover .m-title::after, .menu-list a:focus-visible .m-title::after { transform: scaleX(1); }
 .menu-side { display: grid; gap: 40px; }
@@ -564,12 +566,15 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
 .proj-credit { margin: 0; font-size: 12px; letter-spacing: 0.06em; color: #ffb3a8; border-left: 1px solid var(--red); padding-left: 12px; }
 .sec-doc { grid-column: 2; max-width: 420px; margin-top: 8px; }
 .sec-about { padding-bottom: 4vh; }
-.about-grid { display: grid; grid-template-columns: minmax(180px, 0.8fr) 2fr; gap: 6vw; align-items: center; max-width: 1200px; }
-.about-k img { display: block; width: clamp(200px, 30vw, 440px); height: auto; margin: 0 auto; }
-.about-name { margin: 10px 0 4px; font-family: var(--serif); font-weight: 300; font-size: clamp(40px, 5vw, 80px); line-height: 1; }
+.about-grid { display: grid; grid-template-columns: minmax(240px, 0.82fr) 2fr; gap: 6vw; align-items: center; max-width: 1200px; }
+.about-portrait { position: relative; overflow: hidden; aspect-ratio: 3 / 4; max-height: 680px; border: 1px solid rgba(255,255,255,.16); background: #0a0808; }
+.about-portrait::after { position: absolute; inset: 45% 0 0; content: ''; background: linear-gradient(transparent, rgba(0,0,0,.2)); pointer-events: none; }
+.about-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 34%; filter: saturate(.82); }
+.about-name { margin: 0 0 4px; font-family: var(--serif); font-weight: 300; font-size: clamp(40px, 5vw, 80px); line-height: 1; }
 .about-role { font-size: 12px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--dim); margin-bottom: 26px; }
 .about-text p { margin: 0 0 14px; max-width: 62ch; color: var(--ink); font-size: clamp(15px, 1.15vw, 18px); }
-.about-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
+.about-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 26px; }
+.about-email { color: var(--dim); font-size: 13px; letter-spacing: .04em; }
 .sec-contact { min-height: 70svh; display: grid; align-items: center; }
 .contact-card { width: min(100%, 920px); margin: 0 auto; padding: clamp(32px, 7vw, 88px) clamp(20px, 5vw, 64px); text-align: center; border: 1px solid rgba(255, 90, 90, 0.2); background: radial-gradient(ellipse at 50% 0, rgba(255, 43, 43, 0.12), rgba(3, 1, 2, 0) 68%); box-shadow: 0 0 80px rgba(255, 43, 43, 0.08); }
 .contact-title { margin: 16px 0; font-family: var(--serif); font-size: clamp(38px, 7vw, 92px); font-weight: 300; line-height: 1; color: var(--ink); }
@@ -591,8 +596,8 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
 .btn.ghost { background: transparent; color: var(--ink); }
 .btn.ghost:hover { background: var(--red); color: #fff; }
 @media (max-width: 760px), (max-aspect-ratio: 1/1) {
-  .about-grid { grid-template-columns: 1fr; }
-  .about-k img { width: 220px; }
+  .about-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .about-portrait { width: min(100%, 390px); max-height: 480px; margin: 0 auto; }
   .sec-doc { grid-column: 1; }
   .scrolled .brand-mini { display: none; }
   .top-contact { margin-right: 12px; padding: 7px 9px; font-size: 9px; letter-spacing: 0.14em; }
