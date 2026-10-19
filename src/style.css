@@ -342,7 +342,7 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
 .artwork-detail-inner { width: min(1380px, 100%); margin: 0 auto; }
 .artwork-back { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 44px; color: var(--dim); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; transition: color 0.25s; }
 .artwork-back:hover { color: #fff; }
-.artwork-detail-head { max-width: 760px; margin-bottom: 38px; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9); }
+.artwork-detail-head { max-width: 760px; margin-bottom: 38px; padding: 14px 18px 20px; border-left: 1px solid rgba(255, 43, 43, 0.42); background: linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.74) 72%, rgba(0, 0, 0, 0.42)); text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9); }
 .artwork-detail-head .kicker { margin: 0 0 16px; }
 .artwork-detail-head h1 { margin: 0; font: 300 clamp(42px, 7vw, 86px)/0.98 var(--serif); }
 .artwork-description { max-width: 620px; margin: 24px 0 0; color: var(--dim); font: 400 19px/1.55 var(--serif); white-space: pre-line; }
@@ -698,4 +698,5 @@ body[data-lang='ge'] .pv-all, body[data-lang='jp'] .pv-all, body[data-lang='ge']
   .pv-cap { font-size: 12px; }
   .pv-hint { bottom: 16px; font-size: 9px; letter-spacing: 0.22em; }
 }
+
 
