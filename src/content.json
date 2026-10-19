@@ -2,6 +2,7 @@
  "sections": [
   {
    "id": "sculpture",
+   "workCount": 22,
    "doc": {
     "title": "Artworks Portfolio",
     "pdf": "docs/artworks-portfolio.pdf",
@@ -654,9 +655,12 @@
   },
   {
    "id": "public",
+   "workCount": 3,
    "projects": [
     {
      "title": "Ariadne",
+     "statusKey": "concept",
+     "text": "A public-art concept based on the Ariadne labyrinth. The location shown is proposal context, not a claim that the work has been realized.",
      "images": [
       {
        "src": "art/public-art/ariadne-labyrinth.png",
@@ -679,7 +683,8 @@
        "h": 941
       }
      ],
-     "status": "Competition Proposal · 2026",
+     "statusKey": "competitionProposal",
+     "statusYear": 2026,
      "location": "Amsterdam"
     },
     {
@@ -701,7 +706,8 @@
        "h": 1024
       }
      ],
-     "status": "Competition Proposal · 2026",
+     "statusKey": "competitionProposal",
+     "statusYear": 2026,
      "location": "Germany"
     }
    ]
@@ -805,7 +811,8 @@
       }
      ]
     }
-   ]
+   ],
+   "workCount": 0
   },
   {
    "id": "christmas",
@@ -1041,6 +1048,7 @@
    "projects": [
     {
      "title": "Merani",
+     "statusKey": "concept",
      "kicker": "Independent concept project · Merani",
      "text": "An independent sculptural concept inspired by Nikoloz Baratashvili’s poem “Merani”. The horse becomes an image of freedom, sacrifice and the courage to open an untrodden path. Original concept and hand-sculpted model by Miranda Kuprava.",
      "images": [
@@ -1066,6 +1074,7 @@
     },
     {
      "title": "Space Age",
+     "statusKey": "concept",
      "kicker": "Independent concept project · sculptural light installation",
      "text": "A sculptural concept for automotive environments, where light, orbital movement and architectural scale create a spatial experience. A festive lighting proposal explores a seasonal variation while preserving the sculpture’s form.",
      "images": [
@@ -1079,6 +1088,7 @@
     },
     {
      "title": "From One Root, Every Future",
+     "statusKey": "concept",
      "kicker": "Independent concept project · mobility sculpture",
      "text": "The tree becomes a spatial metaphor for movement and evolution: root as origin and energy, a central spine as intelligence, spiral roads as mobility, orbital nodes as transition, and upper air space where movement becomes three-dimensional. Road → intelligence → physical AI → flight.",
      "images": [
@@ -1098,6 +1108,7 @@
     },
     {
      "title": "Automotive Tree",
+     "statusKey": "concept",
      "kicker": "Independent concept project · automotive sculpture",
      "text": "A sculptural tree conceived as a dialogue between automotive engineering and seasonal ritual, designed for showroom and atrium scale.",
      "images": [
@@ -1266,9 +1277,229 @@
   },
   {
    "id": "melita",
+   "workCount": 0,
    "projects": [
     {
-     "title": "Drawings made real",
+     "title": "Children’s Park of Imagination",
+     "statusKey": "concept",
+     "credit": "Original idea and first drawings: Melita Iosava · Project author, artist and designer: Miranda Kuprava",
+     "text": "A concept for a children’s museum and park in Shanghai. The PDF presents a proposal and visualizations, not a built project.",
+     "images": [],
+     "doc": {
+      "title": "Children’s Park of Imagination",
+      "pdf": "docs/children-s-park-of-imagination.pdf",
+      "pages": [
+       {
+        "src": "docs/children-s-park-of-imagination/01.jpg",
+        "thumb": "docs/children-s-park-of-imagination/01-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/02.jpg",
+        "thumb": "docs/children-s-park-of-imagination/02-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/03.jpg",
+        "thumb": "docs/children-s-park-of-imagination/03-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/04.jpg",
+        "thumb": "docs/children-s-park-of-imagination/04-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/05.jpg",
+        "thumb": "docs/children-s-park-of-imagination/05-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/06.jpg",
+        "thumb": "docs/children-s-park-of-imagination/06-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/07.jpg",
+        "thumb": "docs/children-s-park-of-imagination/07-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/08.jpg",
+        "thumb": "docs/children-s-park-of-imagination/08-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/09.jpg",
+        "thumb": "docs/children-s-park-of-imagination/09-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/10.jpg",
+        "thumb": "docs/children-s-park-of-imagination/10-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/11.jpg",
+        "thumb": "docs/children-s-park-of-imagination/11-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/12.jpg",
+        "thumb": "docs/children-s-park-of-imagination/12-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/13.jpg",
+        "thumb": "docs/children-s-park-of-imagination/13-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/14.jpg",
+        "thumb": "docs/children-s-park-of-imagination/14-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/15.jpg",
+        "thumb": "docs/children-s-park-of-imagination/15-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/16.jpg",
+        "thumb": "docs/children-s-park-of-imagination/16-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/17.jpg",
+        "thumb": "docs/children-s-park-of-imagination/17-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/18.jpg",
+        "thumb": "docs/children-s-park-of-imagination/18-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/19.jpg",
+        "thumb": "docs/children-s-park-of-imagination/19-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/20.jpg",
+        "thumb": "docs/children-s-park-of-imagination/20-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/21.jpg",
+        "thumb": "docs/children-s-park-of-imagination/21-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/22.jpg",
+        "thumb": "docs/children-s-park-of-imagination/22-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/23.jpg",
+        "thumb": "docs/children-s-park-of-imagination/23-t.jpg"
+       },
+       {
+        "src": "docs/children-s-park-of-imagination/24.jpg",
+        "thumb": "docs/children-s-park-of-imagination/24-t.jpg"
+       }
+      ],
+      "sizeMB": 19.5
+     }
+    },
+    {
+     "title": "Pinocchio’s Library",
+     "statusKey": "concept",
+     "credit": "Original idea and initial drawings: Melita Iosava · Project author, artist and designer: Miranda Kuprava",
+     "text": "A library concept proposed for New York City. The drawings and visualizations document a proposal; the project is not presented as built or realized.",
+     "images": [],
+     "doc": {
+      "title": "Pinocchio’s Library",
+      "pdf": "docs/pinocchios-library.pdf",
+      "pages": [
+       {
+        "src": "docs/pinocchios-library/01.jpg",
+        "thumb": "docs/pinocchios-library/01-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/02.jpg",
+        "thumb": "docs/pinocchios-library/02-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/03.jpg",
+        "thumb": "docs/pinocchios-library/03-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/04.jpg",
+        "thumb": "docs/pinocchios-library/04-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/05.jpg",
+        "thumb": "docs/pinocchios-library/05-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/06.jpg",
+        "thumb": "docs/pinocchios-library/06-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/07.jpg",
+        "thumb": "docs/pinocchios-library/07-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/08.jpg",
+        "thumb": "docs/pinocchios-library/08-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/09.jpg",
+        "thumb": "docs/pinocchios-library/09-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/10.jpg",
+        "thumb": "docs/pinocchios-library/10-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/11.jpg",
+        "thumb": "docs/pinocchios-library/11-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/12.jpg",
+        "thumb": "docs/pinocchios-library/12-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/13.jpg",
+        "thumb": "docs/pinocchios-library/13-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/14.jpg",
+        "thumb": "docs/pinocchios-library/14-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/15.jpg",
+        "thumb": "docs/pinocchios-library/15-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/16.jpg",
+        "thumb": "docs/pinocchios-library/16-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/17.jpg",
+        "thumb": "docs/pinocchios-library/17-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/18.jpg",
+        "thumb": "docs/pinocchios-library/18-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/19.jpg",
+        "thumb": "docs/pinocchios-library/19-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/20.jpg",
+        "thumb": "docs/pinocchios-library/20-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/21.jpg",
+        "thumb": "docs/pinocchios-library/21-t.jpg"
+       },
+       {
+        "src": "docs/pinocchios-library/22.jpg",
+        "thumb": "docs/pinocchios-library/22-t.jpg"
+       }
+      ],
+      "sizeMB": 14.8
+     }
+    },
+    {
+     "title": "NINE LIVES",
+     "statusKey": "realizedWork",
+     "credit": "Ideas and drawings: Melita Iosava · Artworks: Miranda Kuprava",
+     "text": "A collaborative project by Miranda Kuprava and Melita Iosava.",
+     "images": []
+    },
+    {
+     "title": "Selected collaboration works and process images",
      "kicker": "Miranda Kuprava × Melita Iosava",
      "credit": "Ideas and drawings: Melita Iosava · Artworks: Miranda Kuprava",
      "images": [

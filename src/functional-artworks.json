@@ -158,41 +158,45 @@
       "title": "BLACK CAT",
       "group": "INTERIOR ART OBJECTS",
       "section": "INTERIOR ART OBJECTS",
+      "description": {
+        "en": "A tall, elegant cat figure with a minimalist and monumental form. The glossy black surface reflects light, while the bowtie and luminous jewel create a quiet, enigmatic presence.",
+        "ge": "მაღალი და ელეგანტური კატის ფიგურა, მინიმალისტური და მონუმენტური ფორმით. პრიალა შავი ზედაპირი ირეკლავს სინათლეს, ხოლო ბაფთა და მანათობელი ქვა მშვიდ, იდუმალ შთაბეჭდილებას ქმნის.",
+        "fr": "Une grande silhouette de chat élégante, à la forme minimaliste et monumentale. Sa surface noire brillante reflète la lumière, tandis que le nœud papillon et la pierre lumineuse créent une présence discrète et énigmatique.",
+        "zh": "一尊高挑优雅的猫形雕塑，造型简约而具有纪念碑般的气势。光亮的黑色表面映照光线，领结与发光宝石带来静谧而神秘的气息。"
+      },
+      "materials": {
+        "en": "Fiberglass",
+        "ge": "მინაბოჭკო",
+        "fr": "Fibre de verre",
+        "zh": "玻璃钢"
+      },
+      "dimensions": {
+        "en": "Height: 138 cm",
+        "ge": "სიმაღლე: 138 სმ",
+        "fr": "Hauteur : 138 cm",
+        "zh": "高度：138 厘米"
+      },
+      "price": "USD 8,500",
       "images": [
         {
-          "src": "art/functional-replacement/black-cat/01-B3550728-A242-4ACE-822A-F77FE80389FA.jpeg",
-          "thumb": "art/functional-replacement/black-cat/01-B3550728-A242-4ACE-822A-F77FE80389FA.jpeg",
-          "alt": "BLACK CAT — view 1"
+          "src": "art/functional-replacement/black-cat/04-B58D268C-88D6-4450-88E4-C95FBD8BEED0-5-.jpeg",
+          "thumb": "art/functional-replacement/black-cat/04-B58D268C-88D6-4450-88E4-C95FBD8BEED0-5-.jpeg",
+          "alt": "BLACK CAT — clean full view"
         },
         {
           "src": "art/functional-replacement/black-cat/02-456198C6-C77D-489F-8CF3-086FF5DB63A4-5-.jpeg",
           "thumb": "art/functional-replacement/black-cat/02-456198C6-C77D-489F-8CF3-086FF5DB63A4-5-.jpeg",
-          "alt": "BLACK CAT — view 2"
+          "alt": "BLACK CAT — close-up view"
         },
         {
           "src": "art/functional-replacement/black-cat/03-903DE2C6-D825-4F88-9941-30923E512ED3-4-.jpeg",
           "thumb": "art/functional-replacement/black-cat/03-903DE2C6-D825-4F88-9941-30923E512ED3-4-.jpeg",
-          "alt": "BLACK CAT — view 3"
-        },
-        {
-          "src": "art/functional-replacement/black-cat/04-B58D268C-88D6-4450-88E4-C95FBD8BEED0-5-.jpeg",
-          "thumb": "art/functional-replacement/black-cat/04-B58D268C-88D6-4450-88E4-C95FBD8BEED0-5-.jpeg",
-          "alt": "BLACK CAT — view 4"
+          "alt": "BLACK CAT — contextual view"
         },
         {
           "src": "art/functional-replacement/black-cat/05-C6C47BCB-C079-485B-8C1F-BCF835ED3651-2-.jpeg",
           "thumb": "art/functional-replacement/black-cat/05-C6C47BCB-C079-485B-8C1F-BCF835ED3651-2-.jpeg",
           "alt": "BLACK CAT — view 5"
-        },
-        {
-          "src": "art/functional-replacement/black-cat/06-a_clean_editorial_studio_product_portfolio_layout.png",
-          "thumb": "art/functional-replacement/black-cat/06-a_clean_editorial_studio_product_portfolio_layout.png",
-          "alt": "BLACK CAT — view 6"
-        },
-        {
-          "src": "art/functional-replacement/black-cat/07-a_polished_high_end_product_catalog_layout_advert.png",
-          "thumb": "art/functional-replacement/black-cat/07-a_polished_high_end_product_catalog_layout_advert.png",
-          "alt": "BLACK CAT — view 7"
         }
       ]
     },
@@ -332,6 +336,7 @@
       "title": "PERSEPHONE",
       "group": "SCULPTURAL CHANDELIERS",
       "section": "SCULPTURAL CHANDELIERS",
+      "edition": "Limited Edition of 18",
       "dimensions": "Ø 100 cm; 45 cm body; adjustable drop 30–60 cm",
       "materials": "Ceiling canopy Ø 12 cm; burgundy textile cable; antique brass chain; E27 socket / LED bulb E27; hand-painted ceramic elements",
       "images": [
@@ -462,6 +467,7 @@
       "title": "CASCATA",
       "group": "SCULPTURAL CHANDELIERS",
       "section": "SCULPTURAL CHANDELIERS",
+      "edition": "Limited Edition of 18",
       "dimensions": "Ø 80 cm; adjustable 120 cm",
       "materials": "E14 socket, max 40 W / LED compatible; glass beads; crystal drop; antique brass frame; 1980s sawdust balls (5 cm); pressed paper, foil, rubber bands and paper disk",
       "images": [
@@ -477,6 +483,7 @@
       "title": "ONDA",
       "group": "SCULPTURAL CHANDELIERS",
       "section": "SCULPTURAL CHANDELIERS",
+      "edition": "Limited Edition of 18",
       "dimensions": "120 × 60 cm",
       "images": [
         {
@@ -491,6 +498,7 @@
       "title": "WALL SCONCES",
       "group": "INTERIOR ART OBJECTS",
       "section": "INTERIOR ART OBJECTS",
+      "edition": "Unlimited Edition",
       "images": [
         {
           "src": "art/functional-replacement/wall-sconces/01-C439B8AF-C523-431F-92F1-896D60D1860C-2-.jpeg",

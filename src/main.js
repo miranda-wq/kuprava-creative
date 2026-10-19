@@ -26,6 +26,10 @@ let lang = 'en';
 try { lang = localStorage.getItem('kc-lang') || 'en'; } catch {}
 if (!LANGS.includes(lang)) lang = 'en';
 const t = () => T[lang];
+const projectStatus = (project) => project.statusKey
+  ? `${t().statuses[project.statusKey]}${project.statusYear ? ` · ${project.statusYear}` : ''}`
+  : (project.status || '');
+const projectField = (project, key) => t().projectCopy?.[slugFor(project)]?.[key] ?? project[key];
 
 const sections = ORDER.map((id) => content.sections.find((s) => s.id === id));
 
@@ -63,44 +67,78 @@ let detailGalleryIndex = null;
 
 const escapeHTML = (value = '') => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 const slugFor = (project) => project.key || project.title.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const localizedArtworkValue = (value) => value && typeof value === 'object' ? (value[lang] || value.en || '') : value;
+const homeSeo = {
+  title: document.title,
+  description: document.querySelector('meta[name="description"]')?.content || '',
+  image: document.querySelector('meta[property="og:image"]')?.content || '',
+};
+function setSeo({ title, description, canonical, image }) {
+  document.title = title;
+  const setContent = (selector, value) => {
+    const node = document.querySelector(selector);
+    if (node && value) node.setAttribute('content', value);
+  };
+  setContent('meta[name="description"]', description);
+  setContent('meta[property="og:title"]', title);
+  setContent('meta[property="og:description"]', description);
+  setContent('meta[property="og:url"]', canonical);
+  setContent('meta[property="og:image"]', image);
+  setContent('meta[property="og:image:alt"]', title);
+  setContent('meta[name="twitter:title"]', title);
+  setContent('meta[name="twitter:description"]', description);
+  setContent('meta[name="twitter:image"]', image);
+  const canonicalLink = document.querySelector('link[rel="canonical"]');
+  if (canonicalLink && canonical) canonicalLink.href = canonical;
+}
 const getArtworkRecords = () => {
   return functionalProducts.map((project) => ({
     ...project,
     key: project.slug,
     category: project.group,
-    productionTime: undefined,
     status: 'published',
   }));
 };
+const getProjectRecords = () => content.sections
+  .filter((section) => section.id !== 'outdoor')
+  .flatMap((section) => (section.projects || []).map((project) => ({
+    ...project,
+    slug: slugFor(project),
+    sectionId: section.id,
+    category: t().sections[section.id].title,
+  })));
 
 function renderArtworkPage(slug) {
   const record = getArtworkRecords().find((artwork) => artwork.slug === slug);
   if (!record || record.status !== 'published') return false;
   const images = record.images;
+  const artworkUrl = `${location.origin}/artwork/${record.slug}/`;
   if (detailGalleryIndex !== null) galleries[detailGalleryIndex] = { title: record.title, images };
   else detailGalleryIndex = galleries.push({ title: record.title, images }) - 1;
   const imageAlt = (image, index) => image.alt || `${record.title}, view ${index + 1}`;
-  const inquiryBody = `Hello KUPRAVA CREATIVE,\n\nI would like to inquire about ${record.title}.\n\nArtwork: ${record.title}\nCategory: ${record.category}\nWebsite: ${location.origin}${location.pathname}#artwork/${record.slug}`;
+  const inquiryBody = `Hello KUPRAVA CREATIVE,\n\nI would like to inquire about ${record.title}.\n\nArtwork: ${record.title}\nCategory: ${record.category}\nWebsite: ${artworkUrl}`;
+  const label = (key) => t().artworkFields[key];
+  const description = localizedArtworkValue(record.description || record.text);
   const fields = [
-    ['Artist', 'Miranda Kuprava'], ['Brand', 'KUPRAVA CREATIVE'], ['Category', record.category], ['Type', record.type], ['Materials', record.materials], ['Dimensions', record.dimensions],
-    ['Edition', record.edition], ['Availability', record.availability], ['Production Time', record.productionTime], ['Installation', record.installationRequirements],
-  ].filter(([, value]) => value);
+    ['artist', 'Miranda Kuprava'], ['brand', 'KUPRAVA CREATIVE'], ['category', record.category], ['type', localizedArtworkValue(record.type)], ['materials', localizedArtworkValue(record.materials)], ['dimensions', localizedArtworkValue(record.dimensions)],
+    ['year', localizedArtworkValue(record.year)], ['price', localizedArtworkValue(record.price)], ['edition', localizedArtworkValue(record.edition)], ['availability', localizedArtworkValue(record.availability)], ['productionTime', localizedArtworkValue(record.productionTime)], ['installation', localizedArtworkValue(record.installationRequirements)],
+  ].filter(([, value]) => value).map(([key, value]) => [label(key), value]);
   artworkView.innerHTML = `
     <div class="artwork-detail-inner">
-      <a class="artwork-back" href="#functional">← <span>Back to Functional Art</span></a>
+      <a class="artwork-back" href="/#functional">← <span>${t().artworkBack}</span></a>
       <header class="artwork-detail-head">
         <p class="kicker">${escapeHTML(record.category)}</p>
         <h1>${escapeHTML(record.title)}</h1>
-        ${(record.description || record.text) ? `<p class="artwork-description">${escapeHTML(record.description || record.text)}</p>` : ''}
+        ${description ? `<p class="artwork-description">${escapeHTML(description)}</p>` : ''}
       </header>
-      ${images.length ? `<button class="artwork-main-image" type="button" data-artwork-image="0" aria-label="Enlarge ${escapeHTML(record.title)}">
+      ${images.length ? `<button class="artwork-main-image" type="button" data-artwork-image="0" aria-label="${escapeHTML(t().viewArtwork)}: ${escapeHTML(record.title)}">
         ${imgTag(images[0], imageAlt(images[0], 0), 'artwork-main-photo')}
       </button>` : ''}
-      ${images.length > 1 ? `<div class="artwork-thumbnails" aria-label="Artwork photographs">${images.map((image, index) => `
-        <button class="artwork-thumb" type="button" data-artwork-image="${index}" aria-label="View ${escapeHTML(imageAlt(image, index))}">${imgTag(image, imageAlt(image, index))}</button>`).join('')}</div>` : ''}
+      ${images.length > 1 ? `<div class="artwork-thumbnails" aria-label="${escapeHTML(t().viewArtwork)}: ${escapeHTML(record.title)}">${images.map((image, index) => `
+        <button class="artwork-thumb" type="button" data-artwork-image="${index}" aria-label="${escapeHTML(t().viewArtwork)} ${escapeHTML(imageAlt(image, index))}">${imgTag(image, imageAlt(image, index))}</button>`).join('')}</div>` : ''}
       <div class="artwork-detail-bottom">
         ${fields.length ? `<dl class="artwork-information">${fields.map(([label, value]) => `<div><dt>${escapeHTML(label)}</dt><dd>${escapeHTML(value)}</dd></div>`).join('')}</dl>` : ''}
-        <a class="artwork-inquiry" href="mailto:miranda@kupravacreative.com?subject=${encodeURIComponent(`Inquiry about ${record.title}`)}&body=${encodeURIComponent(inquiryBody)}">INQUIRE ABOUT THIS WORK <span aria-hidden="true">↗</span></a>
+        <a class="artwork-inquiry" href="mailto:Miranda@kupravacreative.com?subject=${encodeURIComponent(`Inquiry about ${record.title}`)}&body=${encodeURIComponent(inquiryBody)}">${t().inquireWork} <span aria-hidden="true">↗</span></a>
       </div>
     </div>`;
   const mainPhoto = $('.artwork-main-photo', artworkView);
@@ -108,22 +146,81 @@ function renderArtworkPage(slug) {
     mainPhoto.src = url(images[0].src);
     mainPhoto.removeAttribute('data-full');
   }
+  setSeo({
+    title: `${record.title} · KUPRAVA CREATIVE`,
+    description: description || `${record.title} — functional artwork by Miranda Kuprava, KUPRAVA CREATIVE.`,
+    canonical: artworkUrl,
+    image: `${location.origin}${url(images[0]?.src || 'art/sculpture/incitatus-02.jpg')}`,
+  });
   document.body.classList.add('artwork-open');
   $$('.artwork-detail [data-artwork-image]').forEach((button) => button.addEventListener('click', () => openLightbox(detailGalleryIndex, +button.dataset.artworkImage)));
   window.scrollTo({ top: 0, behavior: 'instant' });
   return true;
 }
 
+function renderProjectPage(sectionId, slug) {
+  const record = getProjectRecords().find((project) => project.sectionId === sectionId && project.slug === slug);
+  if (!record) return false;
+  const images = record.images || [];
+  const description = projectField(record, 'text') || '';
+  const credit = projectField(record, 'credit') || '';
+  const kicker = projectField(record, 'kicker') || record.category;
+  if (images.length) {
+    if (detailGalleryIndex !== null) galleries[detailGalleryIndex] = { sectionId, title: record.title, images };
+    else detailGalleryIndex = galleries.push({ sectionId, title: record.title, images }) - 1;
+  }
+  const projectUrl = `${location.origin}/work/${sectionId}/${slug}/`;
+  const inquiryBody = `Hello KUPRAVA CREATIVE,\n\nI would like to inquire about ${record.title}.\n\nProject: ${record.title}\nCategory: ${record.category}\nWebsite: ${projectUrl}`;
+  artworkView.innerHTML = `
+    <div class="artwork-detail-inner">
+      <a class="artwork-back" href="/#${sectionId}">← <span>${t().back}</span></a>
+      <header class="artwork-detail-head">
+        <p class="kicker">${escapeHTML(kicker)}</p>
+        <h1>${escapeHTML(record.title)}</h1>
+        ${record.statusKey ? `<p class="proj-status">${escapeHTML(projectStatus(record))}</p>` : ''}
+        ${record.location ? `<p class="proj-location">${escapeHTML(record.location)}</p>` : ''}
+        ${description ? `<p class="artwork-description">${escapeHTML(description)}</p>` : ''}
+        ${credit ? `<p class="proj-credit">${escapeHTML(credit)}</p>` : ''}
+      </header>
+      ${images.length ? `<button class="artwork-main-image" type="button" data-artwork-image="0" aria-label="${escapeHTML(t().viewArtwork)}: ${escapeHTML(record.title)}">
+        ${imgTag(images[0], images[0].alt || record.title, 'artwork-main-photo')}
+      </button>` : ''}
+      ${images.length > 1 ? `<div class="artwork-thumbnails" aria-label="${escapeHTML(record.title)} photographs">${images.map((image, index) => `
+        <button class="artwork-thumb" type="button" data-artwork-image="${index}" aria-label="${escapeHTML(t().viewArtwork)} ${index + 1}">${imgTag(image, image.alt || `${record.title}, view ${index + 1}`)}</button>`).join('')}</div>` : ''}
+      ${record.doc ? `<div class="artwork-project-document">${docCard(record.doc)}</div>` : ''}
+      <a class="artwork-inquiry" href="mailto:Miranda@kupravacreative.com?subject=${encodeURIComponent(`Inquiry about ${record.title}`)}&body=${encodeURIComponent(inquiryBody)}">${t().inquireWork} <span aria-hidden="true">↗</span></a>
+    </div>`;
+  const mainPhoto = $('.artwork-main-photo', artworkView);
+  if (mainPhoto) { mainPhoto.src = url(images[0].src); mainPhoto.removeAttribute('data-full'); }
+  setSeo({
+    title: `${record.title} · KUPRAVA CREATIVE`,
+    description: description || `${record.title} — selected project by Georgian artist Miranda Kuprava, KUPRAVA CREATIVE.`,
+    canonical: projectUrl,
+    image: `${location.origin}${url(images[0]?.src || record.doc?.pages?.[0]?.src || 'art/sculpture/incitatus-02.jpg')}`,
+  });
+  document.body.classList.add('artwork-open');
+  $$('.artwork-detail [data-artwork-image]').forEach((button) => button.addEventListener('click', () => openLightbox(detailGalleryIndex, +button.dataset.artworkImage)));
+  $('.artwork-detail .doc')?.addEventListener('click', (event) => openDoc(event.currentTarget.dataset.doc));
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  return true;
+}
+
 function syncArtworkRoute() {
-  const match = location.hash.match(/^#artwork\/([a-z0-9-]+)$/i);
-  if (!match) {
+  const productPath = location.pathname.match(/^\/artwork\/([a-z0-9-]+)\/?$/i);
+  const projectPath = location.pathname.match(/^\/work\/([a-z0-9-]+)\/([a-z0-9-]+)\/?$/i);
+  const legacyProduct = location.hash.match(/^#artwork\/([a-z0-9-]+)$/i);
+  if (!productPath && !projectPath && !legacyProduct) {
     document.body.classList.remove('artwork-open');
     artworkView.replaceChildren();
+    setSeo({ title: homeSeo.title, description: homeSeo.description, canonical: 'https://kupravacreative.com/', image: homeSeo.image });
     return;
   }
-  if (draftArtworkSlugs.has(match[1].toLowerCase()) || !renderArtworkPage(match[1].toLowerCase())) {
-    // Drafts are intentionally not routable until their approved photography is added.
-    history.replaceState(null, '', '#functional');
+  const valid = projectPath
+    ? renderProjectPage(projectPath[1].toLowerCase(), projectPath[2].toLowerCase())
+    : !draftArtworkSlugs.has((productPath || legacyProduct)[1].toLowerCase()) && renderArtworkPage((productPath || legacyProduct)[1].toLowerCase());
+  if (!valid) {
+    if (location.pathname.startsWith('/work/') || location.pathname.startsWith('/artwork/')) location.replace('/#functional');
+    else history.replaceState(null, '', '#functional');
     document.body.classList.remove('artwork-open');
     artworkView.replaceChildren();
   }
@@ -137,13 +234,16 @@ function imgTag(im, alt, cls = '') {
 
 function docCard(d) {
   const cover = d.pages[0];
+  const isPortfolio = d.pdf === portfolioDoc?.pdf;
+  const cta = isPortfolio ? t().viewProposal : t().viewPdf;
+  const ctaKey = isPortfolio ? 'viewProposal' : 'viewPdf';
   return `
     <button class="doc" data-doc="${d.pdf}">
       <span class="doc-cover">${imgTag(cover, d.title)}</span>
       <span class="doc-meta">
         <span class="doc-kind">PDF · ${d.pages.length} <span data-i18n="pages">${t().pages}</span> · ${d.sizeMB} MB</span>
         <span class="doc-title">${d.title}</span>
-        <span class="doc-cta"><span data-i18n="viewProposal">${t().viewProposal}</span> <i>→</i></span>
+        <span class="doc-cta"><span data-i18n="${ctaKey}">${cta}</span> <i>→</i></span>
       </span>
     </button>`;
 }
@@ -167,7 +267,7 @@ function renderSections() {
         <h2 class="sec-title" data-sec-title="${s.id}">${t().sections[s.id].title}</h2>
         ${t().sections[s.id].subtitle ? `<p class="sec-subtitle" data-sec-subtitle="${s.id}">${t().sections[s.id].subtitle}</p>` : ''}
         <p class="sec-intro" data-sec-intro="${s.id}">${t().sections[s.id].intro}</p>
-        ${s.id === 'brand' ? `<ul class="commission-services" data-commission-services>${t().commissionServices.map((item) => `<li>${item}</li>`).join('')}</ul>` : ''}
+        ${s.id === 'brand' ? `<ul class="commission-services" data-commission-services>${t().commissionServices.map((item) => `<li>${item}</li>`).join('')}</ul><p class="commission-brief" data-i18n="commissionBrief">${t().commissionBrief}</p><a class="btn commission-discuss" data-i18n="commissionDiscuss" href="mailto:Miranda@kupravacreative.com?subject=${encodeURIComponent(t().commissionEmailSubject)}&body=${encodeURIComponent(t().commissionEmailBody)}">${t().commissionDiscuss}</a>` : ''}
         ${total > 0 ? `<div class="sec-count">${total} <span data-i18n="works">${t().works}</span></div>` : ''}
         ${s.doc ? `<div class="sec-doc">${docCard(s.doc)}</div>` : ''}
       </header>`;
@@ -188,7 +288,7 @@ function renderSections() {
             <div class="about-actions">
               <a class="btn" href="${url('cv/miranda-kuprava-cv.pdf')}" download data-i18n="downloadCv">${t().downloadCv}</a>
               <a class="btn ghost" href="#brand" data-i18n="commissionLink">${t().commissionLink}</a>
-              <a class="about-email" href="mailto:miranda@kupravacreative.com">miranda@kupravacreative.com</a>
+              <a class="about-email" href="mailto:Miranda@kupravacreative.com">Miranda@kupravacreative.com</a>
             </div>
           </div>
         </div>`;
@@ -200,7 +300,7 @@ function renderSections() {
         html += `
           <figure class="work reveal" data-gallery="${gi}" data-idx="0" style="--d:${(pi % 4) * 70}ms">
             <div class="work-img">${imgTag(p.images[0], p.title)}</div>
-            <figcaption><span class="w-num">${pad(pi + 1)}</span><span class="w-title">${p.title}</span>${p.images.length > 1 ? `<span class="w-n">${p.images.length}</span>` : ''}</figcaption>
+            <figcaption><span class="w-num">${pad(pi + 1)}</span><a class="w-title work-page-link" href="/work/sculpture/${slugFor(p)}/">${escapeHTML(p.title)}</a>${p.images.length > 1 ? `<span class="w-n">${p.images.length}</span>` : ''}</figcaption>
           </figure>`;
       });
       html += `</div>`;
@@ -214,7 +314,7 @@ function renderSections() {
           const artwork = { ...p, key: p.slug };
           (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images, key: p.slug, slug: p.slug });
           const cover = p.images?.[0];
-          html += `<article class="functional-art-card reveal" style="--d:${(pi % 4) * 70}ms"><a href="#artwork/${p.slug}" aria-label="View ${escapeHTML(p.title)}"><div class="functional-art-image">${cover ? imgTag(cover, cover.alt || p.title) : '<span class="functional-art-placeholder" aria-hidden="true"></span>'}</div><div class="functional-art-meta"><span class="functional-art-title">${escapeHTML(p.title)}</span><span class="functional-art-arrow" aria-hidden="true">↗</span></div>${p.edition ? `<span class="functional-art-edition">${escapeHTML(p.edition)}</span>` : ''}</a></article>`;
+          html += `<article class="functional-art-card reveal" style="--d:${(pi % 4) * 70}ms"><a href="/artwork/${p.slug}/" aria-label="${escapeHTML(t().viewArtwork)}: ${escapeHTML(p.title)}"><div class="functional-art-image">${cover ? imgTag(cover, cover.alt || p.title) : '<span class="functional-art-placeholder" aria-hidden="true"></span>'}</div><div class="functional-art-meta"><span class="functional-art-title">${escapeHTML(p.title)}</span><span class="functional-art-arrow" aria-hidden="true">↗</span></div>${p.edition ? `<span class="functional-art-edition">${escapeHTML(p.edition)}</span>` : ''}</a></article>`;
         });
         html += `</div></section>`;
       });
@@ -236,26 +336,32 @@ function renderSections() {
                   </div>
                 </section>`).join('')}
             </div>
+            <a class="artwork-card-link" href="/work/spaces/${slugFor(p)}/">${t().viewArtwork} <span aria-hidden="true">↗</span></a>
           </article>`;
       });
     } else {
       s.projects.forEach((p) => {
-        const gi = galleries.push({ sectionId: s.id, title: p.title, kicker: p.kicker, status: p.status, location: p.location, images: p.images, doc: p.doc }) - 1;
+        const status = projectStatus(p);
+        const kicker = projectField(p, 'kicker');
+        const credit = projectField(p, 'credit');
+        const text = projectField(p, 'text');
+        const gi = galleries.push({ sectionId: s.id, title: p.title, kicker, status, statusKey: p.statusKey, statusYear: p.statusYear, location: p.location, images: p.images, doc: p.doc }) - 1;
         (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images });
         if (p.doc) docs[p.doc.pdf] = p.doc;
         const sub = s.id === 'functional' && p.key && t().functionalSubs[p.key];
         const many = p.images.length > 12;
         html += `
-          <article class="proj" ${p.key ? `id="fa-${p.key}"` : ''}>
+          <article class="proj" data-project-slug="${slugFor(p)}" ${p.key ? `id="fa-${p.key}"` : ''}>
             <div class="proj-meta reveal">
-              ${p.kicker ? `<div class="kicker">${p.kicker}</div>` : ''}
+              ${kicker ? `<div class="kicker" data-project-copy="kicker">${escapeHTML(kicker)}</div>` : ''}
               <h3>${p.title}</h3>
-              ${s.id === 'functional' ? `<a class="artwork-card-link" href="#artwork/${slugFor(p)}">View artwork <span aria-hidden="true">↗</span></a>` : ''}
-              ${p.status ? `<p class="proj-status">${p.status}</p>` : ''}
+              ${s.id === 'functional' ? `<a class="artwork-card-link" href="/artwork/${slugFor(p)}/">${t().viewArtwork} <span aria-hidden="true">↗</span></a>` : ''}
+              ${status ? `<p class="proj-status" ${p.statusKey ? `data-project-status="${p.statusKey}" data-status-year="${p.statusYear || ''}"` : ''}>${status}</p>` : ''}
               ${p.location ? `<p class="proj-location">${p.location}</p>` : ''}
               ${sub ? `<p class="proj-sub" data-fa="${p.key}">${sub}</p>` : ''}
-              ${p.credit ? `<p class="proj-credit">${p.credit}</p>` : ''}
-              ${p.text ? `<p class="proj-text">${p.text}</p>` : ''}
+              ${credit ? `<p class="proj-credit" data-project-copy="credit">${escapeHTML(credit)}</p>` : ''}
+              ${text ? `<p class="proj-text" data-project-copy="text">${escapeHTML(text)}</p>` : ''}
+              ${s.id !== 'outdoor' ? `<a class="artwork-card-link" href="/work/${s.id}/${slugFor(p)}/">${t().viewArtwork} <span aria-hidden="true">↗</span></a>` : ''}
               ${p.doc ? docCard(p.doc) : ''}
             </div>
             <div class="gallery ${many ? 'is-clamped' : ''}">
@@ -287,12 +393,13 @@ function renderSections() {
           <a href="mailto:akvirikashvili2026@gmail.com">akvirikashvili2026@gmail.com</a>
         </div>
       </div>
-      <a class="contact-email" href="mailto:miranda@kupravacreative.com"><span>miranda@kupravacreative.com</span><i aria-hidden="true">↗</i></a>
+      <a class="contact-email" href="mailto:Miranda@kupravacreative.com"><span>Miranda@kupravacreative.com</span><i aria-hidden="true">↗</i></a>
     </div>`;
   root.appendChild(contact);
 
   $$('.gallery .more').forEach((b) => b.addEventListener('click', () => { b.parentElement.classList.remove('is-clamped'); b.remove(); }));
   $$('[data-gallery]').forEach((f) => f.addEventListener('click', () => openLightbox(+f.dataset.gallery, +f.dataset.idx)));
+  $$('.work-page-link').forEach((a) => a.addEventListener('click', (event) => event.stopPropagation()));
   $$('.doc').forEach((b) => b.addEventListener('click', () => openDoc(b.dataset.doc)));
   $$('.subnav a').forEach((a) => a.addEventListener('click', (e) => {
     e.preventDefault();
@@ -307,12 +414,20 @@ function applyLang() {
   document.body.dataset.lang = lang;
   $$('.langs button').forEach((b) => b.classList.toggle('on', b.dataset.lang === lang));
   $$('[data-i18n]').forEach((n) => { const v = t()[n.dataset.i18n]; if (typeof v === 'string') n.textContent = v; });
+  const commissionLink = $('.commission-discuss');
+  if (commissionLink) commissionLink.href = `mailto:Miranda@kupravacreative.com?subject=${encodeURIComponent(t().commissionEmailSubject)}&body=${encodeURIComponent(t().commissionEmailBody)}`;
   $$('.tl1').forEach((n) => (n.textContent = t().tagline[0]));
   $$('.tl2').forEach((n) => (n.textContent = t().tagline[1]));
   $$('[data-sec-title]').forEach((n) => (n.textContent = t().sections[n.dataset.secTitle].title));
   $$('[data-sec-subtitle]').forEach((n) => (n.textContent = t().sections[n.dataset.secSubtitle].subtitle));
   $$('[data-sec-intro]').forEach((n) => (n.textContent = t().sections[n.dataset.secIntro].intro));
   $$('[data-sec-closing]').forEach((n) => (n.textContent = t().sections[n.dataset.secClosing].closing));
+  $$('[data-project-copy]').forEach((n) => {
+    const slug = n.closest('[data-project-slug]')?.dataset.projectSlug;
+    const value = slug ? t().projectCopy?.[slug]?.[n.dataset.projectCopy] : null;
+    if (value) n.textContent = value;
+  });
+  $$('.proj-status[data-project-status]').forEach((n) => { n.textContent = projectStatus({ statusKey: n.dataset.projectStatus, statusYear: n.dataset.statusYear }); });
   const services = $('[data-commission-services]');
   if (services) services.replaceChildren(...t().commissionServices.map((label) => {
     const item = document.createElement('li');
@@ -327,6 +442,8 @@ function applyLang() {
   renderOrbitList();
   renderRail();
   planetView.refresh();
+  if (lb.classList.contains('open')) showLB();
+  if (location.pathname.match(/^\/(?:artwork\/[a-z0-9-]+|work\/[a-z0-9-]+\/[a-z0-9-]+)\/?$/i) || location.hash.match(/^#artwork\/[a-z0-9-]+$/i)) syncArtworkRoute();
 }
 $$('.langs button').forEach((b) => b.addEventListener('click', () => {
   lang = b.dataset.lang;
@@ -392,7 +509,7 @@ function showLB() {
   lbImg.alt = `${g.title} ${cur.i + 1}`;
   $('.lb-kicker').textContent = g.kicker || '';
   $('.lb-name').textContent = g.title;
-  $('.lb-status').textContent = g.status || '';
+  $('.lb-status').textContent = g.statusKey ? projectStatus(g) : (g.status || '');
   $('.lb-location').textContent = g.location || '';
   $('.lb-count').textContent = `${pad(cur.i + 1)} / ${pad(g.images.length)}`;
   const pdf = $('.lb-pdf');
@@ -471,13 +588,13 @@ function planetItems(id, cap) {
 const planetView = createPlanetView({
   items: planetItems,
   planet: (id) => hero.planet(id),
-  openItem: (it) => it.sectionId === 'functional' && it.projectSlug ? (location.hash = `#artwork/${it.projectSlug}`) : openLightbox(it.gi, it.idx),
+  openItem: (it) => it.sectionId === 'functional' && it.projectSlug ? (location.href = `/artwork/${it.projectSlug}/`) : openLightbox(it.gi, it.idx),
   toSection: goTo,
   strings: t,
   order: ORDER,
   total: (id) => {
     const section = sections.find((s) => s.id === id);
-    return section?.workCount ?? (['christmas', 'kinetic'].includes(id) ? (sectionWorks[id] || []).length : (sectionWorks[id] || []).reduce((a, p) => a + p.images.length, 0));
+  return section?.workCount ?? (['christmas', 'kinetic'].includes(id) ? (sectionWorks[id] || []).length : (sectionWorks[id] || []).reduce((a, p) => a + p.images.length, 0));
   },
   covered: () => lb.classList.contains('open'),
 });
