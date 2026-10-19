@@ -44,6 +44,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 @keyframes grain { 0% { transform: translate(0, 0); } 33% { transform: translate(-3%, 2%); } 66% { transform: translate(2%, -3%); } 100% { transform: translate(0, 0); } }
 
 main, .footer { position: relative; z-index: 2; }
+.artwork-open #cosmos { opacity: 0.36; transition: opacity 0.4s ease; }
 
 /* ---------------------------------------------------------------- loader */
 .loader { position: fixed; inset: 0; z-index: 100; background: var(--bg); display: grid; place-items: center; align-content: center; gap: 22px; transition: opacity 1.2s var(--ease), visibility 1.2s; }
@@ -341,7 +342,7 @@ body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: nor
 .artwork-detail-inner { width: min(1380px, 100%); margin: 0 auto; }
 .artwork-back { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 44px; color: var(--dim); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; transition: color 0.25s; }
 .artwork-back:hover { color: #fff; }
-.artwork-detail-head { max-width: 760px; margin-bottom: 38px; }
+.artwork-detail-head { max-width: 760px; margin-bottom: 38px; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9); }
 .artwork-detail-head .kicker { margin: 0 0 16px; }
 .artwork-detail-head h1 { margin: 0; font: 300 clamp(42px, 7vw, 86px)/0.98 var(--serif); }
 .artwork-description { max-width: 620px; margin: 24px 0 0; color: var(--dim); font: 400 19px/1.55 var(--serif); white-space: pre-line; }
@@ -697,3 +698,4 @@ body[data-lang='ge'] .pv-all, body[data-lang='jp'] .pv-all, body[data-lang='ge']
   .pv-cap { font-size: 12px; }
   .pv-hint { bottom: 16px; font-size: 9px; letter-spacing: 0.22em; }
 }
+
