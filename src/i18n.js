@@ -44,6 +44,22 @@ export const T = {
     orderInfo: { availability: 'Made to order', productionTime: 'From 2 weeks to a maximum of 2 months', orderTerms: 'Dimensions are indicative; final measurements are agreed with the client.' },
     statuses: { concept: 'Concept', competitionProposal: 'Competition Proposal', realizedWork: 'Realized Work' },
     projectCopy: {
+      'man-in-love': { text: 'A green figure holds a lampshade above its head, with a light bulb rising from its neck.' },
+
+      'the-space-between-us': { text: 'Two contrasting sculptural figures stand side by side, their flowing forms leaving a space between them.' },
+
+      'love-takes-shape': { text: 'Two red sculptural forms rise and meet overhead, shaping an open arch.' },
+
+      'the-fire-within': { text: 'A glowing red orb rises above a pair of red sculptural forms.' },
+
+      'the-butterfly-effect': { text: 'Butterfly-inspired metal forms bring movement to an outdoor space.' },
+
+      'still-standing': { text: 'A slender figure stands beside a branch-like sculptural form.' },
+
+      'black-bull': { text: 'A sculptural bull appears in both gallery and outdoor settings.' },
+
+      'you-are-home': { text: 'A seated figure curls around itself in a quiet, protective pose.' },
+
       ariadne: { text: 'A public-art concept based on the Ariadne labyrinth. The location shown is proposal context, not a claim that the work has been realized.' },
       'the-man-who-was-the-shadow': { kicker: 'Light sculpture', text: 'A bronze-toned figure whose head is a lamp: he lights the street for others while his own face stays in shadow.' },
       'the-deafening-silence': { kicker: 'Public art / light & sound installation', credit: 'Concept & artistic direction: Miranda Kuprava · Original inspiration: Melita Iosava’s drawing “Freedom”', text: 'Dedicated to the children affected by the war in Ukraine. Child-sized, faceless figures stand within a field of light, each holding a balloon. Made from unpainted fiberglass, all visible colour is created by light. The installation unfolds in three acts: everyday city life, the sudden interruption of an air-raid siren, and finally silence accompanied by Mahler’s Kindertotenlieder.' },
@@ -120,6 +136,22 @@ export const T = {
     orderInfo: { availability: 'შეკვეთით მზადდება', productionTime: '2 კვირიდან მაქსიმუმ 2 თვემდე', orderTerms: 'ზომები პირობითია; საბოლოო ზომები დამკვეთთან შეთანხმდება.' },
     statuses: { concept: 'კონცეფცია', competitionProposal: 'საკონკურსო წინადადება', realizedWork: 'განხორციელებული ნამუშევარი' },
     projectCopy: {
+      'man-in-love': { text: 'მწვანე ფიგურას თავს ზემოთ სანათის პლაფონი უჭირავს, კისრიდან კი ნათურა ამოდის.' },
+
+      'the-space-between-us': { text: 'ორი განსხვავებული სკულპტურული ფიგურა გვერდიგვერდ დგას; მათი მოქნილი ფორმები მათ შორის სივრცეს ტოვებს.' },
+
+      'love-takes-shape': { text: 'ორი წითელი სკულპტურული ფორმა მაღლა იწევა და ერთმანეთს ხვდება, ღია თაღის ფორმით.' },
+
+      'the-fire-within': { text: 'მანათობელი წითელი სფერო წითელ სკულპტურულ ფორმებზე მაღლა იწევს.' },
+
+      'the-butterfly-effect': { text: 'პეპლის ფორმებით შთაგონებული მეტალის ქანდაკებები გარე სივრცეს მოძრაობას სძენს.' },
+
+      'still-standing': { text: 'წერწეტი ფიგურა დატოტვილი, ხის მსგავსი სკულპტურული ფორმის გვერდით დგას.' },
+
+      'black-bull': { text: 'ხარის სკულპტურა წარმოდგენილია როგორც საგამოფენო, ისე გარე სივრცის ხედებში.' },
+
+      'you-are-home': { text: 'მჯდომარე ფიგურა საკუთარ თავში იკეცება და მშვიდ, დამცავ პოზას ქმნის.' },
+
       ariadne: { text: 'საჯარო ხელოვნების კონცეფცია, რომელიც არიადნეს ლაბირინთს ეფუძნება. ნაჩვენები ადგილი პროექტის წარდგენის კონტექსტია და არა განხორციელების მტკიცება.' },
       'the-man-who-was-the-shadow': { kicker: 'სინათლის ქანდაკება', text: 'ბრინჯაოსფერი ფიგურა, რომლის თავიც სანათია: ის ქუჩას სხვებისთვის ანათებს, თავად კი ჩრდილში რჩება.' },
       'the-deafening-silence': { kicker: 'საჯარო ხელოვნება / სინათლისა და ხმის ინსტალაცია', credit: 'კონცეფცია და მხატვრული მიმართულება: მირანდა კუპრავა · საწყისი შთაგონება: მელიტა იოსავას ნახატი „თავისუფლება“', text: 'ეძღვნება უკრაინაში ომით დაზარალებულ ბავშვებს. ბავშვების ზომის, უსახო ფიგურები სინათლის სივრცეში დგანან და ბუშტები უჭირავთ. მინაბოჭკოს ნამუშევარში საღებავი არ არის გამოყენებული; ხილულ ფერებს სინათლე ქმნის. ინსტალაცია სამ მოქმედებად ვითარდება: ყოველდღიური ქალაქის ცხოვრება, საჰაერო განგაშის სირენის მოულოდნელი ხმა და ბოლოს სიჩუმე, რომელსაც მალერის Kindertotenlieder ახლავს.' },
@@ -196,6 +228,22 @@ export const T = {
     orderInfo: { availability: 'Fabriqué sur commande', productionTime: 'De 2 semaines à 2 mois maximum', orderTerms: 'Les dimensions sont indicatives ; les dimensions finales sont convenues avec le client.' },
     statuses: { concept: 'Concept', competitionProposal: 'Proposition de concours', realizedWork: 'Œuvre réalisée' },
     projectCopy: {
+      'man-in-love': { text: 'Une figure verte tient un abat-jour au-dessus de sa tête, tandis qu’une ampoule émerge de son cou.' },
+
+      'the-space-between-us': { text: 'Deux figures sculpturales contrastées se tiennent côte à côte, leurs formes fluides laissant un espace entre elles.' },
+
+      'love-takes-shape': { text: 'Deux formes sculpturales rouges s’élèvent et se rejoignent pour dessiner une arche ouverte.' },
+
+      'the-fire-within': { text: 'Un orbe rouge lumineux s’élève au-dessus de formes sculpturales rouges.' },
+
+      'the-butterfly-effect': { text: 'Des formes métalliques inspirées du papillon apportent du mouvement à un espace extérieur.' },
+
+      'still-standing': { text: 'Une silhouette élancée se tient près d’une forme sculpturale ramifiée, semblable à un arbre.' },
+
+      'black-bull': { text: 'La sculpture du taureau est présentée en galerie et dans un espace extérieur.' },
+
+      'you-are-home': { text: 'Une figure assise se replie sur elle-même dans une posture calme et protectrice.' },
+
       ariadne: { text: 'Concept d’art public inspiré du labyrinthe d’Ariane. Le lieu présenté indique le contexte de la proposition et ne signifie pas que l’œuvre a été réalisée.' },
       'the-man-who-was-the-shadow': { kicker: 'Sculpture lumineuse', text: 'Une figure aux tons bronze dont la tête est une lampe : elle éclaire la rue pour les autres tandis que son propre visage reste dans l’ombre.' },
       'the-deafening-silence': { kicker: 'Art public / installation lumineuse et sonore', credit: 'Concept et direction artistique : Miranda Kuprava · Inspiration originale : le dessin « Freedom » de Melita Iosava', text: 'Dédiée aux enfants touchés par la guerre en Ukraine. Des figures sans visage, à hauteur d’enfant, se tiennent dans un champ lumineux, un ballon à la main. Réalisée en fibre de verre non peinte, l’installation tire toute sa couleur visible de la lumière. Elle se déroule en trois actes : la vie quotidienne en ville, l’interruption soudaine d’une sirène d’alerte aérienne, puis le silence accompagné du Kindertotenlieder de Mahler.' },
@@ -308,6 +356,22 @@ T.zh = {
   orderInfo: { availability: '按需定制', productionTime: '2周起，最长2个月', orderTerms: '尺寸为参考值；最终尺寸由客户协商确认。' },
   statuses: { concept: '概念方案', competitionProposal: '竞赛提案', realizedWork: '已实现作品' },
   projectCopy: {
+    'man-in-love': { text: '一尊绿色人物雕塑将灯罩举过头顶，灯泡从颈部向上延伸。' },
+
+    'the-space-between-us': { text: '两尊造型对比鲜明的雕塑并肩而立，流动的曲线在它们之间留出空间。' },
+
+    'love-takes-shape': { text: '两道红色雕塑形体向上伸展并在顶部相遇，形成一座开放式拱门。' },
+
+    'the-fire-within': { text: '发光的红色球体高悬于红色雕塑造型之上。' },
+
+    'the-butterfly-effect': { text: '以蝴蝶为灵感的金属雕塑造型，为户外空间带来动感。' },
+
+    'still-standing': { text: '纤细的人形雕塑伫立在枝状、近似树形的造型旁。' },
+
+    'black-bull': { text: '公牛雕塑既有展厅视角，也有户外空间视角。' },
+
+    'you-are-home': { text: '坐姿人物蜷起身体，呈现安静而具有保护意味的姿态。' },
+
     ariadne: { text: '以阿里阿德涅迷宫为主题的公共艺术概念。画面中的地点仅说明方案背景，并不表示作品已在此落地。' },
     'the-man-who-was-the-shadow': { kicker: '灯光雕塑', text: '一尊青铜色人物雕塑，头部化为灯具：他为街上的行人照明，自己的面容却留在阴影中。' },
     'the-deafening-silence': { kicker: '公共艺术 / 灯光与声音装置', credit: '概念与艺术指导：Miranda Kuprava · 原始灵感：Melita Iosava 的画作《Freedom》', text: '献给受到乌克兰战争影响的儿童。与儿童身高相仿、没有面容的人物站在光场中，每人手持一个气球。作品采用未上漆的玻璃钢，所有可见色彩均由光线产生。装置分为三幕：日常城市生活、空袭警报突然响起，最后是伴随马勒《亡儿之歌》的寂静。' },
