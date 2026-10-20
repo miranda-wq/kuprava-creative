@@ -716,8 +716,7 @@
    "id": "outdoor",
    "projects": [
     {
-     "title": "Outdoor Objects",
-     "kicker": "Gardens · terraces · courtyards · pools",
+     "title": "MAN IN LOVE",
      "images": [
       {
        "src": "art/outdoor/outdoor-01.jpg",
@@ -732,29 +731,49 @@
        "h": 1536
       },
       {
+       "src": "art/outdoor/outdoor-06.jpg",
+       "thumb": "art/outdoor/outdoor-06-t.jpg",
+       "w": 1122,
+       "h": 1402
+      }
+     ]
+    },
+    {
+     "title": "THE SPACE BETWEEN US",
+     "images": [
+      {
        "src": "art/outdoor/outdoor-03.jpg",
        "thumb": "art/outdoor/outdoor-03-t.jpg",
        "w": 1402,
        "h": 1122
-      },
+      }
+     ]
+    },
+    {
+     "title": "love takes shape",
+     "images": [
       {
        "src": "art/outdoor/outdoor-04.jpg",
        "thumb": "art/outdoor/outdoor-04-t.jpg",
        "w": 1122,
        "h": 1402
-      },
+      }
+     ]
+    },
+    {
+     "title": "the fire within",
+     "images": [
       {
        "src": "art/outdoor/outdoor-05.jpg",
        "thumb": "art/outdoor/outdoor-05-t.jpg",
        "w": 1123,
        "h": 1401
-      },
-      {
-       "src": "art/outdoor/outdoor-06.jpg",
-       "thumb": "art/outdoor/outdoor-06-t.jpg",
-       "w": 1122,
-       "h": 1402
-      },
+      }
+     ]
+    },
+    {
+     "title": "THE BUTTERFLY EFFECT",
+     "images": [
       {
        "src": "art/outdoor/outdoor-07.jpg",
        "thumb": "art/outdoor/outdoor-07-t.jpg",
@@ -778,13 +797,23 @@
        "thumb": "art/outdoor/outdoor-10-t.jpg",
        "w": 1402,
        "h": 1122
-      },
+      }
+     ]
+    },
+    {
+     "title": "still standing",
+     "images": [
       {
        "src": "art/outdoor/outdoor-11.jpg",
        "thumb": "art/outdoor/outdoor-11-t.jpg",
        "w": 1086,
        "h": 1448
-      },
+      }
+     ]
+    },
+    {
+     "title": "black bull",
+     "images": [
       {
        "src": "art/outdoor/outdoor-12.jpg",
        "thumb": "art/outdoor/outdoor-12-t.jpg",
@@ -796,7 +825,12 @@
        "thumb": "art/outdoor/outdoor-13-t.jpg",
        "w": 1280,
        "h": 960
-      },
+      }
+     ]
+    },
+    {
+     "title": "you are home",
+     "images": [
       {
        "src": "art/outdoor/outdoor-14.jpg",
        "thumb": "art/outdoor/outdoor-14-t.jpg",
@@ -812,7 +846,7 @@
      ]
     }
    ],
-   "workCount": 0
+   "workCount": 8
   },
   {
    "id": "christmas",
