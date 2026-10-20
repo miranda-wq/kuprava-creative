@@ -26,6 +26,7 @@ let lang = 'en';
 try { lang = localStorage.getItem('kc-lang') || 'en'; } catch {}
 if (!LANGS.includes(lang)) lang = 'en';
 const t = () => T[lang];
+const translated = (path) => path.split('.').reduce((value, part) => value?.[part], t());
 const projectStatus = (project) => project.statusKey
   ? `${t().statuses[project.statusKey]}${project.statusYear ? ` · ${project.statusYear}` : ''}`
   : (project.status || '');
@@ -121,7 +122,7 @@ function renderArtworkPage(slug) {
   const description = localizedArtworkValue(record.description || record.text);
   const fields = [
     ['artist', 'Miranda Kuprava'], ['brand', 'KUPRAVA CREATIVE'], ['category', record.category], ['type', localizedArtworkValue(record.type)], ['materials', localizedArtworkValue(record.materials)], ['dimensions', localizedArtworkValue(record.dimensions)],
-    ['year', localizedArtworkValue(record.year)], ['price', localizedArtworkValue(record.price)], ['edition', localizedArtworkValue(record.edition)], ['availability', localizedArtworkValue(record.availability)], ['productionTime', localizedArtworkValue(record.productionTime)], ['installation', localizedArtworkValue(record.installationRequirements)],
+    ['year', localizedArtworkValue(record.year)], ['price', localizedArtworkValue(record.price)], ['edition', localizedArtworkValue(record.edition)], ['availability', localizedArtworkValue(record.availability) || t().orderInfo.availability], ['productionTime', localizedArtworkValue(record.productionTime) || t().orderInfo.productionTime], ['orderTerms', localizedArtworkValue(record.orderTerms) || t().orderInfo.orderTerms], ['installation', localizedArtworkValue(record.installationRequirements)],
   ].filter(([, value]) => value).map(([key, value]) => [label(key), value]);
   artworkView.innerHTML = `
     <div class="artwork-detail-inner">
@@ -314,7 +315,7 @@ function renderSections() {
           const artwork = { ...p, key: p.slug };
           (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images, key: p.slug, slug: p.slug });
           const cover = p.images?.[0];
-          html += `<article class="functional-art-card reveal" style="--d:${(pi % 4) * 70}ms"><a href="/artwork/${p.slug}/" aria-label="${escapeHTML(t().viewArtwork)}: ${escapeHTML(p.title)}"><div class="functional-art-image">${cover ? imgTag(cover, cover.alt || p.title) : '<span class="functional-art-placeholder" aria-hidden="true"></span>'}</div><div class="functional-art-meta"><span class="functional-art-title">${escapeHTML(p.title)}</span><span class="functional-art-arrow" aria-hidden="true">↗</span></div>${p.edition ? `<span class="functional-art-edition">${escapeHTML(p.edition)}</span>` : ''}</a></article>`;
+          html += `<article class="functional-art-card reveal" style="--d:${(pi % 4) * 70}ms"><a href="/artwork/${p.slug}/" aria-label="${escapeHTML(t().viewArtwork)}: ${escapeHTML(p.title)}" data-i18n-aria="viewArtwork" data-artwork-label="${escapeHTML(p.title)}"><div class="functional-art-image">${cover ? imgTag(cover, cover.alt || p.title) : '<span class="functional-art-placeholder" aria-hidden="true"></span>'}</div><div class="functional-art-meta"><span class="functional-art-title">${escapeHTML(p.title)}</span><span class="functional-art-arrow" aria-hidden="true">↗</span></div>${p.edition ? `<span class="functional-art-edition">${escapeHTML(p.edition)}</span>` : ''}</a></article>`;
         });
         html += `</div></section>`;
       });
@@ -336,7 +337,7 @@ function renderSections() {
                   </div>
                 </section>`).join('')}
             </div>
-            <a class="artwork-card-link" href="/work/spaces/${slugFor(p)}/">${t().viewArtwork} <span aria-hidden="true">↗</span></a>
+            <a class="artwork-card-link" href="/work/spaces/${slugFor(p)}/"><span data-i18n="viewArtwork">${t().viewArtwork}</span> <span aria-hidden="true">↗</span></a>
           </article>`;
       });
     } else {
@@ -345,6 +346,11 @@ function renderSections() {
         const kicker = projectField(p, 'kicker');
         const credit = projectField(p, 'credit');
         const text = projectField(p, 'text');
+        const outdoorOrderInfo = s.id === 'outdoor' ? [
+          [t().artworkFields.availability, t().orderInfo.availability],
+          [t().artworkFields.productionTime, t().orderInfo.productionTime],
+          [t().artworkFields.orderTerms, t().orderInfo.orderTerms],
+        ] : [];
         const gi = galleries.push({ sectionId: s.id, title: p.title, kicker, status, statusKey: p.statusKey, statusYear: p.statusYear, location: p.location, images: p.images, doc: p.doc }) - 1;
         (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images });
         if (p.doc) docs[p.doc.pdf] = p.doc;
@@ -355,13 +361,14 @@ function renderSections() {
             <div class="proj-meta reveal">
               ${kicker ? `<div class="kicker" data-project-copy="kicker">${escapeHTML(kicker)}</div>` : ''}
               <h3>${p.title}</h3>
-              ${s.id === 'functional' ? `<a class="artwork-card-link" href="/artwork/${slugFor(p)}/">${t().viewArtwork} <span aria-hidden="true">↗</span></a>` : ''}
+              ${s.id === 'functional' ? `<a class="artwork-card-link" href="/artwork/${slugFor(p)}/"><span data-i18n="viewArtwork">${t().viewArtwork}</span> <span aria-hidden="true">↗</span></a>` : ''}
               ${status ? `<p class="proj-status" ${p.statusKey ? `data-project-status="${p.statusKey}" data-status-year="${p.statusYear || ''}"` : ''}>${status}</p>` : ''}
+              ${outdoorOrderInfo.length ? `<dl class="project-order-details"><div><dt data-i18n="artworkFields.availability">${escapeHTML(outdoorOrderInfo[0][0])}</dt><dd data-i18n="orderInfo.availability">${escapeHTML(outdoorOrderInfo[0][1])}</dd></div><div><dt data-i18n="artworkFields.productionTime">${escapeHTML(outdoorOrderInfo[1][0])}</dt><dd data-i18n="orderInfo.productionTime">${escapeHTML(outdoorOrderInfo[1][1])}</dd></div><div><dt data-i18n="artworkFields.orderTerms">${escapeHTML(outdoorOrderInfo[2][0])}</dt><dd data-i18n="orderInfo.orderTerms">${escapeHTML(outdoorOrderInfo[2][1])}</dd></div></dl>` : ''}
               ${p.location ? `<p class="proj-location">${p.location}</p>` : ''}
               ${sub ? `<p class="proj-sub" data-fa="${p.key}">${sub}</p>` : ''}
               ${credit ? `<p class="proj-credit" data-project-copy="credit">${escapeHTML(credit)}</p>` : ''}
               ${text ? `<p class="proj-text" data-project-copy="text">${escapeHTML(text)}</p>` : ''}
-              ${s.id !== 'outdoor' ? `<a class="artwork-card-link" href="/work/${s.id}/${slugFor(p)}/">${t().viewArtwork} <span aria-hidden="true">↗</span></a>` : ''}
+              ${s.id !== 'outdoor' ? `<a class="artwork-card-link" href="/work/${s.id}/${slugFor(p)}/"><span data-i18n="viewArtwork">${t().viewArtwork}</span> <span aria-hidden="true">↗</span></a>` : ''}
               ${p.doc ? docCard(p.doc) : ''}
             </div>
             <div class="gallery ${many ? 'is-clamped' : ''}">
@@ -413,7 +420,8 @@ function applyLang() {
   document.documentElement.lang = { en: 'en', ge: 'ka', fr: 'fr', zh: 'zh-CN', jp: 'ja' }[lang];
   document.body.dataset.lang = lang;
   $$('.langs button').forEach((b) => b.classList.toggle('on', b.dataset.lang === lang));
-  $$('[data-i18n]').forEach((n) => { const v = t()[n.dataset.i18n]; if (typeof v === 'string') n.textContent = v; });
+  $$('[data-i18n]').forEach((n) => { const v = translated(n.dataset.i18n); if (typeof v === 'string') n.textContent = v; });
+  $$('[data-i18n-aria]').forEach((n) => n.setAttribute('aria-label', `${translated(n.dataset.i18nAria)}: ${n.dataset.artworkLabel}`));
   const commissionLink = $('.commission-discuss');
   if (commissionLink) commissionLink.href = `mailto:Miranda@kupravacreative.com?subject=${encodeURIComponent(t().commissionEmailSubject)}&body=${encodeURIComponent(t().commissionEmailBody)}`;
   $$('.tl1').forEach((n) => (n.textContent = t().tagline[0]));

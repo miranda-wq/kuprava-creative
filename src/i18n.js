@@ -40,7 +40,8 @@ export const T = {
     viewArtwork: 'View artwork',
     artworkBack: 'Back to Functional Art',
     inquireWork: 'INQUIRE ABOUT THIS WORK',
-    artworkFields: { artist: 'Artist', brand: 'Brand', category: 'Category', type: 'Type', materials: 'Materials', dimensions: 'Dimensions', year: 'Year', price: 'Price', edition: 'Edition', availability: 'Availability', productionTime: 'Production Time', installation: 'Installation' },
+    artworkFields: { artist: 'Artist', brand: 'Brand', category: 'Category', type: 'Type', materials: 'Materials', dimensions: 'Dimensions', year: 'Year', price: 'Price', edition: 'Edition', availability: 'Availability', productionTime: 'Production Time', orderTerms: 'Order Terms', installation: 'Installation' },
+    orderInfo: { availability: 'Made to order', productionTime: 'From 2 weeks to a maximum of 2 months', orderTerms: 'Dimensions are indicative; final measurements are agreed with the client.' },
     statuses: { concept: 'Concept', competitionProposal: 'Competition Proposal', realizedWork: 'Realized Work' },
     projectCopy: {
       ariadne: { text: 'A public-art concept based on the Ariadne labyrinth. The location shown is proposal context, not a claim that the work has been realized.' },
@@ -115,7 +116,8 @@ export const T = {
     viewArtwork: 'ნამუშევრის ნახვა',
     artworkBack: 'ფუნქციურ ხელოვნებაში დაბრუნება',
     inquireWork: 'დაგვიკავშირდით ამ ნამუშევრის შესახებ',
-    artworkFields: { artist: 'ავტორი', brand: 'ბრენდი', category: 'კატეგორია', type: 'ტიპი', materials: 'მასალა', dimensions: 'ზომები', year: 'წელი', price: 'ფასი', edition: 'ტირაჟი', availability: 'ხელმისაწვდომობა', productionTime: 'წარმოების ვადა', installation: 'მონტაჟი' },
+    artworkFields: { artist: 'ავტორი', brand: 'ბრენდი', category: 'კატეგორია', type: 'ტიპი', materials: 'მასალა', dimensions: 'ზომები', year: 'წელი', price: 'ფასი', edition: 'ტირაჟი', availability: 'ხელმისაწვდომობა', productionTime: 'წარმოების ვადა', orderTerms: 'შეკვეთის პირობები', installation: 'მონტაჟი' },
+    orderInfo: { availability: 'შეკვეთით მზადდება', productionTime: '2 კვირიდან მაქსიმუმ 2 თვემდე', orderTerms: 'ზომები პირობითია; საბოლოო ზომები დამკვეთთან შეთანხმდება.' },
     statuses: { concept: 'კონცეფცია', competitionProposal: 'საკონკურსო წინადადება', realizedWork: 'განხორციელებული ნამუშევარი' },
     projectCopy: {
       ariadne: { text: 'საჯარო ხელოვნების კონცეფცია, რომელიც არიადნეს ლაბირინთს ეფუძნება. ნაჩვენები ადგილი პროექტის წარდგენის კონტექსტია და არა განხორციელების მტკიცება.' },
@@ -190,7 +192,8 @@ export const T = {
     viewArtwork: 'Voir l’œuvre',
     artworkBack: 'Retour à l’art fonctionnel',
     inquireWork: 'DEMANDER DES INFORMATIONS SUR CETTE ŒUVRE',
-    artworkFields: { artist: 'Artiste', brand: 'Marque', category: 'Catégorie', type: 'Type', materials: 'Matériaux', dimensions: 'Dimensions', year: 'Année', price: 'Prix', edition: 'Édition', availability: 'Disponibilité', productionTime: 'Délai de production', installation: 'Installation' },
+    artworkFields: { artist: 'Artiste', brand: 'Marque', category: 'Catégorie', type: 'Type', materials: 'Matériaux', dimensions: 'Dimensions', year: 'Année', price: 'Prix', edition: 'Édition', availability: 'Disponibilité', productionTime: 'Délai de production', orderTerms: 'Conditions de commande', installation: 'Installation' },
+    orderInfo: { availability: 'Fabriqué sur commande', productionTime: 'De 2 semaines à 2 mois maximum', orderTerms: 'Les dimensions sont indicatives ; les dimensions finales sont convenues avec le client.' },
     statuses: { concept: 'Concept', competitionProposal: 'Proposition de concours', realizedWork: 'Œuvre réalisée' },
     projectCopy: {
       ariadne: { text: 'Concept d’art public inspiré du labyrinthe d’Ariane. Le lieu présenté indique le contexte de la proposition et ne signifie pas que l’œuvre a été réalisée.' },
@@ -301,7 +304,8 @@ T.zh = {
   commissionEmailSubject: '委托项目咨询',
   commissionEmailBody: '您好，Miranda：\n\n我想洽谈一个委托项目。\n\n空间描述：\n地点：\n期望尺寸：\n计划时间：',
   viewArtwork: '查看作品', artworkBack: '返回功能艺术', inquireWork: '咨询这件作品',
-  artworkFields: { artist: '艺术家', brand: '品牌', category: '类别', type: '类型', materials: '材料', dimensions: '尺寸', year: '年份', price: '价格', edition: '版数', availability: '供应情况', productionTime: '制作周期', installation: '安装' },
+  artworkFields: { artist: '艺术家', brand: '品牌', category: '类别', type: '类型', materials: '材料', dimensions: '尺寸', year: '年份', price: '价格', edition: '版数', availability: '供应情况', productionTime: '制作周期', orderTerms: '订购条件', installation: '安装' },
+  orderInfo: { availability: '按需定制', productionTime: '2周起，最长2个月', orderTerms: '尺寸为参考值；最终尺寸由客户协商确认。' },
   statuses: { concept: '概念方案', competitionProposal: '竞赛提案', realizedWork: '已实现作品' },
   projectCopy: {
     ariadne: { text: '以阿里阿德涅迷宫为主题的公共艺术概念。画面中的地点仅说明方案背景，并不表示作品已在此落地。' },

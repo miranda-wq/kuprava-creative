@@ -331,6 +331,10 @@ body[data-lang='ge'] .tagline, body[data-lang='jp'] .tagline { letter-spacing: 0
 .proj-sub { margin: 0; color: var(--ink); font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.5; }
 body[data-lang='ge'] .proj-sub, body[data-lang='jp'] .proj-sub { font-style: normal; font-size: 16px; }
 .proj-text { margin: 0; color: var(--dim); font-size: 15px; }
+.project-order-details { display: grid; gap: 12px; margin: 0; padding: 14px 16px; border-left: 1px solid var(--red); background: rgba(255, 255, 255, 0.025); }
+.project-order-details > div { display: grid; gap: 4px; }
+.project-order-details dt { color: var(--dim); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; }
+.project-order-details dd { margin: 0; color: var(--ink); font-size: 13px; line-height: 1.5; }
 .artwork-card-link { justify-self: start; display: inline-flex; align-items: center; gap: 12px; padding: 7px 0; border-bottom: 1px solid rgba(255, 235, 230, 0.28); color: var(--ink); font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; transition: color 0.3s, border-color 0.3s; }
 .artwork-card-link span { color: var(--red); }
 .artwork-card-link:hover { color: #fff; border-color: var(--red); }
