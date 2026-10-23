@@ -7,9 +7,9 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js';
 
-const RED = new THREE.Color('#ff2414');
-const EMBER = new THREE.Color('#ff9a8c'); // the reference's dust is mostly this rosy red
-const WHITE = new THREE.Color('#f2e8e6');
+const RED = new THREE.Color('#9f1d2c');
+const EMBER = new THREE.Color('#a54347'); // warm pomegranate ember
+const WHITE = new THREE.Color('#dfd0c8');
 
 function softPointMaterial() {
   return new THREE.ShaderMaterial({
@@ -45,7 +45,7 @@ function softPointMaterial() {
 }
 
 function galaxy(count) {
-  // fine dust in three arms: most of it white-grey specks, a share of red, a few bright stars
+  // fine dust in three arms: mostly warm pomegranate tones, with a few soft highlights
   const pos = new Float32Array(count * 3);
   const col = new Float32Array(count * 3);
   const size = new Float32Array(count);
@@ -92,9 +92,9 @@ function starfield(count) {
   for (let i = 0; i < count; i++) {
     const v = new THREE.Vector3().randomDirection().multiplyScalar(80 + Math.random() * 160);
     pos.set([v.x, v.y, v.z], i * 3);
-    const red = Math.random() < 0.18;
+    const red = Math.random() < 0.28;
     const k = 0.1 + Math.random() ** 3 * 0.5;
-    col.set(red ? [1 * k, 0.25 * k, 0.22 * k] : [k, k * 0.92, k * 0.9], i * 3);
+    col.set(red ? [0.78 * k, 0.2 * k, 0.29 * k] : [k, k * 0.94, k * 0.9], i * 3);
     size[i] = 0.4 + Math.random() * 1.1;
     phase[i] = Math.random();
   }
@@ -172,17 +172,17 @@ export function createCosmos(canvas) {
 
   // orbital rings
   const rings = [
-    ring(40, 17, 0xffe2dc, 0.07, [0.0, 0, 0.0]),
-    ring(30, 10, 0xffe2dc, 0.05, [0.15, 0.3, 0.2]),
-    ring(52, 22, 0xffffff, 0.05, [0.15, 0.2, 0.05]),
-    ring(24, 10, 0xff4a4a, 0.1, [-0.05, 0.5, 0.1]),
-    ring(64, 26, 0xffd9d0, 0.035, [0.25, -0.2, -0.1]),
+    ring(40, 17, 0xdfd0c8, 0.055, [0.0, 0, 0.0]),
+    ring(30, 10, 0xdfd0c8, 0.04, [0.15, 0.3, 0.2]),
+    ring(52, 22, 0xdfd0c8, 0.035, [0.15, 0.2, 0.05]),
+    ring(24, 10, 0x9f1d2c, 0.085, [-0.05, 0.5, 0.1]),
+    ring(64, 26, 0xdfd0c8, 0.03, [0.25, -0.2, -0.1]),
   ];
   rings.forEach((r) => world.add(r));
 
   const composer = new EffectComposer(renderer);
   composer.addPass(new RenderPass(scene, camera));
-  const bloom = new UnrealBloomPass(new THREE.Vector2(1, 1), small ? 0.35 : 0.5, 0.4, 0.22);
+  const bloom = new UnrealBloomPass(new THREE.Vector2(1, 1), small ? 0.35 : 0.48, 0.4, 0.22);
   composer.addPass(bloom);
   composer.addPass(new OutputPass());
 

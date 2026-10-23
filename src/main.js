@@ -12,6 +12,7 @@ import artworkDrafts from './artwork-drafts.json';
 import artworkMetadata from './artwork-metadata.json';
 import functionalArtworks from './functional-artworks.json';
 import { T, LANGS, ORDER } from './i18n.js';
+import { imageUrl } from './asset-config.js';
 import { createCosmos } from './cosmos.js';
 import { buildHero } from './hero.js';
 import { createPlanetView } from './planet-view.js';
@@ -19,7 +20,11 @@ import { createPlanetView } from './planet-view.js';
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const BASE = import.meta.env.BASE_URL;
-const url = (p) => BASE + p;
+// Keep local visual review independent of the remote photo upload. Production
+// builds use the public bucket; Vite development uses the original local files.
+const url = (p) => import.meta.env.DEV
+  ? `${BASE}${String(p ?? '').replace(/^\/+/, '')}`
+  : imageUrl(p, BASE);
 const pad = (n) => String(n).padStart(2, '0');
 
 let lang = 'en';
@@ -151,7 +156,7 @@ function renderArtworkPage(slug) {
     title: `${record.title} · KUPRAVA CREATIVE`,
     description: description || `${record.title} — functional artwork by Miranda Kuprava, KUPRAVA CREATIVE.`,
     canonical: artworkUrl,
-    image: `${location.origin}${url(images[0]?.src || 'art/sculpture/incitatus-02.jpg')}`,
+    image: new URL(url(images[0]?.src || 'art/sculpture/incitatus-02.jpg'), location.origin).href,
   });
   document.body.classList.add('artwork-open');
   $$('.artwork-detail [data-artwork-image]').forEach((button) => button.addEventListener('click', () => openLightbox(detailGalleryIndex, +button.dataset.artworkImage)));
@@ -197,7 +202,7 @@ function renderProjectPage(sectionId, slug) {
     title: `${record.title} · KUPRAVA CREATIVE`,
     description: description || `${record.title} — selected project by Georgian artist Miranda Kuprava, KUPRAVA CREATIVE.`,
     canonical: projectUrl,
-    image: `${location.origin}${url(images[0]?.src || record.doc?.pages?.[0]?.src || 'art/sculpture/incitatus-02.jpg')}`,
+    image: new URL(url(images[0]?.src || record.doc?.pages?.[0]?.src || 'art/sculpture/incitatus-02.jpg'), location.origin).href,
   });
   document.body.classList.add('artwork-open');
   $$('.artwork-detail [data-artwork-image]').forEach((button) => button.addEventListener('click', () => openLightbox(detailGalleryIndex, +button.dataset.artworkImage)));
@@ -232,6 +237,10 @@ function imgTag(im, alt, cls = '') {
   const dimensions = im.w && im.h ? ` width="${im.w}" height="${im.h}"` : '';
   return `<img class="${cls}" src="${url(im.thumb)}" data-full="${url(im.src)}"${dimensions} alt="${alt.replace(/"/g, '&quot;')}" loading="lazy" decoding="async" />`;
 }
+
+const imageAspectStyle = (im) => im?.w && im?.h
+  ? `--image-ratio:${Number(im.w) / Number(im.h)}`
+  : '';
 
 function docCard(d) {
   const cover = d.pages[0];
@@ -300,7 +309,7 @@ function renderSections() {
         (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images });
         html += `
           <figure class="work reveal" data-gallery="${gi}" data-idx="0" style="--d:${(pi % 4) * 70}ms">
-            <div class="work-img">${imgTag(p.images[0], p.title)}</div>
+            <div class="work-img" style="${imageAspectStyle(p.images[0])}">${imgTag(p.images[0], p.title)}</div>
             <figcaption><span class="w-num">${pad(pi + 1)}</span><a class="w-title work-page-link" href="/work/sculpture/${slugFor(p)}/">${escapeHTML(p.title)}</a>${p.images.length > 1 ? `<span class="w-n">${p.images.length}</span>` : ''}</figcaption>
           </figure>`;
       });

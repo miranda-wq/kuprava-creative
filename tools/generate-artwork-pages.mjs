@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { imageUrl } from '../src/asset-config.js';
 
 const outputDirectory = path.resolve('dist');
 const siteOrigin = 'https://kupravacreative.com';
@@ -44,7 +45,7 @@ for (const artwork of artworks.products) {
   const relativePath = `/artwork/${artwork.slug}/`;
   const title = `${artwork.title} · KUPRAVA CREATIVE`;
   const description = artwork.description?.en || `${artwork.title} — functional artwork by Miranda Kuprava, KUPRAVA CREATIVE.`;
-  const image = `${siteOrigin}/${artwork.images[0]?.src || 'art/sculpture/incitatus-02.jpg'}`;
+  const image = imageUrl(artwork.images[0]?.src || 'art/sculpture/incitatus-02.jpg', '/');
   emitPage({ relativePath, title, description, image });
 }
 
@@ -56,7 +57,7 @@ for (const section of content.sections.filter((entry) => entry.id !== 'outdoor')
     const title = `${project.title} · KUPRAVA CREATIVE`;
     const description = project.text || `${project.title} — selected project by Georgian artist Miranda Kuprava, KUPRAVA CREATIVE.`;
     const media = project.images?.[0]?.src || project.doc?.pages?.[0]?.src || 'art/sculpture/incitatus-02.jpg';
-    emitPage({ relativePath, title, description, image: `${siteOrigin}/${media}` });
+    emitPage({ relativePath, title, description, image: imageUrl(media, '/') });
   }
 }
 

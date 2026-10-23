@@ -25,7 +25,7 @@ const LETTERS = ['U', 'P', 'R', 'A', 'V', 'A'];
 function drawArm(svg) {
   const k = el('g', { class: 'k' }, svg);
 
-  // arm: pure-white threads turning into the reference's vivid red
+  // arm: a warm ivory highlight flowing into vivid pomegranate red, as in the reference
   const x1 = STEPS.x + STEPS.w * LETTERS.length;
   const arm = el('g', { class: 'arm' }, k);
   // wide enough to fill the dark band the reference leaves under the stairs; at the top,
@@ -43,8 +43,8 @@ function drawArm(svg) {
     // silver along the top turning red, then fading into the threads below
     // no hard edge anywhere: the colour turns gradually and the light fades out smoothly
     const r = t ** 0.7;
-    const c = [Math.round(242 + 13 * r), Math.round(234 - 191 * r), Math.round(235 - 188 * r)];
-    const o = 0.5 * (1 - t) ** 1.8 + 0.02;
+    const c = [Math.round(238 - 22 * r), Math.round(223 - 190 * r), Math.round(217 - 178 * r)];
+    const o = 0.52 * (1 - t) ** 1.8 + 0.025;
     el('path', { d, fill: 'none', stroke: `rgb(${c.join(',')})`, 'stroke-opacity': o.toFixed(2) }, arm);
   }
   // as in the reference: a thin red line runs under the stairs, parallel to them, from
@@ -74,7 +74,9 @@ function drawArm(svg) {
     el('path', { class: 'step-face', d }, stairs);
     prof += `${i ? 'L' : `M${xl},${f1(armY(xl))} L`}${xl},${y} L${xr},${y} `;
     const g = el('g', { class: 'step', style: `--i:${i}` }, stairs);
-    el('text', { class: 'step-letter', x: xl + STEPS.w * 0.47, y: y - 3, 'text-anchor': 'middle' }, g).textContent = ch;
+    // Place each letter's alphabetic baseline on the tread edge so it rests on
+    // the step instead of floating a few pixels above it.
+    el('text', { class: 'step-letter', x: xl + STEPS.w * 0.47, y, 'text-anchor': 'middle' }, g).textContent = ch;
     el('circle', { class: 'step-glint', cx: xl, cy: y, r: 2 }, g);
   });
 
@@ -158,11 +160,11 @@ function angleFor(o, p) {
 // left (white from above for the grey ones), with a rim glow on the lit side
 const GLOW = 0.45; // canvas margin around the disc, as a share of the radius
 const LIGHTS = {
-  hot: { key: [-0.82, 0.1, 0.4], keyC: [1, 0.26, 0.22], keyI: 2.6, fill: [-0.2, 0.6, 0.77], fillC: [1, 0.72, 0.7], fillI: 0.3, albedo: [0.62, 0.55, 0.54], glow: 1 },
-  lit: { key: [-0.95, 0.08, -0.05], keyC: [1, 0.3, 0.26], keyI: 1.45, fill: [-0.3, 0.6, 0.74], fillC: [1, 0.85, 0.82], fillI: 0.26, albedo: [0.55, 0.5, 0.5], glow: 0.75 },
-  red: { key: [-0.6, 0.35, 0.72], keyC: [1, 0.32, 0.28], keyI: 1.05, fill: [0.2, 0.6, 0.77], fillC: [1, 0.55, 0.5], fillI: 0.3, albedo: [0.8, 0.42, 0.38], glow: 1 },
-  grey: { key: [-0.55, 0.62, 0.56], keyC: [1, 0.94, 0.92], keyI: 0.45, fill: [-0.95, -0.2, 0.25], fillC: [1, 0.25, 0.2], fillI: 0.38, albedo: [0.5, 0.46, 0.46], glow: 0.3 },
-  big: { key: [-0.86, 0.04, -0.52], keyC: [1, 0.4, 0.35], keyI: 2, fill: [-0.45, 0.4, 0.8], fillC: [1, 0.85, 0.82], fillI: 0.2, albedo: [0.45, 0.41, 0.41], glow: 0.6 },
+  hot: { key: [-0.82, 0.1, 0.4], keyC: [0.82, 0.2, 0.18], keyI: 2.35, fill: [-0.2, 0.6, 0.77], fillC: [0.84, 0.38, 0.32], fillI: 0.26, albedo: [0.62, 0.55, 0.54], glow: 0.78 },
+  lit: { key: [-0.95, 0.08, -0.05], keyC: [0.8, 0.2, 0.18], keyI: 1.35, fill: [-0.3, 0.6, 0.74], fillC: [0.82, 0.43, 0.36], fillI: 0.22, albedo: [0.55, 0.5, 0.5], glow: 0.6 },
+  red: { key: [-0.6, 0.35, 0.72], keyC: [0.84, 0.2, 0.18], keyI: 0.98, fill: [0.2, 0.6, 0.77], fillC: [0.82, 0.34, 0.29], fillI: 0.26, albedo: [0.8, 0.42, 0.38], glow: 0.8 },
+  grey: { key: [-0.55, 0.62, 0.56], keyC: [0.9, 0.72, 0.64], keyI: 0.38, fill: [-0.95, -0.2, 0.25], fillC: [0.8, 0.22, 0.18], fillI: 0.32, albedo: [0.5, 0.46, 0.46], glow: 0.22 },
+  big: { key: [-0.86, 0.04, -0.52], keyC: [0.82, 0.23, 0.2], keyI: 1.8, fill: [-0.45, 0.4, 0.8], fillC: [0.8, 0.38, 0.32], fillI: 0.18, albedo: [0.45, 0.41, 0.41], glow: 0.45 },
 };
 const norm = (v) => { const l = Math.hypot(...v); return v.map((x) => x / l); };
 
@@ -193,8 +195,8 @@ function paintMoon(d, tone, seed, radius, gain = 1) {
   // the glow must fade out before the canvas edge, or its square edge shows on big planets
   const reach = S / 2 - Math.max(Math.abs(gx - S / 2), Math.abs(gy - S / 2)) - 1;
   const g = x.createRadialGradient(gx, gy, Math.min(R * 0.7, reach * 0.6), gx, gy, reach);
-  g.addColorStop(0, `rgba(255,40,30,${0.55 * L.glow})`);
-  g.addColorStop(1, 'rgba(255,40,30,0)');
+  g.addColorStop(0, `rgba(165,31,45,${0.27 * L.glow})`);
+  g.addColorStop(1, 'rgba(165,31,45,0)');
   x.fillStyle = g;
   x.fillRect(0, 0, S, S);
   // the disc: height field first, then shade with its slopes
@@ -285,10 +287,10 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   [[669, 58, 669, 700], [405, 185, 520, 185], [560, 693, 1080, 693], [793, 252, 793, 697]].forEach(([a, b, c, d]) => {
     el('line', { x1: a, y1: b, x2: c, y2: d, pathLength: 1000 }, cons);
   });
-  // the K's cap line: bright white across the serifs, fading out at both ends, as in the reference
+  // the K's cap line: a warm, soft highlight that fades out at both ends
   el('defs', {}, svg).innerHTML = `<linearGradient id="capFade" gradientUnits="userSpaceOnUse" x1="500" y1="0" x2="1020" y2="0">
-    <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.2" stop-color="#fff" stop-opacity="0.75"/>
-    <stop offset="0.75" stop-color="#fff" stop-opacity="0.85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`;
+    <stop offset="0" stop-color="#d4c1b5" stop-opacity="0"/><stop offset="0.2" stop-color="#d4c1b5" stop-opacity="0.32"/>
+    <stop offset="0.75" stop-color="#d4c1b5" stop-opacity="0.36"/><stop offset="1" stop-color="#d4c1b5" stop-opacity="0"/></linearGradient>`;
   el('line', { x1: 500, y1: 185.5, x2: 1020, y2: 185.5, class: 'cap-line', pathLength: 1000 }, cons);
   [[669, 512], [669, 592], [793, 470]].forEach(([cx, cy]) => el('circle', { cx, cy, r: 2.6, class: 'node-dot' }, cons));
 
@@ -304,9 +306,9 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   layer.after(top);
   el('defs', {}, top).innerHTML = `
     <linearGradient id="stepFace" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#f2eaeb" stop-opacity="0.62"/>
-      <stop offset="0.55" stop-color="#ff2b2f" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#ff2b2f" stop-opacity="0.68"/>
+    <stop offset="0" stop-color="#e6d6ce" stop-opacity="0.42"/>
+    <stop offset="0.55" stop-color="#bf2432" stop-opacity="0.52"/>
+    <stop offset="1" stop-color="#d82632" stop-opacity="0.62"/>
     </linearGradient>`;
   drawArm(top);
   drawThreads(layer);
