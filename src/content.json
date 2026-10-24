@@ -1084,7 +1084,7 @@
      "title": "Merani",
      "statusKey": "concept",
      "kicker": "Independent concept project · Merani",
-     "text": "An independent sculptural concept inspired by Nikoloz Baratashvili’s poem “Merani”. The horse becomes an image of freedom, sacrifice and the courage to open an untrodden path. Original concept and hand-sculpted model by Miranda Kuprava.",
+     "text": "EVERY GREAT DESIGN BEGINS WITH AN EMOTION.\n\nMERANI was born from the meeting of two worlds. One is the timeless language of Ferrari design, where engineering becomes sculpture and movement becomes beauty. The other begins with Georgian Romanticism and Nikoloz Baratashvili’s poem Merani, in which the horse becomes an image of freedom, sacrifice, and the courage to open an untrodden path for those who follow.\n\nRather than designing an object that imitates an automobile, I wanted to create a sculpture that expresses movement itself. MERANI IS NOT A HORSE. It is the idea of moving forward. It is the moment before speed. It is courage transformed into form.\n\nAt the heart of MERANI is Baratashvili’s poem Merani, a major work of Georgian Romanticism whose philosophical and artistic power remains far less familiar to international audiences than it deserves.",
      "images": [
       {
        "src": "art/automotive-concepts/3B7F8C20-1EA4-4455-A546-62A504673236(5).jpeg",
@@ -1103,8 +1103,45 @@
        "thumb": "art/automotive-concepts/a_high_end_modern_luxury_car_showroom_interior_wit.png",
        "w": 1087,
        "h": 1447
+      },
+      {
+       "src": "art/automotive-concepts/merani-front-detail.png",
+       "thumb": "art/automotive-concepts/merani-front-detail-t.jpg",
+       "w": 1086,
+       "h": 1448,
+       "alt": "Merani sculptural concept study"
+      },
+      {
+       "src": "art/automotive-concepts/merani-front-full.png",
+       "thumb": "art/automotive-concepts/merani-front-full-t.jpg",
+       "w": 1096,
+       "h": 1435,
+       "alt": "Merani sculptural concept study"
+      },
+      {
+       "src": "art/automotive-concepts/merani-showroom.png",
+       "thumb": "art/automotive-concepts/merani-showroom-t.jpg",
+       "w": 1402,
+       "h": 1122,
+       "alt": "Merani sculptural concept study"
+      },
+      {
+       "src": "art/automotive-concepts/merani-rear.png",
+       "thumb": "art/automotive-concepts/merani-rear-t.jpg",
+       "w": 1345,
+       "h": 1169,
+       "alt": "Merani sculptural concept study"
+      },
+      {
+       "src": "docs/merani/03.jpg",
+       "thumb": "docs/merani/03-t.jpg",
+       "w": 1203,
+       "h": 1700,
+       "alt": "Merani design inspiration page, Ferrari 250 Testa Rossa reference"
       }
-     ]
+     ],
+     "quote": "The yearnings of my restless soul will not in vain have glowed,\nFor, dashing on, my steed has paved a new untrodden road.\nHe who follows in our wake, a smoother path will find;\nDaring all, his fateful steed shall leave dark fate behind.",
+     "quoteCredit": "Nikoloz Baratashvili (1817–1845) · Georgian Romantic poet · English translation: Venera Urushadze"
     },
     {
      "title": "Space Age",
@@ -1131,12 +1168,6 @@
        "thumb": "art/automotive-concepts/F0089C39-6D61-4A18-8EB9-0850A7A7BC40(1).jpeg",
        "w": 1022,
        "h": 1536
-      },
-      {
-       "src": "art/automotive-concepts/IMG_6270.jpg",
-       "thumb": "art/automotive-concepts/IMG_6270.jpg",
-       "w": 1170,
-       "h": 1244
       }
      ]
     },
@@ -1163,6 +1194,19 @@
        "thumb": "art/automotive-concepts/DC09464B-46DA-4C56-AE7A-D7EF429320A8(1).jpeg",
        "w": 1213,
        "h": 1296
+      },
+      {
+       "src": "art/automotive-concepts/IMG_6270.jpg",
+       "thumb": "art/automotive-concepts/IMG_6270.jpg",
+       "w": 1170,
+       "h": 1244
+      },
+      {
+       "src": "art/automotive-concepts/automotive-tree-concept-board.png",
+       "thumb": "art/automotive-concepts/automotive-tree-concept-board-t.jpg",
+       "w": 1024,
+       "h": 1536,
+       "alt": "Automotive Tree concept board"
       }
      ]
     }
@@ -1428,102 +1472,13 @@
      "statusKey": "concept",
      "credit": "Original idea and initial drawings: Melita Iosava · Project author, artist and designer: Miranda Kuprava",
      "text": "A library concept proposed for New York City. The drawings and visualizations document a proposal; the project is not presented as built or realized.",
-     "images": [],
-     "doc": {
-      "title": "Pinocchio’s Library",
-      "pdf": "docs/pinocchios-library.pdf",
-      "pages": [
-       {
-        "src": "docs/pinocchios-library/01.jpg",
-        "thumb": "docs/pinocchios-library/01-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/02.jpg",
-        "thumb": "docs/pinocchios-library/02-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/03.jpg",
-        "thumb": "docs/pinocchios-library/03-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/04.jpg",
-        "thumb": "docs/pinocchios-library/04-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/05.jpg",
-        "thumb": "docs/pinocchios-library/05-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/06.jpg",
-        "thumb": "docs/pinocchios-library/06-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/07.jpg",
-        "thumb": "docs/pinocchios-library/07-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/08.jpg",
-        "thumb": "docs/pinocchios-library/08-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/09.jpg",
-        "thumb": "docs/pinocchios-library/09-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/10.jpg",
-        "thumb": "docs/pinocchios-library/10-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/11.jpg",
-        "thumb": "docs/pinocchios-library/11-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/12.jpg",
-        "thumb": "docs/pinocchios-library/12-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/13.jpg",
-        "thumb": "docs/pinocchios-library/13-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/14.jpg",
-        "thumb": "docs/pinocchios-library/14-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/15.jpg",
-        "thumb": "docs/pinocchios-library/15-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/16.jpg",
-        "thumb": "docs/pinocchios-library/16-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/17.jpg",
-        "thumb": "docs/pinocchios-library/17-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/18.jpg",
-        "thumb": "docs/pinocchios-library/18-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/19.jpg",
-        "thumb": "docs/pinocchios-library/19-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/20.jpg",
-        "thumb": "docs/pinocchios-library/20-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/21.jpg",
-        "thumb": "docs/pinocchios-library/21-t.jpg"
-       },
-       {
-        "src": "docs/pinocchios-library/22.jpg",
-        "thumb": "docs/pinocchios-library/22-t.jpg"
-       }
-      ],
-      "sizeMB": 14.8
-     }
+     "images": [
+      {
+       "src": "docs/pinocchios-library/09.jpg",
+       "thumb": "docs/pinocchios-library/09-t.jpg",
+       "alt": "Pinocchio Library main interior concept"
+      }
+     ]
     },
     {
      "title": "NINE LIVES",
@@ -1758,6 +1713,125 @@
        "thumb": "art/melita/melita-37-t.jpg",
        "w": 1153,
        "h": 2000
+      },
+      {
+       "src": "art/melita/melita-38.jpg",
+       "thumb": "art/melita/melita-38-t.jpg",
+       "w": 1086,
+       "h": 1448,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-39.jpg",
+       "thumb": "art/melita/melita-39-t.jpg",
+       "w": 1122,
+       "h": 1402,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-40.png",
+       "thumb": "art/melita/melita-40-t.jpg",
+       "w": 1034,
+       "h": 1521,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-41.jpg",
+       "thumb": "art/melita/melita-41-t.jpg",
+       "w": 1402,
+       "h": 1122,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-42.jpg",
+       "thumb": "art/melita/melita-42-t.jpg",
+       "w": 1536,
+       "h": 1152,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-43.jpg",
+       "thumb": "art/melita/melita-43-t.jpg",
+       "w": 1448,
+       "h": 1086,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-44.jpg",
+       "thumb": "art/melita/melita-44-t.jpg",
+       "w": 1384,
+       "h": 1536,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-45.jpg",
+       "thumb": "art/melita/melita-45-t.jpg",
+       "w": 1086,
+       "h": 1448,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-46.jpg",
+       "thumb": "art/melita/melita-46-t.jpg",
+       "w": 1152,
+       "h": 1536,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-47.jpg",
+       "thumb": "art/melita/melita-47-t.jpg",
+       "w": 1402,
+       "h": 1122,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-48.jpg",
+       "thumb": "art/melita/melita-48-t.jpg",
+       "w": 710,
+       "h": 1536,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-49.jpg",
+       "thumb": "art/melita/melita-49-t.jpg",
+       "w": 1024,
+       "h": 1536,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-50.jpg",
+       "thumb": "art/melita/melita-50-t.jpg",
+       "w": 1152,
+       "h": 1536,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-51.jpg",
+       "thumb": "art/melita/melita-51-t.jpg",
+       "w": 1536,
+       "h": 1108,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-52.jpg",
+       "thumb": "art/melita/melita-52-t.jpg",
+       "w": 1170,
+       "h": 1599,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-53.png",
+       "thumb": "art/melita/melita-53-t.jpg",
+       "w": 1086,
+       "h": 1448,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-54.png",
+       "thumb": "art/melita/melita-54-t.jpg",
+       "w": 1536,
+       "h": 1024,
+       "alt": "Selected artwork and process image by Melita Iosava"
       }
      ]
     }
@@ -1775,3 +1849,4 @@
   "h": 1122
  }
 }
+
