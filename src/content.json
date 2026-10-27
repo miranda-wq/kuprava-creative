@@ -1485,19 +1485,125 @@
      "statusKey": "realizedWork",
      "credit": "Ideas and drawings: Melita Iosava · Artworks: Miranda Kuprava",
      "text": "A collaborative project by Miranda Kuprava and Melita Iosava.",
-     "images": []
-    },
-    {
-     "title": "Selected collaboration works and process images",
-     "kicker": "Miranda Kuprava × Melita Iosava",
-     "credit": "Ideas and drawings: Melita Iosava · Artworks: Miranda Kuprava",
      "images": [
+      {
+       "src": "art/melita/melita-44.jpg",
+       "thumb": "art/melita/melita-44-t.jpg",
+       "w": 1384,
+       "h": 1536,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-45.jpg",
+       "thumb": "art/melita/melita-45-t.jpg",
+       "w": 1086,
+       "h": 1448,
+       "alt": "Selected artwork and process image by Melita Iosava"
+      },
+      {
+       "src": "art/melita/melita-17.jpg",
+       "thumb": "art/melita/melita-17-t.jpg",
+       "w": 1152,
+       "h": 1536
+      },
+      {
+       "src": "art/melita/melita-33.jpg",
+       "thumb": "art/melita/melita-33-t.jpg",
+       "w": 1170,
+       "h": 1720
+      },
+      {
+       "src": "art/melita/melita-18.jpg",
+       "thumb": "art/melita/melita-18-t.jpg",
+       "w": 934,
+       "h": 1536
+      },
+      {
+       "src": "art/melita/melita-29.jpg",
+       "thumb": "art/melita/melita-29-t.jpg",
+       "w": 1170,
+       "h": 1563
+      },
+      {
+       "src": "art/melita/melita-35.jpg",
+       "thumb": "art/melita/melita-35-t.jpg",
+       "w": 821,
+       "h": 1663
+      },
+      {
+       "src": "art/melita/melita-36.jpg",
+       "thumb": "art/melita/melita-36-t.jpg",
+       "w": 1170,
+       "h": 1524
+      },
+      {
+       "src": "art/melita/melita-37.jpg",
+       "thumb": "art/melita/melita-37-t.jpg",
+       "w": 1153,
+       "h": 2000
+      },
+      {
+       "src": "art/melita/melita-23.jpg",
+       "thumb": "art/melita/melita-23-t.jpg",
+       "w": 1536,
+       "h": 1024
+      },
+      {
+       "src": "art/melita/melita-20.jpg",
+       "thumb": "art/melita/melita-20-t.jpg",
+       "w": 1200,
+       "h": 900
+      },
+      {
+       "src": "art/melita/melita-31.jpg",
+       "thumb": "art/melita/melita-31-t.jpg",
+       "w": 1170,
+       "h": 1541
+      },
+      {
+       "src": "art/melita/melita-32.jpg",
+       "thumb": "art/melita/melita-32-t.jpg",
+       "w": 1170,
+       "h": 1691
+      },
+      {
+       "src": "art/melita/melita-34.jpg",
+       "thumb": "art/melita/melita-34-t.jpg",
+       "w": 1170,
+       "h": 1697
+      },
       {
        "src": "art/melita/melita-01.jpg",
        "thumb": "art/melita/melita-01-t.jpg",
        "w": 1086,
        "h": 1448
       },
+      {
+       "src": "art/melita/melita-04.jpg",
+       "thumb": "art/melita/melita-04-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/melita/melita-24.jpg",
+       "thumb": "art/melita/melita-24-t.jpg",
+       "w": 1086,
+       "h": 1448
+      },
+      {
+       "src": "art/melita/melita-28.jpg",
+       "thumb": "art/melita/melita-28-t.jpg",
+       "w": 1086,
+       "h": 1448
+      }
+     ],
+     "kicker": "Melita’s story"
+    },
+    {
+     "title": "Selected collaboration works and process images",
+     "kicker": "Miranda Kuprava × Melita Iosava",
+     "credit": "Ideas and drawings: Melita Iosava · Artworks: Miranda Kuprava",
+     "images": [
       {
        "src": "art/melita/melita-02.jpg",
        "thumb": "art/melita/melita-02-t.jpg",
@@ -1509,24 +1615,6 @@
        "thumb": "art/melita/melita-03-t.jpg",
        "w": 1024,
        "h": 1536
-      },
-      {
-       "src": "art/melita/melita-04.jpg",
-       "thumb": "art/melita/melita-04-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/melita/melita-05.jpg",
-       "thumb": "art/melita/melita-05-t.jpg",
-       "w": 1536,
-       "h": 1024
-      },
-      {
-       "src": "art/melita/melita-06.jpg",
-       "thumb": "art/melita/melita-06-t.jpg",
-       "w": 1086,
-       "h": 1448
       },
       {
        "src": "art/melita/melita-07.jpg",
@@ -1559,18 +1647,6 @@
        "h": 1254
       },
       {
-       "src": "art/melita/melita-12.jpg",
-       "thumb": "art/melita/melita-12-t.jpg",
-       "w": 1122,
-       "h": 1402
-      },
-      {
-       "src": "art/melita/melita-13.jpg",
-       "thumb": "art/melita/melita-13-t.jpg",
-       "w": 1122,
-       "h": 1402
-      },
-      {
        "src": "art/melita/melita-14.jpg",
        "thumb": "art/melita/melita-14-t.jpg",
        "w": 1122,
@@ -1589,28 +1665,10 @@
        "h": 1254
       },
       {
-       "src": "art/melita/melita-17.jpg",
-       "thumb": "art/melita/melita-17-t.jpg",
-       "w": 1152,
-       "h": 1536
-      },
-      {
-       "src": "art/melita/melita-18.jpg",
-       "thumb": "art/melita/melita-18-t.jpg",
-       "w": 934,
-       "h": 1536
-      },
-      {
        "src": "art/melita/melita-19.jpg",
        "thumb": "art/melita/melita-19-t.jpg",
        "w": 1086,
        "h": 1448
-      },
-      {
-       "src": "art/melita/melita-20.jpg",
-       "thumb": "art/melita/melita-20-t.jpg",
-       "w": 1200,
-       "h": 900
       },
       {
        "src": "art/melita/melita-21.jpg",
@@ -1623,18 +1681,6 @@
        "thumb": "art/melita/melita-22-t.jpg",
        "w": 1254,
        "h": 1254
-      },
-      {
-       "src": "art/melita/melita-23.jpg",
-       "thumb": "art/melita/melita-23-t.jpg",
-       "w": 1536,
-       "h": 1024
-      },
-      {
-       "src": "art/melita/melita-24.jpg",
-       "thumb": "art/melita/melita-24-t.jpg",
-       "w": 1086,
-       "h": 1448
       },
       {
        "src": "art/melita/melita-25.jpg",
@@ -1655,64 +1701,10 @@
        "h": 1536
       },
       {
-       "src": "art/melita/melita-28.jpg",
-       "thumb": "art/melita/melita-28-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/melita/melita-29.jpg",
-       "thumb": "art/melita/melita-29-t.jpg",
-       "w": 1170,
-       "h": 1563
-      },
-      {
        "src": "art/melita/melita-30.jpg",
        "thumb": "art/melita/melita-30-t.jpg",
        "w": 1170,
        "h": 1709
-      },
-      {
-       "src": "art/melita/melita-31.jpg",
-       "thumb": "art/melita/melita-31-t.jpg",
-       "w": 1170,
-       "h": 1541
-      },
-      {
-       "src": "art/melita/melita-32.jpg",
-       "thumb": "art/melita/melita-32-t.jpg",
-       "w": 1170,
-       "h": 1691
-      },
-      {
-       "src": "art/melita/melita-33.jpg",
-       "thumb": "art/melita/melita-33-t.jpg",
-       "w": 1170,
-       "h": 1720
-      },
-      {
-       "src": "art/melita/melita-34.jpg",
-       "thumb": "art/melita/melita-34-t.jpg",
-       "w": 1170,
-       "h": 1697
-      },
-      {
-       "src": "art/melita/melita-35.jpg",
-       "thumb": "art/melita/melita-35-t.jpg",
-       "w": 821,
-       "h": 1663
-      },
-      {
-       "src": "art/melita/melita-36.jpg",
-       "thumb": "art/melita/melita-36-t.jpg",
-       "w": 1170,
-       "h": 1524
-      },
-      {
-       "src": "art/melita/melita-37.jpg",
-       "thumb": "art/melita/melita-37-t.jpg",
-       "w": 1153,
-       "h": 2000
       },
       {
        "src": "art/melita/melita-38.jpg",
@@ -1754,20 +1746,6 @@
        "thumb": "art/melita/melita-43-t.jpg",
        "w": 1448,
        "h": 1086,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-44.jpg",
-       "thumb": "art/melita/melita-44-t.jpg",
-       "w": 1384,
-       "h": 1536,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-45.jpg",
-       "thumb": "art/melita/melita-45-t.jpg",
-       "w": 1086,
-       "h": 1448,
        "alt": "Selected artwork and process image by Melita Iosava"
       },
       {
@@ -1849,4 +1827,3 @@
   "h": 1122
  }
 }
-

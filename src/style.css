@@ -709,3 +709,6 @@ body[data-lang='ge'] .pv-all, body[data-lang='jp'] .pv-all, body[data-lang='ge']
 }
 
 
+
+/* Preserve Melita's two-paragraph story. */
+[data-project-slug='nine-lives'] .proj-text { white-space: pre-line; }

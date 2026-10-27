@@ -182,7 +182,7 @@ function renderProjectPage(sectionId, slug) {
       <a class="artwork-back" href="/#${sectionId}">← <span>${t().back}</span></a>
       <header class="artwork-detail-head">
         <p class="kicker">${escapeHTML(kicker)}</p>
-        <h1>${escapeHTML(record.title)}</h1>
+        <h1>${escapeHTML(projectField(record, 'title') || record.title)}</h1>
         ${record.statusKey ? `<p class="proj-status">${escapeHTML(projectStatus(record))}</p>` : ''}
         ${record.location ? `<p class="proj-location">${escapeHTML(record.location)}</p>` : ''}
         ${description ? `<p class="artwork-description">${escapeHTML(description)}</p>` : ''}
@@ -364,12 +364,12 @@ function renderSections() {
         (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images });
         if (p.doc) docs[p.doc.pdf] = p.doc;
         const sub = s.id === 'functional' && p.key && t().functionalSubs[p.key];
-        const many = p.images.length > 12;
+        const many = p.images.length > 12 && slugFor(p) !== 'nine-lives';
         html += `
           <article class="proj" data-project-slug="${slugFor(p)}" ${p.key ? `id="fa-${p.key}"` : ''}>
             <div class="proj-meta reveal">
               ${kicker ? `<div class="kicker" data-project-copy="kicker">${escapeHTML(kicker)}</div>` : ''}
-              <h3>${p.title}</h3>
+              <h3 data-project-copy="title">${escapeHTML(projectField(p, 'title') || p.title)}</h3>
               ${s.id === 'functional' ? `<a class="artwork-card-link" href="/artwork/${slugFor(p)}/"><span data-i18n="viewArtwork">${t().viewArtwork}</span> <span aria-hidden="true">↗</span></a>` : ''}
               ${status ? `<p class="proj-status" ${p.statusKey ? `data-project-status="${p.statusKey}" data-status-year="${p.statusYear || ''}"` : ''}>${status}</p>` : ''}
               ${outdoorOrderInfo.length ? `<dl class="project-order-details"><div><dt data-i18n="artworkFields.availability">${escapeHTML(outdoorOrderInfo[0][0])}</dt><dd data-i18n="orderInfo.availability">${escapeHTML(outdoorOrderInfo[0][1])}</dd></div><div><dt data-i18n="artworkFields.productionTime">${escapeHTML(outdoorOrderInfo[1][0])}</dt><dd data-i18n="orderInfo.productionTime">${escapeHTML(outdoorOrderInfo[1][1])}</dd></div><div><dt data-i18n="artworkFields.orderTerms">${escapeHTML(outdoorOrderInfo[2][0])}</dt><dd data-i18n="orderInfo.orderTerms">${escapeHTML(outdoorOrderInfo[2][1])}</dd></div></dl>` : ''}
