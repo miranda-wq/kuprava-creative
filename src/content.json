@@ -677,13 +677,6 @@
        "alt": "Ariadne — studio"
       },
       {
-       "src": "uploads/public-art/ariadne-original.jpg",
-       "thumb": "uploads/public-art/ariadne-original.jpg",
-       "w": 832,
-       "h": 1800,
-       "alt": "Ariadne — original"
-      },
-      {
        "src": "uploads/public-art/ariadne-detail.jpg",
        "thumb": "uploads/public-art/ariadne-detail.jpg",
        "w": 1350,
@@ -871,8 +864,23 @@
        "thumb": "art/outdoor/outdoor-11-t.jpg",
        "w": 1086,
        "h": 1448
+      },
+      {
+       "src": "uploads/artworks/what-we-carry-full.jpg",
+       "thumb": "uploads/artworks/what-we-carry-full.jpg",
+       "w": 1086,
+       "h": 1448,
+       "alt": "What We Carry — Chicago competition proposal"
+      },
+      {
+       "src": "uploads/artworks/what-we-carry-detail.jpg",
+       "thumb": "uploads/artworks/what-we-carry-detail.jpg",
+       "w": 1086,
+       "h": 1448,
+       "alt": "What We Carry — Chicago competition proposal"
       }
-     ]
+     ],
+     "text": "Still Standing / What We Carry. The deer proposal has been submitted to a competition in Chicago."
     },
     {
      "title": "black bull",
@@ -888,6 +896,20 @@
        "thumb": "art/outdoor/outdoor-13-t.jpg",
        "w": 1280,
        "h": 960
+      },
+      {
+       "src": "uploads/artworks/black-bull-lit.jpg",
+       "thumb": "uploads/artworks/black-bull-lit.jpg",
+       "w": 1350,
+       "h": 1800,
+       "alt": "Black bull — lit"
+      },
+      {
+       "src": "uploads/artworks/black-bull-snow.jpg",
+       "thumb": "uploads/artworks/black-bull-snow.jpg",
+       "w": 1418,
+       "h": 1800,
+       "alt": "Black bull — snow"
       }
      ]
     },

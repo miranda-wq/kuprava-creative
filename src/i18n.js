@@ -54,7 +54,7 @@ export const T = {
 
       'the-butterfly-effect': { text: 'Butterfly-inspired metal forms bring movement to an outdoor space.' },
 
-      'still-standing': { text: 'A slender figure stands beside a branch-like sculptural form.' },
+      'still-standing': { text: "Still Standing / What We Carry. The deer proposal has been submitted to a competition in Chicago." },
 
       'black-bull': { text: 'A sculptural bull appears in both gallery and outdoor settings.' },
 
@@ -146,7 +146,7 @@ export const T = {
 
       'the-butterfly-effect': { text: 'პეპლის ფორმებით შთაგონებული მეტალის ქანდაკებები გარე სივრცეს მოძრაობას სძენს.' },
 
-      'still-standing': { text: 'წერწეტი ფიგურა დატოტვილი, ხის მსგავსი სკულპტურული ფორმის გვერდით დგას.' },
+      'still-standing': { text: "Still Standing / What We Carry. ირმის პროექტი წარდგენილია ჩიკაგოს კონკურსზე." },
 
       'black-bull': { text: 'ხარის სკულპტურა წარმოდგენილია როგორც საგამოფენო, ისე გარე სივრცის ხედებში.' },
 
@@ -238,7 +238,7 @@ export const T = {
 
       'the-butterfly-effect': { text: 'Des formes métalliques inspirées du papillon apportent du mouvement à un espace extérieur.' },
 
-      'still-standing': { text: 'Une silhouette élancée se tient près d’une forme sculpturale ramifiée, semblable à un arbre.' },
+      'still-standing': { text: "Still Standing / What We Carry. Le projet de cerf a été soumis à un concours à Chicago." },
 
       'black-bull': { text: 'La sculpture du taureau est présentée en galerie et dans un espace extérieur.' },
 
@@ -366,7 +366,7 @@ T.zh = {
 
     'the-butterfly-effect': { text: '以蝴蝶为灵感的金属雕塑造型，为户外空间带来动感。' },
 
-    'still-standing': { text: '纤细的人形雕塑伫立在枝状、近似树形的造型旁。' },
+    'still-standing': { text: "Still Standing / What We Carry。鹿雕塑方案已提交芝加哥的一项竞赛。" },
 
     'black-bull': { text: '公牛雕塑既有展厅视角，也有户外空间视角。' },
 
@@ -411,4 +411,3 @@ T.zh = {
     paper: '这些纸浆塑形作品不使用颜料：颜色来自纸张本身，也保留其原有文字、图像和过往痕迹。',
   },
 };
-
