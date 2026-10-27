@@ -668,6 +668,41 @@
        "w": 1145,
        "h": 1374,
        "alt": "Ariadne supporting a circular labyrinth sculpture at sunset, with a labyrinth plan and detail views."
+      },
+      {
+       "src": "uploads/public-art/ariadne-studio.jpg",
+       "thumb": "uploads/public-art/ariadne-studio.jpg",
+       "w": 1086,
+       "h": 1448,
+       "alt": "Ariadne — studio"
+      },
+      {
+       "src": "uploads/public-art/ariadne-original.jpg",
+       "thumb": "uploads/public-art/ariadne-original.jpg",
+       "w": 832,
+       "h": 1800,
+       "alt": "Ariadne — original"
+      },
+      {
+       "src": "uploads/public-art/ariadne-detail.jpg",
+       "thumb": "uploads/public-art/ariadne-detail.jpg",
+       "w": 1350,
+       "h": 1800,
+       "alt": "Ariadne — detail"
+      },
+      {
+       "src": "uploads/public-art/ariadne-daylight.jpg",
+       "thumb": "uploads/public-art/ariadne-daylight.jpg",
+       "w": 1145,
+       "h": 1374,
+       "alt": "Ariadne — daylight"
+      },
+      {
+       "src": "uploads/public-art/ariadne-sunset.jpg",
+       "thumb": "uploads/public-art/ariadne-sunset.jpg",
+       "w": 1145,
+       "h": 1374,
+       "alt": "Ariadne — sunset"
       }
      ]
     },
@@ -681,6 +716,27 @@
        "thumb": "art/public-art/the-man-who-was-the-shadow-t.jpg",
        "w": 1672,
        "h": 941
+      },
+      {
+       "src": "uploads/public-art/shadow-sketch-full.jpg",
+       "thumb": "uploads/public-art/shadow-sketch-full.jpg",
+       "w": 1350,
+       "h": 1800,
+       "alt": "Original full-figure drawing for The Man Who Was the Shadow"
+      },
+      {
+       "src": "uploads/public-art/shadow-sketch-detail.jpg",
+       "thumb": "uploads/public-art/shadow-sketch-detail.jpg",
+       "w": 1350,
+       "h": 1800,
+       "alt": "Original drawing detail for The Man Who Was the Shadow"
+      },
+      {
+       "src": "uploads/public-art/shadow-amsterdam-detail.jpg",
+       "thumb": "uploads/public-art/shadow-amsterdam-detail.jpg",
+       "w": 832,
+       "h": 1800,
+       "alt": "The Man Who Was the Shadow, detail visualization in Amsterdam"
       }
      ],
      "statusKey": "competitionProposal",
@@ -693,6 +749,13 @@
      "credit": "Concept & artistic direction: Miranda Kuprava · Original inspiration: Melita Iosava’s drawing Freedom",
      "text": "Dedicated to the children affected by the war in Ukraine. Child-sized, faceless figures stand within a field of light, each holding a balloon. Made from unpainted fiberglass, all visible colour is created by light. The installation unfolds in three acts: everyday city life, the sudden interruption of an air-raid siren, and finally silence accompanied by Mahler’s Kindertotenlieder.",
      "images": [
+      {
+       "src": "art/melita/melita-53.png",
+       "thumb": "art/melita/melita-53-t.jpg",
+       "w": 1086,
+       "h": 1448,
+       "alt": "Freedom — original drawing by Melita Iosava, inspiration for The Deafening Silence"
+      },
       {
        "src": "art/public-art/the-deafening-silence-cover.jpg",
        "thumb": "art/public-art/the-deafening-silence-cover-t.jpg",
@@ -1683,12 +1746,6 @@
        "h": 1254
       },
       {
-       "src": "art/melita/melita-25.jpg",
-       "thumb": "art/melita/melita-25-t.jpg",
-       "w": 1536,
-       "h": 1024
-      },
-      {
        "src": "art/melita/melita-26.jpg",
        "thumb": "art/melita/melita-26-t.jpg",
        "w": 1402,
@@ -1795,20 +1852,6 @@
        "thumb": "art/melita/melita-52-t.jpg",
        "w": 1170,
        "h": 1599,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-53.png",
-       "thumb": "art/melita/melita-53-t.jpg",
-       "w": 1086,
-       "h": 1448,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-54.png",
-       "thumb": "art/melita/melita-54-t.jpg",
-       "w": 1536,
-       "h": 1024,
        "alt": "Selected artwork and process image by Melita Iosava"
       }
      ]
