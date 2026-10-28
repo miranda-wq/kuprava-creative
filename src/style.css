@@ -712,3 +712,5 @@ body[data-lang='ge'] .pv-all, body[data-lang='jp'] .pv-all, body[data-lang='ge']
 
 /* Preserve Melita's two-paragraph story. */
 [data-project-slug='nine-lives'] .proj-text { white-space: pre-line; }
+
+.festive-group-heading { margin: 4rem 0 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line, #392c2c); font-size: clamp(1.6rem, 3vw, 2.5rem); }

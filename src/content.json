@@ -937,17 +937,6 @@
    "id": "christmas",
    "projects": [
     {
-     "title": "Sculptural Tree of Figures",
-     "images": [
-      {
-       "src": "art/festive-sculptures/3C86ECC9-94E1-4A04-B720-96E789843E12(1).jpeg",
-       "thumb": "art/festive-sculptures/3C86ECC9-94E1-4A04-B720-96E789843E12(1).jpeg",
-       "h": 1402,
-       "w": 1122
-      }
-     ]
-    },
-    {
      "title": "Starburst Figure",
      "images": [
       {
@@ -962,7 +951,10 @@
        "h": 1536,
        "w": 753
       }
-     ]
+     ],
+     "key": "starburst-figure",
+     "group": "realized",
+     "statusKey": "realizedWork"
     },
     {
      "title": "Hanging Ornament Figure",
@@ -985,33 +977,13 @@
        "h": 1536,
        "w": 1152
       }
-     ]
+     ],
+     "key": "hanging-ornament-figure",
+     "group": "realized",
+     "statusKey": "realizedWork"
     },
     {
-     "title": "Butterfly Tree",
-     "images": [
-      {
-       "src": "art/festive-sculptures/141BB918-30B8-4609-B696-E60E000FEE86(6).jpeg",
-       "thumb": "art/festive-sculptures/141BB918-30B8-4609-B696-E60E000FEE86(6).jpeg",
-       "h": 1536,
-       "w": 1022
-      },
-      {
-       "src": "art/festive-sculptures/3E401D56-716D-46DC-82EF-0945D0332F0A(2).jpeg",
-       "thumb": "art/festive-sculptures/3E401D56-716D-46DC-82EF-0945D0332F0A(2).jpeg",
-       "h": 1086,
-       "w": 1448
-      },
-      {
-       "src": "art/festive-sculptures/45FEBA4C-FE19-4B95-A64C-907B2B5557D1(2).jpeg",
-       "thumb": "art/festive-sculptures/45FEBA4C-FE19-4B95-A64C-907B2B5557D1(2).jpeg",
-       "h": 1086,
-       "w": 1448
-      }
-     ]
-    },
-    {
-     "title": "Green Figure Tree",
+     "title": "Caucasus — The Evergreen Guardian",
      "images": [
       {
        "src": "art/festive-sculptures/IMG_0421(2).jpeg",
@@ -1043,7 +1015,10 @@
        "h": 2080,
        "w": 1170
       }
-     ]
+     ],
+     "key": "green-figure-tree",
+     "group": "realized",
+     "statusKey": "realizedWork"
     },
     {
      "title": "Crescent Moon Figure",
@@ -1072,11 +1047,20 @@
        "h": 1536,
        "w": 1152
       }
-     ]
+     ],
+     "key": "crescent-moon-figure",
+     "group": "realized",
+     "statusKey": "realizedWork"
     },
     {
-     "title": "Illuminated Tree Installation",
+     "title": "From Woman to Tree — A Transformation in Light",
      "images": [
+      {
+       "src": "art/festive-sculptures/IMG_0367(8).jpeg",
+       "thumb": "art/festive-sculptures/IMG_0367(8).jpeg",
+       "h": 1536,
+       "w": 1152
+      },
       {
        "src": "art/festive-sculptures/2D1DF357-6868-4BDA-9AA1-5DEF827F76D5.jpeg",
        "thumb": "art/festive-sculptures/2D1DF357-6868-4BDA-9AA1-5DEF827F76D5.jpeg",
@@ -1095,10 +1079,13 @@
        "h": 1536,
        "w": 1024
       }
-     ]
+     ],
+     "key": "illuminated-tree-installation",
+     "group": "realized",
+     "statusKey": "realizedWork"
     },
     {
-     "title": "Starburst Tree Figure",
+     "title": "Mzechabuki — The Sun-Headed Tree",
      "images": [
       {
        "src": "art/festive-sculptures/81E1B252-8ADB-4F67-B85B-DD500782E2BB(3).jpeg",
@@ -1130,18 +1117,50 @@
        "h": 1199,
        "w": 1312
       }
-     ]
+     ],
+     "key": "starburst-tree-figure",
+     "group": "realized",
+     "statusKey": "realizedWork"
     },
     {
-     "title": "Blue Light Figure",
+     "title": "Where Angels Rest",
      "images": [
       {
-       "src": "art/festive-sculptures/IMG_0367(8).jpeg",
-       "thumb": "art/festive-sculptures/IMG_0367(8).jpeg",
-       "h": 1536,
-       "w": 1152
+       "src": "art/festive-sculptures/3C86ECC9-94E1-4A04-B720-96E789843E12(1).jpeg",
+       "thumb": "art/festive-sculptures/3C86ECC9-94E1-4A04-B720-96E789843E12(1).jpeg",
+       "h": 1402,
+       "w": 1122
       }
-     ]
+     ],
+     "key": "sculptural-tree-of-figures",
+     "group": "concepts",
+     "statusKey": "concept"
+    },
+    {
+     "title": "Homage to Salvador Dalí",
+     "images": [
+      {
+       "src": "art/festive-sculptures/141BB918-30B8-4609-B696-E60E000FEE86(6).jpeg",
+       "thumb": "art/festive-sculptures/141BB918-30B8-4609-B696-E60E000FEE86(6).jpeg",
+       "h": 1536,
+       "w": 1022
+      },
+      {
+       "src": "art/festive-sculptures/3E401D56-716D-46DC-82EF-0945D0332F0A(2).jpeg",
+       "thumb": "art/festive-sculptures/3E401D56-716D-46DC-82EF-0945D0332F0A(2).jpeg",
+       "h": 1086,
+       "w": 1448
+      },
+      {
+       "src": "art/festive-sculptures/45FEBA4C-FE19-4B95-A64C-907B2B5557D1(2).jpeg",
+       "thumb": "art/festive-sculptures/45FEBA4C-FE19-4B95-A64C-907B2B5557D1(2).jpeg",
+       "h": 1086,
+       "w": 1448
+      }
+     ],
+     "key": "butterfly-tree",
+     "group": "concepts",
+     "statusKey": "concept"
     },
     {
      "title": "Modern Sculptural Tree",
@@ -1158,7 +1177,10 @@
        "h": 1024,
        "w": 1536
       }
-     ]
+     ],
+     "key": "modern-sculptural-tree",
+     "group": "concepts",
+     "statusKey": "concept"
     }
    ]
   },

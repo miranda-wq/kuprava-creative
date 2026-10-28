@@ -350,7 +350,8 @@ function renderSections() {
           </article>`;
       });
     } else {
-      s.projects.forEach((p) => {
+      s.projects.forEach((p, pi) => {
+        if (s.id === 'christmas' && p.group !== s.projects[pi - 1]?.group) html += `<h3 class="festive-group-heading" data-festive-group="${p.group}">${escapeHTML(t().sections.christmas.groups[p.group])}</h3>`;
         const status = projectStatus(p);
         const kicker = projectField(p, 'kicker');
         const credit = projectField(p, 'credit');
@@ -361,7 +362,7 @@ function renderSections() {
           [t().artworkFields.orderTerms, t().orderInfo.orderTerms],
         ] : [];
         const gi = galleries.push({ sectionId: s.id, title: p.title, kicker, status, statusKey: p.statusKey, statusYear: p.statusYear, location: p.location, images: p.images, doc: p.doc }) - 1;
-        (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images });
+        (sectionWorks[s.id] ||= []).push({ gi, title: p.title, images: p.images, record: p });
         if (p.doc) docs[p.doc.pdf] = p.doc;
         const sub = s.id === 'functional' && p.key && t().functionalSubs[p.key];
         const many = p.images.length > 12 && slugFor(p) !== 'nine-lives';
@@ -439,6 +440,7 @@ function applyLang() {
   $$('[data-sec-subtitle]').forEach((n) => (n.textContent = t().sections[n.dataset.secSubtitle].subtitle));
   $$('[data-sec-intro]').forEach((n) => (n.textContent = t().sections[n.dataset.secIntro].intro));
   $$('[data-sec-closing]').forEach((n) => (n.textContent = t().sections[n.dataset.secClosing].closing));
+  $$('[data-festive-group]').forEach((n) => { n.textContent = t().sections.christmas.groups[n.dataset.festiveGroup]; });
   $$('[data-project-copy]').forEach((n) => {
     const slug = n.closest('[data-project-slug]')?.dataset.projectSlug;
     const value = slug ? t().projectCopy?.[slug]?.[n.dataset.projectCopy] : null;
@@ -587,7 +589,7 @@ function planetItems(id, cap) {
   if (id === 'christmas' || id === 'kinetic') {
     return projects.slice(0, cap).map((p) => {
       const im = p.images[0];
-      return { gi: p.gi, idx: 0, thumb: url(im.thumb), w: im.w, h: im.h, title: p.title, projectSlug: p.slug, sectionId: id, preserveProportions: true };
+      return { gi: p.gi, idx: 0, thumb: url(im.thumb), w: im.w, h: im.h, title: p.record ? `${p.record.group ? t().sections.christmas.groups[p.record.group] + " · " : ""}${projectField(p.record, "title") || p.title}` : p.title, projectSlug: p.slug, sectionId: id, preserveProportions: true };
     });
   }
   for (let r = 0; out.length < cap; r++) {
@@ -680,4 +682,3 @@ document.body.classList.add('ready');
 hero.relayout();
 setTimeout(() => hero.climb(), 2500); // once the staircase has drawn itself
 if (location.hash && location.hash !== '#top') setTimeout(() => goTo(location.hash.slice(1)), 600);
-
