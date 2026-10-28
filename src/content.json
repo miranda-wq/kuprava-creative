@@ -1130,6 +1130,27 @@
        "thumb": "art/festive-sculptures/3C86ECC9-94E1-4A04-B720-96E789843E12(1).jpeg",
        "h": 1402,
        "w": 1122
+      },
+      {
+       "src": "uploads/festive/angels-tree-studio.jpg",
+       "thumb": "uploads/festive/angels-tree-studio.jpg",
+       "w": 1023,
+       "h": 1537,
+       "alt": "Where Angels Rest — studio concept view"
+      },
+      {
+       "src": "uploads/festive/angels-tree-interior.jpg",
+       "thumb": "uploads/festive/angels-tree-interior.jpg",
+       "w": 1023,
+       "h": 1537,
+       "alt": "Where Angels Rest — interior concept view"
+      },
+      {
+       "src": "uploads/festive/angels-tree-atrium.jpg",
+       "thumb": "uploads/festive/angels-tree-atrium.jpg",
+       "w": 1536,
+       "h": 1024,
+       "alt": "Where Angels Rest — atrium concept view"
       }
      ],
      "key": "sculptural-tree-of-figures",
