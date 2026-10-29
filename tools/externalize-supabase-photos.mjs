@@ -36,3 +36,6 @@ for (const root of roots) {
 }
 
 console.log(`Excluded ${removedFiles} Supabase-hosted photos (${(removedBytes / 1024 / 1024).toFixed(2)} MiB) from dist; source files are preserved.`);
+
+// Retire the superseded branded Merani presentation from the public build.
+fs.rmSync(path.join(outputRoot, 'docs', 'merani.pdf'), { force: true });

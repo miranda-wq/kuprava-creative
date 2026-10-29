@@ -1221,51 +1221,37 @@
        "h": 1448
       },
       {
-       "src": "art/automotive-concepts/a_glossy_hyper_realistic_luxury_car_showroom_inte.png",
-       "thumb": "art/automotive-concepts/a_glossy_hyper_realistic_luxury_car_showroom_inte.png",
+       "src": "uploads/cleaned/merani-showroom-clean.jpg",
+       "thumb": "uploads/cleaned/merani-showroom-clean.jpg",
        "w": 1402,
        "h": 1122
       },
       {
-       "src": "art/automotive-concepts/a_high_end_modern_luxury_car_showroom_interior_wit.png",
-       "thumb": "art/automotive-concepts/a_high_end_modern_luxury_car_showroom_interior_wit.png",
+       "src": "uploads/cleaned/merani-side-clean.jpg",
+       "thumb": "uploads/cleaned/merani-side-clean.jpg",
        "w": 1087,
        "h": 1447
       },
       {
-       "src": "art/automotive-concepts/merani-front-detail.png",
-       "thumb": "art/automotive-concepts/merani-front-detail-t.jpg",
+       "src": "uploads/cleaned/merani-front-detail-clean.jpg",
+       "thumb": "uploads/cleaned/merani-front-detail-clean.jpg",
        "w": 1086,
        "h": 1448,
        "alt": "Merani sculptural concept study"
       },
       {
-       "src": "art/automotive-concepts/merani-front-full.png",
-       "thumb": "art/automotive-concepts/merani-front-full-t.jpg",
+       "src": "uploads/cleaned/merani-front-full-clean.jpg",
+       "thumb": "uploads/cleaned/merani-front-full-clean.jpg",
        "w": 1096,
        "h": 1435,
        "alt": "Merani sculptural concept study"
       },
       {
-       "src": "art/automotive-concepts/merani-showroom.png",
-       "thumb": "art/automotive-concepts/merani-showroom-t.jpg",
-       "w": 1402,
-       "h": 1122,
-       "alt": "Merani sculptural concept study"
-      },
-      {
-       "src": "art/automotive-concepts/merani-rear.png",
-       "thumb": "art/automotive-concepts/merani-rear-t.jpg",
+       "src": "uploads/cleaned/merani-rear-clean.jpg",
+       "thumb": "uploads/cleaned/merani-rear-clean.jpg",
        "w": 1345,
        "h": 1169,
        "alt": "Merani sculptural concept study"
-      },
-      {
-       "src": "docs/merani/03.jpg",
-       "thumb": "docs/merani/03-t.jpg",
-       "w": 1203,
-       "h": 1700,
-       "alt": "Merani design inspiration page, Ferrari 250 Testa Rossa reference"
       }
      ],
      "quote": "The yearnings of my restless soul will not in vain have glowed,\nFor, dashing on, my steed has paved a new untrodden road.\nHe who follows in our wake, a smoother path will find;\nDaring all, his fateful steed shall leave dark fate behind.",
@@ -1364,10 +1350,10 @@
        "alt": "Close view of the Vitis Vinifera sculpture and its grape leaves."
       },
       {
-       "src": "art/vitis-vinifera-website/03_IMG_7679(2).jpeg",
-       "thumb": "art/vitis-vinifera-website/03_IMG_7679(2).jpeg",
-       "w": 1164,
-       "h": 1763,
+       "src": "uploads/cleaned/vitis-display-clean.jpg",
+       "thumb": "uploads/cleaned/vitis-display-clean.jpg",
+       "w": 1019,
+       "h": 1543,
        "label": "Display case · Installation",
        "alt": "Vitis Vinifera sculpture displayed in a glass case in a brick wine cellar."
       },
@@ -1412,10 +1398,10 @@
        "alt": "Vitis Vinifera sculpture standing among green grape vines."
       },
       {
-       "src": "art/vitis-vinifera-website/09_IMG_7689(3).jpeg",
-       "thumb": "art/vitis-vinifera-website/09_IMG_7689(3).jpeg",
-       "w": 1155,
-       "h": 843,
+       "src": "uploads/cleaned/spider-light-clean.jpg",
+       "thumb": "uploads/cleaned/spider-light-clean.jpg",
+       "w": 1468,
+       "h": 1071,
        "label": "Spider Light · Concept",
        "alt": "Original Spider Light concept board shown within the wine cellar."
       },
@@ -1929,8 +1915,8 @@
   }
  ],
  "intro": {
-  "src": "art/kinetic/merani-hero.jpg",
-  "thumb": "art/kinetic/merani-hero-t.jpg",
+  "src": "uploads/cleaned/merani-showroom-clean.jpg",
+  "thumb": "uploads/cleaned/merani-showroom-clean.jpg",
   "w": 1402,
   "h": 1122
  }

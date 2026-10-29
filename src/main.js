@@ -284,7 +284,7 @@ function renderSections() {
     if (s.doc) docs[s.doc.pdf] = s.doc;
 
     if (s.id === 'functional') {
-      html += `<div class="subnav reveal">${functionalArtworks.categories.map((category) => `<a href="#fa-${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${category}</a>`).join('')}</div>`;
+      html += `<div class="subnav reveal">${functionalArtworks.categories.map((category) => `<a data-functional-category="${category}" href="#fa-${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${escapeHTML(t().functionalCategoryLabels?.[category] || category)}</a>`).join('')}</div>`;
     }
 
     if (s.id === 'about') {
@@ -318,7 +318,7 @@ function renderSections() {
       functionalArtworks.categories.forEach((category) => {
         const categorySlug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         const works = functionalProducts.filter((p) => p.group === category);
-        html += `<section class="functional-category" id="fa-${categorySlug}"><h3 class="functional-category-title kicker">${category}</h3><div class="functional-grid">`;
+        html += `<section class="functional-category" id="fa-${categorySlug}"><h3 class="functional-category-title kicker" data-functional-category="${category}">${escapeHTML(t().functionalCategoryLabels?.[category] || category)}</h3><div class="functional-grid">`;
         works.forEach((p, pi) => {
           const gi = galleries.push({ sectionId: s.id, title: p.title, images: p.images }) - 1;
           const artwork = { ...p, key: p.slug };
@@ -440,6 +440,7 @@ function applyLang() {
   $$('[data-sec-subtitle]').forEach((n) => (n.textContent = t().sections[n.dataset.secSubtitle].subtitle));
   $$('[data-sec-intro]').forEach((n) => (n.textContent = t().sections[n.dataset.secIntro].intro));
   $$('[data-sec-closing]').forEach((n) => (n.textContent = t().sections[n.dataset.secClosing].closing));
+  $$('[data-functional-category]').forEach((n) => { n.textContent = t().functionalCategoryLabels?.[n.dataset.functionalCategory] || n.dataset.functionalCategory; });
   $$('[data-festive-group]').forEach((n) => { n.textContent = t().sections.christmas.groups[n.dataset.festiveGroup]; });
   $$('[data-project-copy]').forEach((n) => {
     const slug = n.closest('[data-project-slug]')?.dataset.projectSlug;

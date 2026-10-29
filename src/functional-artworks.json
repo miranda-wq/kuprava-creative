@@ -395,8 +395,8 @@
     {
       "slug": "the-flock",
       "title": "THE FLOCK",
-      "group": "INTERIOR ART OBJECTS",
-      "section": "INTERIOR ART OBJECTS",
+      "group": "SCULPTURAL CHANDELIERS",
+      "section": "SCULPTURAL CHANDELIERS",
       "type": "Sculptural Light Installation",
       "edition": "Unique Work / One of a Kind",
       "images": [
@@ -495,15 +495,15 @@
     },
     {
       "slug": "wall-sconces",
-      "title": "WALL SCONCES",
-      "group": "INTERIOR ART OBJECTS",
-      "section": "INTERIOR ART OBJECTS",
+      "title": "EMOTION",
+      "group": "THE LANGUAGE OF SILENCE",
+      "section": "THE LANGUAGE OF SILENCE",
       "edition": "Unlimited Edition",
       "images": [
         {
           "src": "art/functional-replacement/wall-sconces/01-C439B8AF-C523-431F-92F1-896D60D1860C-2-.jpeg",
           "thumb": "art/functional-replacement/wall-sconces/01-C439B8AF-C523-431F-92F1-896D60D1860C-2-.jpeg",
-          "alt": "WALL SCONCES — view 1"
+          "alt": "EMOTION — view 1"
         }
       ]
     }

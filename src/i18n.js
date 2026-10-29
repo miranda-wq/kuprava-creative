@@ -418,3 +418,5 @@ for (const [language, copy] of Object.entries({"en":{"groups":{"realized":"Reali
  T[language].sections.christmas.groups = copy.groups;
  ["sculptural-tree-of-figures","butterfly-tree","green-figure-tree","starburst-tree-figure","illuminated-tree-installation"].forEach((key, index) => { T[language].projectCopy[key] = { title: copy.names[index], text: copy.texts[index] }; });
 }
+
+for (const [language, aboutLabel, chandeliers] of [['en','About Miranda','Chandeliers'],['ge','მირანდას შესახებ','ჭაღები'],['fr','À propos de Miranda','Lustres'],['zh','关于Miranda','吊灯']]) { T[language].aboutLabel = aboutLabel; T[language].functionalCategoryLabels = { 'SCULPTURAL CHANDELIERS': chandeliers }; }

@@ -714,3 +714,6 @@ body[data-lang='ge'] .pv-all, body[data-lang='jp'] .pv-all, body[data-lang='ge']
 [data-project-slug='nine-lives'] .proj-text { white-space: pre-line; }
 
 .festive-group-heading { margin: 4rem 0 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line, #392c2c); font-size: clamp(1.6rem, 3vw, 2.5rem); }
+
+.top-about { color: #f2dfcb; border: 1px solid #b07863; border-radius: 2rem; padding: .5rem .9rem; font-size: .8rem; text-decoration: none; white-space: nowrap; background: #26171acf; }
+@media(max-width: 600px) { .top-about { padding: .4rem .6rem; font-size: .65rem; } .brand-mini { display:none; } .topbar { gap:.5rem; } }
