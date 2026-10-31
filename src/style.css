@@ -717,3 +717,12 @@ body[data-lang='ge'] .pv-all, body[data-lang='jp'] .pv-all, body[data-lang='ge']
 
 .top-about { color: #f2dfcb; border: 1px solid #b07863; border-radius: 2rem; padding: .5rem .9rem; font-size: .8rem; text-decoration: none; white-space: nowrap; background: #26171acf; }
 @media(max-width: 600px) { .top-about { padding: .4rem .6rem; font-size: .65rem; } .brand-mini { display:none; } .topbar { gap:.5rem; } }
+
+/* Readable closing statement on the hero and at the foot of the page. */
+.hero-text { top: 80%; }
+.tagline { font-size: clamp(13px, 1.15vw, 18px); font-weight: 400; color: #f5e8dd; letter-spacing: .16em; line-height: 1.65; text-shadow: 0 2px 8px #000, 0 0 18px #000; }
+.tagline span { margin-right: 0; }
+.footer-tag { display: grid; gap: .5rem; font-size: clamp(15px, 1.5vw, 22px); font-weight: 400; line-height: 1.7; letter-spacing: .12em; color: #f5e8dd; }
+@media (max-width:760px), (max-aspect-ratio:1/1) { .hero-text { top: 76%; } .tagline { font-size: 13px; letter-spacing: .06em; line-height: 1.7; padding: 0 12px; } .footer-tag { letter-spacing: .06em; } }
+
+.explore { bottom: 4px; gap: 4px; }

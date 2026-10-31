@@ -127,20 +127,92 @@ const ORBITS = [
 
 // Miranda's ten planets, placed as in the reference (the three she added later take its unlabelled moons)
 const NODES = [
-  { id: 'sculpture', x: 832, y: 70, d: 28, side: 'right', orbit: 2, tone: 'hot' },
-  { id: 'kinetic', x: 1226, y: 137, d: 30, side: 'right', orbit: 6 },
-  { id: 'christmas', x: 1358, y: 278, d: 42, side: 'right', orbit: 7, wrap: true, tone: 'grey' },
-  { id: 'brand', x: 1467, y: 354, d: 24, side: 'right', orbit: 1, wrap: true, tone: 'red' },
-  { id: 'functional', x: 1282, y: 641, d: 32, side: 'right', orbit: 0 },
-  { id: 'public', x: 417, y: 185, d: 24, side: 'left', orbit: 4, tone: 'hot' },
-  { id: 'spaces', x: 340, y: 400, d: 24, side: 'left', orbit: 8, wrap: true, tone: 'red' },
-  { id: 'contact', x: 378, y: 628, d: 40, side: 'left', orbit: 9 },
-  { id: 'outdoor', x: 548, y: 772, d: 26, side: 'left', orbit: 10, wrap: true, tone: 'grey' },
+  {
+    "id": "sculpture",
+    "x": 832,
+    "y": 70,
+    "d": 32,
+    "side": "right",
+    "orbit": 2,
+    "wrap": true
+  },
+  {
+    "id": "functional",
+    "x": 1226,
+    "y": 137,
+    "d": 40,
+    "side": "right",
+    "orbit": 6,
+    "wrap": true
+  },
+  {
+    "id": "christmas",
+    "x": 1410,
+    "y": 565,
+    "d": 42,
+    "side": "right",
+    "orbit": 7,
+    "wrap": true
+  },
+  {
+    "id": "spaces",
+    "x": 1120,
+    "y": 730,
+    "d": 34,
+    "side": "right",
+    "orbit": 1,
+    "wrap": true
+  },
+  {
+    "id": "kinetic",
+    "x": 590,
+    "y": 790,
+    "d": 34,
+    "side": "left",
+    "orbit": 0,
+    "wrap": true
+  },
+  {
+    "id": "outdoor",
+    "x": 378,
+    "y": 628,
+    "d": 34,
+    "side": "left",
+    "orbit": 9,
+    "wrap": true
+  },
+  {
+    "id": "public",
+    "x": 300,
+    "y": 465,
+    "d": 32,
+    "side": "left",
+    "orbit": 8,
+    "wrap": true
+  },
+  {
+    "id": "brand",
+    "x": 300,
+    "y": 300,
+    "d": 32,
+    "side": "left",
+    "orbit": 4,
+    "wrap": true
+  },
+  {
+    "id": "contact",
+    "x": 610,
+    "y": 105,
+    "d": 38,
+    "side": "left",
+    "orbit": 10,
+    "wrap": true
+  }
 ];
 const MOONS = [
-  { id: 'melita', x: 1240, y: 480, d: 142, tone: 'big', side: 'right', orbit: 3, wrap: true },
-  { id: 'about', x: 510, y: 510, d: 56, tone: 'lit', side: 'left', orbit: 11, wrap: true },
-  { x: 1582, y: 262, d: 6, tone: 'red', orbit: 12 },
+ { id: 'melita', x: 1240, y: 365, d: 142, tone: 'big', side: 'right', orbit: 3, wrap: true },
+ { id: 'about', x: 417, y: 185, d: 56, tone: 'lit', side: 'left', orbit: 11, wrap: true },
+ { x:1582, y:262, d:6, tone:'red', orbit:12 },
 ];
 
 function onEllipse(o, ang) {
@@ -330,7 +402,7 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
   MOONS.forEach((m, i) => {
     const c = moonEl(m.d, m.tone, i + 3);
     const o = orbits[m.orbit];
-    const p = onEllipse(o, angleFor(o, m));
+    const p = { x: m.x, y: m.y };
     if (!m.id) {
       Object.assign(c.style, pos(p.x, p.y));
       nodesBox.appendChild(c);
@@ -358,6 +430,7 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
     a.href = `#${n.id}`;
     a.style.setProperty('--d', n.d);
     a.style.setProperty('--i', i);
+    Object.assign(a.style, pos(n.x, n.y));
     a.innerHTML = `<span class="label"><b>${labelHTML(labels[n.id], n.wrap)}</b><i></i></span>`;
     a.prepend(moonEl(n.d, n.tone || 'lit', i + 11));
     a.addEventListener('click', (e) => {
@@ -371,13 +444,15 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
     return { ...n, o, base, a, phase: Math.random() * 6.28 };
   });
 
+  const navigationOrder = ['sculpture', 'functional', 'melita', 'christmas', 'spaces', 'kinetic', 'outdoor', 'public', 'brand', 'about', 'contact'];
+  navigationOrder.forEach((id) => { const link = nodesBox.querySelector(`a[href="#${id}"]`); if (link) nodesBox.appendChild(link); });
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let raf;
   const t0 = performance.now();
   function tick(now) {
     const t = (now - t0) / 1000;
     live.forEach((n) => {
-      const p = onEllipse(n.o, n.base + (reduce ? 0 : Math.sin(t * 0.16 + n.phase) * 0.012));
+      const p = { x: n.x + (reduce ? 0 : Math.sin(t * .16 + n.phase) * 2), y: n.y + (reduce ? 0 : Math.cos(t * .16 + n.phase) * 2) };
       Object.assign(n.a.style, pos(p.x, p.y));
     });
     raf = requestAnimationFrame(tick);

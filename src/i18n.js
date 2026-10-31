@@ -3,7 +3,7 @@
 export const LANGS = ['en', 'ge', 'fr', 'zh']; // English, Georgian, French and Simplified Chinese
 
 // Miranda's nine "planets", in the order she listed them on WhatsApp.
-export const ORDER = ['sculpture', 'public', 'outdoor', 'christmas', 'kinetic', 'spaces', 'functional', 'brand', 'melita', 'about'];
+export const ORDER = ['sculpture', 'functional', 'melita', 'christmas', 'spaces', 'kinetic', 'outdoor', 'public', 'brand', 'about'];
 
 export const T = {
   en: {
@@ -420,3 +420,5 @@ for (const [language, copy] of Object.entries({"en":{"groups":{"realized":"Reali
 }
 
 for (const [language, aboutLabel, chandeliers] of [['en','About Miranda','Chandeliers'],['ge','მირანდას შესახებ','ჭაღები'],['fr','À propos de Miranda','Lustres'],['zh','关于Miranda','吊灯']]) { T[language].aboutLabel = aboutLabel; T[language].functionalCategoryLabels = { 'SCULPTURAL CHANDELIERS': chandeliers }; }
+
+for (const [language, papier, collaboration] of [['en','Papier-mâché','Melita & Miranda'],['ge','პაპიე-მაშე','მელიტა და მირანდა'],['fr','Papier mâché','Melita & Miranda'],['zh','纸浆雕塑','Melita 与 Miranda']]) { T[language].sections.sculpture.title = papier; T[language].sections.melita.title = collaboration; }
