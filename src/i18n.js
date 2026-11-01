@@ -422,3 +422,12 @@ for (const [language, copy] of Object.entries({"en":{"groups":{"realized":"Reali
 for (const [language, aboutLabel, chandeliers] of [['en','About Miranda','Chandeliers'],['ge','მირანდას შესახებ','ჭაღები'],['fr','À propos de Miranda','Lustres'],['zh','关于Miranda','吊灯']]) { T[language].aboutLabel = aboutLabel; T[language].functionalCategoryLabels = { 'SCULPTURAL CHANDELIERS': chandeliers }; }
 
 for (const [language, papier, collaboration] of [['en','Papier-mâché','Melita & Miranda'],['ge','პაპიე-მაშე','მელიტა და მირანდა'],['fr','Papier mâché','Melita & Miranda'],['zh','纸浆雕塑','Melita 与 Miranda']]) { T[language].sections.sculpture.title = papier; T[language].sections.melita.title = collaboration; }
+
+// The artist's own papier-mâché process: colour comes from reclaimed paper.
+for (const [language, intro] of Object.entries({
+  ge: 'ეს ნამუშევრები პაპიე-მაშეს ჩემეული ტექნიკით იქმნება. ვიყენებ მეორად ქაღალდს და არ ვხმარობ საღებავს — ფერი თავად მასალიდან მოდის. წინასწარ შერჩეული, სხვადასხვა ფერის ქაღალდის შერწყმითა და ზედაპირის მრავალჯერადი გაპრიალებით მიიღება თითქმის ხის მსგავსი ფაქტურა და ფერთა გამა, რომლის ზუსტად განსაზღვრა წინასწარ შეუძლებელია. მასალის ეს ცვალებადობა შემოქმედებითი პროცესის ნაწილია და თითოეულ ნამუშევარს განუმეორებელ ხასიათს ანიჭებს.',
+  en: 'These works are made using my own approach to papier-mâché. I use reclaimed paper and no paint: the colour comes from the material itself. Carefully selected papers of different colours are combined and the surface is polished repeatedly, creating an almost wood-like texture and a palette that cannot be precisely predicted in advance. This variability is part of the creative process and gives each work its own unrepeatable character.',
+  fr: 'Ces œuvres sont réalisées selon ma propre technique de papier mâché. J’utilise du papier de récupération, sans peinture : la couleur vient de la matière elle-même. Des papiers de différentes couleurs, choisis à l’avance, sont assemblés, puis la surface est polie à plusieurs reprises. Il en résulte une texture proche du bois et une palette dont les nuances ne peuvent être prévues avec exactitude. Cette variabilité fait partie du processus créatif et confère à chaque œuvre un caractère singulier.',
+  zh: '这些作品采用我个人探索的纸浆塑形技法创作。我使用回收纸张，不使用颜料：色彩来自材料本身。将预先挑选的不同颜色纸张融合，并反复打磨抛光，形成近似木材的肌理。最终呈现的色彩无法事先精确预知。这种材料的变化是创作过程的一部分，也赋予每件作品独一无二的性格。'
+})) T[language].sections.sculpture.intro = intro;
+
