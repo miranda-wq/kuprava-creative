@@ -3,7 +3,7 @@
 export const LANGS = ['en', 'ge', 'fr', 'zh']; // English, Georgian, French and Simplified Chinese
 
 // Miranda's nine "planets", in the order she listed them on WhatsApp.
-export const ORDER = ['sculpture', 'functional', 'melita', 'christmas', 'spaces', 'kinetic', 'outdoor', 'public', 'brand', 'about'];
+export const ORDER = ['sculpture', 'functional', 'furniture', 'melita', 'christmas', 'spaces', 'kinetic', 'outdoor', 'public', 'brand', 'about'];
 
 export const T = {
   en: {
@@ -430,4 +430,10 @@ for (const [language, intro] of Object.entries({
   fr: 'Ces œuvres sont réalisées selon ma propre technique de papier mâché. J’utilise du papier de récupération, sans peinture : la couleur vient de la matière elle-même. Des papiers de différentes couleurs, choisis à l’avance, sont assemblés, puis la surface est polie à plusieurs reprises. Il en résulte une texture proche du bois et une palette dont les nuances ne peuvent être prévues avec exactitude. Cette variabilité fait partie du processus créatif et confère à chaque œuvre un caractère singulier.',
   zh: '这些作品采用我个人探索的纸浆塑形技法创作。我使用回收纸张，不使用颜料：色彩来自材料本身。将预先挑选的不同颜色纸张融合，并反复打磨抛光，形成近似木材的肌理。最终呈现的色彩无法事先精确预知。这种材料的变化是创作过程的一部分，也赋予每件作品独一无二的性格。'
 })) T[language].sections.sculpture.intro = intro;
+
+// Limited-edition sculptural furniture collections.
+for (const [language, copy] of Object.entries({"ge":{"title":"სკულპტურული ავეჯი","intro":"სავარძლები, სკამები, მაგიდები და შერჩეული ავეჯის ობიექტები, რომლებშიც სკულპტურული ფორმა ყოველდღიურ ფუნქციას ერწყმის. კოლექცია წარმოდგენილია დიზაინის ხაზებად — თითოეული მათგანი აერთიანებს საერთო ფორმითა და ფერთა გამით დაკავშირებულ ნამუშევრებს. ყველა ნამუშევარი ლიმიტირებული გამოშვებისაა და შეკვეთით მზადდება. დამკვეთის მოთხოვნისა და პროექტის თავისებურებების მიხედვით, წარმოება შეიძლება განხორციელდეს იტალიაში, პორტუგალიაში ან საქართველოში. ასევე ვმუშაობ ინდივიდუალურ შეკვეთებზე.","names":["ხელი","გეომეტრიული დიალოგები","კატის ფორმები","ფერთა ორბიტა","დინება","რიტმი"],"kicker":"ლიმიტირებული გამოშვება · შეკვეთით დამზადება"},"en":{"title":"Sculptural Furniture","intro":"Armchairs, chairs, tables and selected furniture objects that bring sculptural form into everyday use. The collection is arranged in design lines, bringing together works connected by form and colour. All works are limited editions and made to order. Depending on the client’s requirements and the needs of the project, production may take place in Italy, Portugal or Georgia. Bespoke commissions are also welcome.","names":["The Hand","Geometric Dialogues","Feline Forms","Chromatic Orbit","Flow","Rhythm"],"kicker":"Limited edition · Made to order"},"fr":{"title":"Mobilier sculptural","intro":"Fauteuils, chaises, tables et pièces de mobilier choisies, où la forme sculpturale rejoint l’usage quotidien. La collection est organisée en lignes de design réunissant des œuvres liées par leurs formes et leurs couleurs. Toutes les pièces sont en édition limitée et réalisées sur commande. Selon les souhaits du client et les besoins du projet, la fabrication peut avoir lieu en Italie, au Portugal ou en Géorgie. Je réalise également des créations sur mesure.","names":["La Main","Dialogues géométriques","Formes félines","Orbite chromatique","Fluidité","Rythme"],"kicker":"Édition limitée · Sur commande"},"zh":{"title":"雕塑家具","intro":"扶手椅、座椅、桌子及精选家具物件，将雕塑形态融入日常功能。系列按设计主题编排，将形态与色彩相互呼应的作品汇集展示。所有作品均为限量版，按订单制作。根据客户要求及项目需求，可在意大利、葡萄牙或格鲁吉亚生产，同时接受个性化定制委托。","names":["手","几何对话","猫的形态","色彩轨道","流动","节奏"],"kicker":"限量版 · 按订单制作"}})) {
+ T[language].sections.furniture = { title: copy.title, intro: copy.intro };
+ ["the-hand","geometric-dialogues","feline-forms","chromatic-orbit","flow","rhythm"].forEach((key,index) => { T[language].projectCopy[key] = { title: copy.names[index], kicker: copy.kicker }; });
+}
 

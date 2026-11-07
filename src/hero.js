@@ -127,6 +127,7 @@ const ORBITS = [
 
 // Miranda's ten planets, placed as in the reference (the three she added later take its unlabelled moons)
 const NODES = [
+  { id: 'furniture', x: 1425, y: 255, d: 46, side: 'right', orbit: 3, wrap: true },
   {
     "id": "sculpture",
     "x": 832,
@@ -444,7 +445,7 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
     return { ...n, o, base, a, phase: Math.random() * 6.28 };
   });
 
-  const navigationOrder = ['sculpture', 'functional', 'melita', 'christmas', 'spaces', 'kinetic', 'outdoor', 'public', 'brand', 'about', 'contact'];
+  const navigationOrder = ['sculpture', 'functional', 'furniture', 'melita', 'christmas', 'spaces', 'kinetic', 'outdoor', 'public', 'brand', 'about', 'contact'];
   navigationOrder.forEach((id) => { const link = nodesBox.querySelector(`a[href="#${id}"]`); if (link) nodesBox.appendChild(link); });
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let raf;
@@ -481,3 +482,4 @@ export function buildHero({ svg, nodesBox, onNavigate, onHover, labels }) {
     stop() { cancelAnimationFrame(raf); },
   };
 }
+

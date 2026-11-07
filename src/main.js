@@ -587,10 +587,10 @@ lb.addEventListener('touchend', (e) => {
 // up to `cap` works of a section, taking each project's images in turn so every project shows
 function planetItems(id, cap) {
   const projects = sectionWorks[id] || [], out = [];
-  if (id === 'christmas' || id === 'kinetic') {
+  if (id === 'christmas' || id === 'kinetic' || id === 'furniture') {
     return projects.slice(0, cap).map((p) => {
       const im = p.images[0];
-      return { gi: p.gi, idx: 0, thumb: url(im.thumb), w: im.w, h: im.h, title: p.record ? `${p.record.group ? t().sections.christmas.groups[p.record.group] + " · " : ""}${projectField(p.record, "title") || p.title}` : p.title, projectSlug: p.slug, sectionId: id, preserveProportions: true };
+      return { gi: p.gi, idx: 0, thumb: url(im.thumb), w: im.w, h: im.h, title: p.record ? `${id === 'christmas' && p.record.group ? t().sections.christmas.groups[p.record.group] + " · " : ""}${projectField(p.record, "title") || p.title}` : p.title, projectSlug: p.slug, sectionId: id, preserveProportions: true };
     });
   }
   for (let r = 0; out.length < cap; r++) {
@@ -683,3 +683,5 @@ document.body.classList.add('ready');
 hero.relayout();
 setTimeout(() => hero.climb(), 2500); // once the staircase has drawn itself
 if (location.hash && location.hash !== '#top') setTimeout(() => goTo(location.hash.slice(1)), 600);
+
+

@@ -1,1923 +1,2176 @@
 {
- "sections": [
-  {
-   "id": "sculpture",
-   "workCount": 22,
-   "doc": {
-    "title": "Artworks Portfolio",
-    "pdf": "docs/artworks-portfolio.pdf",
-    "pages": [
-     {
-      "src": "docs/artworks-portfolio/01.jpg",
-      "thumb": "docs/artworks-portfolio/01-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/02.jpg",
-      "thumb": "docs/artworks-portfolio/02-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/03.jpg",
-      "thumb": "docs/artworks-portfolio/03-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/04.jpg",
-      "thumb": "docs/artworks-portfolio/04-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/05.jpg",
-      "thumb": "docs/artworks-portfolio/05-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/06.jpg",
-      "thumb": "docs/artworks-portfolio/06-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/07.jpg",
-      "thumb": "docs/artworks-portfolio/07-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/08.jpg",
-      "thumb": "docs/artworks-portfolio/08-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/09.jpg",
-      "thumb": "docs/artworks-portfolio/09-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/10.jpg",
-      "thumb": "docs/artworks-portfolio/10-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/11.jpg",
-      "thumb": "docs/artworks-portfolio/11-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/12.jpg",
-      "thumb": "docs/artworks-portfolio/12-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/13.jpg",
-      "thumb": "docs/artworks-portfolio/13-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/14.jpg",
-      "thumb": "docs/artworks-portfolio/14-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/15.jpg",
-      "thumb": "docs/artworks-portfolio/15-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/16.jpg",
-      "thumb": "docs/artworks-portfolio/16-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/17.jpg",
-      "thumb": "docs/artworks-portfolio/17-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/18.jpg",
-      "thumb": "docs/artworks-portfolio/18-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/19.jpg",
-      "thumb": "docs/artworks-portfolio/19-t.jpg",
-      "w": 1203,
-      "h": 1700
-     },
-     {
-      "src": "docs/artworks-portfolio/20.jpg",
-      "thumb": "docs/artworks-portfolio/20-t.jpg",
-      "w": 1203,
-      "h": 1700
-     }
-    ],
-    "sizeMB": 24.6
-   },
-   "projects": [
+  "sections": [
     {
-     "title": "Incitatus",
-     "images": [
-      {
-       "src": "art/sculpture/incitatus-01.jpg",
-       "thumb": "art/sculpture/incitatus-01-t.jpg",
-       "w": 1374,
-       "h": 1145
+      "id": "sculpture",
+      "workCount": 22,
+      "doc": {
+        "title": "Artworks Portfolio",
+        "pdf": "docs/artworks-portfolio.pdf",
+        "pages": [
+          {
+            "src": "docs/artworks-portfolio/01.jpg",
+            "thumb": "docs/artworks-portfolio/01-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/02.jpg",
+            "thumb": "docs/artworks-portfolio/02-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/03.jpg",
+            "thumb": "docs/artworks-portfolio/03-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/04.jpg",
+            "thumb": "docs/artworks-portfolio/04-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/05.jpg",
+            "thumb": "docs/artworks-portfolio/05-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/06.jpg",
+            "thumb": "docs/artworks-portfolio/06-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/07.jpg",
+            "thumb": "docs/artworks-portfolio/07-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/08.jpg",
+            "thumb": "docs/artworks-portfolio/08-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/09.jpg",
+            "thumb": "docs/artworks-portfolio/09-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/10.jpg",
+            "thumb": "docs/artworks-portfolio/10-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/11.jpg",
+            "thumb": "docs/artworks-portfolio/11-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/12.jpg",
+            "thumb": "docs/artworks-portfolio/12-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/13.jpg",
+            "thumb": "docs/artworks-portfolio/13-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/14.jpg",
+            "thumb": "docs/artworks-portfolio/14-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/15.jpg",
+            "thumb": "docs/artworks-portfolio/15-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/16.jpg",
+            "thumb": "docs/artworks-portfolio/16-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/17.jpg",
+            "thumb": "docs/artworks-portfolio/17-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/18.jpg",
+            "thumb": "docs/artworks-portfolio/18-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/19.jpg",
+            "thumb": "docs/artworks-portfolio/19-t.jpg",
+            "w": 1203,
+            "h": 1700
+          },
+          {
+            "src": "docs/artworks-portfolio/20.jpg",
+            "thumb": "docs/artworks-portfolio/20-t.jpg",
+            "w": 1203,
+            "h": 1700
+          }
+        ],
+        "sizeMB": 24.6
       },
-      {
-       "src": "art/sculpture/incitatus-02.jpg",
-       "thumb": "art/sculpture/incitatus-02-t.jpg",
-       "w": 1536,
-       "h": 1024
-      },
-      {
-       "src": "art/sculpture/incitatus-03.jpg",
-       "thumb": "art/sculpture/incitatus-03-t.jpg",
-       "w": 1536,
-       "h": 1024
-      }
-     ]
+      "projects": [
+        {
+          "title": "Incitatus",
+          "images": [
+            {
+              "src": "art/sculpture/incitatus-01.jpg",
+              "thumb": "art/sculpture/incitatus-01-t.jpg",
+              "w": 1374,
+              "h": 1145
+            },
+            {
+              "src": "art/sculpture/incitatus-02.jpg",
+              "thumb": "art/sculpture/incitatus-02-t.jpg",
+              "w": 1536,
+              "h": 1024
+            },
+            {
+              "src": "art/sculpture/incitatus-03.jpg",
+              "thumb": "art/sculpture/incitatus-03-t.jpg",
+              "w": 1536,
+              "h": 1024
+            }
+          ]
+        },
+        {
+          "title": "Blue Horse",
+          "images": [
+            {
+              "src": "art/sculpture/blue-horse-01.jpg",
+              "thumb": "art/sculpture/blue-horse-01-t.jpg",
+              "w": 1122,
+              "h": 1402
+            }
+          ]
+        },
+        {
+          "title": "Dictator's Fate",
+          "images": [
+            {
+              "src": "art/sculpture/dictator-s-fate-01.jpg",
+              "thumb": "art/sculpture/dictator-s-fate-01-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/sculpture/dictator-s-fate-02.jpg",
+              "thumb": "art/sculpture/dictator-s-fate-02-t.jpg",
+              "w": 1202,
+              "h": 1308
+            }
+          ]
+        },
+        {
+          "title": "Dogs",
+          "images": [
+            {
+              "src": "art/sculpture/dogs-01.jpg",
+              "thumb": "art/sculpture/dogs-01-t.jpg",
+              "w": 1369,
+              "h": 1149
+            }
+          ]
+        },
+        {
+          "title": "Bull",
+          "images": [
+            {
+              "src": "art/sculpture/bull-01.jpg",
+              "thumb": "art/sculpture/bull-01-t.jpg",
+              "w": 1113,
+              "h": 1413
+            },
+            {
+              "src": "art/sculpture/bull-02.jpg",
+              "thumb": "art/sculpture/bull-02-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/sculpture/bull-03.jpg",
+              "thumb": "art/sculpture/bull-03-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/sculpture/bull-04.jpg",
+              "thumb": "art/sculpture/bull-04-t.jpg",
+              "w": 1152,
+              "h": 1536
+            }
+          ]
+        },
+        {
+          "title": "Gen Z",
+          "images": [
+            {
+              "src": "art/sculpture/gen-z-01.jpg",
+              "thumb": "art/sculpture/gen-z-01-t.jpg",
+              "w": 1053,
+              "h": 1493
+            },
+            {
+              "src": "art/sculpture/gen-z-02.jpg",
+              "thumb": "art/sculpture/gen-z-02-t.jpg",
+              "w": 1152,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/gen-z-03.jpg",
+              "thumb": "art/sculpture/gen-z-03-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/sculpture/gen-z-04.jpg",
+              "thumb": "art/sculpture/gen-z-04-t.jpg",
+              "w": 1086,
+              "h": 1448
+            }
+          ]
+        },
+        {
+          "title": "Sacrifice",
+          "images": [
+            {
+              "src": "art/sculpture/sacrifice-01.jpg",
+              "thumb": "art/sculpture/sacrifice-01-t.jpg",
+              "w": 1086,
+              "h": 1448
+            }
+          ]
+        },
+        {
+          "title": "Iphigenia",
+          "images": [
+            {
+              "src": "art/sculpture/iphigenia-01.jpg",
+              "thumb": "art/sculpture/iphigenia-01-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/iphigenia-02.jpg",
+              "thumb": "art/sculpture/iphigenia-02-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/iphigenia-03.jpg",
+              "thumb": "art/sculpture/iphigenia-03-t.jpg",
+              "w": 1024,
+              "h": 1536
+            }
+          ]
+        },
+        {
+          "title": "Woman",
+          "images": [
+            {
+              "src": "art/sculpture/woman-01.jpg",
+              "thumb": "art/sculpture/woman-01-t.jpg",
+              "w": 1145,
+              "h": 1374
+            },
+            {
+              "src": "art/sculpture/woman-02.jpg",
+              "thumb": "art/sculpture/woman-02-t.jpg",
+              "w": 1145,
+              "h": 1374
+            }
+          ]
+        },
+        {
+          "title": "The Gaze of God",
+          "images": [
+            {
+              "src": "art/sculpture/the-gaze-of-god-01.jpg",
+              "thumb": "art/sculpture/the-gaze-of-god-01-t.jpg",
+              "w": 1120,
+              "h": 1404
+            },
+            {
+              "src": "art/sculpture/the-gaze-of-god-02.jpg",
+              "thumb": "art/sculpture/the-gaze-of-god-02-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/sculpture/the-gaze-of-god-03.jpg",
+              "thumb": "art/sculpture/the-gaze-of-god-03-t.jpg",
+              "w": 1224,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/the-gaze-of-god-04.jpg",
+              "thumb": "art/sculpture/the-gaze-of-god-04-t.jpg",
+              "w": 1152,
+              "h": 1536
+            }
+          ]
+        },
+        {
+          "title": "Man with a Lantern",
+          "images": [
+            {
+              "src": "art/sculpture/man-with-a-lantern-01.jpg",
+              "thumb": "art/sculpture/man-with-a-lantern-01-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/sculpture/man-with-a-lantern-02.jpg",
+              "thumb": "art/sculpture/man-with-a-lantern-02-t.jpg",
+              "w": 1152,
+              "h": 1536
+            }
+          ]
+        },
+        {
+          "title": "Medea",
+          "images": [
+            {
+              "src": "art/sculpture/medea-01.jpg",
+              "thumb": "art/sculpture/medea-01-t.jpg",
+              "w": 1440,
+              "h": 1800
+            },
+            {
+              "src": "art/sculpture/medea-02.jpg",
+              "thumb": "art/sculpture/medea-02-t.jpg",
+              "w": 1440,
+              "h": 1800
+            },
+            {
+              "src": "art/sculpture/medea-03.jpg",
+              "thumb": "art/sculpture/medea-03-t.jpg",
+              "w": 1440,
+              "h": 1800
+            },
+            {
+              "src": "art/sculpture/medea-04.jpg",
+              "thumb": "art/sculpture/medea-04-t.jpg",
+              "w": 1440,
+              "h": 1800
+            }
+          ]
+        },
+        {
+          "title": "Hecate",
+          "images": [
+            {
+              "src": "art/sculpture/hecate-01.jpg",
+              "thumb": "art/sculpture/hecate-01-t.jpg",
+              "w": 1086,
+              "h": 1448
+            }
+          ]
+        },
+        {
+          "title": "Don't Eat Goldfish",
+          "images": [
+            {
+              "src": "art/sculpture/don-t-eat-goldfish-01.jpg",
+              "thumb": "art/sculpture/don-t-eat-goldfish-01-t.jpg",
+              "w": 1122,
+              "h": 1402
+            }
+          ]
+        },
+        {
+          "title": "Pixel",
+          "images": [
+            {
+              "src": "art/sculpture/pixel-01.jpg",
+              "thumb": "art/sculpture/pixel-01-t.jpg",
+              "w": 1086,
+              "h": 1449
+            }
+          ]
+        },
+        {
+          "title": "Black Cat",
+          "images": [
+            {
+              "src": "art/sculpture/black-cat-01.jpg",
+              "thumb": "art/sculpture/black-cat-01-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/sculpture/black-cat-02.jpg",
+              "thumb": "art/sculpture/black-cat-02-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/sculpture/black-cat-03.jpg",
+              "thumb": "art/sculpture/black-cat-03-t.jpg",
+              "w": 895,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/black-cat-04.jpg",
+              "thumb": "art/sculpture/black-cat-04-t.jpg",
+              "w": 1086,
+              "h": 1448
+            }
+          ]
+        },
+        {
+          "title": "Madame Butterfly",
+          "images": [
+            {
+              "src": "art/sculpture/madame-butterfly-01.jpg",
+              "thumb": "art/sculpture/madame-butterfly-01-t.jpg",
+              "w": 1152,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/madame-butterfly-02.jpg",
+              "thumb": "art/sculpture/madame-butterfly-02-t.jpg",
+              "w": 1152,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/madame-butterfly-03.jpg",
+              "thumb": "art/sculpture/madame-butterfly-03-t.jpg",
+              "w": 1152,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/madame-butterfly-04.jpg",
+              "thumb": "art/sculpture/madame-butterfly-04-t.jpg",
+              "w": 1152,
+              "h": 1536
+            }
+          ]
+        },
+        {
+          "title": "Angry Puppy",
+          "images": [
+            {
+              "src": "art/sculpture/angry-puppy-01.jpg",
+              "thumb": "art/sculpture/angry-puppy-01-t.jpg",
+              "w": 1536,
+              "h": 1152
+            }
+          ]
+        },
+        {
+          "title": "Horse",
+          "images": [
+            {
+              "src": "art/sculpture/horse-01.jpg",
+              "thumb": "art/sculpture/horse-01-t.jpg",
+              "w": 1067,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/horse-02.jpg",
+              "thumb": "art/sculpture/horse-02-t.jpg",
+              "w": 1536,
+              "h": 1152
+            },
+            {
+              "src": "art/sculpture/horse-03.jpg",
+              "thumb": "art/sculpture/horse-03-t.jpg",
+              "w": 1536,
+              "h": 1152
+            },
+            {
+              "src": "art/sculpture/horse-04.jpg",
+              "thumb": "art/sculpture/horse-04-t.jpg",
+              "w": 1536,
+              "h": 1152
+            }
+          ]
+        },
+        {
+          "title": "Young Horse",
+          "images": [
+            {
+              "src": "art/sculpture/young-horse-01.jpg",
+              "thumb": "art/sculpture/young-horse-01-t.jpg",
+              "w": 1170,
+              "h": 1562
+            },
+            {
+              "src": "art/sculpture/young-horse-02.jpg",
+              "thumb": "art/sculpture/young-horse-02-t.jpg",
+              "w": 1160,
+              "h": 1787
+            }
+          ]
+        },
+        {
+          "title": "White Papier-Mâché Rabbits",
+          "kicker": "Small-scale sculptures",
+          "images": [
+            {
+              "src": "art/sculpture/ceramic-rabbits-01.jpg",
+              "thumb": "art/sculpture/ceramic-rabbits-01-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/ceramic-rabbits-02.jpg",
+              "thumb": "art/sculpture/ceramic-rabbits-02-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/ceramic-rabbits-03.jpg",
+              "thumb": "art/sculpture/ceramic-rabbits-03-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/ceramic-rabbits-04.jpg",
+              "thumb": "art/sculpture/ceramic-rabbits-04-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/ceramic-rabbits-05.jpg",
+              "thumb": "art/sculpture/ceramic-rabbits-05-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/ceramic-rabbits-06.jpg",
+              "thumb": "art/sculpture/ceramic-rabbits-06-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/ceramic-rabbits-07.jpg",
+              "thumb": "art/sculpture/ceramic-rabbits-07-t.jpg",
+              "w": 1024,
+              "h": 1536
+            }
+          ]
+        },
+        {
+          "title": "Rabbits",
+          "kicker": "Series · interior studies",
+          "images": [
+            {
+              "src": "art/sculpture/rabbits-01.jpg",
+              "thumb": "art/sculpture/rabbits-01-t.jpg",
+              "w": 1129,
+              "h": 1393
+            },
+            {
+              "src": "art/sculpture/rabbits-02.jpg",
+              "thumb": "art/sculpture/rabbits-02-t.jpg",
+              "w": 1078,
+              "h": 1459
+            },
+            {
+              "src": "art/sculpture/rabbits-03.jpg",
+              "thumb": "art/sculpture/rabbits-03-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/sculpture/rabbits-04.jpg",
+              "thumb": "art/sculpture/rabbits-04-t.jpg",
+              "w": 1124,
+              "h": 1399
+            },
+            {
+              "src": "art/sculpture/rabbits-05.jpg",
+              "thumb": "art/sculpture/rabbits-05-t.jpg",
+              "w": 1123,
+              "h": 1401
+            },
+            {
+              "src": "art/sculpture/rabbits-06.jpg",
+              "thumb": "art/sculpture/rabbits-06-t.jpg",
+              "w": 1113,
+              "h": 1414
+            },
+            {
+              "src": "art/sculpture/rabbits-07.jpg",
+              "thumb": "art/sculpture/rabbits-07-t.jpg",
+              "w": 1113,
+              "h": 1414
+            },
+            {
+              "src": "art/sculpture/rabbits-08.jpg",
+              "thumb": "art/sculpture/rabbits-08-t.jpg",
+              "w": 1197,
+              "h": 1315
+            },
+            {
+              "src": "art/sculpture/rabbits-09.jpg",
+              "thumb": "art/sculpture/rabbits-09-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/sculpture/rabbits-10.jpg",
+              "thumb": "art/sculpture/rabbits-10-t.jpg",
+              "w": 1122,
+              "h": 1402
+            },
+            {
+              "src": "art/sculpture/rabbits-11.jpg",
+              "thumb": "art/sculpture/rabbits-11-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/sculpture/rabbits-12.jpg",
+              "thumb": "art/sculpture/rabbits-12-t.jpg",
+              "w": 1086,
+              "h": 1448
+            }
+          ]
+        }
+      ]
     },
     {
-     "title": "Blue Horse",
-     "images": [
-      {
-       "src": "art/sculpture/blue-horse-01.jpg",
-       "thumb": "art/sculpture/blue-horse-01-t.jpg",
-       "w": 1122,
-       "h": 1402
-      }
-     ]
+      "id": "public",
+      "workCount": 3,
+      "projects": [
+        {
+          "title": "Ariadne",
+          "statusKey": "concept",
+          "text": "A public-art concept based on the Ariadne labyrinth. The location shown is proposal context, not a claim that the work has been realized.",
+          "images": [
+            {
+              "src": "art/public-art/ariadne-labyrinth.png",
+              "thumb": "art/public-art/ariadne-labyrinth.png",
+              "w": 1145,
+              "h": 1374,
+              "alt": "Ariadne supporting a circular labyrinth sculpture at sunset, with a labyrinth plan and detail views."
+            },
+            {
+              "src": "uploads/public-art/ariadne-studio.jpg",
+              "thumb": "uploads/public-art/ariadne-studio.jpg",
+              "w": 1086,
+              "h": 1448,
+              "alt": "Ariadne — studio"
+            },
+            {
+              "src": "uploads/public-art/ariadne-detail.jpg",
+              "thumb": "uploads/public-art/ariadne-detail.jpg",
+              "w": 1350,
+              "h": 1800,
+              "alt": "Ariadne — detail"
+            },
+            {
+              "src": "uploads/public-art/ariadne-daylight.jpg",
+              "thumb": "uploads/public-art/ariadne-daylight.jpg",
+              "w": 1145,
+              "h": 1374,
+              "alt": "Ariadne — daylight"
+            },
+            {
+              "src": "uploads/public-art/ariadne-sunset.jpg",
+              "thumb": "uploads/public-art/ariadne-sunset.jpg",
+              "w": 1145,
+              "h": 1374,
+              "alt": "Ariadne — sunset"
+            }
+          ]
+        },
+        {
+          "title": "The Man Who Was the Shadow",
+          "kicker": "Light sculpture",
+          "text": "A bronze-toned figure whose head is a lamp: he lights the street for others while his own face stays in shadow.",
+          "images": [
+            {
+              "src": "art/public-art/the-man-who-was-the-shadow.jpg",
+              "thumb": "art/public-art/the-man-who-was-the-shadow-t.jpg",
+              "w": 1672,
+              "h": 941
+            },
+            {
+              "src": "uploads/public-art/shadow-sketch-full.jpg",
+              "thumb": "uploads/public-art/shadow-sketch-full.jpg",
+              "w": 1350,
+              "h": 1800,
+              "alt": "Original full-figure drawing for The Man Who Was the Shadow"
+            },
+            {
+              "src": "uploads/public-art/shadow-sketch-detail.jpg",
+              "thumb": "uploads/public-art/shadow-sketch-detail.jpg",
+              "w": 1350,
+              "h": 1800,
+              "alt": "Original drawing detail for The Man Who Was the Shadow"
+            },
+            {
+              "src": "uploads/public-art/shadow-amsterdam-detail.jpg",
+              "thumb": "uploads/public-art/shadow-amsterdam-detail.jpg",
+              "w": 832,
+              "h": 1800,
+              "alt": "The Man Who Was the Shadow, detail visualization in Amsterdam"
+            }
+          ],
+          "statusKey": "competitionProposal",
+          "statusYear": 2026,
+          "location": "Amsterdam"
+        },
+        {
+          "title": "The Deafening Silence",
+          "kicker": "Public art / light & sound installation",
+          "credit": "Concept & artistic direction: Miranda Kuprava · Original inspiration: Melita Iosava’s drawing Freedom",
+          "text": "Dedicated to the children affected by the war in Ukraine. Child-sized, faceless figures stand within a field of light, each holding a balloon. Made from unpainted fiberglass, all visible colour is created by light. The installation unfolds in three acts: everyday city life, the sudden interruption of an air-raid siren, and finally silence accompanied by Mahler’s Kindertotenlieder.",
+          "images": [
+            {
+              "src": "art/melita/melita-53.png",
+              "thumb": "art/melita/melita-53-t.jpg",
+              "w": 1086,
+              "h": 1448,
+              "alt": "Freedom — original drawing by Melita Iosava, inspiration for The Deafening Silence"
+            },
+            {
+              "src": "art/public-art/the-deafening-silence-cover.jpg",
+              "thumb": "art/public-art/the-deafening-silence-cover-t.jpg",
+              "w": 1536,
+              "h": 1024
+            },
+            {
+              "src": "art/public-art/the-deafening-silence-renders.jpg",
+              "thumb": "art/public-art/the-deafening-silence-renders-t.jpg",
+              "w": 1536,
+              "h": 1024
+            }
+          ],
+          "statusKey": "competitionProposal",
+          "statusYear": 2026,
+          "location": "Germany"
+        }
+      ]
     },
     {
-     "title": "Dictator's Fate",
-     "images": [
-      {
-       "src": "art/sculpture/dictator-s-fate-01.jpg",
-       "thumb": "art/sculpture/dictator-s-fate-01-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/sculpture/dictator-s-fate-02.jpg",
-       "thumb": "art/sculpture/dictator-s-fate-02-t.jpg",
-       "w": 1202,
-       "h": 1308
-      }
-     ]
-    },
-    {
-     "title": "Dogs",
-     "images": [
-      {
-       "src": "art/sculpture/dogs-01.jpg",
-       "thumb": "art/sculpture/dogs-01-t.jpg",
-       "w": 1369,
-       "h": 1149
-      }
-     ]
-    },
-    {
-     "title": "Bull",
-     "images": [
-      {
-       "src": "art/sculpture/bull-01.jpg",
-       "thumb": "art/sculpture/bull-01-t.jpg",
-       "w": 1113,
-       "h": 1413
-      },
-      {
-       "src": "art/sculpture/bull-02.jpg",
-       "thumb": "art/sculpture/bull-02-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/sculpture/bull-03.jpg",
-       "thumb": "art/sculpture/bull-03-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/sculpture/bull-04.jpg",
-       "thumb": "art/sculpture/bull-04-t.jpg",
-       "w": 1152,
-       "h": 1536
-      }
-     ]
-    },
-    {
-     "title": "Gen Z",
-     "images": [
-      {
-       "src": "art/sculpture/gen-z-01.jpg",
-       "thumb": "art/sculpture/gen-z-01-t.jpg",
-       "w": 1053,
-       "h": 1493
-      },
-      {
-       "src": "art/sculpture/gen-z-02.jpg",
-       "thumb": "art/sculpture/gen-z-02-t.jpg",
-       "w": 1152,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/gen-z-03.jpg",
-       "thumb": "art/sculpture/gen-z-03-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/sculpture/gen-z-04.jpg",
-       "thumb": "art/sculpture/gen-z-04-t.jpg",
-       "w": 1086,
-       "h": 1448
-      }
-     ]
-    },
-    {
-     "title": "Sacrifice",
-     "images": [
-      {
-       "src": "art/sculpture/sacrifice-01.jpg",
-       "thumb": "art/sculpture/sacrifice-01-t.jpg",
-       "w": 1086,
-       "h": 1448
-      }
-     ]
-    },
-    {
-     "title": "Iphigenia",
-     "images": [
-      {
-       "src": "art/sculpture/iphigenia-01.jpg",
-       "thumb": "art/sculpture/iphigenia-01-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/iphigenia-02.jpg",
-       "thumb": "art/sculpture/iphigenia-02-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/iphigenia-03.jpg",
-       "thumb": "art/sculpture/iphigenia-03-t.jpg",
-       "w": 1024,
-       "h": 1536
-      }
-     ]
-    },
-    {
-     "title": "Woman",
-     "images": [
-      {
-       "src": "art/sculpture/woman-01.jpg",
-       "thumb": "art/sculpture/woman-01-t.jpg",
-       "w": 1145,
-       "h": 1374
-      },
-      {
-       "src": "art/sculpture/woman-02.jpg",
-       "thumb": "art/sculpture/woman-02-t.jpg",
-       "w": 1145,
-       "h": 1374
-      }
-     ]
-    },
-    {
-     "title": "The Gaze of God",
-     "images": [
-      {
-       "src": "art/sculpture/the-gaze-of-god-01.jpg",
-       "thumb": "art/sculpture/the-gaze-of-god-01-t.jpg",
-       "w": 1120,
-       "h": 1404
-      },
-      {
-       "src": "art/sculpture/the-gaze-of-god-02.jpg",
-       "thumb": "art/sculpture/the-gaze-of-god-02-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/sculpture/the-gaze-of-god-03.jpg",
-       "thumb": "art/sculpture/the-gaze-of-god-03-t.jpg",
-       "w": 1224,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/the-gaze-of-god-04.jpg",
-       "thumb": "art/sculpture/the-gaze-of-god-04-t.jpg",
-       "w": 1152,
-       "h": 1536
-      }
-     ]
-    },
-    {
-     "title": "Man with a Lantern",
-     "images": [
-      {
-       "src": "art/sculpture/man-with-a-lantern-01.jpg",
-       "thumb": "art/sculpture/man-with-a-lantern-01-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/sculpture/man-with-a-lantern-02.jpg",
-       "thumb": "art/sculpture/man-with-a-lantern-02-t.jpg",
-       "w": 1152,
-       "h": 1536
-      }
-     ]
-    },
-    {
-     "title": "Medea",
-     "images": [
-      {
-       "src": "art/sculpture/medea-01.jpg",
-       "thumb": "art/sculpture/medea-01-t.jpg",
-       "w": 1440,
-       "h": 1800
-      },
-      {
-       "src": "art/sculpture/medea-02.jpg",
-       "thumb": "art/sculpture/medea-02-t.jpg",
-       "w": 1440,
-       "h": 1800
-      },
-      {
-       "src": "art/sculpture/medea-03.jpg",
-       "thumb": "art/sculpture/medea-03-t.jpg",
-       "w": 1440,
-       "h": 1800
-      },
-      {
-       "src": "art/sculpture/medea-04.jpg",
-       "thumb": "art/sculpture/medea-04-t.jpg",
-       "w": 1440,
-       "h": 1800
-      }
-     ]
-    },
-    {
-     "title": "Hecate",
-     "images": [
-      {
-       "src": "art/sculpture/hecate-01.jpg",
-       "thumb": "art/sculpture/hecate-01-t.jpg",
-       "w": 1086,
-       "h": 1448
-      }
-     ]
-    },
-    {
-     "title": "Don't Eat Goldfish",
-     "images": [
-      {
-       "src": "art/sculpture/don-t-eat-goldfish-01.jpg",
-       "thumb": "art/sculpture/don-t-eat-goldfish-01-t.jpg",
-       "w": 1122,
-       "h": 1402
-      }
-     ]
-    },
-    {
-     "title": "Pixel",
-     "images": [
-      {
-       "src": "art/sculpture/pixel-01.jpg",
-       "thumb": "art/sculpture/pixel-01-t.jpg",
-       "w": 1086,
-       "h": 1449
-      }
-     ]
-    },
-    {
-     "title": "Black Cat",
-     "images": [
-      {
-       "src": "art/sculpture/black-cat-01.jpg",
-       "thumb": "art/sculpture/black-cat-01-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/sculpture/black-cat-02.jpg",
-       "thumb": "art/sculpture/black-cat-02-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/sculpture/black-cat-03.jpg",
-       "thumb": "art/sculpture/black-cat-03-t.jpg",
-       "w": 895,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/black-cat-04.jpg",
-       "thumb": "art/sculpture/black-cat-04-t.jpg",
-       "w": 1086,
-       "h": 1448
-      }
-     ]
-    },
-    {
-     "title": "Madame Butterfly",
-     "images": [
-      {
-       "src": "art/sculpture/madame-butterfly-01.jpg",
-       "thumb": "art/sculpture/madame-butterfly-01-t.jpg",
-       "w": 1152,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/madame-butterfly-02.jpg",
-       "thumb": "art/sculpture/madame-butterfly-02-t.jpg",
-       "w": 1152,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/madame-butterfly-03.jpg",
-       "thumb": "art/sculpture/madame-butterfly-03-t.jpg",
-       "w": 1152,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/madame-butterfly-04.jpg",
-       "thumb": "art/sculpture/madame-butterfly-04-t.jpg",
-       "w": 1152,
-       "h": 1536
-      }
-     ]
-    },
-    {
-     "title": "Angry Puppy",
-     "images": [
-      {
-       "src": "art/sculpture/angry-puppy-01.jpg",
-       "thumb": "art/sculpture/angry-puppy-01-t.jpg",
-       "w": 1536,
-       "h": 1152
-      }
-     ]
-    },
-    {
-     "title": "Horse",
-     "images": [
-      {
-       "src": "art/sculpture/horse-01.jpg",
-       "thumb": "art/sculpture/horse-01-t.jpg",
-       "w": 1067,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/horse-02.jpg",
-       "thumb": "art/sculpture/horse-02-t.jpg",
-       "w": 1536,
-       "h": 1152
-      },
-      {
-       "src": "art/sculpture/horse-03.jpg",
-       "thumb": "art/sculpture/horse-03-t.jpg",
-       "w": 1536,
-       "h": 1152
-      },
-      {
-       "src": "art/sculpture/horse-04.jpg",
-       "thumb": "art/sculpture/horse-04-t.jpg",
-       "w": 1536,
-       "h": 1152
-      }
-     ]
-    },
-    {
-     "title": "Young Horse",
-     "images": [
-      {
-       "src": "art/sculpture/young-horse-01.jpg",
-       "thumb": "art/sculpture/young-horse-01-t.jpg",
-       "w": 1170,
-       "h": 1562
-      },
-      {
-       "src": "art/sculpture/young-horse-02.jpg",
-       "thumb": "art/sculpture/young-horse-02-t.jpg",
-       "w": 1160,
-       "h": 1787
-      }
-     ]
-    },
-    {
-     "title": "White Papier-Mâché Rabbits",
-     "kicker": "Small-scale sculptures",
-     "images": [
-      {
-       "src": "art/sculpture/ceramic-rabbits-01.jpg",
-       "thumb": "art/sculpture/ceramic-rabbits-01-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/ceramic-rabbits-02.jpg",
-       "thumb": "art/sculpture/ceramic-rabbits-02-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/ceramic-rabbits-03.jpg",
-       "thumb": "art/sculpture/ceramic-rabbits-03-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/ceramic-rabbits-04.jpg",
-       "thumb": "art/sculpture/ceramic-rabbits-04-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/ceramic-rabbits-05.jpg",
-       "thumb": "art/sculpture/ceramic-rabbits-05-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/ceramic-rabbits-06.jpg",
-       "thumb": "art/sculpture/ceramic-rabbits-06-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/ceramic-rabbits-07.jpg",
-       "thumb": "art/sculpture/ceramic-rabbits-07-t.jpg",
-       "w": 1024,
-       "h": 1536
-      }
-     ]
-    },
-    {
-     "title": "Rabbits",
-     "kicker": "Series · interior studies",
-     "images": [
-      {
-       "src": "art/sculpture/rabbits-01.jpg",
-       "thumb": "art/sculpture/rabbits-01-t.jpg",
-       "w": 1129,
-       "h": 1393
-      },
-      {
-       "src": "art/sculpture/rabbits-02.jpg",
-       "thumb": "art/sculpture/rabbits-02-t.jpg",
-       "w": 1078,
-       "h": 1459
-      },
-      {
-       "src": "art/sculpture/rabbits-03.jpg",
-       "thumb": "art/sculpture/rabbits-03-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/sculpture/rabbits-04.jpg",
-       "thumb": "art/sculpture/rabbits-04-t.jpg",
-       "w": 1124,
-       "h": 1399
-      },
-      {
-       "src": "art/sculpture/rabbits-05.jpg",
-       "thumb": "art/sculpture/rabbits-05-t.jpg",
-       "w": 1123,
-       "h": 1401
-      },
-      {
-       "src": "art/sculpture/rabbits-06.jpg",
-       "thumb": "art/sculpture/rabbits-06-t.jpg",
-       "w": 1113,
-       "h": 1414
-      },
-      {
-       "src": "art/sculpture/rabbits-07.jpg",
-       "thumb": "art/sculpture/rabbits-07-t.jpg",
-       "w": 1113,
-       "h": 1414
-      },
-      {
-       "src": "art/sculpture/rabbits-08.jpg",
-       "thumb": "art/sculpture/rabbits-08-t.jpg",
-       "w": 1197,
-       "h": 1315
-      },
-      {
-       "src": "art/sculpture/rabbits-09.jpg",
-       "thumb": "art/sculpture/rabbits-09-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/sculpture/rabbits-10.jpg",
-       "thumb": "art/sculpture/rabbits-10-t.jpg",
-       "w": 1122,
-       "h": 1402
-      },
-      {
-       "src": "art/sculpture/rabbits-11.jpg",
-       "thumb": "art/sculpture/rabbits-11-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/sculpture/rabbits-12.jpg",
-       "thumb": "art/sculpture/rabbits-12-t.jpg",
-       "w": 1086,
-       "h": 1448
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "public",
-   "workCount": 3,
-   "projects": [
-    {
-     "title": "Ariadne",
-     "statusKey": "concept",
-     "text": "A public-art concept based on the Ariadne labyrinth. The location shown is proposal context, not a claim that the work has been realized.",
-     "images": [
-      {
-       "src": "art/public-art/ariadne-labyrinth.png",
-       "thumb": "art/public-art/ariadne-labyrinth.png",
-       "w": 1145,
-       "h": 1374,
-       "alt": "Ariadne supporting a circular labyrinth sculpture at sunset, with a labyrinth plan and detail views."
-      },
-      {
-       "src": "uploads/public-art/ariadne-studio.jpg",
-       "thumb": "uploads/public-art/ariadne-studio.jpg",
-       "w": 1086,
-       "h": 1448,
-       "alt": "Ariadne — studio"
-      },
-      {
-       "src": "uploads/public-art/ariadne-detail.jpg",
-       "thumb": "uploads/public-art/ariadne-detail.jpg",
-       "w": 1350,
-       "h": 1800,
-       "alt": "Ariadne — detail"
-      },
-      {
-       "src": "uploads/public-art/ariadne-daylight.jpg",
-       "thumb": "uploads/public-art/ariadne-daylight.jpg",
-       "w": 1145,
-       "h": 1374,
-       "alt": "Ariadne — daylight"
-      },
-      {
-       "src": "uploads/public-art/ariadne-sunset.jpg",
-       "thumb": "uploads/public-art/ariadne-sunset.jpg",
-       "w": 1145,
-       "h": 1374,
-       "alt": "Ariadne — sunset"
-      }
-     ]
-    },
-    {
-     "title": "The Man Who Was the Shadow",
-     "kicker": "Light sculpture",
-     "text": "A bronze-toned figure whose head is a lamp: he lights the street for others while his own face stays in shadow.",
-     "images": [
-      {
-       "src": "art/public-art/the-man-who-was-the-shadow.jpg",
-       "thumb": "art/public-art/the-man-who-was-the-shadow-t.jpg",
-       "w": 1672,
-       "h": 941
-      },
-      {
-       "src": "uploads/public-art/shadow-sketch-full.jpg",
-       "thumb": "uploads/public-art/shadow-sketch-full.jpg",
-       "w": 1350,
-       "h": 1800,
-       "alt": "Original full-figure drawing for The Man Who Was the Shadow"
-      },
-      {
-       "src": "uploads/public-art/shadow-sketch-detail.jpg",
-       "thumb": "uploads/public-art/shadow-sketch-detail.jpg",
-       "w": 1350,
-       "h": 1800,
-       "alt": "Original drawing detail for The Man Who Was the Shadow"
-      },
-      {
-       "src": "uploads/public-art/shadow-amsterdam-detail.jpg",
-       "thumb": "uploads/public-art/shadow-amsterdam-detail.jpg",
-       "w": 832,
-       "h": 1800,
-       "alt": "The Man Who Was the Shadow, detail visualization in Amsterdam"
-      }
-     ],
-     "statusKey": "competitionProposal",
-     "statusYear": 2026,
-     "location": "Amsterdam"
-    },
-    {
-     "title": "The Deafening Silence",
-     "kicker": "Public art / light & sound installation",
-     "credit": "Concept & artistic direction: Miranda Kuprava · Original inspiration: Melita Iosava’s drawing Freedom",
-     "text": "Dedicated to the children affected by the war in Ukraine. Child-sized, faceless figures stand within a field of light, each holding a balloon. Made from unpainted fiberglass, all visible colour is created by light. The installation unfolds in three acts: everyday city life, the sudden interruption of an air-raid siren, and finally silence accompanied by Mahler’s Kindertotenlieder.",
-     "images": [
-      {
-       "src": "art/melita/melita-53.png",
-       "thumb": "art/melita/melita-53-t.jpg",
-       "w": 1086,
-       "h": 1448,
-       "alt": "Freedom — original drawing by Melita Iosava, inspiration for The Deafening Silence"
-      },
-      {
-       "src": "art/public-art/the-deafening-silence-cover.jpg",
-       "thumb": "art/public-art/the-deafening-silence-cover-t.jpg",
-       "w": 1536,
-       "h": 1024
-      },
-      {
-       "src": "art/public-art/the-deafening-silence-renders.jpg",
-       "thumb": "art/public-art/the-deafening-silence-renders-t.jpg",
-       "w": 1536,
-       "h": 1024
-      }
-     ],
-     "statusKey": "competitionProposal",
-     "statusYear": 2026,
-     "location": "Germany"
-    }
-   ]
-  },
-  {
-   "id": "outdoor",
-   "projects": [
-    {
-     "title": "MAN IN LOVE",
-     "images": [
-      {
-       "src": "art/outdoor/outdoor-01.jpg",
-       "thumb": "art/outdoor/outdoor-01-t.jpg",
-       "w": 1122,
-       "h": 1402
-      },
-      {
-       "src": "art/outdoor/outdoor-02.jpg",
-       "thumb": "art/outdoor/outdoor-02-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/outdoor/outdoor-06.jpg",
-       "thumb": "art/outdoor/outdoor-06-t.jpg",
-       "w": 1122,
-       "h": 1402
-      }
-     ]
-    },
-    {
-     "title": "THE SPACE BETWEEN US",
-     "images": [
-      {
-       "src": "art/outdoor/outdoor-03.jpg",
-       "thumb": "art/outdoor/outdoor-03-t.jpg",
-       "w": 1402,
-       "h": 1122
-      }
-     ]
-    },
-    {
-     "title": "love takes shape",
-     "images": [
-      {
-       "src": "art/outdoor/outdoor-04.jpg",
-       "thumb": "art/outdoor/outdoor-04-t.jpg",
-       "w": 1122,
-       "h": 1402
-      }
-     ]
-    },
-    {
-     "title": "the fire within",
-     "images": [
-      {
-       "src": "art/outdoor/outdoor-05.jpg",
-       "thumb": "art/outdoor/outdoor-05-t.jpg",
-       "w": 1123,
-       "h": 1401
-      }
-     ]
-    },
-    {
-     "title": "THE BUTTERFLY EFFECT",
-     "images": [
-      {
-       "src": "art/outdoor/outdoor-07.jpg",
-       "thumb": "art/outdoor/outdoor-07-t.jpg",
-       "w": 1402,
-       "h": 1122
-      },
-      {
-       "src": "art/outdoor/outdoor-08.jpg",
-       "thumb": "art/outdoor/outdoor-08-t.jpg",
-       "w": 1402,
-       "h": 1122
-      },
-      {
-       "src": "art/outdoor/outdoor-09.jpg",
-       "thumb": "art/outdoor/outdoor-09-t.jpg",
-       "w": 1367,
-       "h": 1150
-      },
-      {
-       "src": "art/outdoor/outdoor-10.jpg",
-       "thumb": "art/outdoor/outdoor-10-t.jpg",
-       "w": 1402,
-       "h": 1122
-      }
-     ]
-    },
-    {
-     "title": "still standing",
-     "images": [
-      {
-       "src": "art/outdoor/outdoor-11.jpg",
-       "thumb": "art/outdoor/outdoor-11-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "uploads/artworks/what-we-carry-full.jpg",
-       "thumb": "uploads/artworks/what-we-carry-full.jpg",
-       "w": 1086,
-       "h": 1448,
-       "alt": "What We Carry — Chicago competition proposal"
-      },
-      {
-       "src": "uploads/artworks/what-we-carry-detail.jpg",
-       "thumb": "uploads/artworks/what-we-carry-detail.jpg",
-       "w": 1086,
-       "h": 1448,
-       "alt": "What We Carry — Chicago competition proposal"
-      }
-     ],
-     "text": "Still Standing / What We Carry. The deer proposal has been submitted to a competition in Chicago."
-    },
-    {
-     "title": "black bull",
-     "images": [
-      {
-       "src": "art/outdoor/outdoor-12.jpg",
-       "thumb": "art/outdoor/outdoor-12-t.jpg",
-       "w": 1280,
-       "h": 959
-      },
-      {
-       "src": "art/outdoor/outdoor-13.jpg",
-       "thumb": "art/outdoor/outdoor-13-t.jpg",
-       "w": 1280,
-       "h": 960
-      },
-      {
-       "src": "uploads/artworks/black-bull-lit.jpg",
-       "thumb": "uploads/artworks/black-bull-lit.jpg",
-       "w": 1350,
-       "h": 1800,
-       "alt": "Black bull — lit"
-      },
-      {
-       "src": "uploads/artworks/black-bull-snow.jpg",
-       "thumb": "uploads/artworks/black-bull-snow.jpg",
-       "w": 1418,
-       "h": 1800,
-       "alt": "Black bull — snow"
-      }
-     ]
-    },
-    {
-     "title": "you are home",
-     "images": [
-      {
-       "src": "art/outdoor/outdoor-14.jpg",
-       "thumb": "art/outdoor/outdoor-14-t.jpg",
-       "w": 1519,
-       "h": 1035
-      },
-      {
-       "src": "art/outdoor/outdoor-15.jpg",
-       "thumb": "art/outdoor/outdoor-15-t.jpg",
-       "w": 1086,
-       "h": 1448
-      }
-     ]
-    }
-   ],
-   "workCount": 8
-  },
-  {
-   "id": "christmas",
-   "projects": [
-    {
-     "title": "Starburst Figure",
-     "images": [
-      {
-       "src": "art/festive-sculptures/IMG_0452.jpeg",
-       "thumb": "art/festive-sculptures/IMG_0452.jpeg",
-       "h": 1536,
-       "w": 1152
-      },
-      {
-       "src": "art/festive-sculptures/IMG_6512.jpeg",
-       "thumb": "art/festive-sculptures/IMG_6512.jpeg",
-       "h": 1536,
-       "w": 753
-      }
-     ],
-     "key": "starburst-figure",
-     "group": "realized",
-     "statusKey": "realizedWork"
-    },
-    {
-     "title": "Hanging Ornament Figure",
-     "images": [
-      {
-       "src": "art/festive-sculptures/IMG_7701(1).jpeg",
-       "thumb": "art/festive-sculptures/IMG_7701(1).jpeg",
-       "h": 1536,
-       "w": 1152
-      },
-      {
-       "src": "art/festive-sculptures/IMG_7736.jpeg",
-       "thumb": "art/festive-sculptures/IMG_7736.jpeg",
-       "h": 1536,
-       "w": 1152
-      },
-      {
-       "src": "art/festive-sculptures/IMG_7697.jpeg",
-       "thumb": "art/festive-sculptures/IMG_7697.jpeg",
-       "h": 1536,
-       "w": 1152
-      }
-     ],
-     "key": "hanging-ornament-figure",
-     "group": "realized",
-     "statusKey": "realizedWork"
-    },
-    {
-     "title": "Caucasus — The Evergreen Guardian",
-     "images": [
-      {
-       "src": "art/festive-sculptures/IMG_0421(2).jpeg",
-       "thumb": "art/festive-sculptures/IMG_0421(2).jpeg",
-       "h": 1536,
-       "w": 919
-      },
-      {
-       "src": "art/festive-sculptures/IMG_0422(2).jpeg",
-       "thumb": "art/festive-sculptures/IMG_0422(2).jpeg",
-       "h": 1536,
-       "w": 1152
-      },
-      {
-       "src": "art/festive-sculptures/IMG_6500(3).jpeg",
-       "thumb": "art/festive-sculptures/IMG_6500(3).jpeg",
-       "h": 1536,
-       "w": 852
-      },
-      {
-       "src": "art/festive-sculptures/IMG_0423(2).jpeg",
-       "thumb": "art/festive-sculptures/IMG_0423(2).jpeg",
-       "h": 1536,
-       "w": 1152
-      },
-      {
-       "src": "art/festive-sculptures/9BBD9598-991F-4E0C-BCA5-7B114687B5F6(3).jpeg",
-       "thumb": "art/festive-sculptures/9BBD9598-991F-4E0C-BCA5-7B114687B5F6(3).jpeg",
-       "h": 2080,
-       "w": 1170
-      }
-     ],
-     "key": "green-figure-tree",
-     "group": "realized",
-     "statusKey": "realizedWork"
-    },
-    {
-     "title": "Crescent Moon Figure",
-     "images": [
-      {
-       "src": "art/festive-sculptures/IMG_0507.jpeg",
-       "thumb": "art/festive-sculptures/IMG_0507.jpeg",
-       "h": 1536,
-       "w": 1024
-      },
-      {
-       "src": "art/festive-sculptures/IMG_0505.jpeg",
-       "thumb": "art/festive-sculptures/IMG_0505.jpeg",
-       "h": 1536,
-       "w": 1024
-      },
-      {
-       "src": "art/festive-sculptures/IMG_0516.jpeg",
-       "thumb": "art/festive-sculptures/IMG_0516.jpeg",
-       "h": 1536,
-       "w": 1024
-      },
-      {
-       "src": "art/festive-sculptures/IMG_0445.jpeg",
-       "thumb": "art/festive-sculptures/IMG_0445.jpeg",
-       "h": 1536,
-       "w": 1152
-      }
-     ],
-     "key": "crescent-moon-figure",
-     "group": "realized",
-     "statusKey": "realizedWork"
-    },
-    {
-     "title": "From Woman to Tree — A Transformation in Light",
-     "images": [
-      {
-       "src": "art/festive-sculptures/IMG_0367(8).jpeg",
-       "thumb": "art/festive-sculptures/IMG_0367(8).jpeg",
-       "h": 1536,
-       "w": 1152
-      },
-      {
-       "src": "art/festive-sculptures/2D1DF357-6868-4BDA-9AA1-5DEF827F76D5.jpeg",
-       "thumb": "art/festive-sculptures/2D1DF357-6868-4BDA-9AA1-5DEF827F76D5.jpeg",
-       "h": 1536,
-       "w": 1024
-      },
-      {
-       "src": "art/festive-sculptures/1F9C8E0F-B394-4C5E-BFC2-89D44625C2FB(4).jpeg",
-       "thumb": "art/festive-sculptures/1F9C8E0F-B394-4C5E-BFC2-89D44625C2FB(4).jpeg",
-       "h": 1536,
-       "w": 1024
-      },
-      {
-       "src": "art/festive-sculptures/4BDB777B-5E71-4E65-85AF-E50E5F1D50B6(3).jpeg",
-       "thumb": "art/festive-sculptures/4BDB777B-5E71-4E65-85AF-E50E5F1D50B6(3).jpeg",
-       "h": 1536,
-       "w": 1024
-      }
-     ],
-     "key": "illuminated-tree-installation",
-     "group": "realized",
-     "statusKey": "realizedWork"
-    },
-    {
-     "title": "Mzechabuki — The Sun-Headed Tree",
-     "images": [
-      {
-       "src": "art/festive-sculptures/81E1B252-8ADB-4F67-B85B-DD500782E2BB(3).jpeg",
-       "thumb": "art/festive-sculptures/81E1B252-8ADB-4F67-B85B-DD500782E2BB(3).jpeg",
-       "h": 1199,
-       "w": 1312
-      },
-      {
-       "src": "art/festive-sculptures/IMG_6887(1).jpeg",
-       "thumb": "art/festive-sculptures/IMG_6887(1).jpeg",
-       "h": 1554,
-       "w": 1170
-      },
-      {
-       "src": "art/festive-sculptures/2C9FA51B-9DDC-43D0-9001-F5D131099BE6(2).jpeg",
-       "thumb": "art/festive-sculptures/2C9FA51B-9DDC-43D0-9001-F5D131099BE6(2).jpeg",
-       "h": 1536,
-       "w": 1229
-      },
-      {
-       "src": "art/festive-sculptures/66B39C93-35B3-4A00-BBC2-EC7BB0ED8042(1).jpeg",
-       "thumb": "art/festive-sculptures/66B39C93-35B3-4A00-BBC2-EC7BB0ED8042(1).jpeg",
-       "h": 1393,
-       "w": 1129
-      },
-      {
-       "src": "art/festive-sculptures/5150EB5F-95D7-491B-80A8-2ADE031865BB(4).jpeg",
-       "thumb": "art/festive-sculptures/5150EB5F-95D7-491B-80A8-2ADE031865BB(4).jpeg",
-       "h": 1199,
-       "w": 1312
-      }
-     ],
-     "key": "starburst-tree-figure",
-     "group": "realized",
-     "statusKey": "realizedWork"
-    },
-    {
-     "title": "Where Angels Rest",
-     "images": [
-      {
-       "src": "art/festive-sculptures/3C86ECC9-94E1-4A04-B720-96E789843E12(1).jpeg",
-       "thumb": "art/festive-sculptures/3C86ECC9-94E1-4A04-B720-96E789843E12(1).jpeg",
-       "h": 1402,
-       "w": 1122
-      },
-      {
-       "src": "uploads/festive/angels-tree-studio.jpg",
-       "thumb": "uploads/festive/angels-tree-studio.jpg",
-       "w": 1023,
-       "h": 1537,
-       "alt": "Where Angels Rest — studio concept view"
-      },
-      {
-       "src": "uploads/festive/angels-tree-interior.jpg",
-       "thumb": "uploads/festive/angels-tree-interior.jpg",
-       "w": 1023,
-       "h": 1537,
-       "alt": "Where Angels Rest — interior concept view"
-      },
-      {
-       "src": "uploads/festive/angels-tree-atrium.jpg",
-       "thumb": "uploads/festive/angels-tree-atrium.jpg",
-       "w": 1536,
-       "h": 1024,
-       "alt": "Where Angels Rest — atrium concept view"
-      }
-     ],
-     "key": "sculptural-tree-of-figures",
-     "group": "concepts",
-     "statusKey": "concept"
-    },
-    {
-     "title": "Homage to Salvador Dalí",
-     "images": [
-      {
-       "src": "art/festive-sculptures/141BB918-30B8-4609-B696-E60E000FEE86(6).jpeg",
-       "thumb": "art/festive-sculptures/141BB918-30B8-4609-B696-E60E000FEE86(6).jpeg",
-       "h": 1536,
-       "w": 1022
-      },
-      {
-       "src": "art/festive-sculptures/3E401D56-716D-46DC-82EF-0945D0332F0A(2).jpeg",
-       "thumb": "art/festive-sculptures/3E401D56-716D-46DC-82EF-0945D0332F0A(2).jpeg",
-       "h": 1086,
-       "w": 1448
-      },
-      {
-       "src": "art/festive-sculptures/45FEBA4C-FE19-4B95-A64C-907B2B5557D1(2).jpeg",
-       "thumb": "art/festive-sculptures/45FEBA4C-FE19-4B95-A64C-907B2B5557D1(2).jpeg",
-       "h": 1086,
-       "w": 1448
-      }
-     ],
-     "key": "butterfly-tree",
-     "group": "concepts",
-     "statusKey": "concept"
-    },
-    {
-     "title": "Modern Sculptural Tree",
-     "images": [
-      {
-       "src": "art/festive-sculptures/01C9DBFF-791C-4727-A130-D7F602A262D6.jpeg",
-       "thumb": "art/festive-sculptures/01C9DBFF-791C-4727-A130-D7F602A262D6.jpeg",
-       "h": 1189,
-       "w": 1323
-      },
-      {
-       "src": "art/festive-sculptures/06CE139F-5D36-4870-A1A1-E32C9FA16A18(1).jpeg",
-       "thumb": "art/festive-sculptures/06CE139F-5D36-4870-A1A1-E32C9FA16A18(1).jpeg",
-       "h": 1024,
-       "w": 1536
-      }
-     ],
-     "key": "modern-sculptural-tree",
-     "group": "concepts",
-     "statusKey": "concept"
-    }
-   ]
-  },
-  {
-   "id": "kinetic",
-   "projects": [
-    {
-     "title": "Merani",
-     "statusKey": "concept",
-     "kicker": "Independent concept project · Merani",
-     "text": "EVERY GREAT DESIGN BEGINS WITH AN EMOTION.\n\nMERANI was born from the meeting of two worlds. One is the timeless language of Ferrari design, where engineering becomes sculpture and movement becomes beauty. The other begins with Georgian Romanticism and Nikoloz Baratashvili’s poem Merani, in which the horse becomes an image of freedom, sacrifice, and the courage to open an untrodden path for those who follow.\n\nRather than designing an object that imitates an automobile, I wanted to create a sculpture that expresses movement itself. MERANI IS NOT A HORSE. It is the idea of moving forward. It is the moment before speed. It is courage transformed into form.\n\nAt the heart of MERANI is Baratashvili’s poem Merani, a major work of Georgian Romanticism whose philosophical and artistic power remains far less familiar to international audiences than it deserves.",
-     "images": [
-      {
-       "src": "art/automotive-concepts/3B7F8C20-1EA4-4455-A546-62A504673236(5).jpeg",
-       "thumb": "art/automotive-concepts/3B7F8C20-1EA4-4455-A546-62A504673236(5).jpeg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "uploads/cleaned/merani-showroom-clean.jpg",
-       "thumb": "uploads/cleaned/merani-showroom-clean.jpg",
-       "w": 1402,
-       "h": 1122
-      },
-      {
-       "src": "uploads/cleaned/merani-side-clean.jpg",
-       "thumb": "uploads/cleaned/merani-side-clean.jpg",
-       "w": 1087,
-       "h": 1447
-      },
-      {
-       "src": "uploads/cleaned/merani-front-detail-clean.jpg",
-       "thumb": "uploads/cleaned/merani-front-detail-clean.jpg",
-       "w": 1086,
-       "h": 1448,
-       "alt": "Merani sculptural concept study"
-      },
-      {
-       "src": "uploads/cleaned/merani-front-full-clean.jpg",
-       "thumb": "uploads/cleaned/merani-front-full-clean.jpg",
-       "w": 1096,
-       "h": 1435,
-       "alt": "Merani sculptural concept study"
-      },
-      {
-       "src": "uploads/cleaned/merani-rear-clean.jpg",
-       "thumb": "uploads/cleaned/merani-rear-clean.jpg",
-       "w": 1345,
-       "h": 1169,
-       "alt": "Merani sculptural concept study"
-      }
-     ],
-     "quote": "The yearnings of my restless soul will not in vain have glowed,\nFor, dashing on, my steed has paved a new untrodden road.\nHe who follows in our wake, a smoother path will find;\nDaring all, his fateful steed shall leave dark fate behind.",
-     "quoteCredit": "Nikoloz Baratashvili (1817–1845) · Georgian Romantic poet · English translation: Venera Urushadze"
-    },
-    {
-     "title": "Space Age",
-     "statusKey": "concept",
-     "kicker": "Independent concept project · sculptural light installation",
-     "text": "A sculptural concept for automotive environments, where light, orbital movement and architectural scale create a spatial experience. A festive lighting proposal explores a seasonal variation while preserving the sculpture’s form.",
-     "images": [
-      {
-       "src": "art/automotive-concepts/9A35F069-3E5B-4671-9775-F9015D5D8CE3(1).jpeg",
-       "thumb": "art/automotive-concepts/9A35F069-3E5B-4671-9775-F9015D5D8CE3(1).jpeg",
-       "w": 1024,
-       "h": 1536
-      }
-     ]
-    },
-    {
-     "title": "From One Root, Every Future",
-     "statusKey": "concept",
-     "kicker": "Independent concept project · mobility sculpture",
-     "text": "The tree becomes a spatial metaphor for movement and evolution: root as origin and energy, a central spine as intelligence, spiral roads as mobility, orbital nodes as transition, and upper air space where movement becomes three-dimensional. Road → intelligence → physical AI → flight.",
-     "images": [
-      {
-       "src": "art/automotive-concepts/F0089C39-6D61-4A18-8EB9-0850A7A7BC40(1).jpeg",
-       "thumb": "art/automotive-concepts/F0089C39-6D61-4A18-8EB9-0850A7A7BC40(1).jpeg",
-       "w": 1022,
-       "h": 1536
-      }
-     ]
-    },
-    {
-     "title": "Automotive Tree",
-     "statusKey": "concept",
-     "kicker": "Independent concept project · automotive sculpture",
-     "text": "A sculptural tree conceived as a dialogue between automotive engineering and seasonal ritual, designed for showroom and atrium scale.",
-     "images": [
-      {
-       "src": "art/automotive-concepts/13836663-9593-4FD6-AE2C-9D36A028FBF9.jpeg",
-       "thumb": "art/automotive-concepts/13836663-9593-4FD6-AE2C-9D36A028FBF9.jpeg",
-       "w": 1315,
-       "h": 1197
-      },
-      {
-       "src": "art/automotive-concepts/456C321A-46A4-40FC-B39A-4240BA06D365.jpeg",
-       "thumb": "art/automotive-concepts/456C321A-46A4-40FC-B39A-4240BA06D365.jpeg",
-       "w": 1199,
-       "h": 1312
-      },
-      {
-       "src": "art/automotive-concepts/DC09464B-46DA-4C56-AE7A-D7EF429320A8(1).jpeg",
-       "thumb": "art/automotive-concepts/DC09464B-46DA-4C56-AE7A-D7EF429320A8(1).jpeg",
-       "w": 1213,
-       "h": 1296
-      },
-      {
-       "src": "art/automotive-concepts/IMG_6270.jpg",
-       "thumb": "art/automotive-concepts/IMG_6270.jpg",
-       "w": 1170,
-       "h": 1244
-      },
-      {
-       "src": "art/automotive-concepts/automotive-tree-concept-board.png",
-       "thumb": "art/automotive-concepts/automotive-tree-concept-board-t.jpg",
-       "w": 1024,
-       "h": 1536,
-       "alt": "Automotive Tree concept board"
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "spaces",
-   "workCount": 12,
-   "projects": [
-    {
-     "title": "Vitis Vinifera",
-     "images": [
-      {
-       "src": "art/vitis-vinifera-website/01_318B00AA-35F1-4260-A6C8-E97D7C48E109.jpeg",
-       "thumb": "art/vitis-vinifera-website/01_318B00AA-35F1-4260-A6C8-E97D7C48E109.jpeg",
-       "w": 1091,
-       "h": 1442,
-       "label": "Vitis Vinifera · Object view",
-       "alt": "Vitis Vinifera sculpture shown against a clean white background, full object view."
-      },
-      {
-       "src": "art/vitis-vinifera-website/02_IMG_7681(2).jpeg",
-       "thumb": "art/vitis-vinifera-website/02_IMG_7681(2).jpeg",
-       "w": 1159,
-       "h": 1436,
-       "label": "Vitis Vinifera · Detail",
-       "alt": "Close view of the Vitis Vinifera sculpture and its grape leaves."
-      },
-      {
-       "src": "uploads/cleaned/vitis-display-clean.jpg",
-       "thumb": "uploads/cleaned/vitis-display-clean.jpg",
-       "w": 1019,
-       "h": 1543,
-       "label": "Display case · Installation",
-       "alt": "Vitis Vinifera sculpture displayed in a glass case in a brick wine cellar."
-      },
-      {
-       "src": "art/vitis-vinifera-website/04_IMG_7677(3).jpeg",
-       "thumb": "art/vitis-vinifera-website/04_IMG_7677(3).jpeg",
-       "w": 1170,
-       "h": 1344,
-       "label": "Display case · Context",
-       "alt": "Vitis Vinifera sculpture installed in a lit display case in the wine estate."
-      },
-      {
-       "src": "art/vitis-vinifera-website/05_IMG_7678(4).jpeg",
-       "thumb": "art/vitis-vinifera-website/05_IMG_7678(4).jpeg",
-       "w": 1170,
-       "h": 1730,
-       "label": "Wine cellar · Installation",
-       "alt": "Full view of the Vitis Vinifera sculpture in its display case in a brick cellar."
-      },
-      {
-       "src": "art/vitis-vinifera-website/06_IMG_7682(1).jpeg",
-       "thumb": "art/vitis-vinifera-website/06_IMG_7682(1).jpeg",
-       "w": 1170,
-       "h": 734,
-       "label": "Numen Vinae · Outdoor concept",
-       "alt": "Original Numen Vinae outdoor concept board with a vineyard sculpture image."
-      },
-      {
-       "src": "art/vitis-vinifera-website/07_8343A1D4-6215-44E0-BD0A-801A1A27D654.jpeg",
-       "thumb": "art/vitis-vinifera-website/07_8343A1D4-6215-44E0-BD0A-801A1A27D654.jpeg",
-       "w": 1125,
-       "h": 1398,
-       "label": "Vineyard · Installation",
-       "alt": "Vitis Vinifera sculpture standing among the grape vines at sunset."
-      },
-      {
-       "src": "art/vitis-vinifera-website/08_64156352-0676-451B-B8AC-496E1B7FD355.jpeg",
-       "thumb": "art/vitis-vinifera-website/08_64156352-0676-451B-B8AC-496E1B7FD355.jpeg",
-       "w": 1125,
-       "h": 1398,
-       "label": "Vineyard · Context",
-       "alt": "Vitis Vinifera sculpture standing among green grape vines."
-      },
-      {
-       "src": "uploads/cleaned/spider-light-clean.jpg",
-       "thumb": "uploads/cleaned/spider-light-clean.jpg",
-       "w": 1468,
-       "h": 1071,
-       "label": "Spider Light · Concept",
-       "alt": "Original Spider Light concept board shown within the wine cellar."
-      },
-      {
-       "src": "art/vitis-vinifera-website/10_030ECCED-A619-4979-A5BE-4B0A72403530.jpeg",
-       "thumb": "art/vitis-vinifera-website/10_030ECCED-A619-4979-A5BE-4B0A72403530.jpeg",
-       "w": 1536,
-       "h": 1024,
-       "label": "Spider Light · Cellar installation",
-       "alt": "Spider Light installed within the arched wine cellar."
-      },
-      {
-       "src": "art/vitis-vinifera-website/11_A1A4EB59-14F1-4446-B808-402A0EC734D7.jpeg",
-       "thumb": "art/vitis-vinifera-website/11_A1A4EB59-14F1-4446-B808-402A0EC734D7.jpeg",
-       "w": 1536,
-       "h": 1024,
-       "label": "Spider Light · Object view",
-       "alt": "Spider Light sculptural lamp shown against a clean white background."
-      }
-     ],
-     "groups": [
-      {
-       "key": "objectDetails",
-       "imageIndexes": [
-        0,
-        1
-       ]
-      },
-      {
-       "key": "displayCase",
-       "imageIndexes": [
-        2,
-        3,
-        4
-       ]
-      },
-      {
-       "key": "vineyardOutdoor",
-       "imageIndexes": [
-        5,
-        6,
-        7
-       ]
-      },
-      {
-       "key": "spiderLight",
-       "imageIndexes": [
-        8,
-        9,
-        10
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "functional",
-   "subsections": true,
-   "projects": []
-  },
-  {
-   "id": "brand",
-   "projects": []
-  },
-  {
-   "id": "melita",
-   "workCount": 0,
-   "projects": [
-    {
-     "title": "Children’s Park of Imagination",
-     "statusKey": "concept",
-     "credit": "Original idea and first drawings: Melita Iosava · Project author, artist and designer: Miranda Kuprava",
-     "text": "A concept for a children’s museum and park in Shanghai. The PDF presents a proposal and visualizations, not a built project.",
-     "images": [],
-     "doc": {
-      "title": "Children’s Park of Imagination",
-      "pdf": "docs/children-s-park-of-imagination.pdf",
-      "pages": [
-       {
-        "src": "docs/children-s-park-of-imagination/01.jpg",
-        "thumb": "docs/children-s-park-of-imagination/01-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/02.jpg",
-        "thumb": "docs/children-s-park-of-imagination/02-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/03.jpg",
-        "thumb": "docs/children-s-park-of-imagination/03-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/04.jpg",
-        "thumb": "docs/children-s-park-of-imagination/04-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/05.jpg",
-        "thumb": "docs/children-s-park-of-imagination/05-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/06.jpg",
-        "thumb": "docs/children-s-park-of-imagination/06-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/07.jpg",
-        "thumb": "docs/children-s-park-of-imagination/07-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/08.jpg",
-        "thumb": "docs/children-s-park-of-imagination/08-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/09.jpg",
-        "thumb": "docs/children-s-park-of-imagination/09-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/10.jpg",
-        "thumb": "docs/children-s-park-of-imagination/10-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/11.jpg",
-        "thumb": "docs/children-s-park-of-imagination/11-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/12.jpg",
-        "thumb": "docs/children-s-park-of-imagination/12-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/13.jpg",
-        "thumb": "docs/children-s-park-of-imagination/13-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/14.jpg",
-        "thumb": "docs/children-s-park-of-imagination/14-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/15.jpg",
-        "thumb": "docs/children-s-park-of-imagination/15-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/16.jpg",
-        "thumb": "docs/children-s-park-of-imagination/16-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/17.jpg",
-        "thumb": "docs/children-s-park-of-imagination/17-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/18.jpg",
-        "thumb": "docs/children-s-park-of-imagination/18-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/19.jpg",
-        "thumb": "docs/children-s-park-of-imagination/19-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/20.jpg",
-        "thumb": "docs/children-s-park-of-imagination/20-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/21.jpg",
-        "thumb": "docs/children-s-park-of-imagination/21-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/22.jpg",
-        "thumb": "docs/children-s-park-of-imagination/22-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/23.jpg",
-        "thumb": "docs/children-s-park-of-imagination/23-t.jpg"
-       },
-       {
-        "src": "docs/children-s-park-of-imagination/24.jpg",
-        "thumb": "docs/children-s-park-of-imagination/24-t.jpg"
-       }
+      "id": "outdoor",
+      "projects": [
+        {
+          "title": "MAN IN LOVE",
+          "images": [
+            {
+              "src": "art/outdoor/outdoor-01.jpg",
+              "thumb": "art/outdoor/outdoor-01-t.jpg",
+              "w": 1122,
+              "h": 1402
+            },
+            {
+              "src": "art/outdoor/outdoor-02.jpg",
+              "thumb": "art/outdoor/outdoor-02-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/outdoor/outdoor-06.jpg",
+              "thumb": "art/outdoor/outdoor-06-t.jpg",
+              "w": 1122,
+              "h": 1402
+            }
+          ]
+        },
+        {
+          "title": "THE SPACE BETWEEN US",
+          "images": [
+            {
+              "src": "art/outdoor/outdoor-03.jpg",
+              "thumb": "art/outdoor/outdoor-03-t.jpg",
+              "w": 1402,
+              "h": 1122
+            }
+          ]
+        },
+        {
+          "title": "love takes shape",
+          "images": [
+            {
+              "src": "art/outdoor/outdoor-04.jpg",
+              "thumb": "art/outdoor/outdoor-04-t.jpg",
+              "w": 1122,
+              "h": 1402
+            }
+          ]
+        },
+        {
+          "title": "the fire within",
+          "images": [
+            {
+              "src": "art/outdoor/outdoor-05.jpg",
+              "thumb": "art/outdoor/outdoor-05-t.jpg",
+              "w": 1123,
+              "h": 1401
+            }
+          ]
+        },
+        {
+          "title": "THE BUTTERFLY EFFECT",
+          "images": [
+            {
+              "src": "art/outdoor/outdoor-07.jpg",
+              "thumb": "art/outdoor/outdoor-07-t.jpg",
+              "w": 1402,
+              "h": 1122
+            },
+            {
+              "src": "art/outdoor/outdoor-08.jpg",
+              "thumb": "art/outdoor/outdoor-08-t.jpg",
+              "w": 1402,
+              "h": 1122
+            },
+            {
+              "src": "art/outdoor/outdoor-09.jpg",
+              "thumb": "art/outdoor/outdoor-09-t.jpg",
+              "w": 1367,
+              "h": 1150
+            },
+            {
+              "src": "art/outdoor/outdoor-10.jpg",
+              "thumb": "art/outdoor/outdoor-10-t.jpg",
+              "w": 1402,
+              "h": 1122
+            }
+          ]
+        },
+        {
+          "title": "still standing",
+          "images": [
+            {
+              "src": "art/outdoor/outdoor-11.jpg",
+              "thumb": "art/outdoor/outdoor-11-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "uploads/artworks/what-we-carry-full.jpg",
+              "thumb": "uploads/artworks/what-we-carry-full.jpg",
+              "w": 1086,
+              "h": 1448,
+              "alt": "What We Carry — Chicago competition proposal"
+            },
+            {
+              "src": "uploads/artworks/what-we-carry-detail.jpg",
+              "thumb": "uploads/artworks/what-we-carry-detail.jpg",
+              "w": 1086,
+              "h": 1448,
+              "alt": "What We Carry — Chicago competition proposal"
+            }
+          ],
+          "text": "Still Standing / What We Carry. The deer proposal has been submitted to a competition in Chicago."
+        },
+        {
+          "title": "black bull",
+          "images": [
+            {
+              "src": "art/outdoor/outdoor-12.jpg",
+              "thumb": "art/outdoor/outdoor-12-t.jpg",
+              "w": 1280,
+              "h": 959
+            },
+            {
+              "src": "art/outdoor/outdoor-13.jpg",
+              "thumb": "art/outdoor/outdoor-13-t.jpg",
+              "w": 1280,
+              "h": 960
+            },
+            {
+              "src": "uploads/artworks/black-bull-lit.jpg",
+              "thumb": "uploads/artworks/black-bull-lit.jpg",
+              "w": 1350,
+              "h": 1800,
+              "alt": "Black bull — lit"
+            },
+            {
+              "src": "uploads/artworks/black-bull-snow.jpg",
+              "thumb": "uploads/artworks/black-bull-snow.jpg",
+              "w": 1418,
+              "h": 1800,
+              "alt": "Black bull — snow"
+            }
+          ]
+        },
+        {
+          "title": "you are home",
+          "images": [
+            {
+              "src": "art/outdoor/outdoor-14.jpg",
+              "thumb": "art/outdoor/outdoor-14-t.jpg",
+              "w": 1519,
+              "h": 1035
+            },
+            {
+              "src": "art/outdoor/outdoor-15.jpg",
+              "thumb": "art/outdoor/outdoor-15-t.jpg",
+              "w": 1086,
+              "h": 1448
+            }
+          ]
+        }
       ],
-      "sizeMB": 19.5
-     }
+      "workCount": 8
     },
     {
-     "title": "Pinocchio’s Library",
-     "statusKey": "concept",
-     "credit": "Original idea and initial drawings: Melita Iosava · Project author, artist and designer: Miranda Kuprava",
-     "text": "A library concept proposed for New York City. The drawings and visualizations document a proposal; the project is not presented as built or realized.",
-     "images": [
-      {
-       "src": "docs/pinocchios-library/09.jpg",
-       "thumb": "docs/pinocchios-library/09-t.jpg",
-       "alt": "Pinocchio Library main interior concept"
-      }
-     ]
+      "id": "christmas",
+      "projects": [
+        {
+          "title": "Starburst Figure",
+          "images": [
+            {
+              "src": "art/festive-sculptures/IMG_0452.jpeg",
+              "thumb": "art/festive-sculptures/IMG_0452.jpeg",
+              "h": 1536,
+              "w": 1152
+            },
+            {
+              "src": "art/festive-sculptures/IMG_6512.jpeg",
+              "thumb": "art/festive-sculptures/IMG_6512.jpeg",
+              "h": 1536,
+              "w": 753
+            }
+          ],
+          "key": "starburst-figure",
+          "group": "realized",
+          "statusKey": "realizedWork"
+        },
+        {
+          "title": "Hanging Ornament Figure",
+          "images": [
+            {
+              "src": "art/festive-sculptures/IMG_7701(1).jpeg",
+              "thumb": "art/festive-sculptures/IMG_7701(1).jpeg",
+              "h": 1536,
+              "w": 1152
+            },
+            {
+              "src": "art/festive-sculptures/IMG_7736.jpeg",
+              "thumb": "art/festive-sculptures/IMG_7736.jpeg",
+              "h": 1536,
+              "w": 1152
+            },
+            {
+              "src": "art/festive-sculptures/IMG_7697.jpeg",
+              "thumb": "art/festive-sculptures/IMG_7697.jpeg",
+              "h": 1536,
+              "w": 1152
+            }
+          ],
+          "key": "hanging-ornament-figure",
+          "group": "realized",
+          "statusKey": "realizedWork"
+        },
+        {
+          "title": "Caucasus — The Evergreen Guardian",
+          "images": [
+            {
+              "src": "art/festive-sculptures/IMG_0421(2).jpeg",
+              "thumb": "art/festive-sculptures/IMG_0421(2).jpeg",
+              "h": 1536,
+              "w": 919
+            },
+            {
+              "src": "art/festive-sculptures/IMG_0422(2).jpeg",
+              "thumb": "art/festive-sculptures/IMG_0422(2).jpeg",
+              "h": 1536,
+              "w": 1152
+            },
+            {
+              "src": "art/festive-sculptures/IMG_6500(3).jpeg",
+              "thumb": "art/festive-sculptures/IMG_6500(3).jpeg",
+              "h": 1536,
+              "w": 852
+            },
+            {
+              "src": "art/festive-sculptures/IMG_0423(2).jpeg",
+              "thumb": "art/festive-sculptures/IMG_0423(2).jpeg",
+              "h": 1536,
+              "w": 1152
+            },
+            {
+              "src": "art/festive-sculptures/9BBD9598-991F-4E0C-BCA5-7B114687B5F6(3).jpeg",
+              "thumb": "art/festive-sculptures/9BBD9598-991F-4E0C-BCA5-7B114687B5F6(3).jpeg",
+              "h": 2080,
+              "w": 1170
+            }
+          ],
+          "key": "green-figure-tree",
+          "group": "realized",
+          "statusKey": "realizedWork"
+        },
+        {
+          "title": "Crescent Moon Figure",
+          "images": [
+            {
+              "src": "art/festive-sculptures/IMG_0507.jpeg",
+              "thumb": "art/festive-sculptures/IMG_0507.jpeg",
+              "h": 1536,
+              "w": 1024
+            },
+            {
+              "src": "art/festive-sculptures/IMG_0505.jpeg",
+              "thumb": "art/festive-sculptures/IMG_0505.jpeg",
+              "h": 1536,
+              "w": 1024
+            },
+            {
+              "src": "art/festive-sculptures/IMG_0516.jpeg",
+              "thumb": "art/festive-sculptures/IMG_0516.jpeg",
+              "h": 1536,
+              "w": 1024
+            },
+            {
+              "src": "art/festive-sculptures/IMG_0445.jpeg",
+              "thumb": "art/festive-sculptures/IMG_0445.jpeg",
+              "h": 1536,
+              "w": 1152
+            }
+          ],
+          "key": "crescent-moon-figure",
+          "group": "realized",
+          "statusKey": "realizedWork"
+        },
+        {
+          "title": "From Woman to Tree — A Transformation in Light",
+          "images": [
+            {
+              "src": "art/festive-sculptures/IMG_0367(8).jpeg",
+              "thumb": "art/festive-sculptures/IMG_0367(8).jpeg",
+              "h": 1536,
+              "w": 1152
+            },
+            {
+              "src": "art/festive-sculptures/2D1DF357-6868-4BDA-9AA1-5DEF827F76D5.jpeg",
+              "thumb": "art/festive-sculptures/2D1DF357-6868-4BDA-9AA1-5DEF827F76D5.jpeg",
+              "h": 1536,
+              "w": 1024
+            },
+            {
+              "src": "art/festive-sculptures/1F9C8E0F-B394-4C5E-BFC2-89D44625C2FB(4).jpeg",
+              "thumb": "art/festive-sculptures/1F9C8E0F-B394-4C5E-BFC2-89D44625C2FB(4).jpeg",
+              "h": 1536,
+              "w": 1024
+            },
+            {
+              "src": "art/festive-sculptures/4BDB777B-5E71-4E65-85AF-E50E5F1D50B6(3).jpeg",
+              "thumb": "art/festive-sculptures/4BDB777B-5E71-4E65-85AF-E50E5F1D50B6(3).jpeg",
+              "h": 1536,
+              "w": 1024
+            }
+          ],
+          "key": "illuminated-tree-installation",
+          "group": "realized",
+          "statusKey": "realizedWork"
+        },
+        {
+          "title": "Mzechabuki — The Sun-Headed Tree",
+          "images": [
+            {
+              "src": "art/festive-sculptures/81E1B252-8ADB-4F67-B85B-DD500782E2BB(3).jpeg",
+              "thumb": "art/festive-sculptures/81E1B252-8ADB-4F67-B85B-DD500782E2BB(3).jpeg",
+              "h": 1199,
+              "w": 1312
+            },
+            {
+              "src": "art/festive-sculptures/IMG_6887(1).jpeg",
+              "thumb": "art/festive-sculptures/IMG_6887(1).jpeg",
+              "h": 1554,
+              "w": 1170
+            },
+            {
+              "src": "art/festive-sculptures/2C9FA51B-9DDC-43D0-9001-F5D131099BE6(2).jpeg",
+              "thumb": "art/festive-sculptures/2C9FA51B-9DDC-43D0-9001-F5D131099BE6(2).jpeg",
+              "h": 1536,
+              "w": 1229
+            },
+            {
+              "src": "art/festive-sculptures/66B39C93-35B3-4A00-BBC2-EC7BB0ED8042(1).jpeg",
+              "thumb": "art/festive-sculptures/66B39C93-35B3-4A00-BBC2-EC7BB0ED8042(1).jpeg",
+              "h": 1393,
+              "w": 1129
+            },
+            {
+              "src": "art/festive-sculptures/5150EB5F-95D7-491B-80A8-2ADE031865BB(4).jpeg",
+              "thumb": "art/festive-sculptures/5150EB5F-95D7-491B-80A8-2ADE031865BB(4).jpeg",
+              "h": 1199,
+              "w": 1312
+            }
+          ],
+          "key": "starburst-tree-figure",
+          "group": "realized",
+          "statusKey": "realizedWork"
+        },
+        {
+          "title": "Where Angels Rest",
+          "images": [
+            {
+              "src": "art/festive-sculptures/3C86ECC9-94E1-4A04-B720-96E789843E12(1).jpeg",
+              "thumb": "art/festive-sculptures/3C86ECC9-94E1-4A04-B720-96E789843E12(1).jpeg",
+              "h": 1402,
+              "w": 1122
+            },
+            {
+              "src": "uploads/festive/angels-tree-studio.jpg",
+              "thumb": "uploads/festive/angels-tree-studio.jpg",
+              "w": 1023,
+              "h": 1537,
+              "alt": "Where Angels Rest — studio concept view"
+            },
+            {
+              "src": "uploads/festive/angels-tree-interior.jpg",
+              "thumb": "uploads/festive/angels-tree-interior.jpg",
+              "w": 1023,
+              "h": 1537,
+              "alt": "Where Angels Rest — interior concept view"
+            },
+            {
+              "src": "uploads/festive/angels-tree-atrium.jpg",
+              "thumb": "uploads/festive/angels-tree-atrium.jpg",
+              "w": 1536,
+              "h": 1024,
+              "alt": "Where Angels Rest — atrium concept view"
+            }
+          ],
+          "key": "sculptural-tree-of-figures",
+          "group": "concepts",
+          "statusKey": "concept"
+        },
+        {
+          "title": "Homage to Salvador Dalí",
+          "images": [
+            {
+              "src": "art/festive-sculptures/141BB918-30B8-4609-B696-E60E000FEE86(6).jpeg",
+              "thumb": "art/festive-sculptures/141BB918-30B8-4609-B696-E60E000FEE86(6).jpeg",
+              "h": 1536,
+              "w": 1022
+            },
+            {
+              "src": "art/festive-sculptures/3E401D56-716D-46DC-82EF-0945D0332F0A(2).jpeg",
+              "thumb": "art/festive-sculptures/3E401D56-716D-46DC-82EF-0945D0332F0A(2).jpeg",
+              "h": 1086,
+              "w": 1448
+            },
+            {
+              "src": "art/festive-sculptures/45FEBA4C-FE19-4B95-A64C-907B2B5557D1(2).jpeg",
+              "thumb": "art/festive-sculptures/45FEBA4C-FE19-4B95-A64C-907B2B5557D1(2).jpeg",
+              "h": 1086,
+              "w": 1448
+            }
+          ],
+          "key": "butterfly-tree",
+          "group": "concepts",
+          "statusKey": "concept"
+        },
+        {
+          "title": "Modern Sculptural Tree",
+          "images": [
+            {
+              "src": "art/festive-sculptures/01C9DBFF-791C-4727-A130-D7F602A262D6.jpeg",
+              "thumb": "art/festive-sculptures/01C9DBFF-791C-4727-A130-D7F602A262D6.jpeg",
+              "h": 1189,
+              "w": 1323
+            },
+            {
+              "src": "art/festive-sculptures/06CE139F-5D36-4870-A1A1-E32C9FA16A18(1).jpeg",
+              "thumb": "art/festive-sculptures/06CE139F-5D36-4870-A1A1-E32C9FA16A18(1).jpeg",
+              "h": 1024,
+              "w": 1536
+            }
+          ],
+          "key": "modern-sculptural-tree",
+          "group": "concepts",
+          "statusKey": "concept"
+        }
+      ]
     },
     {
-     "title": "NINE LIVES",
-     "statusKey": "realizedWork",
-     "credit": "Ideas and drawings: Melita Iosava · Artworks: Miranda Kuprava",
-     "text": "A collaborative project by Miranda Kuprava and Melita Iosava.",
-     "images": [
-      {
-       "src": "art/melita/melita-44.jpg",
-       "thumb": "art/melita/melita-44-t.jpg",
-       "w": 1384,
-       "h": 1536,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-45.jpg",
-       "thumb": "art/melita/melita-45-t.jpg",
-       "w": 1086,
-       "h": 1448,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-17.jpg",
-       "thumb": "art/melita/melita-17-t.jpg",
-       "w": 1152,
-       "h": 1536
-      },
-      {
-       "src": "art/melita/melita-33.jpg",
-       "thumb": "art/melita/melita-33-t.jpg",
-       "w": 1170,
-       "h": 1720
-      },
-      {
-       "src": "art/melita/melita-18.jpg",
-       "thumb": "art/melita/melita-18-t.jpg",
-       "w": 934,
-       "h": 1536
-      },
-      {
-       "src": "art/melita/melita-29.jpg",
-       "thumb": "art/melita/melita-29-t.jpg",
-       "w": 1170,
-       "h": 1563
-      },
-      {
-       "src": "art/melita/melita-35.jpg",
-       "thumb": "art/melita/melita-35-t.jpg",
-       "w": 821,
-       "h": 1663
-      },
-      {
-       "src": "art/melita/melita-36.jpg",
-       "thumb": "art/melita/melita-36-t.jpg",
-       "w": 1170,
-       "h": 1524
-      },
-      {
-       "src": "art/melita/melita-37.jpg",
-       "thumb": "art/melita/melita-37-t.jpg",
-       "w": 1153,
-       "h": 2000
-      },
-      {
-       "src": "art/melita/melita-23.jpg",
-       "thumb": "art/melita/melita-23-t.jpg",
-       "w": 1536,
-       "h": 1024
-      },
-      {
-       "src": "art/melita/melita-20.jpg",
-       "thumb": "art/melita/melita-20-t.jpg",
-       "w": 1200,
-       "h": 900
-      },
-      {
-       "src": "art/melita/melita-31.jpg",
-       "thumb": "art/melita/melita-31-t.jpg",
-       "w": 1170,
-       "h": 1541
-      },
-      {
-       "src": "art/melita/melita-32.jpg",
-       "thumb": "art/melita/melita-32-t.jpg",
-       "w": 1170,
-       "h": 1691
-      },
-      {
-       "src": "art/melita/melita-34.jpg",
-       "thumb": "art/melita/melita-34-t.jpg",
-       "w": 1170,
-       "h": 1697
-      },
-      {
-       "src": "art/melita/melita-01.jpg",
-       "thumb": "art/melita/melita-01-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/melita/melita-04.jpg",
-       "thumb": "art/melita/melita-04-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/melita/melita-24.jpg",
-       "thumb": "art/melita/melita-24-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/melita/melita-28.jpg",
-       "thumb": "art/melita/melita-28-t.jpg",
-       "w": 1086,
-       "h": 1448
-      }
-     ],
-     "kicker": "Melita’s story"
+      "id": "kinetic",
+      "projects": [
+        {
+          "title": "Merani",
+          "statusKey": "concept",
+          "kicker": "Independent concept project · Merani",
+          "text": "EVERY GREAT DESIGN BEGINS WITH AN EMOTION.\n\nMERANI was born from the meeting of two worlds. One is the timeless language of Ferrari design, where engineering becomes sculpture and movement becomes beauty. The other begins with Georgian Romanticism and Nikoloz Baratashvili’s poem Merani, in which the horse becomes an image of freedom, sacrifice, and the courage to open an untrodden path for those who follow.\n\nRather than designing an object that imitates an automobile, I wanted to create a sculpture that expresses movement itself. MERANI IS NOT A HORSE. It is the idea of moving forward. It is the moment before speed. It is courage transformed into form.\n\nAt the heart of MERANI is Baratashvili’s poem Merani, a major work of Georgian Romanticism whose philosophical and artistic power remains far less familiar to international audiences than it deserves.",
+          "images": [
+            {
+              "src": "art/automotive-concepts/3B7F8C20-1EA4-4455-A546-62A504673236(5).jpeg",
+              "thumb": "art/automotive-concepts/3B7F8C20-1EA4-4455-A546-62A504673236(5).jpeg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "uploads/cleaned/merani-showroom-clean.jpg",
+              "thumb": "uploads/cleaned/merani-showroom-clean.jpg",
+              "w": 1402,
+              "h": 1122
+            },
+            {
+              "src": "uploads/cleaned/merani-side-clean.jpg",
+              "thumb": "uploads/cleaned/merani-side-clean.jpg",
+              "w": 1087,
+              "h": 1447
+            },
+            {
+              "src": "uploads/cleaned/merani-front-detail-clean.jpg",
+              "thumb": "uploads/cleaned/merani-front-detail-clean.jpg",
+              "w": 1086,
+              "h": 1448,
+              "alt": "Merani sculptural concept study"
+            },
+            {
+              "src": "uploads/cleaned/merani-front-full-clean.jpg",
+              "thumb": "uploads/cleaned/merani-front-full-clean.jpg",
+              "w": 1096,
+              "h": 1435,
+              "alt": "Merani sculptural concept study"
+            },
+            {
+              "src": "uploads/cleaned/merani-rear-clean.jpg",
+              "thumb": "uploads/cleaned/merani-rear-clean.jpg",
+              "w": 1345,
+              "h": 1169,
+              "alt": "Merani sculptural concept study"
+            }
+          ],
+          "quote": "The yearnings of my restless soul will not in vain have glowed,\nFor, dashing on, my steed has paved a new untrodden road.\nHe who follows in our wake, a smoother path will find;\nDaring all, his fateful steed shall leave dark fate behind.",
+          "quoteCredit": "Nikoloz Baratashvili (1817–1845) · Georgian Romantic poet · English translation: Venera Urushadze"
+        },
+        {
+          "title": "Space Age",
+          "statusKey": "concept",
+          "kicker": "Independent concept project · sculptural light installation",
+          "text": "A sculptural concept for automotive environments, where light, orbital movement and architectural scale create a spatial experience. A festive lighting proposal explores a seasonal variation while preserving the sculpture’s form.",
+          "images": [
+            {
+              "src": "art/automotive-concepts/9A35F069-3E5B-4671-9775-F9015D5D8CE3(1).jpeg",
+              "thumb": "art/automotive-concepts/9A35F069-3E5B-4671-9775-F9015D5D8CE3(1).jpeg",
+              "w": 1024,
+              "h": 1536
+            }
+          ]
+        },
+        {
+          "title": "From One Root, Every Future",
+          "statusKey": "concept",
+          "kicker": "Independent concept project · mobility sculpture",
+          "text": "The tree becomes a spatial metaphor for movement and evolution: root as origin and energy, a central spine as intelligence, spiral roads as mobility, orbital nodes as transition, and upper air space where movement becomes three-dimensional. Road → intelligence → physical AI → flight.",
+          "images": [
+            {
+              "src": "art/automotive-concepts/F0089C39-6D61-4A18-8EB9-0850A7A7BC40(1).jpeg",
+              "thumb": "art/automotive-concepts/F0089C39-6D61-4A18-8EB9-0850A7A7BC40(1).jpeg",
+              "w": 1022,
+              "h": 1536
+            }
+          ]
+        },
+        {
+          "title": "Automotive Tree",
+          "statusKey": "concept",
+          "kicker": "Independent concept project · automotive sculpture",
+          "text": "A sculptural tree conceived as a dialogue between automotive engineering and seasonal ritual, designed for showroom and atrium scale.",
+          "images": [
+            {
+              "src": "art/automotive-concepts/13836663-9593-4FD6-AE2C-9D36A028FBF9.jpeg",
+              "thumb": "art/automotive-concepts/13836663-9593-4FD6-AE2C-9D36A028FBF9.jpeg",
+              "w": 1315,
+              "h": 1197
+            },
+            {
+              "src": "art/automotive-concepts/456C321A-46A4-40FC-B39A-4240BA06D365.jpeg",
+              "thumb": "art/automotive-concepts/456C321A-46A4-40FC-B39A-4240BA06D365.jpeg",
+              "w": 1199,
+              "h": 1312
+            },
+            {
+              "src": "art/automotive-concepts/DC09464B-46DA-4C56-AE7A-D7EF429320A8(1).jpeg",
+              "thumb": "art/automotive-concepts/DC09464B-46DA-4C56-AE7A-D7EF429320A8(1).jpeg",
+              "w": 1213,
+              "h": 1296
+            },
+            {
+              "src": "art/automotive-concepts/IMG_6270.jpg",
+              "thumb": "art/automotive-concepts/IMG_6270.jpg",
+              "w": 1170,
+              "h": 1244
+            },
+            {
+              "src": "art/automotive-concepts/automotive-tree-concept-board.png",
+              "thumb": "art/automotive-concepts/automotive-tree-concept-board-t.jpg",
+              "w": 1024,
+              "h": 1536,
+              "alt": "Automotive Tree concept board"
+            }
+          ]
+        }
+      ]
     },
     {
-     "title": "Selected collaboration works and process images",
-     "kicker": "Miranda Kuprava × Melita Iosava",
-     "credit": "Ideas and drawings: Melita Iosava · Artworks: Miranda Kuprava",
-     "images": [
-      {
-       "src": "art/melita/melita-02.jpg",
-       "thumb": "art/melita/melita-02-t.jpg",
-       "w": 1122,
-       "h": 1402
-      },
-      {
-       "src": "art/melita/melita-03.jpg",
-       "thumb": "art/melita/melita-03-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/melita/melita-07.jpg",
-       "thumb": "art/melita/melita-07-t.jpg",
-       "w": 1402,
-       "h": 1122
-      },
-      {
-       "src": "art/melita/melita-08.jpg",
-       "thumb": "art/melita/melita-08-t.jpg",
-       "w": 1122,
-       "h": 1402
-      },
-      {
-       "src": "art/melita/melita-09.jpg",
-       "thumb": "art/melita/melita-09-t.jpg",
-       "w": 1536,
-       "h": 1024
-      },
-      {
-       "src": "art/melita/melita-10.jpg",
-       "thumb": "art/melita/melita-10-t.jpg",
-       "w": 1145,
-       "h": 1374
-      },
-      {
-       "src": "art/melita/melita-11.jpg",
-       "thumb": "art/melita/melita-11-t.jpg",
-       "w": 1254,
-       "h": 1254
-      },
-      {
-       "src": "art/melita/melita-14.jpg",
-       "thumb": "art/melita/melita-14-t.jpg",
-       "w": 1122,
-       "h": 1402
-      },
-      {
-       "src": "art/melita/melita-15.jpg",
-       "thumb": "art/melita/melita-15-t.jpg",
-       "w": 1448,
-       "h": 1086
-      },
-      {
-       "src": "art/melita/melita-16.jpg",
-       "thumb": "art/melita/melita-16-t.jpg",
-       "w": 1254,
-       "h": 1254
-      },
-      {
-       "src": "art/melita/melita-19.jpg",
-       "thumb": "art/melita/melita-19-t.jpg",
-       "w": 1086,
-       "h": 1448
-      },
-      {
-       "src": "art/melita/melita-21.jpg",
-       "thumb": "art/melita/melita-21-t.jpg",
-       "w": 1179,
-       "h": 1334
-      },
-      {
-       "src": "art/melita/melita-22.jpg",
-       "thumb": "art/melita/melita-22-t.jpg",
-       "w": 1254,
-       "h": 1254
-      },
-      {
-       "src": "art/melita/melita-26.jpg",
-       "thumb": "art/melita/melita-26-t.jpg",
-       "w": 1402,
-       "h": 1122
-      },
-      {
-       "src": "art/melita/melita-27.jpg",
-       "thumb": "art/melita/melita-27-t.jpg",
-       "w": 1024,
-       "h": 1536
-      },
-      {
-       "src": "art/melita/melita-30.jpg",
-       "thumb": "art/melita/melita-30-t.jpg",
-       "w": 1170,
-       "h": 1709
-      },
-      {
-       "src": "art/melita/melita-38.jpg",
-       "thumb": "art/melita/melita-38-t.jpg",
-       "w": 1086,
-       "h": 1448,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-39.jpg",
-       "thumb": "art/melita/melita-39-t.jpg",
-       "w": 1122,
-       "h": 1402,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-40.png",
-       "thumb": "art/melita/melita-40-t.jpg",
-       "w": 1034,
-       "h": 1521,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-41.jpg",
-       "thumb": "art/melita/melita-41-t.jpg",
-       "w": 1402,
-       "h": 1122,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-42.jpg",
-       "thumb": "art/melita/melita-42-t.jpg",
-       "w": 1536,
-       "h": 1152,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-43.jpg",
-       "thumb": "art/melita/melita-43-t.jpg",
-       "w": 1448,
-       "h": 1086,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-46.jpg",
-       "thumb": "art/melita/melita-46-t.jpg",
-       "w": 1152,
-       "h": 1536,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-47.jpg",
-       "thumb": "art/melita/melita-47-t.jpg",
-       "w": 1402,
-       "h": 1122,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-48.jpg",
-       "thumb": "art/melita/melita-48-t.jpg",
-       "w": 710,
-       "h": 1536,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-49.jpg",
-       "thumb": "art/melita/melita-49-t.jpg",
-       "w": 1024,
-       "h": 1536,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-50.jpg",
-       "thumb": "art/melita/melita-50-t.jpg",
-       "w": 1152,
-       "h": 1536,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-51.jpg",
-       "thumb": "art/melita/melita-51-t.jpg",
-       "w": 1536,
-       "h": 1108,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      },
-      {
-       "src": "art/melita/melita-52.jpg",
-       "thumb": "art/melita/melita-52-t.jpg",
-       "w": 1170,
-       "h": 1599,
-       "alt": "Selected artwork and process image by Melita Iosava"
-      }
-     ]
+      "id": "spaces",
+      "workCount": 12,
+      "projects": [
+        {
+          "title": "Vitis Vinifera",
+          "images": [
+            {
+              "src": "art/vitis-vinifera-website/01_318B00AA-35F1-4260-A6C8-E97D7C48E109.jpeg",
+              "thumb": "art/vitis-vinifera-website/01_318B00AA-35F1-4260-A6C8-E97D7C48E109.jpeg",
+              "w": 1091,
+              "h": 1442,
+              "label": "Vitis Vinifera · Object view",
+              "alt": "Vitis Vinifera sculpture shown against a clean white background, full object view."
+            },
+            {
+              "src": "art/vitis-vinifera-website/02_IMG_7681(2).jpeg",
+              "thumb": "art/vitis-vinifera-website/02_IMG_7681(2).jpeg",
+              "w": 1159,
+              "h": 1436,
+              "label": "Vitis Vinifera · Detail",
+              "alt": "Close view of the Vitis Vinifera sculpture and its grape leaves."
+            },
+            {
+              "src": "uploads/cleaned/vitis-display-clean.jpg",
+              "thumb": "uploads/cleaned/vitis-display-clean.jpg",
+              "w": 1019,
+              "h": 1543,
+              "label": "Display case · Installation",
+              "alt": "Vitis Vinifera sculpture displayed in a glass case in a brick wine cellar."
+            },
+            {
+              "src": "art/vitis-vinifera-website/04_IMG_7677(3).jpeg",
+              "thumb": "art/vitis-vinifera-website/04_IMG_7677(3).jpeg",
+              "w": 1170,
+              "h": 1344,
+              "label": "Display case · Context",
+              "alt": "Vitis Vinifera sculpture installed in a lit display case in the wine estate."
+            },
+            {
+              "src": "art/vitis-vinifera-website/05_IMG_7678(4).jpeg",
+              "thumb": "art/vitis-vinifera-website/05_IMG_7678(4).jpeg",
+              "w": 1170,
+              "h": 1730,
+              "label": "Wine cellar · Installation",
+              "alt": "Full view of the Vitis Vinifera sculpture in its display case in a brick cellar."
+            },
+            {
+              "src": "art/vitis-vinifera-website/06_IMG_7682(1).jpeg",
+              "thumb": "art/vitis-vinifera-website/06_IMG_7682(1).jpeg",
+              "w": 1170,
+              "h": 734,
+              "label": "Numen Vinae · Outdoor concept",
+              "alt": "Original Numen Vinae outdoor concept board with a vineyard sculpture image."
+            },
+            {
+              "src": "art/vitis-vinifera-website/07_8343A1D4-6215-44E0-BD0A-801A1A27D654.jpeg",
+              "thumb": "art/vitis-vinifera-website/07_8343A1D4-6215-44E0-BD0A-801A1A27D654.jpeg",
+              "w": 1125,
+              "h": 1398,
+              "label": "Vineyard · Installation",
+              "alt": "Vitis Vinifera sculpture standing among the grape vines at sunset."
+            },
+            {
+              "src": "art/vitis-vinifera-website/08_64156352-0676-451B-B8AC-496E1B7FD355.jpeg",
+              "thumb": "art/vitis-vinifera-website/08_64156352-0676-451B-B8AC-496E1B7FD355.jpeg",
+              "w": 1125,
+              "h": 1398,
+              "label": "Vineyard · Context",
+              "alt": "Vitis Vinifera sculpture standing among green grape vines."
+            },
+            {
+              "src": "uploads/cleaned/spider-light-clean.jpg",
+              "thumb": "uploads/cleaned/spider-light-clean.jpg",
+              "w": 1468,
+              "h": 1071,
+              "label": "Spider Light · Concept",
+              "alt": "Original Spider Light concept board shown within the wine cellar."
+            },
+            {
+              "src": "art/vitis-vinifera-website/10_030ECCED-A619-4979-A5BE-4B0A72403530.jpeg",
+              "thumb": "art/vitis-vinifera-website/10_030ECCED-A619-4979-A5BE-4B0A72403530.jpeg",
+              "w": 1536,
+              "h": 1024,
+              "label": "Spider Light · Cellar installation",
+              "alt": "Spider Light installed within the arched wine cellar."
+            },
+            {
+              "src": "art/vitis-vinifera-website/11_A1A4EB59-14F1-4446-B808-402A0EC734D7.jpeg",
+              "thumb": "art/vitis-vinifera-website/11_A1A4EB59-14F1-4446-B808-402A0EC734D7.jpeg",
+              "w": 1536,
+              "h": 1024,
+              "label": "Spider Light · Object view",
+              "alt": "Spider Light sculptural lamp shown against a clean white background."
+            }
+          ],
+          "groups": [
+            {
+              "key": "objectDetails",
+              "imageIndexes": [
+                0,
+                1
+              ]
+            },
+            {
+              "key": "displayCase",
+              "imageIndexes": [
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "key": "vineyardOutdoor",
+              "imageIndexes": [
+                5,
+                6,
+                7
+              ]
+            },
+            {
+              "key": "spiderLight",
+              "imageIndexes": [
+                8,
+                9,
+                10
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "functional",
+      "subsections": true,
+      "projects": []
+    },
+    {
+      "id": "brand",
+      "projects": []
+    },
+    {
+      "id": "melita",
+      "workCount": 0,
+      "projects": [
+        {
+          "title": "Children’s Park of Imagination",
+          "statusKey": "concept",
+          "credit": "Original idea and first drawings: Melita Iosava · Project author, artist and designer: Miranda Kuprava",
+          "text": "A concept for a children’s museum and park in Shanghai. The PDF presents a proposal and visualizations, not a built project.",
+          "images": [],
+          "doc": {
+            "title": "Children’s Park of Imagination",
+            "pdf": "docs/children-s-park-of-imagination.pdf",
+            "pages": [
+              {
+                "src": "docs/children-s-park-of-imagination/01.jpg",
+                "thumb": "docs/children-s-park-of-imagination/01-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/02.jpg",
+                "thumb": "docs/children-s-park-of-imagination/02-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/03.jpg",
+                "thumb": "docs/children-s-park-of-imagination/03-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/04.jpg",
+                "thumb": "docs/children-s-park-of-imagination/04-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/05.jpg",
+                "thumb": "docs/children-s-park-of-imagination/05-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/06.jpg",
+                "thumb": "docs/children-s-park-of-imagination/06-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/07.jpg",
+                "thumb": "docs/children-s-park-of-imagination/07-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/08.jpg",
+                "thumb": "docs/children-s-park-of-imagination/08-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/09.jpg",
+                "thumb": "docs/children-s-park-of-imagination/09-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/10.jpg",
+                "thumb": "docs/children-s-park-of-imagination/10-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/11.jpg",
+                "thumb": "docs/children-s-park-of-imagination/11-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/12.jpg",
+                "thumb": "docs/children-s-park-of-imagination/12-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/13.jpg",
+                "thumb": "docs/children-s-park-of-imagination/13-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/14.jpg",
+                "thumb": "docs/children-s-park-of-imagination/14-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/15.jpg",
+                "thumb": "docs/children-s-park-of-imagination/15-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/16.jpg",
+                "thumb": "docs/children-s-park-of-imagination/16-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/17.jpg",
+                "thumb": "docs/children-s-park-of-imagination/17-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/18.jpg",
+                "thumb": "docs/children-s-park-of-imagination/18-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/19.jpg",
+                "thumb": "docs/children-s-park-of-imagination/19-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/20.jpg",
+                "thumb": "docs/children-s-park-of-imagination/20-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/21.jpg",
+                "thumb": "docs/children-s-park-of-imagination/21-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/22.jpg",
+                "thumb": "docs/children-s-park-of-imagination/22-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/23.jpg",
+                "thumb": "docs/children-s-park-of-imagination/23-t.jpg"
+              },
+              {
+                "src": "docs/children-s-park-of-imagination/24.jpg",
+                "thumb": "docs/children-s-park-of-imagination/24-t.jpg"
+              }
+            ],
+            "sizeMB": 19.5
+          }
+        },
+        {
+          "title": "Pinocchio’s Library",
+          "statusKey": "concept",
+          "credit": "Original idea and initial drawings: Melita Iosava · Project author, artist and designer: Miranda Kuprava",
+          "text": "A library concept proposed for New York City. The drawings and visualizations document a proposal; the project is not presented as built or realized.",
+          "images": [
+            {
+              "src": "docs/pinocchios-library/09.jpg",
+              "thumb": "docs/pinocchios-library/09-t.jpg",
+              "alt": "Pinocchio Library main interior concept"
+            }
+          ]
+        },
+        {
+          "title": "NINE LIVES",
+          "statusKey": "realizedWork",
+          "credit": "Ideas and drawings: Melita Iosava · Artworks: Miranda Kuprava",
+          "text": "A collaborative project by Miranda Kuprava and Melita Iosava.",
+          "images": [
+            {
+              "src": "art/melita/melita-44.jpg",
+              "thumb": "art/melita/melita-44-t.jpg",
+              "w": 1384,
+              "h": 1536,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-45.jpg",
+              "thumb": "art/melita/melita-45-t.jpg",
+              "w": 1086,
+              "h": 1448,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-17.jpg",
+              "thumb": "art/melita/melita-17-t.jpg",
+              "w": 1152,
+              "h": 1536
+            },
+            {
+              "src": "art/melita/melita-33.jpg",
+              "thumb": "art/melita/melita-33-t.jpg",
+              "w": 1170,
+              "h": 1720
+            },
+            {
+              "src": "art/melita/melita-18.jpg",
+              "thumb": "art/melita/melita-18-t.jpg",
+              "w": 934,
+              "h": 1536
+            },
+            {
+              "src": "art/melita/melita-29.jpg",
+              "thumb": "art/melita/melita-29-t.jpg",
+              "w": 1170,
+              "h": 1563
+            },
+            {
+              "src": "art/melita/melita-35.jpg",
+              "thumb": "art/melita/melita-35-t.jpg",
+              "w": 821,
+              "h": 1663
+            },
+            {
+              "src": "art/melita/melita-36.jpg",
+              "thumb": "art/melita/melita-36-t.jpg",
+              "w": 1170,
+              "h": 1524
+            },
+            {
+              "src": "art/melita/melita-37.jpg",
+              "thumb": "art/melita/melita-37-t.jpg",
+              "w": 1153,
+              "h": 2000
+            },
+            {
+              "src": "art/melita/melita-23.jpg",
+              "thumb": "art/melita/melita-23-t.jpg",
+              "w": 1536,
+              "h": 1024
+            },
+            {
+              "src": "art/melita/melita-20.jpg",
+              "thumb": "art/melita/melita-20-t.jpg",
+              "w": 1200,
+              "h": 900
+            },
+            {
+              "src": "art/melita/melita-31.jpg",
+              "thumb": "art/melita/melita-31-t.jpg",
+              "w": 1170,
+              "h": 1541
+            },
+            {
+              "src": "art/melita/melita-32.jpg",
+              "thumb": "art/melita/melita-32-t.jpg",
+              "w": 1170,
+              "h": 1691
+            },
+            {
+              "src": "art/melita/melita-34.jpg",
+              "thumb": "art/melita/melita-34-t.jpg",
+              "w": 1170,
+              "h": 1697
+            },
+            {
+              "src": "art/melita/melita-01.jpg",
+              "thumb": "art/melita/melita-01-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/melita/melita-04.jpg",
+              "thumb": "art/melita/melita-04-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/melita/melita-24.jpg",
+              "thumb": "art/melita/melita-24-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/melita/melita-28.jpg",
+              "thumb": "art/melita/melita-28-t.jpg",
+              "w": 1086,
+              "h": 1448
+            }
+          ],
+          "kicker": "Melita’s story"
+        },
+        {
+          "title": "Selected collaboration works and process images",
+          "kicker": "Miranda Kuprava × Melita Iosava",
+          "credit": "Ideas and drawings: Melita Iosava · Artworks: Miranda Kuprava",
+          "images": [
+            {
+              "src": "art/melita/melita-02.jpg",
+              "thumb": "art/melita/melita-02-t.jpg",
+              "w": 1122,
+              "h": 1402
+            },
+            {
+              "src": "art/melita/melita-03.jpg",
+              "thumb": "art/melita/melita-03-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/melita/melita-07.jpg",
+              "thumb": "art/melita/melita-07-t.jpg",
+              "w": 1402,
+              "h": 1122
+            },
+            {
+              "src": "art/melita/melita-08.jpg",
+              "thumb": "art/melita/melita-08-t.jpg",
+              "w": 1122,
+              "h": 1402
+            },
+            {
+              "src": "art/melita/melita-09.jpg",
+              "thumb": "art/melita/melita-09-t.jpg",
+              "w": 1536,
+              "h": 1024
+            },
+            {
+              "src": "art/melita/melita-10.jpg",
+              "thumb": "art/melita/melita-10-t.jpg",
+              "w": 1145,
+              "h": 1374
+            },
+            {
+              "src": "art/melita/melita-11.jpg",
+              "thumb": "art/melita/melita-11-t.jpg",
+              "w": 1254,
+              "h": 1254
+            },
+            {
+              "src": "art/melita/melita-14.jpg",
+              "thumb": "art/melita/melita-14-t.jpg",
+              "w": 1122,
+              "h": 1402
+            },
+            {
+              "src": "art/melita/melita-15.jpg",
+              "thumb": "art/melita/melita-15-t.jpg",
+              "w": 1448,
+              "h": 1086
+            },
+            {
+              "src": "art/melita/melita-16.jpg",
+              "thumb": "art/melita/melita-16-t.jpg",
+              "w": 1254,
+              "h": 1254
+            },
+            {
+              "src": "art/melita/melita-19.jpg",
+              "thumb": "art/melita/melita-19-t.jpg",
+              "w": 1086,
+              "h": 1448
+            },
+            {
+              "src": "art/melita/melita-21.jpg",
+              "thumb": "art/melita/melita-21-t.jpg",
+              "w": 1179,
+              "h": 1334
+            },
+            {
+              "src": "art/melita/melita-22.jpg",
+              "thumb": "art/melita/melita-22-t.jpg",
+              "w": 1254,
+              "h": 1254
+            },
+            {
+              "src": "art/melita/melita-26.jpg",
+              "thumb": "art/melita/melita-26-t.jpg",
+              "w": 1402,
+              "h": 1122
+            },
+            {
+              "src": "art/melita/melita-27.jpg",
+              "thumb": "art/melita/melita-27-t.jpg",
+              "w": 1024,
+              "h": 1536
+            },
+            {
+              "src": "art/melita/melita-30.jpg",
+              "thumb": "art/melita/melita-30-t.jpg",
+              "w": 1170,
+              "h": 1709
+            },
+            {
+              "src": "art/melita/melita-38.jpg",
+              "thumb": "art/melita/melita-38-t.jpg",
+              "w": 1086,
+              "h": 1448,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-39.jpg",
+              "thumb": "art/melita/melita-39-t.jpg",
+              "w": 1122,
+              "h": 1402,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-40.png",
+              "thumb": "art/melita/melita-40-t.jpg",
+              "w": 1034,
+              "h": 1521,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-41.jpg",
+              "thumb": "art/melita/melita-41-t.jpg",
+              "w": 1402,
+              "h": 1122,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-42.jpg",
+              "thumb": "art/melita/melita-42-t.jpg",
+              "w": 1536,
+              "h": 1152,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-43.jpg",
+              "thumb": "art/melita/melita-43-t.jpg",
+              "w": 1448,
+              "h": 1086,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-46.jpg",
+              "thumb": "art/melita/melita-46-t.jpg",
+              "w": 1152,
+              "h": 1536,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-47.jpg",
+              "thumb": "art/melita/melita-47-t.jpg",
+              "w": 1402,
+              "h": 1122,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-48.jpg",
+              "thumb": "art/melita/melita-48-t.jpg",
+              "w": 710,
+              "h": 1536,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-49.jpg",
+              "thumb": "art/melita/melita-49-t.jpg",
+              "w": 1024,
+              "h": 1536,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-50.jpg",
+              "thumb": "art/melita/melita-50-t.jpg",
+              "w": 1152,
+              "h": 1536,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-51.jpg",
+              "thumb": "art/melita/melita-51-t.jpg",
+              "w": 1536,
+              "h": 1108,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            },
+            {
+              "src": "art/melita/melita-52.jpg",
+              "thumb": "art/melita/melita-52-t.jpg",
+              "w": 1170,
+              "h": 1599,
+              "alt": "Selected artwork and process image by Melita Iosava"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "projects": []
+    },
+    {
+      "id": "furniture",
+      "workCount": 6,
+      "projects": [
+        {
+          "key": "the-hand",
+          "title": "The Hand",
+          "images": [
+            {
+              "src": "uploads/furniture/furniture-18.jpg",
+              "thumb": "uploads/furniture/furniture-18.jpg",
+              "w": 1290,
+              "h": 2796,
+              "alt": "The Hand — sculptural furniture, view 1"
+            },
+            {
+              "src": "uploads/furniture/furniture-01.jpg",
+              "thumb": "uploads/furniture/furniture-01.jpg",
+              "w": 1086,
+              "h": 1448,
+              "alt": "The Hand — sculptural furniture, view 2"
+            },
+            {
+              "src": "uploads/furniture/furniture-06.jpg",
+              "thumb": "uploads/furniture/furniture-06.jpg",
+              "w": 1254,
+              "h": 1254,
+              "alt": "The Hand — sculptural furniture, view 3"
+            },
+            {
+              "src": "uploads/furniture/furniture-11.jpg",
+              "thumb": "uploads/furniture/furniture-11.jpg",
+              "w": 1254,
+              "h": 1254,
+              "alt": "The Hand — sculptural furniture, view 4"
+            },
+            {
+              "src": "uploads/furniture/furniture-27.jpg",
+              "thumb": "uploads/furniture/furniture-27.jpg",
+              "w": 1254,
+              "h": 1254,
+              "alt": "The Hand — sculptural furniture, view 5"
+            },
+            {
+              "src": "uploads/furniture/furniture-09.jpg",
+              "thumb": "uploads/furniture/furniture-09.jpg",
+              "w": 1254,
+              "h": 1254,
+              "alt": "The Hand — sculptural furniture, view 6"
+            }
+          ]
+        },
+        {
+          "key": "geometric-dialogues",
+          "title": "Geometric Dialogues",
+          "images": [
+            {
+              "src": "uploads/furniture/furniture-03.jpg",
+              "thumb": "uploads/furniture/furniture-03.jpg",
+              "w": 1122,
+              "h": 1402,
+              "alt": "Geometric Dialogues — sculptural furniture, view 1"
+            },
+            {
+              "src": "uploads/furniture/furniture-19.jpg",
+              "thumb": "uploads/furniture/furniture-19.jpg",
+              "w": 1122,
+              "h": 1402,
+              "alt": "Geometric Dialogues — sculptural furniture, view 2"
+            },
+            {
+              "src": "uploads/furniture/furniture-21.jpg",
+              "thumb": "uploads/furniture/furniture-21.jpg",
+              "w": 1122,
+              "h": 1402,
+              "alt": "Geometric Dialogues — sculptural furniture, view 3"
+            },
+            {
+              "src": "uploads/furniture/furniture-22.jpg",
+              "thumb": "uploads/furniture/furniture-22.jpg",
+              "w": 1122,
+              "h": 1402,
+              "alt": "Geometric Dialogues — sculptural furniture, view 4"
+            },
+            {
+              "src": "uploads/furniture/furniture-02.jpg",
+              "thumb": "uploads/furniture/furniture-02.jpg",
+              "w": 1122,
+              "h": 1402,
+              "alt": "Geometric Dialogues — sculptural furniture, view 5"
+            },
+            {
+              "src": "uploads/furniture/furniture-04.jpg",
+              "thumb": "uploads/furniture/furniture-04.jpg",
+              "w": 1123,
+              "h": 1401,
+              "alt": "Geometric Dialogues — sculptural furniture, view 6"
+            },
+            {
+              "src": "uploads/furniture/furniture-23.jpg",
+              "thumb": "uploads/furniture/furniture-23.jpg",
+              "w": 1122,
+              "h": 1402,
+              "alt": "Geometric Dialogues — sculptural furniture, view 7"
+            },
+            {
+              "src": "uploads/furniture/furniture-05.jpg",
+              "thumb": "uploads/furniture/furniture-05.jpg",
+              "w": 1054,
+              "h": 1493,
+              "alt": "Geometric Dialogues — sculptural furniture, view 8"
+            },
+            {
+              "src": "uploads/furniture/furniture-20.jpg",
+              "thumb": "uploads/furniture/furniture-20.jpg",
+              "w": 1056,
+              "h": 1489,
+              "alt": "Geometric Dialogues — sculptural furniture, view 9"
+            },
+            {
+              "src": "uploads/furniture/furniture-24.jpg",
+              "thumb": "uploads/furniture/furniture-24.jpg",
+              "w": 1402,
+              "h": 1122,
+              "alt": "Geometric Dialogues — sculptural furniture, view 10"
+            }
+          ]
+        },
+        {
+          "key": "feline-forms",
+          "title": "Feline Forms",
+          "images": [
+            {
+              "src": "uploads/furniture/furniture-16.jpg",
+              "thumb": "uploads/furniture/furniture-16.jpg",
+              "w": 1122,
+              "h": 1402,
+              "alt": "Feline Forms — sculptural furniture, view 1"
+            },
+            {
+              "src": "uploads/furniture/furniture-14.jpg",
+              "thumb": "uploads/furniture/furniture-14.jpg",
+              "w": 1402,
+              "h": 1122,
+              "alt": "Feline Forms — sculptural furniture, view 2"
+            },
+            {
+              "src": "uploads/furniture/furniture-15.jpg",
+              "thumb": "uploads/furniture/furniture-15.jpg",
+              "w": 1402,
+              "h": 1122,
+              "alt": "Feline Forms — sculptural furniture, view 3"
+            },
+            {
+              "src": "uploads/furniture/furniture-30.jpg",
+              "thumb": "uploads/furniture/furniture-30.jpg",
+              "w": 1402,
+              "h": 1122,
+              "alt": "Feline Forms — sculptural furniture, view 4"
+            }
+          ]
+        },
+        {
+          "key": "chromatic-orbit",
+          "title": "Chromatic Orbit",
+          "images": [
+            {
+              "src": "uploads/furniture/furniture-07.jpg",
+              "thumb": "uploads/furniture/furniture-07.jpg",
+              "w": 1402,
+              "h": 1122,
+              "alt": "Chromatic Orbit — sculptural furniture, view 1"
+            },
+            {
+              "src": "uploads/furniture/furniture-10.jpg",
+              "thumb": "uploads/furniture/furniture-10.jpg",
+              "w": 1313,
+              "h": 1198,
+              "alt": "Chromatic Orbit — sculptural furniture, view 2"
+            }
+          ]
+        },
+        {
+          "key": "flow",
+          "title": "Flow",
+          "images": [
+            {
+              "src": "uploads/furniture/furniture-25.jpg",
+              "thumb": "uploads/furniture/furniture-25.jpg",
+              "w": 1402,
+              "h": 1122,
+              "alt": "Flow — sculptural furniture, view 1"
+            },
+            {
+              "src": "uploads/furniture/furniture-26.jpg",
+              "thumb": "uploads/furniture/furniture-26.jpg",
+              "w": 1536,
+              "h": 1024,
+              "alt": "Flow — sculptural furniture, view 2"
+            },
+            {
+              "src": "uploads/furniture/furniture-12.jpg",
+              "thumb": "uploads/furniture/furniture-12.jpg",
+              "w": 1448,
+              "h": 1086,
+              "alt": "Flow — sculptural furniture, view 3"
+            },
+            {
+              "src": "uploads/furniture/furniture-08.jpg",
+              "thumb": "uploads/furniture/furniture-08.jpg",
+              "w": 1536,
+              "h": 1024,
+              "alt": "Flow — sculptural furniture, view 4"
+            }
+          ]
+        },
+        {
+          "key": "rhythm",
+          "title": "Rhythm",
+          "images": [
+            {
+              "src": "uploads/furniture/furniture-13.jpg",
+              "thumb": "uploads/furniture/furniture-13.jpg",
+              "w": 1536,
+              "h": 1024,
+              "alt": "Rhythm — sculptural furniture, view 1"
+            },
+            {
+              "src": "uploads/furniture/furniture-17.jpg",
+              "thumb": "uploads/furniture/furniture-17.jpg",
+              "w": 1145,
+              "h": 1374,
+              "alt": "Rhythm — sculptural furniture, view 2"
+            },
+            {
+              "src": "uploads/furniture/furniture-29.jpg",
+              "thumb": "uploads/furniture/furniture-29.jpg",
+              "w": 1536,
+              "h": 1024,
+              "alt": "Rhythm — sculptural furniture, view 3"
+            },
+            {
+              "src": "uploads/furniture/furniture-28.jpg",
+              "thumb": "uploads/furniture/furniture-28.jpg",
+              "w": 1536,
+              "h": 1024,
+              "alt": "Rhythm — sculptural furniture, view 4"
+            }
+          ]
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "about",
-   "projects": []
+  ],
+  "intro": {
+    "src": "uploads/cleaned/merani-showroom-clean.jpg",
+    "thumb": "uploads/cleaned/merani-showroom-clean.jpg",
+    "w": 1402,
+    "h": 1122
   }
- ],
- "intro": {
-  "src": "uploads/cleaned/merani-showroom-clean.jpg",
-  "thumb": "uploads/cleaned/merani-showroom-clean.jpg",
-  "w": 1402,
-  "h": 1122
- }
 }
+
